@@ -11,7 +11,7 @@ all required headers (platform headers, xxhash, etc.).
 | Directory | APIs | gloam flags |
 |-----------|------|-------------|
 | `vulkan/` | Vulkan (all versions, all extensions) | `--api vk c --alias --loader` |
-| `gl-egl/` | GL core + GLES2 (merged) and EGL (all versions, all extensions) | `--api gl:core,gles2 --merge c --alias --loader` and `--api egl c --alias --loader` |
+| `gl-egl/` | GL core + GLES2 (merged) and EGL (all versions, all extensions) | `--api gl:core,gles2,egl --merge c --alias --loader` |
 
 ## Usage
 

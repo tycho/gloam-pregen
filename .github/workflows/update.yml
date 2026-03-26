@@ -42,20 +42,11 @@ jobs:
           --quiet
           c --alias --loader
 
-      - name: Generate GL + GLES2 (merged) loader
+      - name: Generate GL + GLES2 (merged) and EGL loaders
         run: >
           gloam
-          --api gl:core,gles2
+          --api gl:core,gles2,egl
           --merge
-          --fetch
-          --out-path gl-egl
-          --quiet
-          c --alias --loader
-
-      - name: Generate EGL loader
-        run: >
-          gloam
-          --api egl
           --fetch
           --out-path gl-egl
           --quiet
