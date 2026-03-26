@@ -1,0 +1,111 @@
+name: Update generated loaders
+
+on:
+  schedule:
+    # Daily at 06:17 UTC (off-minute to avoid cron stampede)
+    - cron: '17 6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install gloam
+        run: cargo install gloam
+
+      # Snapshot file sizes before regeneration so we can detect regressions.
+      - name: Record baseline sizes
+        run: |
+          find vulkan gl-egl -type f \( -name '*.h' -o -name '*.c' \) \
+            -exec stat --format='%n %s' {} + | sort > /tmp/sizes-before.txt
+          cat /tmp/sizes-before.txt
+
+      # Wipe old output so removed files don't linger.
+      - name: Clean previous output
+        run: |
+          rm -rf vulkan/include vulkan/src
+          rm -rf gl-egl/include gl-egl/src
+
+      - name: Generate Vulkan loader
+        run: >
+          gloam
+          --api vk
+          --fetch
+          --out-path vulkan
+          --quiet
+          c --alias --loader
+
+      - name: Generate GL + GLES2 (merged) loader
+        run: >
+          gloam
+          --api gl:core,gles2
+          --merge
+          --fetch
+          --out-path gl-egl
+          --quiet
+          c --alias --loader
+
+      - name: Generate EGL loader
+        run: >
+          gloam
+          --api egl
+          --fetch
+          --out-path gl-egl
+          --quiet
+          c --alias --loader
+
+      # Sanity: the generated C must compile.
+      - name: Compile check
+        run: |
+          gcc -fsyntax-only -Ivulkan/include vulkan/src/vulkan.c
+          gcc -fsyntax-only -Igl-egl/include gl-egl/src/gl.c
+          gcc -fsyntax-only -Igl-egl/include gl-egl/src/egl.c
+
+      # Fail if any tracked file shrank by more than 10% — that almost
+      # certainly means something went wrong upstream or in gloam itself.
+      - name: Size regression check
+        run: |
+          find vulkan gl-egl -type f \( -name '*.h' -o -name '*.c' \) \
+            -exec stat --format='%n %s' {} + | sort > /tmp/sizes-after.txt
+
+          failures=0
+          while IFS=' ' read -r file before; do
+            after=$(awk -v f="$file" '$1 == f { print $2 }' /tmp/sizes-after.txt)
+            if [ -z "$after" ]; then
+              echo "MISSING: $file was removed"
+              failures=1
+              continue
+            fi
+            threshold=$(( before * 90 / 100 ))
+            if [ "$after" -lt "$threshold" ]; then
+              echo "SHRUNK: $file went from $before to $after bytes (>10% decrease)"
+              failures=1
+            fi
+          done < /tmp/sizes-before.txt
+
+          if [ "$failures" -ne 0 ]; then
+            echo "::error::Size regression detected — see above. Aborting."
+            exit 1
+          fi
+          echo "Size check passed."
+
+      # Commit and push only if the output actually changed.
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes — nothing to commit."
+          else
+            version=$(gloam --version | awk '{ print $2 }')
+            git commit -m "chore: update generated output (gloam v${version})"
+            git push
+          fi
