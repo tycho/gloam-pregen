@@ -63,10 +63,18 @@ jobs:
           --quiet
           c --alias --loader
 
+      - name: Clone Vulkan-Headers
+        uses: actions/checkout@v6
+        with:
+          repository: KhronosGroup/Vulkan-Headers
+          path: Vulkan-Headers
+          fetch-depth: 0
+
       # Sanity: the generated C must compile.
       - name: Compile check
         run: |
-          gcc -fsyntax-only -Ivulkan/include vulkan/src/vulkan.c
+          gcc -fsyntax-only -IVulkan-Headers/include -Ivulkan/include vulkan/src/vulkan.c
+          gcc -fsyntax-only -Ivulkan-aio/include vulkan-aio/src/vulkan.c
           gcc -fsyntax-only -Igl-egl/include gl-egl/src/gl.c
           gcc -fsyntax-only -Igl-egl/include gl-egl/src/egl.c
 
