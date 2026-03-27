@@ -35,12 +35,21 @@ jobs:
           rm -rf vulkan/include vulkan/src
           rm -rf gl-egl/include gl-egl/src
 
-      - name: Generate Vulkan loader
+      - name: Generate Vulkan loader (with Vulkan-Headers dependency)
         run: >
           gloam
           --api vk
           --fetch
           --out-path vulkan
+          --quiet
+          c --alias --loader --external-headers
+
+      - name: Generate Vulkan loader (AIO)
+        run: >
+          gloam
+          --api vk
+          --fetch
+          --out-path vulkan-aio
           --quiet
           c --alias --loader
 
