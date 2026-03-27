@@ -15,12 +15,58 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: dtolnay/rust-toolchain@stable
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          cache: false
 
-      - uses: Swatinem/rust-cache@v2
+      - name: Query latest crate version
+        id: crate_version
+        shell: bash
+        run: |
+          set -euo pipefail
+          CRATE="gloam"
+          API_URL="https://crates.io/api/v1/crates/${CRATE}"
 
-      - name: Install gloam
-        run: cargo install gloam
+          VERSION="$(
+            curl -fsSL \
+              -H 'Accept: application/json' \
+              -A "github-actions-${GITHUB_REPOSITORY}/1.0" \
+              "${API_URL}" \
+            | jq -er '.crate.max_stable_version'
+          )"
+
+          echo "version=${VERSION}" >> "${GITHUB_OUTPUT}"
+
+      - name: Restore cargo-install cache
+        id: cargo_cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cargo/bin
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: ${{ runner.os }}-cargo-install-gloam-${{ steps.crate_version.outputs.version }}
+
+      - name: Install gloam ${{ steps.crate_version.outputs.version }}
+        run: |
+          cargo install gloam \
+            --version "${{ steps.crate_version.outputs.version }}" \
+            --locked
+
+      - name: Save cargo-install cache
+        if: steps.cargo_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cargo/bin
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: ${{ runner.os }}-cargo-install-gloam-${{ steps.crate_version.outputs.version }}
 
       # Snapshot file sizes before regeneration so we can detect regressions.
       - name: Record baseline sizes
