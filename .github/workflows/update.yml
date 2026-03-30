@@ -40,7 +40,7 @@ jobs:
 
       - name: Restore cargo-install cache
         id: cargo_cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: |
             ~/.cargo/bin
@@ -58,7 +58,7 @@ jobs:
 
       - name: Save cargo-install cache
         if: steps.cargo_cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: |
             ~/.cargo/bin
