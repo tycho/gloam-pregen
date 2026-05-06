@@ -2136,6 +2136,8 @@ extern "C" {
 #define VK_AMD_EXTENSION_689_EXTENSION_NAME "VK_AMD_extension_689"
 #define VK_NV_EXTENSION_690_SPEC_VERSION 0
 #define VK_NV_EXTENSION_690_EXTENSION_NAME "VK_NV_extension_690"
+#define VK_MESA_FRAGMENT_COVERAGE_MASK_SPEC_VERSION 0
+#define VK_MESA_FRAGMENT_COVERAGE_MASK_EXTENSION_NAME "VK_MESA_fragment_coverage_mask"
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 
