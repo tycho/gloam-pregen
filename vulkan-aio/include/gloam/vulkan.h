@@ -3,7 +3,7 @@
  *
  *   gloam --api vk --fetch --out-path vulkan-aio --quiet c --alias --loader
  *
- * Extensions: all (464 included)
+ * Extensions: all (465 included)
  *
  * Copyright (c) 2026 Steven Noonan
  * SPDX-License-Identifier: MIT
@@ -539,6 +539,7 @@ extern "C" {
 #define VK_NV_compute_shader_derivatives 1
 #define VK_NV_cooperative_matrix 1
 #define VK_NV_cooperative_matrix2 1
+#define VK_NV_cooperative_matrix_decode_vector 1
 #define VK_NV_cooperative_vector 1
 #define VK_NV_copy_memory_indirect 1
 #define VK_NV_corner_sampled_image 1
@@ -2140,10 +2141,14 @@ extern "C" {
 #define VK_AMD_EXTENSION_688_EXTENSION_NAME "VK_AMD_extension_688"
 #define VK_AMD_EXTENSION_689_SPEC_VERSION 0
 #define VK_AMD_EXTENSION_689_EXTENSION_NAME "VK_AMD_extension_689"
-#define VK_NV_EXTENSION_690_SPEC_VERSION 0
-#define VK_NV_EXTENSION_690_EXTENSION_NAME "VK_NV_extension_690"
+#define VK_NV_COOPERATIVE_MATRIX_DECODE_VECTOR_SPEC_VERSION 1
+#define VK_NV_COOPERATIVE_MATRIX_DECODE_VECTOR_EXTENSION_NAME "VK_NV_cooperative_matrix_decode_vector"
 #define VK_MESA_FRAGMENT_COVERAGE_MASK_SPEC_VERSION 0
 #define VK_MESA_FRAGMENT_COVERAGE_MASK_EXTENSION_NAME "VK_MESA_fragment_coverage_mask"
+#define VK_EXT_EXTENSION_692_SPEC_VERSION 0
+#define VK_EXT_EXTENSION_692_EXTENSION_NAME "VK_EXT_extension_692"
+#define VK_EXT_EXTENSION_693_SPEC_VERSION 0
+#define VK_EXT_EXTENSION_693_EXTENSION_NAME "VK_EXT_extension_693"
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 
@@ -4192,6 +4197,7 @@ typedef enum VkStructureType {
     VK_STRUCTURE_TYPE_DATA_GRAPH_PIPELINE_SESSION_NEURAL_STATISTICS_CREATE_INFO_ARM = 1000676001,
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DATA_GRAPH_NEURAL_ACCELERATOR_STATISTICS_FEATURES_ARM = 1000676002,
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PRIMITIVE_RESTART_INDEX_FEATURES_EXT = 1000678000,
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_DECODE_VECTOR_FEATURES_NV = 1000689000,
     VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_INFO_KHR = VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_INFO,
     VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_INFO_KHR = VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_INFO,
     VK_STRUCTURE_TYPE_MEMORY_DEDICATED_REQUIREMENTS_KHR = VK_STRUCTURE_TYPE_MEMORY_DEDICATED_REQUIREMENTS,
@@ -6268,6 +6274,7 @@ typedef enum VkDriverId {
     VK_DRIVER_ID_MESA_HONEYKRISP = 26 /* Mesa open source project */,
     VK_DRIVER_ID_VULKAN_SC_EMULATION_ON_VULKAN = 27 /* Vulkan SC Emulation on Vulkan */,
     VK_DRIVER_ID_MESA_KOSMICKRISP = 28 /* Mesa open source project */,
+    VK_DRIVER_ID_MESA_GFXSTREAM = 29 /* Mesa open source project */,
     VK_DRIVER_ID_AMD_PROPRIETARY_KHR = VK_DRIVER_ID_AMD_PROPRIETARY,
     VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR = VK_DRIVER_ID_AMD_OPEN_SOURCE,
     VK_DRIVER_ID_MESA_RADV_KHR = VK_DRIVER_ID_MESA_RADV,
@@ -8603,7 +8610,7 @@ typedef enum VkNeuralAcceleratorStatisticsModeARM {
  * same platform guard are coalesced into a single #ifdef/#endif block.
  */
 /* Version of this file */
-#define VK_HEADER_VERSION 351
+#define VK_HEADER_VERSION 352
 
 #define VK_DEFINE_HANDLE(object) typedef struct object##_T* object;
 
@@ -14932,6 +14939,12 @@ typedef struct VkCooperativeMatrixFlexibleDimensionsPropertiesNV {
     VkScopeKHR                          scope;
     uint32_t                            workgroupInvocations;
 } VkCooperativeMatrixFlexibleDimensionsPropertiesNV;
+
+typedef struct VkPhysicalDeviceCooperativeMatrixDecodeVectorFeaturesNV {
+    VkStructureType sType;
+    void*               pNext;
+    VkBool32                            cooperativeMatrixDecodeVector;
+} VkPhysicalDeviceCooperativeMatrixDecodeVectorFeaturesNV;
 
 typedef struct VkPhysicalDeviceHdrVividFeaturesHUAWEI {
     VkStructureType sType;
@@ -22841,7 +22854,7 @@ typedef struct GloamVulkanContext {
     };
 
     union {
-        unsigned char extArray[464];
+        unsigned char extArray[465];
         struct {
         /*    0 */ unsigned char AMDX_dense_geometry_format;
         /*    1 */ unsigned char AMDX_shader_enqueue;
@@ -23217,96 +23230,97 @@ typedef struct GloamVulkanContext {
         /*  371 */ unsigned char NV_compute_shader_derivatives;
         /*  372 */ unsigned char NV_cooperative_matrix;
         /*  373 */ unsigned char NV_cooperative_matrix2;
-        /*  374 */ unsigned char NV_cooperative_vector;
-        /*  375 */ unsigned char NV_copy_memory_indirect;
-        /*  376 */ unsigned char NV_corner_sampled_image;
-        /*  377 */ unsigned char NV_coverage_reduction_mode;
-        /*  378 */ unsigned char NV_cuda_kernel_launch;
-        /*  379 */ unsigned char NV_dedicated_allocation;
-        /*  380 */ unsigned char NV_dedicated_allocation_image_aliasing;
-        /*  381 */ unsigned char NV_descriptor_pool_overallocation;
-        /*  382 */ unsigned char NV_device_diagnostic_checkpoints;
-        /*  383 */ unsigned char NV_device_diagnostics_config;
-        /*  384 */ unsigned char NV_device_generated_commands;
-        /*  385 */ unsigned char NV_device_generated_commands_compute;
-        /*  386 */ unsigned char NV_displacement_micromap;
-        /*  387 */ unsigned char NV_display_stereo;
-        /*  388 */ unsigned char NV_extended_sparse_address_space;
-        /*  389 */ unsigned char NV_external_compute_queue;
-        /*  390 */ unsigned char NV_external_memory;
-        /*  391 */ unsigned char NV_external_memory_capabilities;
-        /*  392 */ unsigned char NV_external_memory_rdma;
-        /*  393 */ unsigned char NV_external_memory_win32;
-        /*  394 */ unsigned char NV_fill_rectangle;
-        /*  395 */ unsigned char NV_fragment_coverage_to_color;
-        /*  396 */ unsigned char NV_fragment_shader_barycentric;
-        /*  397 */ unsigned char NV_fragment_shading_rate_enums;
-        /*  398 */ unsigned char NV_framebuffer_mixed_samples;
-        /*  399 */ unsigned char NV_geometry_shader_passthrough;
-        /*  400 */ unsigned char NV_glsl_shader;
-        /*  401 */ unsigned char NV_inherited_viewport_scissor;
-        /*  402 */ unsigned char NV_linear_color_attachment;
-        /*  403 */ unsigned char NV_low_latency;
-        /*  404 */ unsigned char NV_low_latency2;
-        /*  405 */ unsigned char NV_memory_decompression;
-        /*  406 */ unsigned char NV_mesh_shader;
-        /*  407 */ unsigned char NV_optical_flow;
-        /*  408 */ unsigned char NV_partitioned_acceleration_structure;
-        /*  409 */ unsigned char NV_per_stage_descriptor_set;
-        /*  410 */ unsigned char NV_present_barrier;
-        /*  411 */ unsigned char NV_present_metering;
-        /*  412 */ unsigned char NV_push_constant_bank;
-        /*  413 */ unsigned char NV_raw_access_chains;
-        /*  414 */ unsigned char NV_ray_tracing;
-        /*  415 */ unsigned char NV_ray_tracing_invocation_reorder;
-        /*  416 */ unsigned char NV_ray_tracing_linear_swept_spheres;
-        /*  417 */ unsigned char NV_ray_tracing_motion_blur;
-        /*  418 */ unsigned char NV_ray_tracing_validation;
-        /*  419 */ unsigned char NV_representative_fragment_test;
-        /*  420 */ unsigned char NV_sample_mask_override_coverage;
-        /*  421 */ unsigned char NV_scissor_exclusive;
-        /*  422 */ unsigned char NV_shader_atomic_float16_vector;
-        /*  423 */ unsigned char NV_shader_image_footprint;
-        /*  424 */ unsigned char NV_shader_sm_builtins;
-        /*  425 */ unsigned char NV_shader_subgroup_partitioned;
-        /*  426 */ unsigned char NV_shading_rate_image;
-        /*  427 */ unsigned char NV_viewport_array2;
-        /*  428 */ unsigned char NV_viewport_swizzle;
-        /*  429 */ unsigned char NV_win32_keyed_mutex;
-        /*  430 */ unsigned char OHOS_external_memory;
-        /*  431 */ unsigned char OHOS_surface;
-        /*  432 */ unsigned char QCOM_cooperative_matrix_conversion;
-        /*  433 */ unsigned char QCOM_data_graph_model;
-        /*  434 */ unsigned char QCOM_elapsed_timer_query;
-        /*  435 */ unsigned char QCOM_filter_cubic_clamp;
-        /*  436 */ unsigned char QCOM_filter_cubic_weights;
-        /*  437 */ unsigned char QCOM_fragment_density_map_offset;
-        /*  438 */ unsigned char QCOM_image_processing;
-        /*  439 */ unsigned char QCOM_image_processing2;
-        /*  440 */ unsigned char QCOM_image_processing3;
-        /*  441 */ unsigned char QCOM_multiview_per_view_render_areas;
-        /*  442 */ unsigned char QCOM_multiview_per_view_viewports;
-        /*  443 */ unsigned char QCOM_queue_perf_hint;
-        /*  444 */ unsigned char QCOM_render_pass_shader_resolve;
-        /*  445 */ unsigned char QCOM_render_pass_store_ops;
-        /*  446 */ unsigned char QCOM_render_pass_transform;
-        /*  447 */ unsigned char QCOM_rotated_copy_commands;
-        /*  448 */ unsigned char QCOM_shader_multiple_wait_queues;
-        /*  449 */ unsigned char QCOM_tile_memory_heap;
-        /*  450 */ unsigned char QCOM_tile_properties;
-        /*  451 */ unsigned char QCOM_tile_shading;
-        /*  452 */ unsigned char QCOM_ycbcr_degamma;
-        /*  453 */ unsigned char QNX_external_memory_screen_buffer;
-        /*  454 */ unsigned char QNX_screen_surface;
-        /*  455 */ unsigned char SEC_amigo_profiling;
-        /*  456 */ unsigned char SEC_pipeline_cache_incremental_mode;
-        /*  457 */ unsigned char SEC_throttle_hint;
-        /*  458 */ unsigned char SEC_ubm_surface;
-        /*  459 */ unsigned char VALVE_descriptor_set_host_mapping;
-        /*  460 */ unsigned char VALVE_fragment_density_map_layered;
-        /*  461 */ unsigned char VALVE_mutable_descriptor_type;
-        /*  462 */ unsigned char VALVE_shader_mixed_float_dot_product;
-        /*  463 */ unsigned char VALVE_video_encode_rgb_conversion;
+        /*  374 */ unsigned char NV_cooperative_matrix_decode_vector;
+        /*  375 */ unsigned char NV_cooperative_vector;
+        /*  376 */ unsigned char NV_copy_memory_indirect;
+        /*  377 */ unsigned char NV_corner_sampled_image;
+        /*  378 */ unsigned char NV_coverage_reduction_mode;
+        /*  379 */ unsigned char NV_cuda_kernel_launch;
+        /*  380 */ unsigned char NV_dedicated_allocation;
+        /*  381 */ unsigned char NV_dedicated_allocation_image_aliasing;
+        /*  382 */ unsigned char NV_descriptor_pool_overallocation;
+        /*  383 */ unsigned char NV_device_diagnostic_checkpoints;
+        /*  384 */ unsigned char NV_device_diagnostics_config;
+        /*  385 */ unsigned char NV_device_generated_commands;
+        /*  386 */ unsigned char NV_device_generated_commands_compute;
+        /*  387 */ unsigned char NV_displacement_micromap;
+        /*  388 */ unsigned char NV_display_stereo;
+        /*  389 */ unsigned char NV_extended_sparse_address_space;
+        /*  390 */ unsigned char NV_external_compute_queue;
+        /*  391 */ unsigned char NV_external_memory;
+        /*  392 */ unsigned char NV_external_memory_capabilities;
+        /*  393 */ unsigned char NV_external_memory_rdma;
+        /*  394 */ unsigned char NV_external_memory_win32;
+        /*  395 */ unsigned char NV_fill_rectangle;
+        /*  396 */ unsigned char NV_fragment_coverage_to_color;
+        /*  397 */ unsigned char NV_fragment_shader_barycentric;
+        /*  398 */ unsigned char NV_fragment_shading_rate_enums;
+        /*  399 */ unsigned char NV_framebuffer_mixed_samples;
+        /*  400 */ unsigned char NV_geometry_shader_passthrough;
+        /*  401 */ unsigned char NV_glsl_shader;
+        /*  402 */ unsigned char NV_inherited_viewport_scissor;
+        /*  403 */ unsigned char NV_linear_color_attachment;
+        /*  404 */ unsigned char NV_low_latency;
+        /*  405 */ unsigned char NV_low_latency2;
+        /*  406 */ unsigned char NV_memory_decompression;
+        /*  407 */ unsigned char NV_mesh_shader;
+        /*  408 */ unsigned char NV_optical_flow;
+        /*  409 */ unsigned char NV_partitioned_acceleration_structure;
+        /*  410 */ unsigned char NV_per_stage_descriptor_set;
+        /*  411 */ unsigned char NV_present_barrier;
+        /*  412 */ unsigned char NV_present_metering;
+        /*  413 */ unsigned char NV_push_constant_bank;
+        /*  414 */ unsigned char NV_raw_access_chains;
+        /*  415 */ unsigned char NV_ray_tracing;
+        /*  416 */ unsigned char NV_ray_tracing_invocation_reorder;
+        /*  417 */ unsigned char NV_ray_tracing_linear_swept_spheres;
+        /*  418 */ unsigned char NV_ray_tracing_motion_blur;
+        /*  419 */ unsigned char NV_ray_tracing_validation;
+        /*  420 */ unsigned char NV_representative_fragment_test;
+        /*  421 */ unsigned char NV_sample_mask_override_coverage;
+        /*  422 */ unsigned char NV_scissor_exclusive;
+        /*  423 */ unsigned char NV_shader_atomic_float16_vector;
+        /*  424 */ unsigned char NV_shader_image_footprint;
+        /*  425 */ unsigned char NV_shader_sm_builtins;
+        /*  426 */ unsigned char NV_shader_subgroup_partitioned;
+        /*  427 */ unsigned char NV_shading_rate_image;
+        /*  428 */ unsigned char NV_viewport_array2;
+        /*  429 */ unsigned char NV_viewport_swizzle;
+        /*  430 */ unsigned char NV_win32_keyed_mutex;
+        /*  431 */ unsigned char OHOS_external_memory;
+        /*  432 */ unsigned char OHOS_surface;
+        /*  433 */ unsigned char QCOM_cooperative_matrix_conversion;
+        /*  434 */ unsigned char QCOM_data_graph_model;
+        /*  435 */ unsigned char QCOM_elapsed_timer_query;
+        /*  436 */ unsigned char QCOM_filter_cubic_clamp;
+        /*  437 */ unsigned char QCOM_filter_cubic_weights;
+        /*  438 */ unsigned char QCOM_fragment_density_map_offset;
+        /*  439 */ unsigned char QCOM_image_processing;
+        /*  440 */ unsigned char QCOM_image_processing2;
+        /*  441 */ unsigned char QCOM_image_processing3;
+        /*  442 */ unsigned char QCOM_multiview_per_view_render_areas;
+        /*  443 */ unsigned char QCOM_multiview_per_view_viewports;
+        /*  444 */ unsigned char QCOM_queue_perf_hint;
+        /*  445 */ unsigned char QCOM_render_pass_shader_resolve;
+        /*  446 */ unsigned char QCOM_render_pass_store_ops;
+        /*  447 */ unsigned char QCOM_render_pass_transform;
+        /*  448 */ unsigned char QCOM_rotated_copy_commands;
+        /*  449 */ unsigned char QCOM_shader_multiple_wait_queues;
+        /*  450 */ unsigned char QCOM_tile_memory_heap;
+        /*  451 */ unsigned char QCOM_tile_properties;
+        /*  452 */ unsigned char QCOM_tile_shading;
+        /*  453 */ unsigned char QCOM_ycbcr_degamma;
+        /*  454 */ unsigned char QNX_external_memory_screen_buffer;
+        /*  455 */ unsigned char QNX_screen_surface;
+        /*  456 */ unsigned char SEC_amigo_profiling;
+        /*  457 */ unsigned char SEC_pipeline_cache_incremental_mode;
+        /*  458 */ unsigned char SEC_throttle_hint;
+        /*  459 */ unsigned char SEC_ubm_surface;
+        /*  460 */ unsigned char VALVE_descriptor_set_host_mapping;
+        /*  461 */ unsigned char VALVE_fragment_density_map_layered;
+        /*  462 */ unsigned char VALVE_mutable_descriptor_type;
+        /*  463 */ unsigned char VALVE_shader_mixed_float_dot_product;
+        /*  464 */ unsigned char VALVE_video_encode_rgb_conversion;
         };
     };
 
@@ -24766,6 +24780,7 @@ extern GloamVulkanContext gloam_vk_context;
 #define GLOAM_VK_NV_compute_shader_derivatives (gloam_vk_context.NV_compute_shader_derivatives)
 #define GLOAM_VK_NV_cooperative_matrix (gloam_vk_context.NV_cooperative_matrix)
 #define GLOAM_VK_NV_cooperative_matrix2 (gloam_vk_context.NV_cooperative_matrix2)
+#define GLOAM_VK_NV_cooperative_matrix_decode_vector (gloam_vk_context.NV_cooperative_matrix_decode_vector)
 #define GLOAM_VK_NV_cooperative_vector (gloam_vk_context.NV_cooperative_vector)
 #define GLOAM_VK_NV_copy_memory_indirect (gloam_vk_context.NV_copy_memory_indirect)
 #define GLOAM_VK_NV_corner_sampled_image (gloam_vk_context.NV_corner_sampled_image)
