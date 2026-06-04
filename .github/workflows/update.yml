@@ -12,6 +12,10 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    # Used by gloam for the GitHub API (provenance acquisition).  The automatic
+    # token reads public repos fine and lifts the rate limit to 1000 req/hr.
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v6
 
@@ -68,6 +72,17 @@ jobs:
             ~/.cargo/git
           key: ${{ runner.os }}-cargo-install-gloam-${{ steps.crate_version.outputs.version }}
 
+      # Persist gloam's provenance cache (SQLite + WAL sidecars) across runs so
+      # unchanged upstream blobs aren't re-downloaded.  A unique key always
+      # saves; restore-keys restores the most recent prior cache.
+      - name: Restore gloam provenance cache
+        uses: actions/cache/restore@v5
+        with:
+          path: ~/.cache/gloam
+          key: gloam-provenance-${{ github.run_id }}
+          restore-keys: |
+            gloam-provenance-
+
       # Snapshot file sizes before regeneration so we can detect regressions.
       - name: Record baseline sizes
         run: |
@@ -78,13 +93,20 @@ jobs:
       # Wipe old output so removed files don't linger.
       - name: Clean previous output
         run: |
-          rm -rf vulkan/include vulkan/src
-          rm -rf gl-egl/include gl-egl/src
+          rm -rf vulkan/include vulkan/src vulkan/.gloam
+          rm -rf vulkan-aio/include vulkan-aio/src vulkan-aio/.gloam
+          rm -rf gl-egl/include gl-egl/src gl-egl/.gloam
+
+      # Preflight: snapshot every upstream source at its current HEAD once, so
+      # all three loaders below are generated from one consistent instant.
+      - name: Snapshot upstream provenance
+        run: gloam --fetch lock --out manifest.json
 
       - name: Generate Vulkan loader (with Vulkan-Headers dependency)
         run: >
           gloam
           --api vk
+          --lock manifest.json
           --fetch
           --out-path vulkan
           --quiet
@@ -94,6 +116,7 @@ jobs:
         run: >
           gloam
           --api vk
+          --lock manifest.json
           --fetch
           --out-path vulkan-aio
           --quiet
@@ -104,10 +127,17 @@ jobs:
           gloam
           --api gl:core,gles2,egl
           --merge
+          --lock manifest.json
           --fetch
           --out-path gl-egl
           --quiet
           c --alias --loader
+
+      - name: Save gloam provenance cache
+        uses: actions/cache/save@v5
+        with:
+          path: ~/.cache/gloam
+          key: gloam-provenance-${{ github.run_id }}
 
       - name: Clone Vulkan-Headers
         uses: actions/checkout@v6
@@ -152,16 +182,30 @@ jobs:
           fi
           echo "Size check passed."
 
-      # Commit and push only if the output actually changed.
+      # Commit and push only if the output actually changed.  The commit message
+      # is built from manifest.json: the gloam version plus each upstream repo's
+      # git describe and commit, so the history records exactly what was used.
       - name: Commit if changed
         run: |
+          set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes — nothing to commit."
           else
-            version=$(gloam --version | awk '{ print $2 }')
-            git commit -m "chore: update generated output (gloam v${version})"
+            gloam_ver="$(jq -r '.gloam.describe' manifest.json)"
+            sources="$(
+              jq -r '
+                .provenance
+                | to_entries | map(.value)
+                | group_by(.repo)[]
+                | "- \(.[0].repo) @ \(.[0].describe) (commit \(.[0].commit[0:12]))"
+              ' manifest.json | sort
+            )"
+            git commit \
+              -m "chore: update generated output (gloam ${gloam_ver})" \
+              -m "Regenerated from this upstream snapshot:" \
+              -m "${sources}"
             git push
           fi
