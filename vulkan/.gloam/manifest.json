@@ -11,104 +11,104 @@
       "repo": "KhronosGroup/Vulkan-Docs",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Docs",
       "path_in_repo": "xml/vk.xml",
-      "commit": "e2843a23d3c5a2c5e93e27d3b0fcd2c1087b0b64",
-      "describe": "v1.4.352",
-      "blob": "0241edfe50de54d24fd2378b34d63226e7b63706"
+      "commit": "4abe0260bbd8e59930786eed645481808a3fe6f1",
+      "describe": "v1.4.353",
+      "blob": "8bcca5a28d71a0f8c0fd46abd2e7dbbde74fcfc5"
     },
     "vk_video/vulkan_video_codec_av1std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_av1std.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "75cebd74cbfe4273c1b5b8a9f3ddb34d83e6ab72"
     },
     "vk_video/vulkan_video_codec_av1std_decode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_av1std_decode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "60bf2c0398761b65f2704a1969c94316d8a411a5"
     },
     "vk_video/vulkan_video_codec_av1std_encode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_av1std_encode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "3602fe1250214bb6506463becf7bf20d2e22f7d7"
     },
     "vk_video/vulkan_video_codec_h264std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_h264std.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "48621b6954d7057f4ec8ce64a8a78e1683b278cb"
     },
     "vk_video/vulkan_video_codec_h264std_decode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_h264std_decode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "a6bfe9d8228a0e29c22099fe969b25e3df4d8712"
     },
     "vk_video/vulkan_video_codec_h264std_encode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_h264std_encode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "2d42ac321b8d6add0f7109940de8e0cddba874c5"
     },
     "vk_video/vulkan_video_codec_h265std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_h265std.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "23617b8f962f38585c554daf51f513bf5ae14bce"
     },
     "vk_video/vulkan_video_codec_h265std_decode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_h265std_decode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "1758d4a88ddaf8eb13aa5825633ccc880ae38d74"
     },
     "vk_video/vulkan_video_codec_h265std_encode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_h265std_encode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "e584a7262b9579a4f591e1c071244e653d142f33"
     },
     "vk_video/vulkan_video_codec_vp9std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_vp9std.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "3c62f287e76ec2c5ff525764af7d03f4d365300d"
     },
     "vk_video/vulkan_video_codec_vp9std_decode.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vk_video/vulkan_video_codec_vp9std_decode.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "ac7fa7be8c6b52ea571ee4db91ba58940b69e637"
     },
     "vulkan/vk_platform.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Headers",
       "path_in_repo": "include/vulkan/vk_platform.h",
-      "commit": "015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
-      "describe": "v1.4.352",
+      "commit": "45834b722e29ca6968f3811ae930eae7bb73e9e8",
+      "describe": "v1.4.353",
       "blob": "e431c7631db6743278f7a116edfeb2e6b859d2cc"
     },
     "xxhash.h": {
@@ -123,7 +123,7 @@
   "output": [
     {
       "path": "include/gloam/vulkan.h",
-      "blob": "36a5d188cc56365db1243c0bd85fefcadeefe021",
+      "blob": "c0cf2e9cc31b1c48d75235a60ca7834d419d1de3",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -151,7 +151,7 @@
     },
     {
       "path": "src/vulkan.c",
-      "blob": "788abf30fa7dceb58ce58b684bc54764ec1f8311",
+      "blob": "a33c257c431f62914eb9a940ab5c8a142f9d60e9",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
