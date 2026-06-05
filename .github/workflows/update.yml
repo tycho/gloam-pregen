@@ -79,7 +79,7 @@ jobs:
         uses: actions/cache/restore@v5
         with:
           path: ~/.cache/gloam
-          key: gloam-provenance-${{ github.run_id }}
+          key: gloam-provenance-${{ steps.crate_version.outputs.version }}
           restore-keys: |
             gloam-provenance-
 
@@ -137,7 +137,7 @@ jobs:
         uses: actions/cache/save@v5
         with:
           path: ~/.cache/gloam
-          key: gloam-provenance-${{ github.run_id }}
+          key: gloam-provenance-${{ steps.crate_version.outputs.version }}
 
       - name: Clone Vulkan-Headers
         uses: actions/checkout@v6
