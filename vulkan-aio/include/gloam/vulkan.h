@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   KhronosGroup/Vulkan-Docs (v1.4.353)
- *     xml/vk.xml (blob 8bcca5a)
+ *   KhronosGroup/Vulkan-Docs (v1.4.353-1-g5056ed9)
+ *     xml/vk.xml (blob bf86758)
  *   KhronosGroup/Vulkan-Headers (v1.4.353)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob 75cebd7)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 60bf2c0)
@@ -6410,6 +6410,7 @@ typedef enum VkVendorId {
     VK_VENDOR_ID_MESA = 0x10005 /* Mesa vendor ID */,
     VK_VENDOR_ID_POCL = 0x10006 /* PoCL vendor ID */,
     VK_VENDOR_ID_MOBILEYE = 0x10007 /* Mobileye vendor ID */,
+    VK_VENDOR_ID_APE = 0x10008 /* Ape vendor ID */,
     VK_VENDOR_ID_MAX_ENUM = 0x7FFFFFFF
 } VkVendorId;
 
@@ -6443,6 +6444,7 @@ typedef enum VkDriverId {
     VK_DRIVER_ID_VULKAN_SC_EMULATION_ON_VULKAN = 27 /* Vulkan SC Emulation on Vulkan */,
     VK_DRIVER_ID_MESA_KOSMICKRISP = 28 /* Mesa open source project */,
     VK_DRIVER_ID_MESA_GFXSTREAM = 29 /* Mesa open source project */,
+    VK_DRIVER_ID_APE_SOFT = 30 /* Ape open source project */,
     VK_DRIVER_ID_AMD_PROPRIETARY_KHR = VK_DRIVER_ID_AMD_PROPRIETARY,
     VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR = VK_DRIVER_ID_AMD_OPEN_SOURCE,
     VK_DRIVER_ID_MESA_RADV_KHR = VK_DRIVER_ID_MESA_RADV,

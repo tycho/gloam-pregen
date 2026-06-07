@@ -35,8 +35,8 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/egl_angle_ext.xml",
-      "commit": "2c9098ad1320d9b4a5b5a395de43ac2adf89c968",
-      "describe": "2c9098a",
+      "commit": "e53ecb3f8dbd797748dd21eea0a5606b54d82802",
+      "describe": "e53ecb3",
       "blob": "5ff7f83dcd72014797d9972f1fbe3809f4849d76"
     },
     "gl.xml": {
@@ -51,8 +51,8 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/gl_angle_ext.xml",
-      "commit": "2c9098ad1320d9b4a5b5a395de43ac2adf89c968",
-      "describe": "2c9098a",
+      "commit": "e53ecb3f8dbd797748dd21eea0a5606b54d82802",
+      "describe": "e53ecb3",
       "blob": "1c4b34c8b37a5900244e89ef6883990f0452426e"
     },
     "glsl_exts.xml": {
@@ -75,9 +75,9 @@
       "repo": "KhronosGroup/Vulkan-Docs",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Docs",
       "path_in_repo": "xml/vk.xml",
-      "commit": "4abe0260bbd8e59930786eed645481808a3fe6f1",
-      "describe": "v1.4.353",
-      "blob": "8bcca5a28d71a0f8c0fd46abd2e7dbbde74fcfc5"
+      "commit": "5056ed95c01b2c96758a8e1883fdbb47e72b4662",
+      "describe": "v1.4.353-1-g5056ed9",
+      "blob": "bf86758ae7825916c4660c58fab4f8bb01ce4884"
     },
     "vk_video/vulkan_video_codec_av1std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
