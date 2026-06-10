@@ -35,24 +35,24 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/egl_angle_ext.xml",
-      "commit": "30d7a564a7506aff6b46f5c7d80768fbf7bc2374",
-      "describe": "30d7a56",
+      "commit": "0c063596e689ba00c0e586284d93f0ff2285f7a7",
+      "describe": "0c06359",
       "blob": "5ff7f83dcd72014797d9972f1fbe3809f4849d76"
     },
     "gl.xml": {
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/gl.xml",
-      "commit": "a30033d3e812c9bf10094f1010374a6b15e192eb",
-      "describe": "a30033d",
-      "blob": "326bddab1cad089ec2bf5b06dc3813dd88632e76"
+      "commit": "9d527dbc81bb76e35ba284fe385ed8a5ddb90cbc",
+      "describe": "9d527db",
+      "blob": "902d7aabcd5e6d6fdb348b20f1a1b9733dac5fbb"
     },
     "gl_angle_ext.xml": {
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/gl_angle_ext.xml",
-      "commit": "30d7a564a7506aff6b46f5c7d80768fbf7bc2374",
-      "describe": "30d7a56",
+      "commit": "0c063596e689ba00c0e586284d93f0ff2285f7a7",
+      "describe": "0c06359",
       "blob": "1c4b34c8b37a5900244e89ef6883990f0452426e"
     },
     "glsl_exts.xml": {
@@ -67,8 +67,8 @@
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/glx.xml",
-      "commit": "a30033d3e812c9bf10094f1010374a6b15e192eb",
-      "describe": "a30033d",
+      "commit": "9d527dbc81bb76e35ba284fe385ed8a5ddb90cbc",
+      "describe": "9d527db",
       "blob": "80bce12bf53a81f58fd585846495cf1937b35b44"
     },
     "vk.xml": {
@@ -187,8 +187,8 @@
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/wgl.xml",
-      "commit": "a30033d3e812c9bf10094f1010374a6b15e192eb",
-      "describe": "a30033d",
+      "commit": "9d527dbc81bb76e35ba284fe385ed8a5ddb90cbc",
+      "describe": "9d527db",
       "blob": "1ef34b838104167593158efa3d631bf851a0d4bc"
     },
     "xxhash.h": {

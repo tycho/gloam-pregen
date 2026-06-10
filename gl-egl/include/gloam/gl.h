@@ -24,12 +24,12 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   google/angle (30d7a56)
+ *   google/angle (0c06359)
  *     scripts/gl_angle_ext.xml (blob 1c4b34c)
  *   KhronosGroup/EGL-Registry (3d7796b)
  *     api/KHR/khrplatform.h (blob 0164644)
- *   KhronosGroup/OpenGL-Registry (a30033d)
- *     xml/gl.xml (blob 326bdda)
+ *   KhronosGroup/OpenGL-Registry (9d527db)
+ *     xml/gl.xml (blob 902d7aa)
  *   tycho/gloam (0.4.11)
  *     bundled/xml/glsl_exts.xml (blob f4651bd)
  *
@@ -8823,7 +8823,7 @@ typedef void (APIENTRYP PFNGLREADNPIXELSKHRPROC)(GLint x, GLint y, GLsizei width
 typedef void (APIENTRYP PFNGLMAXSHADERCOMPILERTHREADSKHRPROC)(GLuint count);
 typedef void (APIENTRYP PFNGLFRAMEBUFFERPARAMETERIMESAPROC)(GLenum target, GLenum pname, GLint param);
 typedef void (APIENTRYP PFNGLGETFRAMEBUFFERPARAMETERIVMESAPROC)(GLenum target, GLenum pname, GLint * params);
-typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC)(GLvoid * addr, GLsizeiptr size);
+typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC)(void * addr, GLsizeiptr size);
 typedef void* (APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC)(GLsizeiptr * size);
 typedef void (APIENTRYP PFNGLRESIZEBUFFERSMESAPROC)(void);
 typedef void (APIENTRYP PFNGLWINDOWPOS2DMESAPROC)(GLdouble x, GLdouble y);
@@ -16769,7 +16769,7 @@ void glReadnPixelsKHR(GLint x, GLint y, GLsizei width, GLsizei height, GLenum fo
 void glMaxShaderCompilerThreadsKHR(GLuint count);
 void glFramebufferParameteriMESA(GLenum target, GLenum pname, GLint param);
 void glGetFramebufferParameterivMESA(GLenum target, GLenum pname, GLint * params);
-void glAddClientPointerRangeMESA(GLvoid * addr, GLsizeiptr size);
+void glAddClientPointerRangeMESA(void * addr, GLsizeiptr size);
 void* glReleaseClientPointerRangeMESA(GLsizeiptr * size);
 void glResizeBuffersMESA(void);
 void glWindowPos2dMESA(GLdouble x, GLdouble y);

@@ -24,12 +24,12 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   google/angle (30d7a56)
+ *   google/angle (0c06359)
  *     scripts/gl_angle_ext.xml (blob 1c4b34c)
  *   KhronosGroup/EGL-Registry (3d7796b)
  *     api/KHR/khrplatform.h (blob 0164644)
- *   KhronosGroup/OpenGL-Registry (a30033d)
- *     xml/gl.xml (blob 326bdda)
+ *   KhronosGroup/OpenGL-Registry (9d527db)
+ *     xml/gl.xml (blob 902d7aa)
  *   tycho/gloam (0.4.11)
  *     bundled/xml/glsl_exts.xml (blob f4651bd)
  *
