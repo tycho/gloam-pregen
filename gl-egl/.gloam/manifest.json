@@ -35,8 +35,8 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/egl_angle_ext.xml",
-      "commit": "8e09325ebad45c7e11630a79754361e965e5fab0",
-      "describe": "8e09325",
+      "commit": "81a96a84e6e6f3b71b3f6f66128b1490d077bf64",
+      "describe": "81a96a8",
       "blob": "5ff7f83dcd72014797d9972f1fbe3809f4849d76"
     },
     "gl.xml": {
@@ -51,8 +51,8 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/gl_angle_ext.xml",
-      "commit": "8e09325ebad45c7e11630a79754361e965e5fab0",
-      "describe": "8e09325",
+      "commit": "81a96a84e6e6f3b71b3f6f66128b1490d077bf64",
+      "describe": "81a96a8",
       "blob": "1c4b34c8b37a5900244e89ef6883990f0452426e"
     },
     "glsl_exts.xml": {
@@ -91,7 +91,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "e3ad8b118536e2160fa410f9a39ce9c8894dd9ae",
+      "blob": "d44782871df19796cf9c4d39108a106419a8cfb6",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -102,7 +102,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "a292334bc6cc72f2985a622e1734088178aebc25",
+      "blob": "7c056a797a07cb39ab12ec101cb3f1a8d76ad103",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -121,7 +121,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "0f0de0143b1bf5f1b161068a240ea61e7c0a2aca",
+      "blob": "623a8565b2cb32d1ec33e5f00cf3e67602bf1b72",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -132,7 +132,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "8b442046b5d232adf5c9f4b6e78c56c786ff5377",
+      "blob": "47f230960d381b9a616fca8f4edc88787fde7c30",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
