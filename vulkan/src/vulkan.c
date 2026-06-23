@@ -22,7 +22,7 @@
  *     xxhash.h (blob dceb921)
  *   KhronosGroup/Vulkan-Docs (v1.4.354)
  *     xml/vk.xml (blob 4d66622)
- *   KhronosGroup/Vulkan-Headers (v1.4.354)
+ *   KhronosGroup/Vulkan-Headers (v1.4.354-1-g0307c70)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob 75cebd7)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 60bf2c0)
  *     include/vk_video/vulkan_video_codec_av1std_encode.h (blob 3602fe1)
