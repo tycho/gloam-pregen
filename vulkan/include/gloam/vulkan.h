@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   KhronosGroup/Vulkan-Docs (v1.4.354)
- *     xml/vk.xml (blob 4d66622)
+ *   KhronosGroup/Vulkan-Docs (v1.4.354-2-gc2b4a2a)
+ *     xml/vk.xml (blob 1f857b6)
  *   KhronosGroup/Vulkan-Headers (v1.4.354-1-g0307c70)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob 75cebd7)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 60bf2c0)
