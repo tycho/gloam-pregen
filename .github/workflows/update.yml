@@ -44,7 +44,7 @@ jobs:
 
       - name: Restore cargo-install cache
         id: cargo_cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: |
             ~/.cargo/bin
@@ -62,7 +62,7 @@ jobs:
 
       - name: Save cargo-install cache
         if: steps.cargo_cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: |
             ~/.cargo/bin
@@ -76,7 +76,7 @@ jobs:
       # unchanged upstream blobs aren't re-downloaded.  A unique key always
       # saves; restore-keys restores the most recent prior cache.
       - name: Restore gloam provenance cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: ~/.cache/gloam
           key: gloam-provenance-${{ steps.crate_version.outputs.version }}
@@ -134,7 +134,7 @@ jobs:
           c --alias --loader
 
       - name: Save gloam provenance cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: ~/.cache/gloam
           key: gloam-provenance-${{ steps.crate_version.outputs.version }}
