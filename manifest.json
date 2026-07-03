@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "gloam": {
-    "version": "0.4.11",
-    "describe": "0.4.11",
+    "version": "0.4.12",
+    "describe": "0.4.12",
     "commit": "",
     "command_line": "gloam --fetch lock --out manifest.json"
   },
@@ -59,8 +59,8 @@
       "repo": "tycho/gloam",
       "repo_url": "https://github.com/tycho/gloam",
       "path_in_repo": "bundled/xml/glsl_exts.xml",
-      "commit": "0c8ced30f035da2c45386595d296fdd3209efaec",
-      "describe": "0.4.11",
+      "commit": "eff581223fc4853c2e79e1edbfde9c8ac727624c",
+      "describe": "0.4.12",
       "blob": "f4651bd4d326c0eb4504dc19c99efb7f323ed5ca"
     },
     "glx.xml": {
