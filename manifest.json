@@ -35,8 +35,8 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/egl_angle_ext.xml",
-      "commit": "dc4634c5d32a83a78d0997a32daa738c48953329",
-      "describe": "dc4634c",
+      "commit": "69e200e7178a823e1825f301a2c4ea2f1449ad91",
+      "describe": "69e200e",
       "blob": "f1bbc3a88789860a0e2c3e0348fa6c659eb41925"
     },
     "gl.xml": {
@@ -51,8 +51,8 @@
       "repo": "google/angle",
       "repo_url": "https://github.com/google/angle",
       "path_in_repo": "scripts/gl_angle_ext.xml",
-      "commit": "dc4634c5d32a83a78d0997a32daa738c48953329",
-      "describe": "dc4634c",
+      "commit": "69e200e7178a823e1825f301a2c4ea2f1449ad91",
+      "describe": "69e200e",
       "blob": "1c4b34c8b37a5900244e89ef6883990f0452426e"
     },
     "glsl_exts.xml": {
