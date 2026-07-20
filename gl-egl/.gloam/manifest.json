@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "gloam": {
-    "version": "0.4.13",
-    "describe": "0.4.13",
+    "version": "0.5.1",
+    "describe": "0.5.1",
     "commit": "",
     "command_line": "gloam --api gl:core,gles2,egl --merge --fetch --out-path gl-egl --quiet c --alias --loader"
   },
@@ -12,7 +12,6 @@
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/EGL/eglplatform.h",
       "commit": "3d7796b3721d93976b6bfe536aa97bbc4bce8667",
-      "describe": "3d7796b",
       "blob": "6786afd90b685895efa25b302afba68fc8296941"
     },
     "KHR/khrplatform.h": {
@@ -20,7 +19,6 @@
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/KHR/khrplatform.h",
       "commit": "3d7796b3721d93976b6bfe536aa97bbc4bce8667",
-      "describe": "3d7796b",
       "blob": "01646449caedc958effc3b450360aefd260671ab"
     },
     "egl.xml": {
@@ -28,15 +26,13 @@
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/egl.xml",
       "commit": "3d7796b3721d93976b6bfe536aa97bbc4bce8667",
-      "describe": "3d7796b",
       "blob": "ec184e75dfdb5d5244febe18a8f380cdea60bd03"
     },
     "egl_angle_ext.xml": {
-      "repo": "google/angle",
-      "repo_url": "https://github.com/google/angle",
+      "repo": "angle/angle",
+      "repo_url": "https://chromium.googlesource.com/angle/angle",
       "path_in_repo": "scripts/egl_angle_ext.xml",
-      "commit": "69e200e7178a823e1825f301a2c4ea2f1449ad91",
-      "describe": "69e200e",
+      "commit": "6e09ee679387f2eadd22f2c35fdc7c774d2e71bb",
       "blob": "f1bbc3a88789860a0e2c3e0348fa6c659eb41925"
     },
     "gl.xml": {
@@ -44,31 +40,27 @@
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/gl.xml",
       "commit": "9d527dbc81bb76e35ba284fe385ed8a5ddb90cbc",
-      "describe": "9d527db",
       "blob": "902d7aabcd5e6d6fdb348b20f1a1b9733dac5fbb"
     },
     "gl_angle_ext.xml": {
-      "repo": "google/angle",
-      "repo_url": "https://github.com/google/angle",
+      "repo": "angle/angle",
+      "repo_url": "https://chromium.googlesource.com/angle/angle",
       "path_in_repo": "scripts/gl_angle_ext.xml",
-      "commit": "69e200e7178a823e1825f301a2c4ea2f1449ad91",
-      "describe": "69e200e",
+      "commit": "6e09ee679387f2eadd22f2c35fdc7c774d2e71bb",
       "blob": "1c4b34c8b37a5900244e89ef6883990f0452426e"
     },
     "glsl_exts.xml": {
-      "repo": "tycho/gloam",
-      "repo_url": "https://github.com/tycho/gloam",
-      "path_in_repo": "bundled/xml/glsl_exts.xml",
-      "commit": "eff581223fc4853c2e79e1edbfde9c8ac727624c",
-      "describe": "0.4.12",
-      "blob": "f4651bd4d326c0eb4504dc19c99efb7f323ed5ca"
+      "repo": "tycho/gloam-registry",
+      "repo_url": "https://github.com/tycho/gloam-registry",
+      "path_in_repo": "xml/glsl_exts.xml",
+      "commit": "1f5959b4c0d9166a8428f666b667c1b553678b71",
+      "blob": "943fe5f6cffb0a6a6c8263d4bae22e3caac56d09"
     },
     "xxhash.h": {
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
       "commit": "e573d4d2aaeaba0f3e5a0a9a54144a1f2b4b56e7",
-      "describe": "e573d4d",
       "blob": "dceb9216aa5ac144172ddab595f98c5b0f80e653"
     }
   },
@@ -91,7 +83,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "912b09636f0ca81ca44446acd9e2989e01b25579",
+      "blob": "53265c342a83127bf7b9f6d151a077b3bf7b6415",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -102,7 +94,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "0195ec0ad25cc71c527bcd95982e8efaeb293df6",
+      "blob": "4f2d5dab7de58feb54b8a0b206e4a8ffb49b59cf",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -121,7 +113,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "b835ccd447f491e781a8dd3b651f934ed94518b9",
+      "blob": "14a9e48da5a85250740032cb97f45a3a3c391c20",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -132,7 +124,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "bef489dd3f35a3672b46d21f7bd8acfb88c3c39f",
+      "blob": "dc0a005beeaeda445747cee956576e531b85bd3e",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
