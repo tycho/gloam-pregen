@@ -3,7 +3,7 @@
  *
  *   gloam --api gl:core,gles2,egl --merge --fetch --out-path gl-egl --quiet c --alias --loader
  *
- * Extensions: all (992 included)
+ * Extensions: all (991 included)
  *
  * Copyright (c) 2026 Steven Noonan
  * SPDX-License-Identifier: MIT
@@ -22,8 +22,8 @@
  *
  * Generated from the following upstream sources:
  *
- *   angle/angle (6e09ee6)
- *     scripts/gl_angle_ext.xml (blob 1c4b34c)
+ *   angle/angle (ff48557)
+ *     scripts/gl_angle_ext.xml (blob 5953358)
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
  *   KhronosGroup/EGL-Registry (3d7796b)
@@ -221,7 +221,7 @@ GloamGLContext gloam_gl_context = { 0 };
  * plus one relocation entry (~24 bytes in PIC builds) per command compared to
  * the traditional const char * const [] approach.
  */
-static const uint32_t kFnCount_GL = 2953;
+static const uint32_t kFnCount_GL = 2952;
 
 static const char kFnNameData_GL[] =
     /*     0 */ "glClearDepth\0"
@@ -3079,104 +3079,103 @@ static const char kFnNameData_GL[] =
     /* 63888 */ "glTexCoord4fVertex4fSUN\0"
     /* 63912 */ "glTexCoord4fVertex4fvSUN\0"
     /* 63937 */ "glBindUniformLocationCHROMIUM\0"
-    /* 63967 */ "glCoverageModulationCHROMIUM\0"
-    /* 63996 */ "glCopySubTextureCHROMIUM\0"
-    /* 64021 */ "glCopyTextureCHROMIUM\0"
-    /* 64043 */ "glCompressedCopyTextureCHROMIUM\0"
-    /* 64075 */ "glRequestExtensionANGLE\0"
-    /* 64099 */ "glAcquireTexturesANGLE\0"
-    /* 64122 */ "glReleaseTexturesANGLE\0"
-    /* 64145 */ "glGetActiveUniformBlockivRobustANGLE\0"
-    /* 64182 */ "glGetBooleanvRobustANGLE\0"
-    /* 64207 */ "glGetBufferParameteri64vRobustANGLE\0"
-    /* 64243 */ "glGetBufferParameterivRobustANGLE\0"
-    /* 64277 */ "glGetBufferPointervRobustANGLE\0"
-    /* 64308 */ "glGetFloatvRobustANGLE\0"
-    /* 64331 */ "glGetFramebufferAttachmentParameterivRobustANGLE\0"
-    /* 64380 */ "glGetFramebufferPixelLocalStorageParameterfvRobustANGLE\0"
-    /* 64436 */ "glGetFramebufferPixelLocalStorageParameterivRobustANGLE\0"
-    /* 64492 */ "glGetFramebufferPixelLocalStorageParameteruivRobustANGLE\0"
-    /* 64549 */ "glGetInteger64i_vRobustANGLE\0"
-    /* 64578 */ "glGetInteger64vRobustANGLE\0"
-    /* 64605 */ "glGetIntegeri_vRobustANGLE\0"
-    /* 64632 */ "glGetIntegervRobustANGLE\0"
-    /* 64657 */ "glGetInternalformativRobustANGLE\0"
-    /* 64690 */ "glGetMultisamplefvRobustANGLE\0"
-    /* 64720 */ "glGetProgramivRobustANGLE\0"
-    /* 64746 */ "glGetQueryObjecti64vRobustANGLE\0"
-    /* 64778 */ "glGetQueryObjectivRobustANGLE\0"
-    /* 64808 */ "glGetQueryObjectui64vRobustANGLE\0"
-    /* 64841 */ "glGetQueryObjectuivRobustANGLE\0"
-    /* 64872 */ "glGetQueryivRobustANGLE\0"
-    /* 64896 */ "glGetRenderbufferParameterivRobustANGLE\0"
-    /* 64936 */ "glGetSamplerParameterfvRobustANGLE\0"
-    /* 64971 */ "glGetSamplerParameterivRobustANGLE\0"
-    /* 65006 */ "glGetShaderivRobustANGLE\0"
-    /* 65031 */ "glGetTexLevelParameterfvRobustANGLE\0"
-    /* 65067 */ "glGetTexLevelParameterivRobustANGLE\0"
-    /* 65103 */ "glGetTexParameterfvRobustANGLE\0"
-    /* 65134 */ "glGetTexParameterivRobustANGLE\0"
-    /* 65165 */ "glGetUniformfvRobustANGLE\0"
-    /* 65191 */ "glGetUniformivRobustANGLE\0"
-    /* 65217 */ "glGetUniformuivRobustANGLE\0"
-    /* 65244 */ "glGetVertexAttribIivRobustANGLE\0"
-    /* 65276 */ "glGetVertexAttribIuivRobustANGLE\0"
-    /* 65309 */ "glGetVertexAttribPointervRobustANGLE\0"
-    /* 65346 */ "glGetVertexAttribfvRobustANGLE\0"
-    /* 65377 */ "glGetVertexAttribivRobustANGLE\0"
-    /* 65408 */ "glReadPixelsRobustANGLE\0"
-    /* 65432 */ "glSamplerParameterfvRobustANGLE\0"
-    /* 65464 */ "glSamplerParameterivRobustANGLE\0"
-    /* 65496 */ "glTexImage2DRobustANGLE\0"
-    /* 65520 */ "glTexImage3DRobustANGLE\0"
-    /* 65544 */ "glTexParameterfvRobustANGLE\0"
-    /* 65572 */ "glTexParameterivRobustANGLE\0"
-    /* 65600 */ "glTexSubImage2DRobustANGLE\0"
-    /* 65627 */ "glTexSubImage3DRobustANGLE\0"
-    /* 65654 */ "glCopySubTexture3DANGLE\0"
-    /* 65678 */ "glCopyTexture3DANGLE\0"
-    /* 65699 */ "glGetMultisamplefvANGLE\0"
-    /* 65723 */ "glSampleMaskiANGLE\0"
-    /* 65742 */ "glTexStorage2DMultisampleANGLE\0"
-    /* 65773 */ "glMultiDrawArraysANGLE\0"
-    /* 65796 */ "glMultiDrawArraysInstancedANGLE\0"
-    /* 65828 */ "glMultiDrawElementsANGLE\0"
-    /* 65853 */ "glMultiDrawElementsInstancedANGLE\0"
-    /* 65887 */ "glDrawArraysInstancedBaseInstanceANGLE\0"
-    /* 65926 */ "glDrawElementsInstancedBaseVertexBaseInstanceANGLE\0"
-    /* 65977 */ "glMultiDrawArraysInstancedBaseInstanceANGLE\0"
-    /* 66021 */ "glMultiDrawElementsInstancedBaseVertexBaseInstanceANGLE\0"
-    /* 66077 */ "glPolygonModeANGLE\0"
-    /* 66096 */ "glProvokingVertexANGLE\0"
-    /* 66119 */ "glLoseContextCHROMIUM\0"
-    /* 66141 */ "glGetCompressedTexImageANGLE\0"
-    /* 66170 */ "glGetRenderbufferImageANGLE\0"
-    /* 66198 */ "glGetTexImageANGLE\0"
-    /* 66217 */ "glGetTexLevelParameterfvANGLE\0"
-    /* 66247 */ "glGetTexLevelParameterivANGLE\0"
-    /* 66277 */ "glTexStorageMemFlags2DANGLE\0"
-    /* 66305 */ "glTexStorageMemFlags2DMultisampleANGLE\0"
-    /* 66344 */ "glTexStorageMemFlags3DANGLE\0"
-    /* 66372 */ "glTexStorageMemFlags3DMultisampleANGLE\0"
-    /* 66411 */ "glImportMemoryZirconHandleANGLE\0"
-    /* 66443 */ "glImportSemaphoreZirconHandleANGLE\0"
-    /* 66478 */ "glBeginPixelLocalStorageANGLE\0"
-    /* 66508 */ "glEndPixelLocalStorageANGLE\0"
-    /* 66536 */ "glEndPixelLocalStorageImplicitANGLE\0"
-    /* 66572 */ "glFramebufferMemorylessPixelLocalStorageANGLE\0"
-    /* 66618 */ "glFramebufferPixelLocalClearValuefvANGLE\0"
-    /* 66659 */ "glFramebufferPixelLocalClearValueivANGLE\0"
-    /* 66700 */ "glFramebufferPixelLocalClearValueuivANGLE\0"
-    /* 66742 */ "glFramebufferPixelLocalStorageInterruptANGLE\0"
-    /* 66787 */ "glFramebufferPixelLocalStorageRestoreANGLE\0"
-    /* 66830 */ "glFramebufferTexturePixelLocalStorageANGLE\0"
-    /* 66873 */ "glGetFramebufferPixelLocalStorageParameterfvANGLE\0"
-    /* 66923 */ "glGetFramebufferPixelLocalStorageParameterivANGLE\0"
-    /* 66973 */ "glGetFramebufferPixelLocalStorageParameteruivANGLE\0"
-    /* 67024 */ "glPixelLocalStorageBarrierANGLE\0"
-    /* 67056 */ "glLogicOpANGLE\0"
-    /* 67071 */ "glBlobCacheCallbacksANGLE\0"
-    /* 67097 */ "glGetPointervANGLE\0"
+    /* 63967 */ "glCopySubTextureCHROMIUM\0"
+    /* 63992 */ "glCopyTextureCHROMIUM\0"
+    /* 64014 */ "glCompressedCopyTextureCHROMIUM\0"
+    /* 64046 */ "glRequestExtensionANGLE\0"
+    /* 64070 */ "glAcquireTexturesANGLE\0"
+    /* 64093 */ "glReleaseTexturesANGLE\0"
+    /* 64116 */ "glGetActiveUniformBlockivRobustANGLE\0"
+    /* 64153 */ "glGetBooleanvRobustANGLE\0"
+    /* 64178 */ "glGetBufferParameteri64vRobustANGLE\0"
+    /* 64214 */ "glGetBufferParameterivRobustANGLE\0"
+    /* 64248 */ "glGetBufferPointervRobustANGLE\0"
+    /* 64279 */ "glGetFloatvRobustANGLE\0"
+    /* 64302 */ "glGetFramebufferAttachmentParameterivRobustANGLE\0"
+    /* 64351 */ "glGetFramebufferPixelLocalStorageParameterfvRobustANGLE\0"
+    /* 64407 */ "glGetFramebufferPixelLocalStorageParameterivRobustANGLE\0"
+    /* 64463 */ "glGetFramebufferPixelLocalStorageParameteruivRobustANGLE\0"
+    /* 64520 */ "glGetInteger64i_vRobustANGLE\0"
+    /* 64549 */ "glGetInteger64vRobustANGLE\0"
+    /* 64576 */ "glGetIntegeri_vRobustANGLE\0"
+    /* 64603 */ "glGetIntegervRobustANGLE\0"
+    /* 64628 */ "glGetInternalformativRobustANGLE\0"
+    /* 64661 */ "glGetMultisamplefvRobustANGLE\0"
+    /* 64691 */ "glGetProgramivRobustANGLE\0"
+    /* 64717 */ "glGetQueryObjecti64vRobustANGLE\0"
+    /* 64749 */ "glGetQueryObjectivRobustANGLE\0"
+    /* 64779 */ "glGetQueryObjectui64vRobustANGLE\0"
+    /* 64812 */ "glGetQueryObjectuivRobustANGLE\0"
+    /* 64843 */ "glGetQueryivRobustANGLE\0"
+    /* 64867 */ "glGetRenderbufferParameterivRobustANGLE\0"
+    /* 64907 */ "glGetSamplerParameterfvRobustANGLE\0"
+    /* 64942 */ "glGetSamplerParameterivRobustANGLE\0"
+    /* 64977 */ "glGetShaderivRobustANGLE\0"
+    /* 65002 */ "glGetTexLevelParameterfvRobustANGLE\0"
+    /* 65038 */ "glGetTexLevelParameterivRobustANGLE\0"
+    /* 65074 */ "glGetTexParameterfvRobustANGLE\0"
+    /* 65105 */ "glGetTexParameterivRobustANGLE\0"
+    /* 65136 */ "glGetUniformfvRobustANGLE\0"
+    /* 65162 */ "glGetUniformivRobustANGLE\0"
+    /* 65188 */ "glGetUniformuivRobustANGLE\0"
+    /* 65215 */ "glGetVertexAttribIivRobustANGLE\0"
+    /* 65247 */ "glGetVertexAttribIuivRobustANGLE\0"
+    /* 65280 */ "glGetVertexAttribPointervRobustANGLE\0"
+    /* 65317 */ "glGetVertexAttribfvRobustANGLE\0"
+    /* 65348 */ "glGetVertexAttribivRobustANGLE\0"
+    /* 65379 */ "glReadPixelsRobustANGLE\0"
+    /* 65403 */ "glSamplerParameterfvRobustANGLE\0"
+    /* 65435 */ "glSamplerParameterivRobustANGLE\0"
+    /* 65467 */ "glTexImage2DRobustANGLE\0"
+    /* 65491 */ "glTexImage3DRobustANGLE\0"
+    /* 65515 */ "glTexParameterfvRobustANGLE\0"
+    /* 65543 */ "glTexParameterivRobustANGLE\0"
+    /* 65571 */ "glTexSubImage2DRobustANGLE\0"
+    /* 65598 */ "glTexSubImage3DRobustANGLE\0"
+    /* 65625 */ "glCopySubTexture3DANGLE\0"
+    /* 65649 */ "glCopyTexture3DANGLE\0"
+    /* 65670 */ "glGetMultisamplefvANGLE\0"
+    /* 65694 */ "glSampleMaskiANGLE\0"
+    /* 65713 */ "glTexStorage2DMultisampleANGLE\0"
+    /* 65744 */ "glMultiDrawArraysANGLE\0"
+    /* 65767 */ "glMultiDrawArraysInstancedANGLE\0"
+    /* 65799 */ "glMultiDrawElementsANGLE\0"
+    /* 65824 */ "glMultiDrawElementsInstancedANGLE\0"
+    /* 65858 */ "glDrawArraysInstancedBaseInstanceANGLE\0"
+    /* 65897 */ "glDrawElementsInstancedBaseVertexBaseInstanceANGLE\0"
+    /* 65948 */ "glMultiDrawArraysInstancedBaseInstanceANGLE\0"
+    /* 65992 */ "glMultiDrawElementsInstancedBaseVertexBaseInstanceANGLE\0"
+    /* 66048 */ "glPolygonModeANGLE\0"
+    /* 66067 */ "glProvokingVertexANGLE\0"
+    /* 66090 */ "glLoseContextCHROMIUM\0"
+    /* 66112 */ "glGetCompressedTexImageANGLE\0"
+    /* 66141 */ "glGetRenderbufferImageANGLE\0"
+    /* 66169 */ "glGetTexImageANGLE\0"
+    /* 66188 */ "glGetTexLevelParameterfvANGLE\0"
+    /* 66218 */ "glGetTexLevelParameterivANGLE\0"
+    /* 66248 */ "glTexStorageMemFlags2DANGLE\0"
+    /* 66276 */ "glTexStorageMemFlags2DMultisampleANGLE\0"
+    /* 66315 */ "glTexStorageMemFlags3DANGLE\0"
+    /* 66343 */ "glTexStorageMemFlags3DMultisampleANGLE\0"
+    /* 66382 */ "glImportMemoryZirconHandleANGLE\0"
+    /* 66414 */ "glImportSemaphoreZirconHandleANGLE\0"
+    /* 66449 */ "glBeginPixelLocalStorageANGLE\0"
+    /* 66479 */ "glEndPixelLocalStorageANGLE\0"
+    /* 66507 */ "glEndPixelLocalStorageImplicitANGLE\0"
+    /* 66543 */ "glFramebufferMemorylessPixelLocalStorageANGLE\0"
+    /* 66589 */ "glFramebufferPixelLocalClearValuefvANGLE\0"
+    /* 66630 */ "glFramebufferPixelLocalClearValueivANGLE\0"
+    /* 66671 */ "glFramebufferPixelLocalClearValueuivANGLE\0"
+    /* 66713 */ "glFramebufferPixelLocalStorageInterruptANGLE\0"
+    /* 66758 */ "glFramebufferPixelLocalStorageRestoreANGLE\0"
+    /* 66801 */ "glFramebufferTexturePixelLocalStorageANGLE\0"
+    /* 66844 */ "glGetFramebufferPixelLocalStorageParameterfvANGLE\0"
+    /* 66894 */ "glGetFramebufferPixelLocalStorageParameterivANGLE\0"
+    /* 66944 */ "glGetFramebufferPixelLocalStorageParameteruivANGLE\0"
+    /* 66995 */ "glPixelLocalStorageBarrierANGLE\0"
+    /* 67027 */ "glLogicOpANGLE\0"
+    /* 67042 */ "glBlobCacheCallbacksANGLE\0"
+    /* 67068 */ "glGetPointervANGLE\0"
 ;
 static const uint32_t kFnNameOffsets_GL[] = {
     /*    0 */     0, /* glClearDepth */
@@ -6034,104 +6033,103 @@ static const uint32_t kFnNameOffsets_GL[] = {
     /* 2852 */ 63888, /* glTexCoord4fVertex4fSUN */
     /* 2853 */ 63912, /* glTexCoord4fVertex4fvSUN */
     /* 2854 */ 63937, /* glBindUniformLocationCHROMIUM */
-    /* 2855 */ 63967, /* glCoverageModulationCHROMIUM */
-    /* 2856 */ 63996, /* glCopySubTextureCHROMIUM */
-    /* 2857 */ 64021, /* glCopyTextureCHROMIUM */
-    /* 2858 */ 64043, /* glCompressedCopyTextureCHROMIUM */
-    /* 2859 */ 64075, /* glRequestExtensionANGLE */
-    /* 2860 */ 64099, /* glAcquireTexturesANGLE */
-    /* 2861 */ 64122, /* glReleaseTexturesANGLE */
-    /* 2862 */ 64145, /* glGetActiveUniformBlockivRobustANGLE */
-    /* 2863 */ 64182, /* glGetBooleanvRobustANGLE */
-    /* 2864 */ 64207, /* glGetBufferParameteri64vRobustANGLE */
-    /* 2865 */ 64243, /* glGetBufferParameterivRobustANGLE */
-    /* 2866 */ 64277, /* glGetBufferPointervRobustANGLE */
-    /* 2867 */ 64308, /* glGetFloatvRobustANGLE */
-    /* 2868 */ 64331, /* glGetFramebufferAttachmentParameterivRobustANGLE */
-    /* 2869 */ 64380, /* glGetFramebufferPixelLocalStorageParameterfvRobustANGLE */
-    /* 2870 */ 64436, /* glGetFramebufferPixelLocalStorageParameterivRobustANGLE */
-    /* 2871 */ 64492, /* glGetFramebufferPixelLocalStorageParameteruivRobustANGLE */
-    /* 2872 */ 64549, /* glGetInteger64i_vRobustANGLE */
-    /* 2873 */ 64578, /* glGetInteger64vRobustANGLE */
-    /* 2874 */ 64605, /* glGetIntegeri_vRobustANGLE */
-    /* 2875 */ 64632, /* glGetIntegervRobustANGLE */
-    /* 2876 */ 64657, /* glGetInternalformativRobustANGLE */
-    /* 2877 */ 64690, /* glGetMultisamplefvRobustANGLE */
-    /* 2878 */ 64720, /* glGetProgramivRobustANGLE */
-    /* 2879 */ 64746, /* glGetQueryObjecti64vRobustANGLE */
-    /* 2880 */ 64778, /* glGetQueryObjectivRobustANGLE */
-    /* 2881 */ 64808, /* glGetQueryObjectui64vRobustANGLE */
-    /* 2882 */ 64841, /* glGetQueryObjectuivRobustANGLE */
-    /* 2883 */ 64872, /* glGetQueryivRobustANGLE */
-    /* 2884 */ 64896, /* glGetRenderbufferParameterivRobustANGLE */
-    /* 2885 */ 64936, /* glGetSamplerParameterfvRobustANGLE */
-    /* 2886 */ 64971, /* glGetSamplerParameterivRobustANGLE */
-    /* 2887 */ 65006, /* glGetShaderivRobustANGLE */
-    /* 2888 */ 65031, /* glGetTexLevelParameterfvRobustANGLE */
-    /* 2889 */ 65067, /* glGetTexLevelParameterivRobustANGLE */
-    /* 2890 */ 65103, /* glGetTexParameterfvRobustANGLE */
-    /* 2891 */ 65134, /* glGetTexParameterivRobustANGLE */
-    /* 2892 */ 65165, /* glGetUniformfvRobustANGLE */
-    /* 2893 */ 65191, /* glGetUniformivRobustANGLE */
-    /* 2894 */ 65217, /* glGetUniformuivRobustANGLE */
-    /* 2895 */ 65244, /* glGetVertexAttribIivRobustANGLE */
-    /* 2896 */ 65276, /* glGetVertexAttribIuivRobustANGLE */
-    /* 2897 */ 65309, /* glGetVertexAttribPointervRobustANGLE */
-    /* 2898 */ 65346, /* glGetVertexAttribfvRobustANGLE */
-    /* 2899 */ 65377, /* glGetVertexAttribivRobustANGLE */
-    /* 2900 */ 65408, /* glReadPixelsRobustANGLE */
-    /* 2901 */ 65432, /* glSamplerParameterfvRobustANGLE */
-    /* 2902 */ 65464, /* glSamplerParameterivRobustANGLE */
-    /* 2903 */ 65496, /* glTexImage2DRobustANGLE */
-    /* 2904 */ 65520, /* glTexImage3DRobustANGLE */
-    /* 2905 */ 65544, /* glTexParameterfvRobustANGLE */
-    /* 2906 */ 65572, /* glTexParameterivRobustANGLE */
-    /* 2907 */ 65600, /* glTexSubImage2DRobustANGLE */
-    /* 2908 */ 65627, /* glTexSubImage3DRobustANGLE */
-    /* 2909 */ 65654, /* glCopySubTexture3DANGLE */
-    /* 2910 */ 65678, /* glCopyTexture3DANGLE */
-    /* 2911 */ 65699, /* glGetMultisamplefvANGLE */
-    /* 2912 */ 65723, /* glSampleMaskiANGLE */
-    /* 2913 */ 65742, /* glTexStorage2DMultisampleANGLE */
-    /* 2914 */ 65773, /* glMultiDrawArraysANGLE */
-    /* 2915 */ 65796, /* glMultiDrawArraysInstancedANGLE */
-    /* 2916 */ 65828, /* glMultiDrawElementsANGLE */
-    /* 2917 */ 65853, /* glMultiDrawElementsInstancedANGLE */
-    /* 2918 */ 65887, /* glDrawArraysInstancedBaseInstanceANGLE */
-    /* 2919 */ 65926, /* glDrawElementsInstancedBaseVertexBaseInstanceANGLE */
-    /* 2920 */ 65977, /* glMultiDrawArraysInstancedBaseInstanceANGLE */
-    /* 2921 */ 66021, /* glMultiDrawElementsInstancedBaseVertexBaseInstanceANGLE */
-    /* 2922 */ 66077, /* glPolygonModeANGLE */
-    /* 2923 */ 66096, /* glProvokingVertexANGLE */
-    /* 2924 */ 66119, /* glLoseContextCHROMIUM */
-    /* 2925 */ 66141, /* glGetCompressedTexImageANGLE */
-    /* 2926 */ 66170, /* glGetRenderbufferImageANGLE */
-    /* 2927 */ 66198, /* glGetTexImageANGLE */
-    /* 2928 */ 66217, /* glGetTexLevelParameterfvANGLE */
-    /* 2929 */ 66247, /* glGetTexLevelParameterivANGLE */
-    /* 2930 */ 66277, /* glTexStorageMemFlags2DANGLE */
-    /* 2931 */ 66305, /* glTexStorageMemFlags2DMultisampleANGLE */
-    /* 2932 */ 66344, /* glTexStorageMemFlags3DANGLE */
-    /* 2933 */ 66372, /* glTexStorageMemFlags3DMultisampleANGLE */
-    /* 2934 */ 66411, /* glImportMemoryZirconHandleANGLE */
-    /* 2935 */ 66443, /* glImportSemaphoreZirconHandleANGLE */
-    /* 2936 */ 66478, /* glBeginPixelLocalStorageANGLE */
-    /* 2937 */ 66508, /* glEndPixelLocalStorageANGLE */
-    /* 2938 */ 66536, /* glEndPixelLocalStorageImplicitANGLE */
-    /* 2939 */ 66572, /* glFramebufferMemorylessPixelLocalStorageANGLE */
-    /* 2940 */ 66618, /* glFramebufferPixelLocalClearValuefvANGLE */
-    /* 2941 */ 66659, /* glFramebufferPixelLocalClearValueivANGLE */
-    /* 2942 */ 66700, /* glFramebufferPixelLocalClearValueuivANGLE */
-    /* 2943 */ 66742, /* glFramebufferPixelLocalStorageInterruptANGLE */
-    /* 2944 */ 66787, /* glFramebufferPixelLocalStorageRestoreANGLE */
-    /* 2945 */ 66830, /* glFramebufferTexturePixelLocalStorageANGLE */
-    /* 2946 */ 66873, /* glGetFramebufferPixelLocalStorageParameterfvANGLE */
-    /* 2947 */ 66923, /* glGetFramebufferPixelLocalStorageParameterivANGLE */
-    /* 2948 */ 66973, /* glGetFramebufferPixelLocalStorageParameteruivANGLE */
-    /* 2949 */ 67024, /* glPixelLocalStorageBarrierANGLE */
-    /* 2950 */ 67056, /* glLogicOpANGLE */
-    /* 2951 */ 67071, /* glBlobCacheCallbacksANGLE */
-    /* 2952 */ 67097 /* glGetPointervANGLE */
+    /* 2855 */ 63967, /* glCopySubTextureCHROMIUM */
+    /* 2856 */ 63992, /* glCopyTextureCHROMIUM */
+    /* 2857 */ 64014, /* glCompressedCopyTextureCHROMIUM */
+    /* 2858 */ 64046, /* glRequestExtensionANGLE */
+    /* 2859 */ 64070, /* glAcquireTexturesANGLE */
+    /* 2860 */ 64093, /* glReleaseTexturesANGLE */
+    /* 2861 */ 64116, /* glGetActiveUniformBlockivRobustANGLE */
+    /* 2862 */ 64153, /* glGetBooleanvRobustANGLE */
+    /* 2863 */ 64178, /* glGetBufferParameteri64vRobustANGLE */
+    /* 2864 */ 64214, /* glGetBufferParameterivRobustANGLE */
+    /* 2865 */ 64248, /* glGetBufferPointervRobustANGLE */
+    /* 2866 */ 64279, /* glGetFloatvRobustANGLE */
+    /* 2867 */ 64302, /* glGetFramebufferAttachmentParameterivRobustANGLE */
+    /* 2868 */ 64351, /* glGetFramebufferPixelLocalStorageParameterfvRobustANGLE */
+    /* 2869 */ 64407, /* glGetFramebufferPixelLocalStorageParameterivRobustANGLE */
+    /* 2870 */ 64463, /* glGetFramebufferPixelLocalStorageParameteruivRobustANGLE */
+    /* 2871 */ 64520, /* glGetInteger64i_vRobustANGLE */
+    /* 2872 */ 64549, /* glGetInteger64vRobustANGLE */
+    /* 2873 */ 64576, /* glGetIntegeri_vRobustANGLE */
+    /* 2874 */ 64603, /* glGetIntegervRobustANGLE */
+    /* 2875 */ 64628, /* glGetInternalformativRobustANGLE */
+    /* 2876 */ 64661, /* glGetMultisamplefvRobustANGLE */
+    /* 2877 */ 64691, /* glGetProgramivRobustANGLE */
+    /* 2878 */ 64717, /* glGetQueryObjecti64vRobustANGLE */
+    /* 2879 */ 64749, /* glGetQueryObjectivRobustANGLE */
+    /* 2880 */ 64779, /* glGetQueryObjectui64vRobustANGLE */
+    /* 2881 */ 64812, /* glGetQueryObjectuivRobustANGLE */
+    /* 2882 */ 64843, /* glGetQueryivRobustANGLE */
+    /* 2883 */ 64867, /* glGetRenderbufferParameterivRobustANGLE */
+    /* 2884 */ 64907, /* glGetSamplerParameterfvRobustANGLE */
+    /* 2885 */ 64942, /* glGetSamplerParameterivRobustANGLE */
+    /* 2886 */ 64977, /* glGetShaderivRobustANGLE */
+    /* 2887 */ 65002, /* glGetTexLevelParameterfvRobustANGLE */
+    /* 2888 */ 65038, /* glGetTexLevelParameterivRobustANGLE */
+    /* 2889 */ 65074, /* glGetTexParameterfvRobustANGLE */
+    /* 2890 */ 65105, /* glGetTexParameterivRobustANGLE */
+    /* 2891 */ 65136, /* glGetUniformfvRobustANGLE */
+    /* 2892 */ 65162, /* glGetUniformivRobustANGLE */
+    /* 2893 */ 65188, /* glGetUniformuivRobustANGLE */
+    /* 2894 */ 65215, /* glGetVertexAttribIivRobustANGLE */
+    /* 2895 */ 65247, /* glGetVertexAttribIuivRobustANGLE */
+    /* 2896 */ 65280, /* glGetVertexAttribPointervRobustANGLE */
+    /* 2897 */ 65317, /* glGetVertexAttribfvRobustANGLE */
+    /* 2898 */ 65348, /* glGetVertexAttribivRobustANGLE */
+    /* 2899 */ 65379, /* glReadPixelsRobustANGLE */
+    /* 2900 */ 65403, /* glSamplerParameterfvRobustANGLE */
+    /* 2901 */ 65435, /* glSamplerParameterivRobustANGLE */
+    /* 2902 */ 65467, /* glTexImage2DRobustANGLE */
+    /* 2903 */ 65491, /* glTexImage3DRobustANGLE */
+    /* 2904 */ 65515, /* glTexParameterfvRobustANGLE */
+    /* 2905 */ 65543, /* glTexParameterivRobustANGLE */
+    /* 2906 */ 65571, /* glTexSubImage2DRobustANGLE */
+    /* 2907 */ 65598, /* glTexSubImage3DRobustANGLE */
+    /* 2908 */ 65625, /* glCopySubTexture3DANGLE */
+    /* 2909 */ 65649, /* glCopyTexture3DANGLE */
+    /* 2910 */ 65670, /* glGetMultisamplefvANGLE */
+    /* 2911 */ 65694, /* glSampleMaskiANGLE */
+    /* 2912 */ 65713, /* glTexStorage2DMultisampleANGLE */
+    /* 2913 */ 65744, /* glMultiDrawArraysANGLE */
+    /* 2914 */ 65767, /* glMultiDrawArraysInstancedANGLE */
+    /* 2915 */ 65799, /* glMultiDrawElementsANGLE */
+    /* 2916 */ 65824, /* glMultiDrawElementsInstancedANGLE */
+    /* 2917 */ 65858, /* glDrawArraysInstancedBaseInstanceANGLE */
+    /* 2918 */ 65897, /* glDrawElementsInstancedBaseVertexBaseInstanceANGLE */
+    /* 2919 */ 65948, /* glMultiDrawArraysInstancedBaseInstanceANGLE */
+    /* 2920 */ 65992, /* glMultiDrawElementsInstancedBaseVertexBaseInstanceANGLE */
+    /* 2921 */ 66048, /* glPolygonModeANGLE */
+    /* 2922 */ 66067, /* glProvokingVertexANGLE */
+    /* 2923 */ 66090, /* glLoseContextCHROMIUM */
+    /* 2924 */ 66112, /* glGetCompressedTexImageANGLE */
+    /* 2925 */ 66141, /* glGetRenderbufferImageANGLE */
+    /* 2926 */ 66169, /* glGetTexImageANGLE */
+    /* 2927 */ 66188, /* glGetTexLevelParameterfvANGLE */
+    /* 2928 */ 66218, /* glGetTexLevelParameterivANGLE */
+    /* 2929 */ 66248, /* glTexStorageMemFlags2DANGLE */
+    /* 2930 */ 66276, /* glTexStorageMemFlags2DMultisampleANGLE */
+    /* 2931 */ 66315, /* glTexStorageMemFlags3DANGLE */
+    /* 2932 */ 66343, /* glTexStorageMemFlags3DMultisampleANGLE */
+    /* 2933 */ 66382, /* glImportMemoryZirconHandleANGLE */
+    /* 2934 */ 66414, /* glImportSemaphoreZirconHandleANGLE */
+    /* 2935 */ 66449, /* glBeginPixelLocalStorageANGLE */
+    /* 2936 */ 66479, /* glEndPixelLocalStorageANGLE */
+    /* 2937 */ 66507, /* glEndPixelLocalStorageImplicitANGLE */
+    /* 2938 */ 66543, /* glFramebufferMemorylessPixelLocalStorageANGLE */
+    /* 2939 */ 66589, /* glFramebufferPixelLocalClearValuefvANGLE */
+    /* 2940 */ 66630, /* glFramebufferPixelLocalClearValueivANGLE */
+    /* 2941 */ 66671, /* glFramebufferPixelLocalClearValueuivANGLE */
+    /* 2942 */ 66713, /* glFramebufferPixelLocalStorageInterruptANGLE */
+    /* 2943 */ 66758, /* glFramebufferPixelLocalStorageRestoreANGLE */
+    /* 2944 */ 66801, /* glFramebufferTexturePixelLocalStorageANGLE */
+    /* 2945 */ 66844, /* glGetFramebufferPixelLocalStorageParameterfvANGLE */
+    /* 2946 */ 66894, /* glGetFramebufferPixelLocalStorageParameterivANGLE */
+    /* 2947 */ 66944, /* glGetFramebufferPixelLocalStorageParameteruivANGLE */
+    /* 2948 */ 66995, /* glPixelLocalStorageBarrierANGLE */
+    /* 2949 */ 67027, /* glLogicOpANGLE */
+    /* 2950 */ 67042, /* glBlobCacheCallbacksANGLE */
+    /* 2951 */ 67068 /* glGetPointervANGLE */
 };
 /* ---- Extension hash table ------------------------------------------------
    One XXH3-64 hash per extension, in extArray index order.
@@ -6450,685 +6448,684 @@ static const uint64_t kExtHashes_GL[] = {
     /*  310 */ 0x9a85b4342c34b2f8ULL, /* GL_CHROMIUM_bind_uniform_location */
     /*  311 */ 0x0dd808babc9daaabULL, /* GL_CHROMIUM_copy_compressed_texture */
     /*  312 */ 0xe6bdf6222c3733efULL, /* GL_CHROMIUM_copy_texture */
-    /*  313 */ 0x0bd5e31cc0c829e7ULL, /* GL_CHROMIUM_framebuffer_mixed_samples */
-    /*  314 */ 0x04af64470030272eULL, /* GL_CHROMIUM_lose_context */
-    /*  315 */ 0x2b55ba018525895bULL, /* GL_DMP_program_binary */
-    /*  316 */ 0x8e5f4ce24de544d5ULL, /* GL_DMP_shader_binary */
-    /*  317 */ 0x0cf95c40c08a43a8ULL, /* GL_EXT_422_pixels */
-    /*  318 */ 0x2a61d7b733e75c77ULL, /* GL_EXT_EGL_image_array */
-    /*  319 */ 0x35b7bb88d6ff4a1eULL, /* GL_EXT_EGL_image_storage */
-    /*  320 */ 0xfe8066998f34da8eULL, /* GL_EXT_EGL_image_storage_compression */
-    /*  321 */ 0xb8221664855c83bdULL, /* GL_EXT_EGL_sync */
-    /*  322 */ 0x6fac3cb4234e6c59ULL, /* GL_EXT_YUV_target */
-    /*  323 */ 0xc118d96a66b6bea3ULL, /* GL_EXT_abgr */
-    /*  324 */ 0x6b5e9b6cfbdc3dc0ULL, /* GL_EXT_base_instance */
-    /*  325 */ 0x94adfa4ef027ccd6ULL, /* GL_EXT_bfloat16 */
-    /*  326 */ 0x2c343f7622589325ULL, /* GL_EXT_bgra */
-    /*  327 */ 0x9d83c1e02304fb00ULL, /* GL_EXT_bindable_uniform */
-    /*  328 */ 0x1cafcd91efe0e1d6ULL, /* GL_EXT_blend_color */
-    /*  329 */ 0x3510ec477f22f7e7ULL, /* GL_EXT_blend_equation_separate */
-    /*  330 */ 0x888e740cefe39cc4ULL, /* GL_EXT_blend_func_extended */
-    /*  331 */ 0x97c1a7c0b569dfb8ULL, /* GL_EXT_blend_func_separate */
-    /*  332 */ 0x709f5d763ef0911fULL, /* GL_EXT_blend_logic_op */
-    /*  333 */ 0x1163ab5d43e9b052ULL, /* GL_EXT_blend_minmax */
-    /*  334 */ 0x2c5c11d0c1161814ULL, /* GL_EXT_blend_subtract */
-    /*  335 */ 0x8a59c192ebd08825ULL, /* GL_EXT_buffer_reference */
-    /*  336 */ 0x1fe18a884a2d4d2aULL, /* GL_EXT_buffer_reference2 */
-    /*  337 */ 0xb839402fc769c51eULL, /* GL_EXT_buffer_reference_uvec2 */
-    /*  338 */ 0xf57e9c9fe9c776cdULL, /* GL_EXT_buffer_storage */
-    /*  339 */ 0xaafb791a26428890ULL, /* GL_EXT_clear_texture */
-    /*  340 */ 0x9452d292aa14805eULL, /* GL_EXT_clip_control */
-    /*  341 */ 0x5737e20452f91527ULL, /* GL_EXT_clip_cull_distance */
-    /*  342 */ 0x56a5c2f21e51bb5aULL, /* GL_EXT_clip_volume_hint */
-    /*  343 */ 0x82b62c808e4abb64ULL, /* GL_EXT_cmyka */
-    /*  344 */ 0xa297c2c3a49a99beULL, /* GL_EXT_color_buffer_float */
-    /*  345 */ 0xf9449646b78eab54ULL, /* GL_EXT_color_buffer_half_float */
-    /*  346 */ 0x6d76340b1318b839ULL, /* GL_EXT_color_subtable */
-    /*  347 */ 0xf1bda7fa0a83d383ULL, /* GL_EXT_compiled_vertex_array */
-    /*  348 */ 0x9ddf99bdc50f4149ULL, /* GL_EXT_conservative_depth */
-    /*  349 */ 0x354415fe7a6e013eULL, /* GL_EXT_control_flow_attributes */
-    /*  350 */ 0x04f0f0ce501bd29dULL, /* GL_EXT_control_flow_attributes2 */
-    /*  351 */ 0xe9260724f594f80bULL, /* GL_EXT_convolution */
-    /*  352 */ 0xf9792a196e0ab7c9ULL, /* GL_EXT_coordinate_frame */
-    /*  353 */ 0xa26b121ae33c3436ULL, /* GL_EXT_copy_image */
-    /*  354 */ 0x2611c2618f21aa2fULL, /* GL_EXT_copy_texture */
-    /*  355 */ 0xddfc92096368bfbbULL, /* GL_EXT_cull_vertex */
-    /*  356 */ 0xed15a3d914865c56ULL, /* GL_EXT_debug_label */
-    /*  357 */ 0x84891a2031a0f162ULL, /* GL_EXT_debug_marker */
-    /*  358 */ 0x3d46dbc8319361c9ULL, /* GL_EXT_debug_printf */
-    /*  359 */ 0x2a423943f8be1307ULL, /* GL_EXT_demote_to_helper_invocation */
-    /*  360 */ 0xe21a2b607eb5c6bbULL, /* GL_EXT_depth_bounds_test */
-    /*  361 */ 0xdc5fb3a8d43d753eULL, /* GL_EXT_depth_clamp */
-    /*  362 */ 0xa17767ae25ee3760ULL, /* GL_EXT_descriptor_heap */
-    /*  363 */ 0xee026f0d1b48c324ULL, /* GL_EXT_device_group */
-    /*  364 */ 0xff4a74da40c62745ULL, /* GL_EXT_direct_state_access */
-    /*  365 */ 0x3287a129fb1e11c1ULL, /* GL_EXT_discard_framebuffer */
-    /*  366 */ 0x3d06b0f91612d10dULL, /* GL_EXT_disjoint_timer_query */
-    /*  367 */ 0xd3ac9ca278a62f1aULL, /* GL_EXT_draw_buffers */
-    /*  368 */ 0x5d6aa36dbdce372dULL, /* GL_EXT_draw_buffers2 */
-    /*  369 */ 0x997893a6ac44f7feULL, /* GL_EXT_draw_buffers_indexed */
-    /*  370 */ 0x548657f15226635bULL, /* GL_EXT_draw_elements_base_vertex */
-    /*  371 */ 0xeb1b622faf7697c7ULL, /* GL_EXT_draw_instanced */
-    /*  372 */ 0xbb5e6eb0e1559ef1ULL, /* GL_EXT_draw_range_elements */
-    /*  373 */ 0x0ccbfada83c13182ULL, /* GL_EXT_draw_transform_feedback */
-    /*  374 */ 0xa3176575cdaf6f54ULL, /* GL_EXT_expect_assume */
-    /*  375 */ 0x5e1ad5852ce64f31ULL, /* GL_EXT_external_buffer */
-    /*  376 */ 0x18d7b8f80d477ce9ULL, /* GL_EXT_float_blend */
-    /*  377 */ 0x77979094c87fc8d1ULL, /* GL_EXT_float_e2m1 */
-    /*  378 */ 0x026b05bdafc47ad0ULL, /* GL_EXT_float_e2m3 */
-    /*  379 */ 0x94d4c91173d7a2d3ULL, /* GL_EXT_float_e3m2 */
-    /*  380 */ 0xf56685b2adca994cULL, /* GL_EXT_float_e4m3 */
-    /*  381 */ 0x8f8295d889d0bc49ULL, /* GL_EXT_float_e5m2 */
-    /*  382 */ 0x929201bdc09e9439ULL, /* GL_EXT_float_mxint8 */
-    /*  383 */ 0xbd3952767e7b786dULL, /* GL_EXT_float_ue8m0 */
-    /*  384 */ 0xe09e32cd1ae79288ULL, /* GL_EXT_fog_coord */
-    /*  385 */ 0x09b6fae76304a4f3ULL, /* GL_EXT_frag_depth */
-    /*  386 */ 0xc117232bce18d68eULL, /* GL_EXT_fragment_invocation_density */
-    /*  387 */ 0x2f9b21678a5e0043ULL, /* GL_EXT_fragment_shader_barycentric */
-    /*  388 */ 0xde0a545f611c91b2ULL, /* GL_EXT_fragment_shading_rate */
-    /*  389 */ 0xdefc19d979b2e3e2ULL, /* GL_EXT_framebuffer_blit */
-    /*  390 */ 0x616048bcd1aa9223ULL, /* GL_EXT_framebuffer_blit_layers */
-    /*  391 */ 0x8cbb2537704d8953ULL, /* GL_EXT_framebuffer_multisample */
-    /*  392 */ 0x5634f30b2756d601ULL, /* GL_EXT_framebuffer_multisample_blit_scaled */
-    /*  393 */ 0x8350f19ac13e7c07ULL, /* GL_EXT_framebuffer_object */
-    /*  394 */ 0xa45a63878264c1e5ULL, /* GL_EXT_framebuffer_sRGB */
-    /*  395 */ 0x30d017755de50dd9ULL, /* GL_EXT_geometry_point_size */
-    /*  396 */ 0xfa22129bb4d04128ULL, /* GL_EXT_geometry_shader */
-    /*  397 */ 0x5370f0fbdd1b1f1dULL, /* GL_EXT_geometry_shader4 */
-    /*  398 */ 0x3604f5b2b65016b2ULL, /* GL_EXT_gpu_program_parameters */
-    /*  399 */ 0x020c60828c37ce5dULL, /* GL_EXT_gpu_shader4 */
-    /*  400 */ 0x53dbe9871073dca3ULL, /* GL_EXT_gpu_shader5 */
-    /*  401 */ 0xcebb9285fc482cfdULL, /* GL_EXT_histogram */
-    /*  402 */ 0x64ea7e43377361ffULL, /* GL_EXT_index_array_formats */
-    /*  403 */ 0xecf771ddabe3f8edULL, /* GL_EXT_index_func */
-    /*  404 */ 0x649623e695acbfb0ULL, /* GL_EXT_index_material */
-    /*  405 */ 0x43fd3f035960e92cULL, /* GL_EXT_index_texture */
-    /*  406 */ 0x9c3c026caab1aaf7ULL, /* GL_EXT_instanced_arrays */
-    /*  407 */ 0x82ec9e979f47f3ddULL, /* GL_EXT_integer_dot_product */
-    /*  408 */ 0x6b0a475df16ae9f2ULL, /* GL_EXT_light_texture */
-    /*  409 */ 0xa0c370e2e64afa4cULL, /* GL_EXT_long_vector */
-    /*  410 */ 0xf41152d50d03cc16ULL, /* GL_EXT_map_buffer_range */
-    /*  411 */ 0xdea398d907b668d0ULL, /* GL_EXT_maximal_reconvergence */
-    /*  412 */ 0xebb55934637c6ab7ULL, /* GL_EXT_memory_object */
-    /*  413 */ 0x7e941665b79d31c4ULL, /* GL_EXT_memory_object_fd */
-    /*  414 */ 0x6bf3a6b6ec24354bULL, /* GL_EXT_memory_object_win32 */
-    /*  415 */ 0x67079bf943104541ULL, /* GL_EXT_mesh_shader */
-    /*  416 */ 0xda6fb882011aa28eULL, /* GL_EXT_misc_attribute */
-    /*  417 */ 0x6077bed8aa109362ULL, /* GL_EXT_multi_draw_arrays */
-    /*  418 */ 0x55b4806b38f2b08eULL, /* GL_EXT_multi_draw_indirect */
-    /*  419 */ 0x872a66595e5024caULL, /* GL_EXT_multisample */
-    /*  420 */ 0x3e4a3b0ff8584927ULL, /* GL_EXT_multisampled_compatibility */
-    /*  421 */ 0x33b89ab037aed106ULL, /* GL_EXT_multisampled_render_to_texture */
-    /*  422 */ 0x39f0379607d459f0ULL, /* GL_EXT_multisampled_render_to_texture2 */
-    /*  423 */ 0xe6a1408b398af343ULL, /* GL_EXT_multiview */
-    /*  424 */ 0x49f63d58daabfccbULL, /* GL_EXT_multiview_draw_buffers */
-    /*  425 */ 0x5b7a6a36ed0fe897ULL, /* GL_EXT_multiview_tessellation_geometry_shader */
-    /*  426 */ 0x3679a0ac14e16e97ULL, /* GL_EXT_multiview_texture_multisample */
-    /*  427 */ 0x39d0f3848228d38fULL, /* GL_EXT_multiview_timer_query */
-    /*  428 */ 0x02a2910cd422340eULL, /* GL_EXT_nontemporal_keyword */
-    /*  429 */ 0x0d7bdf1d96e54238ULL, /* GL_EXT_nonuniform_qualifier */
-    /*  430 */ 0xff653ce0c16c5c81ULL, /* GL_EXT_null_initializer */
-    /*  431 */ 0xbf12db2b88c87ccfULL, /* GL_EXT_occlusion_query_boolean */
-    /*  432 */ 0x927980c53f038149ULL, /* GL_EXT_opacity_micromap */
-    /*  433 */ 0x21dda5378be0ae17ULL, /* GL_EXT_opacity_micromap_ray_query_mode */
-    /*  434 */ 0x757af2451eae9d25ULL, /* GL_EXT_packed_depth_stencil */
-    /*  435 */ 0x2ace1d8656332b56ULL, /* GL_EXT_packed_float */
-    /*  436 */ 0x248d529c3993285cULL, /* GL_EXT_packed_pixels */
-    /*  437 */ 0xecd5d2503b35bb13ULL, /* GL_EXT_paletted_texture */
-    /*  438 */ 0xc7f3ad7137661622ULL, /* GL_EXT_pixel_buffer_object */
-    /*  439 */ 0x59d7be95f9b27b9aULL, /* GL_EXT_pixel_transform */
-    /*  440 */ 0xd7024b008ea1463bULL, /* GL_EXT_pixel_transform_color_table */
-    /*  441 */ 0x14eaf45986c9bfa1ULL, /* GL_EXT_point_parameters */
-    /*  442 */ 0x5640aa3e3a0202cbULL, /* GL_EXT_polygon_offset */
-    /*  443 */ 0xd55f7ac9bd1eba74ULL, /* GL_EXT_polygon_offset_clamp */
-    /*  444 */ 0x55695328ecdeb972ULL, /* GL_EXT_post_depth_coverage */
-    /*  445 */ 0x849565c10789238eULL, /* GL_EXT_primitive_bounding_box */
-    /*  446 */ 0x638afa82b47ca539ULL, /* GL_EXT_protected_textures */
-    /*  447 */ 0xfc1cd6391217f09eULL, /* GL_EXT_provoking_vertex */
-    /*  448 */ 0xc36c4a5ae294a717ULL, /* GL_EXT_pvrtc_sRGB */
-    /*  449 */ 0x864a43fa5616bb8cULL, /* GL_EXT_raster_multisample */
-    /*  450 */ 0xb0b19c0e9f3b0f5cULL, /* GL_EXT_ray_cull_mask */
-    /*  451 */ 0xd982b05f307f6fcdULL, /* GL_EXT_ray_flags_primitive_culling */
-    /*  452 */ 0xbf4a58353f9a7a75ULL, /* GL_EXT_ray_query */
-    /*  453 */ 0x5d7ccf8ac93b7140ULL, /* GL_EXT_ray_tracing */
-    /*  454 */ 0x98b5a9c9f9d792ddULL, /* GL_EXT_ray_tracing_position_fetch */
-    /*  455 */ 0x1b664521b8e7ceddULL, /* GL_EXT_read_format_bgra */
-    /*  456 */ 0x461ed0af7d9ee57eULL, /* GL_EXT_render_snorm */
-    /*  457 */ 0xc99a47326d03fd17ULL, /* GL_EXT_rescale_normal */
-    /*  458 */ 0x04aaf7c50fd23609ULL, /* GL_EXT_robustness */
-    /*  459 */ 0x72a714dfac11ff63ULL, /* GL_EXT_sRGB */
-    /*  460 */ 0xa329e9d07bf41faaULL, /* GL_EXT_sRGB_write_control */
-    /*  461 */ 0x6c203c99634fa814ULL, /* GL_EXT_samplerless_texture_functions */
-    /*  462 */ 0xe045958c8c43c35fULL, /* GL_EXT_scalar_block_layout */
-    /*  463 */ 0x5da9f01e568b2e0bULL, /* GL_EXT_secondary_color */
-    /*  464 */ 0x40ea8dbcbb4d106fULL, /* GL_EXT_semaphore */
-    /*  465 */ 0xb3de6f78cadcbed7ULL, /* GL_EXT_semaphore_fd */
-    /*  466 */ 0xd80cf52931619f45ULL, /* GL_EXT_semaphore_win32 */
-    /*  467 */ 0xde7c2e65ed21d1e7ULL, /* GL_EXT_separate_depth_stencil */
-    /*  468 */ 0xb207ff65f8bf495dULL, /* GL_EXT_separate_shader_objects */
-    /*  469 */ 0xeb07329b2f67d2ecULL, /* GL_EXT_separate_specular_color */
-    /*  470 */ 0x49d751ecfad21a12ULL, /* GL_EXT_shader_16bit_storage */
-    /*  471 */ 0xf3d1b4d8ddf95897ULL, /* GL_EXT_shader_64bit_indexing */
-    /*  472 */ 0x9861ec1bd88d15cfULL, /* GL_EXT_shader_8bit_storage */
-    /*  473 */ 0x71c6281257d16bdfULL, /* GL_EXT_shader_atomic_float */
-    /*  474 */ 0x3b6516e3dbabfb91ULL, /* GL_EXT_shader_atomic_float2 */
-    /*  475 */ 0x59bd13c26a6e0f68ULL, /* GL_EXT_shader_atomic_int64 */
-    /*  476 */ 0x6854ef445a71e3b0ULL, /* GL_EXT_shader_clock */
-    /*  477 */ 0x6e599868ea3a939fULL, /* GL_EXT_shader_explicit_arithmetic_types */
-    /*  478 */ 0x38889dc6669f650dULL, /* GL_EXT_shader_explicit_arithmetic_types_float16 */
-    /*  479 */ 0x935e023eaa3a09f7ULL, /* GL_EXT_shader_explicit_arithmetic_types_float32 */
-    /*  480 */ 0x898fe8394abadf05ULL, /* GL_EXT_shader_explicit_arithmetic_types_float64 */
-    /*  481 */ 0x9177b5f32c341f00ULL, /* GL_EXT_shader_explicit_arithmetic_types_int16 */
-    /*  482 */ 0x974487e410e50b66ULL, /* GL_EXT_shader_explicit_arithmetic_types_int32 */
-    /*  483 */ 0x6cf4f9de748703f8ULL, /* GL_EXT_shader_explicit_arithmetic_types_int64 */
-    /*  484 */ 0x43904cfef5f6138eULL, /* GL_EXT_shader_explicit_arithmetic_types_int8 */
-    /*  485 */ 0x86da0f80c54cef33ULL, /* GL_EXT_shader_framebuffer_fetch */
-    /*  486 */ 0xcd3c990c9f8c0a64ULL, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
-    /*  487 */ 0x17434ddfdf3a5893ULL, /* GL_EXT_shader_group_vote */
-    /*  488 */ 0xeab14f8fb076d3f3ULL, /* GL_EXT_shader_image_int64 */
-    /*  489 */ 0xc1de48ba5bbf7b01ULL, /* GL_EXT_shader_image_load_formatted */
-    /*  490 */ 0x6ab82341e3e65156ULL, /* GL_EXT_shader_image_load_store */
-    /*  491 */ 0xe19d3a68c60c0ef4ULL, /* GL_EXT_shader_implicit_conversions */
-    /*  492 */ 0x033287cccf9a6962ULL, /* GL_EXT_shader_integer_mix */
-    /*  493 */ 0xc25f86fd76d2ff53ULL, /* GL_EXT_shader_invocation_reorder */
-    /*  494 */ 0xd055bdf912abe3b0ULL, /* GL_EXT_shader_io_blocks */
-    /*  495 */ 0x07975202b868bf83ULL, /* GL_EXT_shader_non_constant_global_initializers */
-    /*  496 */ 0x49f7e4529e189129ULL, /* GL_EXT_shader_pixel_local_storage */
-    /*  497 */ 0x28720bf0be8ab661ULL, /* GL_EXT_shader_pixel_local_storage2 */
-    /*  498 */ 0x9b3693eac0a5b344ULL, /* GL_EXT_shader_quad_control */
-    /*  499 */ 0x28c00ec379a98b9dULL, /* GL_EXT_shader_realtime_clock */
-    /*  500 */ 0x3ef958340d410019ULL, /* GL_EXT_shader_samples_identical */
-    /*  501 */ 0xdb7ea225c0575a72ULL, /* GL_EXT_shader_subgroup_extended_types_float16 */
-    /*  502 */ 0x50620210b36d2a7eULL, /* GL_EXT_shader_subgroup_extended_types_int16 */
-    /*  503 */ 0xcaf721268b43e997ULL, /* GL_EXT_shader_subgroup_extended_types_int64 */
-    /*  504 */ 0x6de284e02f65aff5ULL, /* GL_EXT_shader_subgroup_extended_types_int8 */
-    /*  505 */ 0x0fbf30e41210d727ULL, /* GL_EXT_shader_texture_lod */
-    /*  506 */ 0x9383bd5e3c4d02ceULL, /* GL_EXT_shader_texture_samples */
-    /*  507 */ 0x0e7ba3c5e5be8403ULL, /* GL_EXT_shader_tile_image */
-    /*  508 */ 0xe504594d7646deb5ULL, /* GL_EXT_shadow_funcs */
-    /*  509 */ 0x7c7d332de021da36ULL, /* GL_EXT_shadow_samplers */
-    /*  510 */ 0x4851b197319900c7ULL, /* GL_EXT_shared_memory_block */
-    /*  511 */ 0xa39da1f69d0cad57ULL, /* GL_EXT_shared_texture_palette */
-    /*  512 */ 0x86ac1bf74755a73bULL, /* GL_EXT_sparse_texture */
-    /*  513 */ 0x81ed537411dae865ULL, /* GL_EXT_sparse_texture2 */
-    /*  514 */ 0x3e990113969288c9ULL, /* GL_EXT_spec_constant_composites */
-    /*  515 */ 0x5d049f1a9498df05ULL, /* GL_EXT_spirv_intrinsics */
-    /*  516 */ 0xe20fb1c3faf6f7d8ULL, /* GL_EXT_stencil_clear_tag */
-    /*  517 */ 0x629c334d67e5c718ULL, /* GL_EXT_stencil_two_side */
-    /*  518 */ 0x961b80206055e672ULL, /* GL_EXT_stencil_wrap */
-    /*  519 */ 0x2ca97e0716abd9e5ULL, /* GL_EXT_structured_descriptor_heap */
-    /*  520 */ 0x8a56add0af10cbb6ULL, /* GL_EXT_subgroup_uniform_control_flow */
-    /*  521 */ 0xf85c8111e381b059ULL, /* GL_EXT_subgroupuniform_qualifier */
-    /*  522 */ 0xe101571ccdddbe44ULL, /* GL_EXT_subtexture */
-    /*  523 */ 0x80fb7149e30bd23aULL, /* GL_EXT_terminate_invocation */
-    /*  524 */ 0x9e9a449841a4392bULL, /* GL_EXT_tessellation_point_size */
-    /*  525 */ 0xa694e21c70c92ac7ULL, /* GL_EXT_tessellation_shader */
-    /*  526 */ 0x7893ebdfb50f10a6ULL, /* GL_EXT_texture */
-    /*  527 */ 0x3c1975837c97841bULL, /* GL_EXT_texture3D */
-    /*  528 */ 0x2e4c3fc71fe20a24ULL, /* GL_EXT_texture_array */
-    /*  529 */ 0xf02848fc36653917ULL, /* GL_EXT_texture_border_clamp */
-    /*  530 */ 0x990b742e339cfdabULL, /* GL_EXT_texture_buffer */
-    /*  531 */ 0xe30b1bf963964b94ULL, /* GL_EXT_texture_buffer_object */
-    /*  532 */ 0x7c8af8bc6e29a35bULL, /* GL_EXT_texture_compression_astc_decode_mode */
-    /*  533 */ 0x8c12f4a29dd9872dULL, /* GL_EXT_texture_compression_bptc */
-    /*  534 */ 0x42f4b0934de6c2dcULL, /* GL_EXT_texture_compression_dxt1 */
-    /*  535 */ 0x789187ec36c3334eULL, /* GL_EXT_texture_compression_latc */
-    /*  536 */ 0x6d7076425ffdf707ULL, /* GL_EXT_texture_compression_rgtc */
-    /*  537 */ 0x675e8f3271d1d5caULL, /* GL_EXT_texture_compression_s3tc */
-    /*  538 */ 0x747ed54119078205ULL, /* GL_EXT_texture_compression_s3tc_srgb */
-    /*  539 */ 0x511d1308a8dfc13fULL, /* GL_EXT_texture_cube_map */
-    /*  540 */ 0x143e4c21a6ff53ccULL, /* GL_EXT_texture_cube_map_array */
-    /*  541 */ 0xd7d84a9c353851fdULL, /* GL_EXT_texture_env_add */
-    /*  542 */ 0x9d216b7a877bbcfbULL, /* GL_EXT_texture_env_combine */
-    /*  543 */ 0x4bacf852b1cc1a43ULL, /* GL_EXT_texture_env_dot3 */
-    /*  544 */ 0xeafde92a9cccc4edULL, /* GL_EXT_texture_filter_anisotropic */
-    /*  545 */ 0x7738fa89f1d13a13ULL, /* GL_EXT_texture_filter_minmax */
-    /*  546 */ 0x39751dec512ae77cULL, /* GL_EXT_texture_format_BGRA8888 */
-    /*  547 */ 0xeb53a2bedf43571dULL, /* GL_EXT_texture_format_sRGB_override */
-    /*  548 */ 0xaf09c3ff42c89eb5ULL, /* GL_EXT_texture_integer */
-    /*  549 */ 0x41cf52695838c61cULL, /* GL_EXT_texture_lod_bias */
-    /*  550 */ 0x17fb25156306ea61ULL, /* GL_EXT_texture_mirror_clamp */
-    /*  551 */ 0x9a5a807af7e26b3fULL, /* GL_EXT_texture_mirror_clamp_to_edge */
-    /*  552 */ 0x94b22c00bec3e518ULL, /* GL_EXT_texture_norm16 */
-    /*  553 */ 0x10827f593acd1ba7ULL, /* GL_EXT_texture_object */
-    /*  554 */ 0xbdcbb1418f18d3a4ULL, /* GL_EXT_texture_offset_non_const */
-    /*  555 */ 0x971e595b62f38066ULL, /* GL_EXT_texture_perturb_normal */
-    /*  556 */ 0x1e6eaad4a57ca1b5ULL, /* GL_EXT_texture_query_lod */
-    /*  557 */ 0x95f0b0bc421f25d3ULL, /* GL_EXT_texture_rg */
-    /*  558 */ 0xd43be8ff9c7c7adaULL, /* GL_EXT_texture_sRGB */
-    /*  559 */ 0xfe62dc3d8ab9f10bULL, /* GL_EXT_texture_sRGB_R8 */
-    /*  560 */ 0xcb6984e200d35ff9ULL, /* GL_EXT_texture_sRGB_RG8 */
-    /*  561 */ 0x2b44a8b2473d6e5fULL, /* GL_EXT_texture_sRGB_decode */
-    /*  562 */ 0x127856e58a250c1bULL, /* GL_EXT_texture_shadow_lod */
-    /*  563 */ 0x30a7dd27a9ac5760ULL, /* GL_EXT_texture_shared_exponent */
-    /*  564 */ 0xa2f8f4e45d997df3ULL, /* GL_EXT_texture_snorm */
-    /*  565 */ 0x154c4c8b80533dc0ULL, /* GL_EXT_texture_storage */
-    /*  566 */ 0x8768e67dadd2a7fdULL, /* GL_EXT_texture_storage_compression */
-    /*  567 */ 0x183ae240682f4ad7ULL, /* GL_EXT_texture_swizzle */
-    /*  568 */ 0x4a802d8de71af8e9ULL, /* GL_EXT_texture_type_2_10_10_10_REV */
-    /*  569 */ 0x19afe800141638dcULL, /* GL_EXT_texture_view */
-    /*  570 */ 0x4ab0caa70a996495ULL, /* GL_EXT_timer_query */
-    /*  571 */ 0x471536c0a27f5c81ULL, /* GL_EXT_transform_feedback */
-    /*  572 */ 0x924e7084bc277556ULL, /* GL_EXT_uniform_buffer_unsized_array */
-    /*  573 */ 0x1675c7c13b385f42ULL, /* GL_EXT_unpack_subimage */
-    /*  574 */ 0x2347ebc551d02975ULL, /* GL_EXT_vertex_array */
-    /*  575 */ 0xc5160cefc841200dULL, /* GL_EXT_vertex_array_bgra */
-    /*  576 */ 0xfe8f41c3d0888d86ULL, /* GL_EXT_vertex_attrib_64bit */
-    /*  577 */ 0x10ce9358a245f782ULL, /* GL_EXT_vertex_shader */
-    /*  578 */ 0x80e4c2ee68e62a5fULL, /* GL_EXT_vertex_weighting */
-    /*  579 */ 0x71431741b9e82753ULL, /* GL_EXT_vulkan_glsl_relaxed */
-    /*  580 */ 0xb7046ff80ce07f1aULL, /* GL_EXT_win32_keyed_mutex */
-    /*  581 */ 0x225b607d5cdf07d5ULL, /* GL_EXT_window_rectangles */
-    /*  582 */ 0x80306c2b70f53adaULL, /* GL_EXT_x11_sync_object */
-    /*  583 */ 0xaf38ae454737b45aULL, /* GL_FJ_shader_binary_GCCSO */
-    /*  584 */ 0x776d5f9ce5dc30adULL, /* GL_GREMEDY_frame_terminator */
-    /*  585 */ 0x2b64919ae0d632d6ULL, /* GL_GREMEDY_string_marker */
-    /*  586 */ 0x4ba0a53809cd8e1cULL, /* GL_HP_convolution_border_modes */
-    /*  587 */ 0x175101ef679b74d1ULL, /* GL_HP_image_transform */
-    /*  588 */ 0x21db09dff47e8865ULL, /* GL_HP_occlusion_test */
-    /*  589 */ 0xbccb311192bef9fcULL, /* GL_HP_texture_lighting */
-    /*  590 */ 0x3f692d999fbf45a2ULL, /* GL_HUAWEI_cluster_culling_shader */
-    /*  591 */ 0xf5546e69b4a74cb1ULL, /* GL_HUAWEI_program_binary */
-    /*  592 */ 0x1ca5a9610adbc615ULL, /* GL_HUAWEI_shader_binary */
-    /*  593 */ 0x01088281231ac4b3ULL, /* GL_HUAWEI_subpass_shading */
-    /*  594 */ 0x052c78ec9092b2bcULL, /* GL_IBM_cull_vertex */
-    /*  595 */ 0xbed7db565a3dcdb1ULL, /* GL_IBM_multimode_draw_arrays */
-    /*  596 */ 0xb0a341b3ba34bde7ULL, /* GL_IBM_rasterpos_clip */
-    /*  597 */ 0xe5d4e67e743793afULL, /* GL_IBM_static_data */
-    /*  598 */ 0x42e7c1e06f5230cbULL, /* GL_IBM_texture_mirrored_repeat */
-    /*  599 */ 0x3801878506a0d3e5ULL, /* GL_IBM_vertex_array_lists */
-    /*  600 */ 0xe966fe12585d0ee3ULL, /* GL_IMG_bindless_texture */
-    /*  601 */ 0xee05cb0623b18588ULL, /* GL_IMG_framebuffer_downsample */
-    /*  602 */ 0x6cd4bff21f14cba9ULL, /* GL_IMG_multisampled_render_to_texture */
-    /*  603 */ 0x10eae89c21411416ULL, /* GL_IMG_program_binary */
-    /*  604 */ 0xe1d246c5f2217570ULL, /* GL_IMG_read_format */
-    /*  605 */ 0x631524850de59dddULL, /* GL_IMG_shader_binary */
-    /*  606 */ 0x26bbd5573ad61282ULL, /* GL_IMG_texture_compression_pvrtc */
-    /*  607 */ 0x46869091dbce71a6ULL, /* GL_IMG_texture_compression_pvrtc2 */
-    /*  608 */ 0xd44d6d9763e6fd68ULL, /* GL_IMG_texture_filter_cubic */
-    /*  609 */ 0xf8c1cfe37858c556ULL, /* GL_INGR_blend_func_separate */
-    /*  610 */ 0x9d3ca51fe0f2a837ULL, /* GL_INGR_color_clamp */
-    /*  611 */ 0x231c00090b681c01ULL, /* GL_INGR_interlace_read */
-    /*  612 */ 0xc0f54564fa652ebaULL, /* GL_INTEL_blackhole_render */
-    /*  613 */ 0x8cfa061f6a006e62ULL, /* GL_INTEL_conservative_rasterization */
-    /*  614 */ 0x693a15be925d42bbULL, /* GL_INTEL_fragment_shader_ordering */
-    /*  615 */ 0x14386616e0282da8ULL, /* GL_INTEL_framebuffer_CMAA */
-    /*  616 */ 0xfe0a30102b2b7f11ULL, /* GL_INTEL_map_texture */
-    /*  617 */ 0x6d9138f92a97a9b2ULL, /* GL_INTEL_parallel_arrays */
-    /*  618 */ 0x331d1b2f1d575bd8ULL, /* GL_INTEL_performance_query */
-    /*  619 */ 0xd9d4c609dd72784cULL, /* GL_INTEL_shader_integer_functions2 */
-    /*  620 */ 0x898f16e7a19612feULL, /* GL_KHR_blend_equation_advanced */
-    /*  621 */ 0xa66b25957f58c923ULL, /* GL_KHR_blend_equation_advanced_coherent */
-    /*  622 */ 0x3adc9ab9c87fd235ULL, /* GL_KHR_compute_shader_derivatives */
-    /*  623 */ 0x0956a658c75ab600ULL, /* GL_KHR_context_flush_control */
-    /*  624 */ 0x836eea06917bcccbULL, /* GL_KHR_cooperative_matrix */
-    /*  625 */ 0x5e0c5b9607ac8784ULL, /* GL_KHR_debug */
-    /*  626 */ 0x08ce79df715e69dcULL, /* GL_KHR_memory_scope_semantics */
-    /*  627 */ 0x12316ddfcc85238eULL, /* GL_KHR_no_error */
-    /*  628 */ 0x3406b66e92343753ULL, /* GL_KHR_parallel_shader_compile */
-    /*  629 */ 0xfa6bb57654b50c92ULL, /* GL_KHR_robust_buffer_access_behavior */
-    /*  630 */ 0x474beac5f6910636ULL, /* GL_KHR_robustness */
-    /*  631 */ 0x65263f2081d063e7ULL, /* GL_KHR_shader_subgroup */
-    /*  632 */ 0x877be0bdc1f8d36cULL, /* GL_KHR_shader_subgroup_arithmetic */
-    /*  633 */ 0x61e703f91e0948f3ULL, /* GL_KHR_shader_subgroup_ballot */
-    /*  634 */ 0x5b9c554fd0d5a036ULL, /* GL_KHR_shader_subgroup_basic */
-    /*  635 */ 0xe1044b09af95d72aULL, /* GL_KHR_shader_subgroup_clustered */
-    /*  636 */ 0x4b76468cfb09dabcULL, /* GL_KHR_shader_subgroup_quad */
-    /*  637 */ 0x55436fcdf6a6d27dULL, /* GL_KHR_shader_subgroup_rotate */
-    /*  638 */ 0xaa09aac681765f3aULL, /* GL_KHR_shader_subgroup_shuffle */
-    /*  639 */ 0x56a562daeb0a2f26ULL, /* GL_KHR_shader_subgroup_shuffle_relative */
-    /*  640 */ 0x85bb9015d69ab32dULL, /* GL_KHR_shader_subgroup_vote */
-    /*  641 */ 0x24c80aab81e859b3ULL, /* GL_KHR_texture_compression_astc_hdr */
-    /*  642 */ 0x16f59295398b9d0aULL, /* GL_KHR_texture_compression_astc_ldr */
-    /*  643 */ 0xa4a29c6f56f2023eULL, /* GL_KHR_texture_compression_astc_sliced_3d */
-    /*  644 */ 0xcbbacf3d7c96adccULL, /* GL_KHR_vulkan_glsl */
-    /*  645 */ 0x70bbb44bbc67a914ULL, /* GL_MESAX_texture_stack */
-    /*  646 */ 0x4b833beb1f90e758ULL, /* GL_MESA_bgra */
-    /*  647 */ 0xf9cfb61b2f897c12ULL, /* GL_MESA_framebuffer_flip_x */
-    /*  648 */ 0xdf842b85f40b8f2dULL, /* GL_MESA_framebuffer_flip_y */
-    /*  649 */ 0xc735e4d56089513eULL, /* GL_MESA_framebuffer_swap_xy */
-    /*  650 */ 0x208599190bbb22ccULL, /* GL_MESA_map_buffer_client_pointer */
-    /*  651 */ 0xac7eeedfea22e53dULL, /* GL_MESA_pack_invert */
-    /*  652 */ 0xe164dc7b3064a548ULL, /* GL_MESA_program_binary_formats */
-    /*  653 */ 0x39376b06206502d6ULL, /* GL_MESA_resize_buffers */
-    /*  654 */ 0xa14ebc048c19e849ULL, /* GL_MESA_sampler_objects */
-    /*  655 */ 0x58e3c24874e50b2fULL, /* GL_MESA_shader_integer_functions */
-    /*  656 */ 0x7148e64fc5eef950ULL, /* GL_MESA_texture_const_bandwidth */
-    /*  657 */ 0x8ee739e5f4f16337ULL, /* GL_MESA_tile_raster_order */
-    /*  658 */ 0x00063de42ab739f6ULL, /* GL_MESA_window_pos */
-    /*  659 */ 0x05840d0e5ebfdb5dULL, /* GL_MESA_ycbcr_texture */
-    /*  660 */ 0x210f54fb5023bd27ULL, /* GL_NVX_blend_equation_advanced_multi_draw_buffers */
-    /*  661 */ 0xdb3d40c973a8401dULL, /* GL_NVX_conditional_render */
-    /*  662 */ 0xdba64e974cfda98bULL, /* GL_NVX_gpu_memory_info */
-    /*  663 */ 0xfadb1fc8cec16ab6ULL, /* GL_NVX_gpu_multicast2 */
-    /*  664 */ 0xcd2e0dc9329fd277ULL, /* GL_NVX_linked_gpu_multicast */
-    /*  665 */ 0xd9dac6ae420f2bc1ULL, /* GL_NVX_multiview_per_view_attributes */
-    /*  666 */ 0xd0ab24d9b21b5714ULL, /* GL_NVX_progress_fence */
-    /*  667 */ 0xf60ebf70e765dadeULL, /* GL_NV_alpha_to_coverage_dither_control */
-    /*  668 */ 0x0125c6b149dc763dULL, /* GL_NV_bindless_multi_draw_indirect */
-    /*  669 */ 0xbf25dd3d5b684860ULL, /* GL_NV_bindless_multi_draw_indirect_count */
-    /*  670 */ 0xfe0701cf0661b283ULL, /* GL_NV_bindless_texture */
-    /*  671 */ 0xdfb2fe6dc8d05e7bULL, /* GL_NV_blend_equation_advanced */
-    /*  672 */ 0x93143e8adaf57589ULL, /* GL_NV_blend_equation_advanced_coherent */
-    /*  673 */ 0xea9c32d0ef37492eULL, /* GL_NV_blend_minmax_factor */
-    /*  674 */ 0xcfb887fc69ba21e3ULL, /* GL_NV_blend_square */
-    /*  675 */ 0xa4c52c3b41a4fcadULL, /* GL_NV_clip_space_w_scaling */
-    /*  676 */ 0xd5cc92349ed5c556ULL, /* GL_NV_cluster_acceleration_structure */
-    /*  677 */ 0x86fd725bf0f0d470ULL, /* GL_NV_command_list */
-    /*  678 */ 0x909a590b136b2993ULL, /* GL_NV_compute_program5 */
-    /*  679 */ 0x6e8fcfc637ce5f42ULL, /* GL_NV_compute_shader_derivatives */
-    /*  680 */ 0x30dc18387f98fe17ULL, /* GL_NV_conditional_render */
-    /*  681 */ 0xe3492208f94da35fULL, /* GL_NV_conservative_raster */
-    /*  682 */ 0xd3d407b80b1805aeULL, /* GL_NV_conservative_raster_dilate */
-    /*  683 */ 0x10c99e7e01aae44fULL, /* GL_NV_conservative_raster_pre_snap */
-    /*  684 */ 0xf4ef9c1caf911a2cULL, /* GL_NV_conservative_raster_pre_snap_triangles */
-    /*  685 */ 0x9a8099482ede4695ULL, /* GL_NV_conservative_raster_underestimation */
-    /*  686 */ 0x82f2d3fffe63ccbaULL, /* GL_NV_cooperative_matrix */
-    /*  687 */ 0xc3e52c0f74e3a5b4ULL, /* GL_NV_cooperative_matrix2 */
-    /*  688 */ 0xaabf9ee854c39076ULL, /* GL_NV_cooperative_matrix_decode_vector */
-    /*  689 */ 0xc5b30d49db3f4c5dULL, /* GL_NV_cooperative_vector */
-    /*  690 */ 0x1250d4e984fabb8aULL, /* GL_NV_copy_buffer */
-    /*  691 */ 0xddf225eb383a722aULL, /* GL_NV_copy_depth_to_color */
-    /*  692 */ 0x542626fd538a9ee0ULL, /* GL_NV_copy_image */
-    /*  693 */ 0x1f3cf0884049a65cULL, /* GL_NV_coverage_sample */
-    /*  694 */ 0xa115ed21a9ad2718ULL, /* GL_NV_deep_texture3D */
-    /*  695 */ 0x11d0e662e981dd10ULL, /* GL_NV_depth_buffer_float */
-    /*  696 */ 0x25caf626c8dc4876ULL, /* GL_NV_depth_clamp */
-    /*  697 */ 0x23fb225c6189b719ULL, /* GL_NV_depth_nonlinear */
-    /*  698 */ 0xc7c2a14929f83872ULL, /* GL_NV_displacement_micromap */
-    /*  699 */ 0xe30effdb6e04aad2ULL, /* GL_NV_draw_buffers */
-    /*  700 */ 0x5cef483902a0a7d1ULL, /* GL_NV_draw_instanced */
-    /*  701 */ 0x0ac29b41db04db89ULL, /* GL_NV_draw_texture */
-    /*  702 */ 0x0c3ad3a0bb6ea832ULL, /* GL_NV_draw_vulkan_image */
-    /*  703 */ 0x86aaaa35812cc6e4ULL, /* GL_NV_evaluators */
-    /*  704 */ 0x0d0ad1150bf11b93ULL, /* GL_NV_explicit_attrib_location */
-    /*  705 */ 0xb1fb52088193eb75ULL, /* GL_NV_explicit_multisample */
-    /*  706 */ 0xdd319bbc193b0f81ULL, /* GL_NV_explicit_typecast */
-    /*  707 */ 0xf69d212a36261f45ULL, /* GL_NV_fbo_color_attachments */
-    /*  708 */ 0x9f9d6242407aaa0dULL, /* GL_NV_fence */
-    /*  709 */ 0x574a28d0edc9eb1fULL, /* GL_NV_fill_rectangle */
-    /*  710 */ 0x60178d619bd63acdULL, /* GL_NV_float_buffer */
-    /*  711 */ 0x3a25bd3423152eb5ULL, /* GL_NV_fog_distance */
-    /*  712 */ 0xbd0368ffaa60b1e1ULL, /* GL_NV_fragment_coverage_to_color */
-    /*  713 */ 0xd63f48ff142e3931ULL, /* GL_NV_fragment_program */
-    /*  714 */ 0x9607f3b2549a29c3ULL, /* GL_NV_fragment_program2 */
-    /*  715 */ 0x3fc3c14225294207ULL, /* GL_NV_fragment_program4 */
-    /*  716 */ 0x7e38a803870eb005ULL, /* GL_NV_fragment_program_option */
-    /*  717 */ 0x63f3491b75562351ULL, /* GL_NV_fragment_shader_barycentric */
-    /*  718 */ 0xf907528dfaacf5d1ULL, /* GL_NV_fragment_shader_interlock */
-    /*  719 */ 0xc7b0688e759eaccaULL, /* GL_NV_framebuffer_blit */
-    /*  720 */ 0x7690d69739f37d49ULL, /* GL_NV_framebuffer_mixed_samples */
-    /*  721 */ 0xd333a1d53faf1645ULL, /* GL_NV_framebuffer_multisample */
-    /*  722 */ 0xb7e1d7ede28f1eb6ULL, /* GL_NV_framebuffer_multisample_coverage */
-    /*  723 */ 0x42fb5b03beace82dULL, /* GL_NV_generate_mipmap_sRGB */
-    /*  724 */ 0xd649529b8b1dc13fULL, /* GL_NV_geometry_program4 */
-    /*  725 */ 0x85be2495755b8912ULL, /* GL_NV_geometry_shader4 */
-    /*  726 */ 0x2650d5fc619ace25ULL, /* GL_NV_geometry_shader_passthrough */
-    /*  727 */ 0x0f309973ce34369dULL, /* GL_NV_gpu_multicast */
-    /*  728 */ 0xb97d5c93298f0cd0ULL, /* GL_NV_gpu_program4 */
-    /*  729 */ 0xfee0597c2b98bd5aULL, /* GL_NV_gpu_program5 */
-    /*  730 */ 0x76ac1ada5bbc4ea2ULL, /* GL_NV_gpu_program5_mem_extended */
-    /*  731 */ 0x9ca801fbedd18a78ULL, /* GL_NV_gpu_shader5 */
-    /*  732 */ 0x185a8632c27d17b4ULL, /* GL_NV_half_float */
-    /*  733 */ 0xe34c3aba26b785e0ULL, /* GL_NV_image_formats */
-    /*  734 */ 0xc2e8b0284eeb3343ULL, /* GL_NV_instanced_arrays */
-    /*  735 */ 0xaeae3147a430714aULL, /* GL_NV_integer_cooperative_matrix */
-    /*  736 */ 0xa5628152267b8db5ULL, /* GL_NV_internalformat_sample_query */
-    /*  737 */ 0x4514ca3e8473d61dULL, /* GL_NV_light_max_exponent */
-    /*  738 */ 0xfc66f81ba1dde103ULL, /* GL_NV_linear_swept_spheres */
-    /*  739 */ 0xe91f9b1323143013ULL, /* GL_NV_memory_attachment */
-    /*  740 */ 0x529b823de64f6ca0ULL, /* GL_NV_memory_object_sparse */
-    /*  741 */ 0x2793373463edd95bULL, /* GL_NV_mesh_shader */
-    /*  742 */ 0x8d5187c2fb3e3879ULL, /* GL_NV_multisample_coverage */
-    /*  743 */ 0x92f77a4cfb0d4df3ULL, /* GL_NV_multisample_filter_hint */
-    /*  744 */ 0x5b891d5155380820ULL, /* GL_NV_non_square_matrices */
-    /*  745 */ 0xdff6cf35e1df2d8dULL, /* GL_NV_occlusion_query */
-    /*  746 */ 0xda29f4099a052321ULL, /* GL_NV_pack_subimage */
-    /*  747 */ 0x1a5932681cefa5ebULL, /* GL_NV_packed_depth_stencil */
-    /*  748 */ 0xbffccb846b13070aULL, /* GL_NV_parameter_buffer_object */
-    /*  749 */ 0xb153f109324c418bULL, /* GL_NV_parameter_buffer_object2 */
-    /*  750 */ 0x77bc468b065f8fdbULL, /* GL_NV_path_rendering */
-    /*  751 */ 0x2f70022ecb786aedULL, /* GL_NV_path_rendering_shared_edge */
-    /*  752 */ 0x0b44f2e633646ab5ULL, /* GL_NV_pixel_buffer_object */
-    /*  753 */ 0x43d8732157b4106dULL, /* GL_NV_pixel_data_range */
-    /*  754 */ 0x839efae2d0736a4cULL, /* GL_NV_point_sprite */
-    /*  755 */ 0x3330eb9a4ceb6c0cULL, /* GL_NV_polygon_mode */
-    /*  756 */ 0x6512c3d1922a98dbULL, /* GL_NV_present_video */
-    /*  757 */ 0x8c542b195b5b3c94ULL, /* GL_NV_primitive_restart */
-    /*  758 */ 0x0cacb49d8f1c105aULL, /* GL_NV_primitive_shading_rate */
-    /*  759 */ 0x2474fcd7c3d2a339ULL, /* GL_NV_push_constant_bank */
-    /*  760 */ 0x9b1b0441d8d19911ULL, /* GL_NV_query_resource */
-    /*  761 */ 0x15f0661a8638b338ULL, /* GL_NV_query_resource_tag */
-    /*  762 */ 0xdd74002f450fb368ULL, /* GL_NV_ray_tracing */
-    /*  763 */ 0x182d9aed7af08983ULL, /* GL_NV_ray_tracing_motion_blur */
-    /*  764 */ 0xb51b7c433236bd06ULL, /* GL_NV_read_buffer */
-    /*  765 */ 0xc91023f37354df43ULL, /* GL_NV_read_buffer_front */
-    /*  766 */ 0x3dfff3ed25362196ULL, /* GL_NV_read_depth */
-    /*  767 */ 0x55261906f55bb17aULL, /* GL_NV_read_depth_stencil */
-    /*  768 */ 0x7bab8fd7e4a04ee8ULL, /* GL_NV_read_stencil */
-    /*  769 */ 0xd791c5687139b905ULL, /* GL_NV_register_combiners */
-    /*  770 */ 0x8814ab530e95a798ULL, /* GL_NV_register_combiners2 */
-    /*  771 */ 0xb46bd57f88e91d64ULL, /* GL_NV_representative_fragment_test */
-    /*  772 */ 0xc4eada8b9cbe17c0ULL, /* GL_NV_robustness_video_memory_purge */
-    /*  773 */ 0x2c2775936dc2a882ULL, /* GL_NV_sRGB_formats */
-    /*  774 */ 0xc50ae467eedfefdeULL, /* GL_NV_sample_locations */
-    /*  775 */ 0x446a05466a6d6429ULL, /* GL_NV_sample_mask_override_coverage */
-    /*  776 */ 0x4247a4acbfcdb098ULL, /* GL_NV_scissor_exclusive */
-    /*  777 */ 0x0383e334dd39d9a0ULL, /* GL_NV_shader_atomic_counters */
-    /*  778 */ 0x02399be47930fbf4ULL, /* GL_NV_shader_atomic_float */
-    /*  779 */ 0x8c8c8962eadf1230ULL, /* GL_NV_shader_atomic_float64 */
-    /*  780 */ 0x4c3311286ab16152ULL, /* GL_NV_shader_atomic_fp16_vector */
-    /*  781 */ 0xb14dbc3c64a1326fULL, /* GL_NV_shader_atomic_int64 */
-    /*  782 */ 0x3ae6fc5c42bab2c2ULL, /* GL_NV_shader_buffer_load */
-    /*  783 */ 0x1c05604500113691ULL, /* GL_NV_shader_buffer_store */
-    /*  784 */ 0x22e85dcf4a44b2f7ULL, /* GL_NV_shader_invocation_reorder */
-    /*  785 */ 0xbb5c10f38325fdf8ULL, /* GL_NV_shader_noperspective_interpolation */
-    /*  786 */ 0x6d97890637a77774ULL, /* GL_NV_shader_sm_builtins */
-    /*  787 */ 0xaf5c0eb5c483eb28ULL, /* GL_NV_shader_storage_buffer_object */
-    /*  788 */ 0x826afa0d2f696f22ULL, /* GL_NV_shader_subgroup_partitioned */
-    /*  789 */ 0x7b3f8fad48cfd967ULL, /* GL_NV_shader_texture_footprint */
-    /*  790 */ 0xfd2aa76218c9354eULL, /* GL_NV_shader_thread_group */
-    /*  791 */ 0x74a053165bf8ada4ULL, /* GL_NV_shader_thread_shuffle */
-    /*  792 */ 0xf9355d5174ef4c70ULL, /* GL_NV_shading_rate_image */
-    /*  793 */ 0x28944cfc0cca07ecULL, /* GL_NV_shadow_samplers_array */
-    /*  794 */ 0xfdbd6232791ce36fULL, /* GL_NV_shadow_samplers_cube */
-    /*  795 */ 0x56dc6bb2a7d8736fULL, /* GL_NV_stereo_view_rendering */
-    /*  796 */ 0x2410081ec485d619ULL, /* GL_NV_tessellation_program5 */
-    /*  797 */ 0x6a6887942da6a4c4ULL, /* GL_NV_texgen_emboss */
-    /*  798 */ 0x35865e06d7292c9bULL, /* GL_NV_texgen_reflection */
-    /*  799 */ 0x282f885e0bfd25deULL, /* GL_NV_texture_barrier */
-    /*  800 */ 0x373989acbf486191ULL, /* GL_NV_texture_border_clamp */
-    /*  801 */ 0x4d5276bd5a1f04ceULL, /* GL_NV_texture_compression_s3tc_update */
-    /*  802 */ 0x25b70b1f5bbed713ULL, /* GL_NV_texture_compression_vtc */
-    /*  803 */ 0x84b70fe53fcdcde1ULL, /* GL_NV_texture_env_combine4 */
-    /*  804 */ 0x07e650e01fee3678ULL, /* GL_NV_texture_expand_normal */
-    /*  805 */ 0x4679eee96470073fULL, /* GL_NV_texture_multisample */
-    /*  806 */ 0xcba499c04274ad25ULL, /* GL_NV_texture_npot_2D_mipmap */
-    /*  807 */ 0xccbc8154a70c3605ULL, /* GL_NV_texture_rectangle */
-    /*  808 */ 0x5da6e59a7e51bc40ULL, /* GL_NV_texture_rectangle_compressed */
-    /*  809 */ 0x8a67a1269b408254ULL, /* GL_NV_texture_shader */
-    /*  810 */ 0x816b354fd0cd9228ULL, /* GL_NV_texture_shader2 */
-    /*  811 */ 0x5526327fa18acddeULL, /* GL_NV_texture_shader3 */
-    /*  812 */ 0x39f7dcc9a62c5153ULL, /* GL_NV_timeline_semaphore */
-    /*  813 */ 0xf09b77c741443fcbULL, /* GL_NV_transform_feedback */
-    /*  814 */ 0x32519ec17990e826ULL, /* GL_NV_transform_feedback2 */
-    /*  815 */ 0x5600eb6f04e474eeULL, /* GL_NV_uniform_buffer_std430_layout */
-    /*  816 */ 0x5a3050e67df48f2cULL, /* GL_NV_uniform_buffer_unified_memory */
-    /*  817 */ 0xc270d7ffe7e44b23ULL, /* GL_NV_vdpau_interop */
-    /*  818 */ 0x613710111a2944f7ULL, /* GL_NV_vdpau_interop2 */
-    /*  819 */ 0x2670ae7bcc80188eULL, /* GL_NV_vertex_array_range */
-    /*  820 */ 0x79ae834a103024c5ULL, /* GL_NV_vertex_array_range2 */
-    /*  821 */ 0xe688c60fe2e62039ULL, /* GL_NV_vertex_attrib_integer_64bit */
-    /*  822 */ 0x7e2fb60c66658e57ULL, /* GL_NV_vertex_buffer_unified_memory */
-    /*  823 */ 0x527413b984649803ULL, /* GL_NV_vertex_program */
-    /*  824 */ 0x7d2fc2b85898af18ULL, /* GL_NV_vertex_program1_1 */
-    /*  825 */ 0x2d5a70a0a1d00d78ULL, /* GL_NV_vertex_program2 */
-    /*  826 */ 0x747ed48148981054ULL, /* GL_NV_vertex_program2_option */
-    /*  827 */ 0xc13798df29c369e2ULL, /* GL_NV_vertex_program3 */
-    /*  828 */ 0xa796194638bbdc74ULL, /* GL_NV_vertex_program4 */
-    /*  829 */ 0x89ae752e4cfcfae8ULL, /* GL_NV_video_capture */
-    /*  830 */ 0x1b9db3e10e73323bULL, /* GL_NV_viewport_array */
-    /*  831 */ 0x4e9c3fc0856350f9ULL, /* GL_NV_viewport_array2 */
-    /*  832 */ 0xdf18b1c27e48f432ULL, /* GL_NV_viewport_swizzle */
-    /*  833 */ 0xc05411382c7e9b6fULL, /* GL_OES_EGL_image */
-    /*  834 */ 0xb3f47895b1c4d5f8ULL, /* GL_OES_EGL_image_external */
-    /*  835 */ 0xbbae531ab8d7e16fULL, /* GL_OES_EGL_image_external_essl3 */
-    /*  836 */ 0x55f4d891b16ad96cULL, /* GL_OES_byte_coordinates */
-    /*  837 */ 0x866125fa75aab774ULL, /* GL_OES_compressed_ETC1_RGB8_sub_texture */
-    /*  838 */ 0x5b4df7888b81a92bULL, /* GL_OES_compressed_ETC1_RGB8_texture */
-    /*  839 */ 0xd1ae5222afe37da5ULL, /* GL_OES_compressed_paletted_texture */
-    /*  840 */ 0xc5e1ddc1ea43276eULL, /* GL_OES_copy_image */
-    /*  841 */ 0xa3f0bbbc7660d96cULL, /* GL_OES_depth24 */
-    /*  842 */ 0xb8b2dd3478f1ec83ULL, /* GL_OES_depth32 */
-    /*  843 */ 0x67516f69dbc843f6ULL, /* GL_OES_depth_texture */
-    /*  844 */ 0x012b99c59ced284fULL, /* GL_OES_draw_buffers_indexed */
-    /*  845 */ 0x4638dd889d2b7eabULL, /* GL_OES_draw_elements_base_vertex */
-    /*  846 */ 0x29e68bee4a9705f1ULL, /* GL_OES_element_index_uint */
-    /*  847 */ 0xe0b0d82d6dc31daeULL, /* GL_OES_fbo_render_mipmap */
-    /*  848 */ 0x9f59932407436633ULL, /* GL_OES_fixed_point */
-    /*  849 */ 0x116a77aa55534c76ULL, /* GL_OES_fragment_precision_high */
-    /*  850 */ 0x5e6f26587d551ffcULL, /* GL_OES_geometry_point_size */
-    /*  851 */ 0xaa384a84e450d595ULL, /* GL_OES_geometry_shader */
-    /*  852 */ 0x503ad238c5e97931ULL, /* GL_OES_get_program_binary */
-    /*  853 */ 0x77f35c2a7a2bd390ULL, /* GL_OES_gpu_shader5 */
-    /*  854 */ 0x22e521fe25c89a3bULL, /* GL_OES_mapbuffer */
-    /*  855 */ 0xb124b23bca92b355ULL, /* GL_OES_packed_depth_stencil */
-    /*  856 */ 0x303e15e4f8fb9ee6ULL, /* GL_OES_primitive_bounding_box */
-    /*  857 */ 0xc8d3d0277204ac3dULL, /* GL_OES_query_matrix */
-    /*  858 */ 0xca46680e5cfc3e18ULL, /* GL_OES_read_format */
-    /*  859 */ 0xd6c9bec1dd5d5b89ULL, /* GL_OES_required_internalformat */
-    /*  860 */ 0xccb18f4e376e6c74ULL, /* GL_OES_rgb8_rgba8 */
-    /*  861 */ 0xcb740362814f4ca0ULL, /* GL_OES_sample_shading */
-    /*  862 */ 0x8f4eb2b127c21f67ULL, /* GL_OES_sample_variables */
-    /*  863 */ 0xa023718702859970ULL, /* GL_OES_shader_image_atomic */
-    /*  864 */ 0x8cc1262bb8c2d393ULL, /* GL_OES_shader_io_blocks */
-    /*  865 */ 0xc772b78382e1a793ULL, /* GL_OES_shader_multisample_interpolation */
-    /*  866 */ 0xbcbfeb8171756944ULL, /* GL_OES_single_precision */
-    /*  867 */ 0x4e9710576f516b4eULL, /* GL_OES_standard_derivatives */
-    /*  868 */ 0x79f1937e076eb6e0ULL, /* GL_OES_stencil1 */
-    /*  869 */ 0x7361db1a08c53c55ULL, /* GL_OES_stencil4 */
-    /*  870 */ 0x6df979b4adc4989bULL, /* GL_OES_surfaceless_context */
-    /*  871 */ 0xdc7532bffc48cb01ULL, /* GL_OES_tessellation_point_size */
-    /*  872 */ 0x8bbb4c0c94dc1415ULL, /* GL_OES_tessellation_shader */
-    /*  873 */ 0xccac53b0ed36c73cULL, /* GL_OES_texture_3D */
-    /*  874 */ 0xedc39fcb928c7be5ULL, /* GL_OES_texture_border_clamp */
-    /*  875 */ 0xc7d6a2d8a596bf50ULL, /* GL_OES_texture_buffer */
-    /*  876 */ 0x552cece98cadbaa6ULL, /* GL_OES_texture_compression_astc */
-    /*  877 */ 0xfad8c3de7cf9ffc4ULL, /* GL_OES_texture_cube_map_array */
-    /*  878 */ 0x32ed502b39dd1594ULL, /* GL_OES_texture_float */
-    /*  879 */ 0x5afe2be3731190e1ULL, /* GL_OES_texture_float_linear */
-    /*  880 */ 0xa9fdcf0e5b6803ddULL, /* GL_OES_texture_half_float */
-    /*  881 */ 0x0011e43010189be7ULL, /* GL_OES_texture_half_float_linear */
-    /*  882 */ 0xe706ff7638659b7eULL, /* GL_OES_texture_npot */
-    /*  883 */ 0xdfa8a0ccd9d60d53ULL, /* GL_OES_texture_stencil8 */
-    /*  884 */ 0xbc655ee4febdcfcaULL, /* GL_OES_texture_storage_multisample_2d_array */
-    /*  885 */ 0x8fc2a146f6290d39ULL, /* GL_OES_texture_view */
-    /*  886 */ 0x7cd6041965da7d3cULL, /* GL_OES_vertex_array_object */
-    /*  887 */ 0x8d77aa22bdd641e8ULL, /* GL_OES_vertex_half_float */
-    /*  888 */ 0x244e9e511573b959ULL, /* GL_OES_vertex_type_10_10_10_2 */
-    /*  889 */ 0x2e0ac92809baabbdULL, /* GL_OES_viewport_array */
-    /*  890 */ 0xe4756190e24cfae1ULL, /* GL_OML_interlace */
-    /*  891 */ 0xf00e1502b0d1f5d7ULL, /* GL_OML_resample */
-    /*  892 */ 0xee17f2c40613fa28ULL, /* GL_OML_subsample */
-    /*  893 */ 0x462789e64be7acd7ULL, /* GL_OVR_multiview */
-    /*  894 */ 0x4d3b083404c10e3fULL, /* GL_OVR_multiview2 */
-    /*  895 */ 0xdd9450d3b97e069bULL, /* GL_OVR_multiview_multisampled_render_to_texture */
-    /*  896 */ 0xb1df54452698a7beULL, /* GL_PGI_misc_hints */
-    /*  897 */ 0x830c412288059800ULL, /* GL_PGI_vertex_hints */
-    /*  898 */ 0x03b99dd37fd50188ULL, /* GL_QCOM_YUV_texture_gather */
-    /*  899 */ 0x3aa5ff0497f38e96ULL, /* GL_QCOM_alpha_test */
-    /*  900 */ 0x8b6f2c405eed8fc9ULL, /* GL_QCOM_binning_control */
-    /*  901 */ 0xf4d179d0eb998db1ULL, /* GL_QCOM_cooperative_matrix_conversion */
-    /*  902 */ 0xd69ddd5074f27947ULL, /* GL_QCOM_driver_control */
-    /*  903 */ 0x2cfff6c37fa549bcULL, /* GL_QCOM_extended_get */
-    /*  904 */ 0xa36cbb8c3a77c3a1ULL, /* GL_QCOM_extended_get2 */
-    /*  905 */ 0x1359ba3cc79be309ULL, /* GL_QCOM_frame_extrapolation */
-    /*  906 */ 0xa96b1c721f28a1c2ULL, /* GL_QCOM_framebuffer_foveated */
-    /*  907 */ 0xaa7b8918e97b02c0ULL, /* GL_QCOM_image_processing */
-    /*  908 */ 0x87abde46d2fd3251ULL, /* GL_QCOM_image_processing2 */
-    /*  909 */ 0x822886625bd76c4aULL, /* GL_QCOM_motion_estimation */
-    /*  910 */ 0x62c4f9e3d0cf2728ULL, /* GL_QCOM_perfmon_global_mode */
-    /*  911 */ 0x6667e13047800b18ULL, /* GL_QCOM_render_sRGB_R8_RG8 */
-    /*  912 */ 0x005a335cb406a184ULL, /* GL_QCOM_render_shared_exponent */
-    /*  913 */ 0x0668ea2d27f4b9c7ULL, /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
-    /*  914 */ 0x2f8fba53941074deULL, /* GL_QCOM_shader_framebuffer_fetch_rate */
-    /*  915 */ 0x360f4bc982306308ULL, /* GL_QCOM_shading_rate */
-    /*  916 */ 0xa23647ccb657fc93ULL, /* GL_QCOM_texture_foveated */
-    /*  917 */ 0xac6fb0841696dc5fULL, /* GL_QCOM_texture_foveated2 */
-    /*  918 */ 0xb7f306a63180d3dfULL, /* GL_QCOM_texture_foveated_subsampled_layout */
-    /*  919 */ 0x70d9c41ab20f93f9ULL, /* GL_QCOM_texture_lod_bias */
-    /*  920 */ 0x539f28eaf685b3e5ULL, /* GL_QCOM_tile_shading */
-    /*  921 */ 0x288ca2e6c7c5c86dULL, /* GL_QCOM_tiled_rendering */
-    /*  922 */ 0x28eabd27e2f106a8ULL, /* GL_QCOM_writeonly_rendering */
-    /*  923 */ 0xafb9cdf7b9a2826aULL, /* GL_QCOM_ycbcr_degamma */
-    /*  924 */ 0x14dac5dff736a3dfULL, /* GL_REND_screen_coordinates */
-    /*  925 */ 0x93469fe128fc0919ULL, /* GL_S3_s3tc */
-    /*  926 */ 0x8c7ee523e6ed026aULL, /* GL_SGIS_detail_texture */
-    /*  927 */ 0xe54deb13059b8c4cULL, /* GL_SGIS_fog_function */
-    /*  928 */ 0xb1b31f0af9b1e3c1ULL, /* GL_SGIS_generate_mipmap */
-    /*  929 */ 0x39568b3690efef18ULL, /* GL_SGIS_multisample */
-    /*  930 */ 0xf250c15acefa1ac9ULL, /* GL_SGIS_pixel_texture */
-    /*  931 */ 0x9b7bb525c279e853ULL, /* GL_SGIS_point_line_texgen */
-    /*  932 */ 0x4e3e0fa2dfafd5b4ULL, /* GL_SGIS_point_parameters */
-    /*  933 */ 0x4a4aa0671eb15c9fULL, /* GL_SGIS_sharpen_texture */
-    /*  934 */ 0xe3880e70b14a01efULL, /* GL_SGIS_texture4D */
-    /*  935 */ 0x70c7cab7e228743cULL, /* GL_SGIS_texture_border_clamp */
-    /*  936 */ 0x04eb37e0f3c4686aULL, /* GL_SGIS_texture_color_mask */
-    /*  937 */ 0xb6400bcd7a346c99ULL, /* GL_SGIS_texture_edge_clamp */
-    /*  938 */ 0xd79b6287779eca3fULL, /* GL_SGIS_texture_filter4 */
-    /*  939 */ 0xf25eb0173c775af1ULL, /* GL_SGIS_texture_lod */
-    /*  940 */ 0x4b818d48997acf33ULL, /* GL_SGIS_texture_select */
-    /*  941 */ 0x42053ed5c2789d8aULL, /* GL_SGIX_async */
-    /*  942 */ 0x9baec4623ae00aa8ULL, /* GL_SGIX_async_histogram */
-    /*  943 */ 0xbed04383395711b9ULL, /* GL_SGIX_async_pixel */
-    /*  944 */ 0xd3cc8d1ef603a7f6ULL, /* GL_SGIX_blend_alpha_minmax */
-    /*  945 */ 0xe60980f13acb1fe8ULL, /* GL_SGIX_calligraphic_fragment */
-    /*  946 */ 0x5d613989907c2996ULL, /* GL_SGIX_clipmap */
-    /*  947 */ 0x8fa248e9981db96eULL, /* GL_SGIX_convolution_accuracy */
-    /*  948 */ 0x47ef8f4254eec5a0ULL, /* GL_SGIX_depth_pass_instrument */
-    /*  949 */ 0x3489d57ce09fdb5eULL, /* GL_SGIX_depth_texture */
-    /*  950 */ 0x37a8cdae9276920fULL, /* GL_SGIX_flush_raster */
-    /*  951 */ 0x21b4c2f4db4fb980ULL, /* GL_SGIX_fog_offset */
-    /*  952 */ 0x5379c01e285814d7ULL, /* GL_SGIX_fragment_lighting */
-    /*  953 */ 0xbc4f1c742be26f3fULL, /* GL_SGIX_framezoom */
-    /*  954 */ 0xd8ea1ff9ab303390ULL, /* GL_SGIX_igloo_interface */
-    /*  955 */ 0x828685155c316d20ULL, /* GL_SGIX_instruments */
-    /*  956 */ 0xaf75b3c8a321fd9bULL, /* GL_SGIX_interlace */
-    /*  957 */ 0xac3c1477e6f161efULL, /* GL_SGIX_ir_instrument1 */
-    /*  958 */ 0xe6f72d5da01567e9ULL, /* GL_SGIX_list_priority */
-    /*  959 */ 0x945b05eefbbaf60cULL, /* GL_SGIX_pixel_texture */
-    /*  960 */ 0x3c667c7037c70246ULL, /* GL_SGIX_pixel_tiles */
-    /*  961 */ 0x17349f9e9a6e5976ULL, /* GL_SGIX_polynomial_ffd */
-    /*  962 */ 0xe64b4cbd5d5fe178ULL, /* GL_SGIX_reference_plane */
-    /*  963 */ 0x007a4678f7628880ULL, /* GL_SGIX_resample */
-    /*  964 */ 0xfc833b6c6a1f8cc1ULL, /* GL_SGIX_scalebias_hint */
-    /*  965 */ 0xfe04490bc9621226ULL, /* GL_SGIX_shadow */
-    /*  966 */ 0xa1f64483e1ed6c09ULL, /* GL_SGIX_shadow_ambient */
-    /*  967 */ 0x1b1eb2d33e2626cbULL, /* GL_SGIX_sprite */
-    /*  968 */ 0xab712623aed89578ULL, /* GL_SGIX_subsample */
-    /*  969 */ 0xf6707a8df70625ffULL, /* GL_SGIX_tag_sample_buffer */
-    /*  970 */ 0xb31cc86db966473bULL, /* GL_SGIX_texture_add_env */
-    /*  971 */ 0x8b7acea8e9290faeULL, /* GL_SGIX_texture_coordinate_clamp */
-    /*  972 */ 0xb5df7fecc6d921f7ULL, /* GL_SGIX_texture_lod_bias */
-    /*  973 */ 0xb819f1015daf16c4ULL, /* GL_SGIX_texture_multi_buffer */
-    /*  974 */ 0x3c9d7b66aea3cba1ULL, /* GL_SGIX_texture_scale_bias */
-    /*  975 */ 0xe9afc853af27422dULL, /* GL_SGIX_vertex_preclip */
-    /*  976 */ 0x3bb1183ffedb9c68ULL, /* GL_SGIX_ycrcb */
-    /*  977 */ 0x004ffc30998c20dbULL, /* GL_SGIX_ycrcb_subsample */
-    /*  978 */ 0x7ab4a4b4639c69dfULL, /* GL_SGIX_ycrcba */
-    /*  979 */ 0x014fc2d56670cd5aULL, /* GL_SGI_color_matrix */
-    /*  980 */ 0x5f28de108b449e5dULL, /* GL_SGI_color_table */
-    /*  981 */ 0xa03c2d1d2eeb1bd2ULL, /* GL_SGI_texture_color_table */
-    /*  982 */ 0xd3460591a825bcf6ULL, /* GL_SUNX_constant_data */
-    /*  983 */ 0x4e5296cda0471f61ULL, /* GL_SUN_convolution_border_modes */
-    /*  984 */ 0xe19c670da3369515ULL, /* GL_SUN_global_alpha */
-    /*  985 */ 0xbd8a54b9db901974ULL, /* GL_SUN_mesh_array */
-    /*  986 */ 0xa52af6dd6a5fb2d3ULL, /* GL_SUN_slice_accum */
-    /*  987 */ 0xbeb30cddf53ae288ULL, /* GL_SUN_triangle_list */
-    /*  988 */ 0xd0bf54f2a8798b55ULL, /* GL_SUN_vertex */
-    /*  989 */ 0x156892df7146814dULL, /* GL_VIV_shader_binary */
-    /*  990 */ 0xf09a257256bde8f6ULL, /* GL_WIN_phong_shading */
-    /*  991 */ 0x5a3e106713a38cffULL  /* GL_WIN_specular_fog */
+    /*  313 */ 0x04af64470030272eULL, /* GL_CHROMIUM_lose_context */
+    /*  314 */ 0x2b55ba018525895bULL, /* GL_DMP_program_binary */
+    /*  315 */ 0x8e5f4ce24de544d5ULL, /* GL_DMP_shader_binary */
+    /*  316 */ 0x0cf95c40c08a43a8ULL, /* GL_EXT_422_pixels */
+    /*  317 */ 0x2a61d7b733e75c77ULL, /* GL_EXT_EGL_image_array */
+    /*  318 */ 0x35b7bb88d6ff4a1eULL, /* GL_EXT_EGL_image_storage */
+    /*  319 */ 0xfe8066998f34da8eULL, /* GL_EXT_EGL_image_storage_compression */
+    /*  320 */ 0xb8221664855c83bdULL, /* GL_EXT_EGL_sync */
+    /*  321 */ 0x6fac3cb4234e6c59ULL, /* GL_EXT_YUV_target */
+    /*  322 */ 0xc118d96a66b6bea3ULL, /* GL_EXT_abgr */
+    /*  323 */ 0x6b5e9b6cfbdc3dc0ULL, /* GL_EXT_base_instance */
+    /*  324 */ 0x94adfa4ef027ccd6ULL, /* GL_EXT_bfloat16 */
+    /*  325 */ 0x2c343f7622589325ULL, /* GL_EXT_bgra */
+    /*  326 */ 0x9d83c1e02304fb00ULL, /* GL_EXT_bindable_uniform */
+    /*  327 */ 0x1cafcd91efe0e1d6ULL, /* GL_EXT_blend_color */
+    /*  328 */ 0x3510ec477f22f7e7ULL, /* GL_EXT_blend_equation_separate */
+    /*  329 */ 0x888e740cefe39cc4ULL, /* GL_EXT_blend_func_extended */
+    /*  330 */ 0x97c1a7c0b569dfb8ULL, /* GL_EXT_blend_func_separate */
+    /*  331 */ 0x709f5d763ef0911fULL, /* GL_EXT_blend_logic_op */
+    /*  332 */ 0x1163ab5d43e9b052ULL, /* GL_EXT_blend_minmax */
+    /*  333 */ 0x2c5c11d0c1161814ULL, /* GL_EXT_blend_subtract */
+    /*  334 */ 0x8a59c192ebd08825ULL, /* GL_EXT_buffer_reference */
+    /*  335 */ 0x1fe18a884a2d4d2aULL, /* GL_EXT_buffer_reference2 */
+    /*  336 */ 0xb839402fc769c51eULL, /* GL_EXT_buffer_reference_uvec2 */
+    /*  337 */ 0xf57e9c9fe9c776cdULL, /* GL_EXT_buffer_storage */
+    /*  338 */ 0xaafb791a26428890ULL, /* GL_EXT_clear_texture */
+    /*  339 */ 0x9452d292aa14805eULL, /* GL_EXT_clip_control */
+    /*  340 */ 0x5737e20452f91527ULL, /* GL_EXT_clip_cull_distance */
+    /*  341 */ 0x56a5c2f21e51bb5aULL, /* GL_EXT_clip_volume_hint */
+    /*  342 */ 0x82b62c808e4abb64ULL, /* GL_EXT_cmyka */
+    /*  343 */ 0xa297c2c3a49a99beULL, /* GL_EXT_color_buffer_float */
+    /*  344 */ 0xf9449646b78eab54ULL, /* GL_EXT_color_buffer_half_float */
+    /*  345 */ 0x6d76340b1318b839ULL, /* GL_EXT_color_subtable */
+    /*  346 */ 0xf1bda7fa0a83d383ULL, /* GL_EXT_compiled_vertex_array */
+    /*  347 */ 0x9ddf99bdc50f4149ULL, /* GL_EXT_conservative_depth */
+    /*  348 */ 0x354415fe7a6e013eULL, /* GL_EXT_control_flow_attributes */
+    /*  349 */ 0x04f0f0ce501bd29dULL, /* GL_EXT_control_flow_attributes2 */
+    /*  350 */ 0xe9260724f594f80bULL, /* GL_EXT_convolution */
+    /*  351 */ 0xf9792a196e0ab7c9ULL, /* GL_EXT_coordinate_frame */
+    /*  352 */ 0xa26b121ae33c3436ULL, /* GL_EXT_copy_image */
+    /*  353 */ 0x2611c2618f21aa2fULL, /* GL_EXT_copy_texture */
+    /*  354 */ 0xddfc92096368bfbbULL, /* GL_EXT_cull_vertex */
+    /*  355 */ 0xed15a3d914865c56ULL, /* GL_EXT_debug_label */
+    /*  356 */ 0x84891a2031a0f162ULL, /* GL_EXT_debug_marker */
+    /*  357 */ 0x3d46dbc8319361c9ULL, /* GL_EXT_debug_printf */
+    /*  358 */ 0x2a423943f8be1307ULL, /* GL_EXT_demote_to_helper_invocation */
+    /*  359 */ 0xe21a2b607eb5c6bbULL, /* GL_EXT_depth_bounds_test */
+    /*  360 */ 0xdc5fb3a8d43d753eULL, /* GL_EXT_depth_clamp */
+    /*  361 */ 0xa17767ae25ee3760ULL, /* GL_EXT_descriptor_heap */
+    /*  362 */ 0xee026f0d1b48c324ULL, /* GL_EXT_device_group */
+    /*  363 */ 0xff4a74da40c62745ULL, /* GL_EXT_direct_state_access */
+    /*  364 */ 0x3287a129fb1e11c1ULL, /* GL_EXT_discard_framebuffer */
+    /*  365 */ 0x3d06b0f91612d10dULL, /* GL_EXT_disjoint_timer_query */
+    /*  366 */ 0xd3ac9ca278a62f1aULL, /* GL_EXT_draw_buffers */
+    /*  367 */ 0x5d6aa36dbdce372dULL, /* GL_EXT_draw_buffers2 */
+    /*  368 */ 0x997893a6ac44f7feULL, /* GL_EXT_draw_buffers_indexed */
+    /*  369 */ 0x548657f15226635bULL, /* GL_EXT_draw_elements_base_vertex */
+    /*  370 */ 0xeb1b622faf7697c7ULL, /* GL_EXT_draw_instanced */
+    /*  371 */ 0xbb5e6eb0e1559ef1ULL, /* GL_EXT_draw_range_elements */
+    /*  372 */ 0x0ccbfada83c13182ULL, /* GL_EXT_draw_transform_feedback */
+    /*  373 */ 0xa3176575cdaf6f54ULL, /* GL_EXT_expect_assume */
+    /*  374 */ 0x5e1ad5852ce64f31ULL, /* GL_EXT_external_buffer */
+    /*  375 */ 0x18d7b8f80d477ce9ULL, /* GL_EXT_float_blend */
+    /*  376 */ 0x77979094c87fc8d1ULL, /* GL_EXT_float_e2m1 */
+    /*  377 */ 0x026b05bdafc47ad0ULL, /* GL_EXT_float_e2m3 */
+    /*  378 */ 0x94d4c91173d7a2d3ULL, /* GL_EXT_float_e3m2 */
+    /*  379 */ 0xf56685b2adca994cULL, /* GL_EXT_float_e4m3 */
+    /*  380 */ 0x8f8295d889d0bc49ULL, /* GL_EXT_float_e5m2 */
+    /*  381 */ 0x929201bdc09e9439ULL, /* GL_EXT_float_mxint8 */
+    /*  382 */ 0xbd3952767e7b786dULL, /* GL_EXT_float_ue8m0 */
+    /*  383 */ 0xe09e32cd1ae79288ULL, /* GL_EXT_fog_coord */
+    /*  384 */ 0x09b6fae76304a4f3ULL, /* GL_EXT_frag_depth */
+    /*  385 */ 0xc117232bce18d68eULL, /* GL_EXT_fragment_invocation_density */
+    /*  386 */ 0x2f9b21678a5e0043ULL, /* GL_EXT_fragment_shader_barycentric */
+    /*  387 */ 0xde0a545f611c91b2ULL, /* GL_EXT_fragment_shading_rate */
+    /*  388 */ 0xdefc19d979b2e3e2ULL, /* GL_EXT_framebuffer_blit */
+    /*  389 */ 0x616048bcd1aa9223ULL, /* GL_EXT_framebuffer_blit_layers */
+    /*  390 */ 0x8cbb2537704d8953ULL, /* GL_EXT_framebuffer_multisample */
+    /*  391 */ 0x5634f30b2756d601ULL, /* GL_EXT_framebuffer_multisample_blit_scaled */
+    /*  392 */ 0x8350f19ac13e7c07ULL, /* GL_EXT_framebuffer_object */
+    /*  393 */ 0xa45a63878264c1e5ULL, /* GL_EXT_framebuffer_sRGB */
+    /*  394 */ 0x30d017755de50dd9ULL, /* GL_EXT_geometry_point_size */
+    /*  395 */ 0xfa22129bb4d04128ULL, /* GL_EXT_geometry_shader */
+    /*  396 */ 0x5370f0fbdd1b1f1dULL, /* GL_EXT_geometry_shader4 */
+    /*  397 */ 0x3604f5b2b65016b2ULL, /* GL_EXT_gpu_program_parameters */
+    /*  398 */ 0x020c60828c37ce5dULL, /* GL_EXT_gpu_shader4 */
+    /*  399 */ 0x53dbe9871073dca3ULL, /* GL_EXT_gpu_shader5 */
+    /*  400 */ 0xcebb9285fc482cfdULL, /* GL_EXT_histogram */
+    /*  401 */ 0x64ea7e43377361ffULL, /* GL_EXT_index_array_formats */
+    /*  402 */ 0xecf771ddabe3f8edULL, /* GL_EXT_index_func */
+    /*  403 */ 0x649623e695acbfb0ULL, /* GL_EXT_index_material */
+    /*  404 */ 0x43fd3f035960e92cULL, /* GL_EXT_index_texture */
+    /*  405 */ 0x9c3c026caab1aaf7ULL, /* GL_EXT_instanced_arrays */
+    /*  406 */ 0x82ec9e979f47f3ddULL, /* GL_EXT_integer_dot_product */
+    /*  407 */ 0x6b0a475df16ae9f2ULL, /* GL_EXT_light_texture */
+    /*  408 */ 0xa0c370e2e64afa4cULL, /* GL_EXT_long_vector */
+    /*  409 */ 0xf41152d50d03cc16ULL, /* GL_EXT_map_buffer_range */
+    /*  410 */ 0xdea398d907b668d0ULL, /* GL_EXT_maximal_reconvergence */
+    /*  411 */ 0xebb55934637c6ab7ULL, /* GL_EXT_memory_object */
+    /*  412 */ 0x7e941665b79d31c4ULL, /* GL_EXT_memory_object_fd */
+    /*  413 */ 0x6bf3a6b6ec24354bULL, /* GL_EXT_memory_object_win32 */
+    /*  414 */ 0x67079bf943104541ULL, /* GL_EXT_mesh_shader */
+    /*  415 */ 0xda6fb882011aa28eULL, /* GL_EXT_misc_attribute */
+    /*  416 */ 0x6077bed8aa109362ULL, /* GL_EXT_multi_draw_arrays */
+    /*  417 */ 0x55b4806b38f2b08eULL, /* GL_EXT_multi_draw_indirect */
+    /*  418 */ 0x872a66595e5024caULL, /* GL_EXT_multisample */
+    /*  419 */ 0x3e4a3b0ff8584927ULL, /* GL_EXT_multisampled_compatibility */
+    /*  420 */ 0x33b89ab037aed106ULL, /* GL_EXT_multisampled_render_to_texture */
+    /*  421 */ 0x39f0379607d459f0ULL, /* GL_EXT_multisampled_render_to_texture2 */
+    /*  422 */ 0xe6a1408b398af343ULL, /* GL_EXT_multiview */
+    /*  423 */ 0x49f63d58daabfccbULL, /* GL_EXT_multiview_draw_buffers */
+    /*  424 */ 0x5b7a6a36ed0fe897ULL, /* GL_EXT_multiview_tessellation_geometry_shader */
+    /*  425 */ 0x3679a0ac14e16e97ULL, /* GL_EXT_multiview_texture_multisample */
+    /*  426 */ 0x39d0f3848228d38fULL, /* GL_EXT_multiview_timer_query */
+    /*  427 */ 0x02a2910cd422340eULL, /* GL_EXT_nontemporal_keyword */
+    /*  428 */ 0x0d7bdf1d96e54238ULL, /* GL_EXT_nonuniform_qualifier */
+    /*  429 */ 0xff653ce0c16c5c81ULL, /* GL_EXT_null_initializer */
+    /*  430 */ 0xbf12db2b88c87ccfULL, /* GL_EXT_occlusion_query_boolean */
+    /*  431 */ 0x927980c53f038149ULL, /* GL_EXT_opacity_micromap */
+    /*  432 */ 0x21dda5378be0ae17ULL, /* GL_EXT_opacity_micromap_ray_query_mode */
+    /*  433 */ 0x757af2451eae9d25ULL, /* GL_EXT_packed_depth_stencil */
+    /*  434 */ 0x2ace1d8656332b56ULL, /* GL_EXT_packed_float */
+    /*  435 */ 0x248d529c3993285cULL, /* GL_EXT_packed_pixels */
+    /*  436 */ 0xecd5d2503b35bb13ULL, /* GL_EXT_paletted_texture */
+    /*  437 */ 0xc7f3ad7137661622ULL, /* GL_EXT_pixel_buffer_object */
+    /*  438 */ 0x59d7be95f9b27b9aULL, /* GL_EXT_pixel_transform */
+    /*  439 */ 0xd7024b008ea1463bULL, /* GL_EXT_pixel_transform_color_table */
+    /*  440 */ 0x14eaf45986c9bfa1ULL, /* GL_EXT_point_parameters */
+    /*  441 */ 0x5640aa3e3a0202cbULL, /* GL_EXT_polygon_offset */
+    /*  442 */ 0xd55f7ac9bd1eba74ULL, /* GL_EXT_polygon_offset_clamp */
+    /*  443 */ 0x55695328ecdeb972ULL, /* GL_EXT_post_depth_coverage */
+    /*  444 */ 0x849565c10789238eULL, /* GL_EXT_primitive_bounding_box */
+    /*  445 */ 0x638afa82b47ca539ULL, /* GL_EXT_protected_textures */
+    /*  446 */ 0xfc1cd6391217f09eULL, /* GL_EXT_provoking_vertex */
+    /*  447 */ 0xc36c4a5ae294a717ULL, /* GL_EXT_pvrtc_sRGB */
+    /*  448 */ 0x864a43fa5616bb8cULL, /* GL_EXT_raster_multisample */
+    /*  449 */ 0xb0b19c0e9f3b0f5cULL, /* GL_EXT_ray_cull_mask */
+    /*  450 */ 0xd982b05f307f6fcdULL, /* GL_EXT_ray_flags_primitive_culling */
+    /*  451 */ 0xbf4a58353f9a7a75ULL, /* GL_EXT_ray_query */
+    /*  452 */ 0x5d7ccf8ac93b7140ULL, /* GL_EXT_ray_tracing */
+    /*  453 */ 0x98b5a9c9f9d792ddULL, /* GL_EXT_ray_tracing_position_fetch */
+    /*  454 */ 0x1b664521b8e7ceddULL, /* GL_EXT_read_format_bgra */
+    /*  455 */ 0x461ed0af7d9ee57eULL, /* GL_EXT_render_snorm */
+    /*  456 */ 0xc99a47326d03fd17ULL, /* GL_EXT_rescale_normal */
+    /*  457 */ 0x04aaf7c50fd23609ULL, /* GL_EXT_robustness */
+    /*  458 */ 0x72a714dfac11ff63ULL, /* GL_EXT_sRGB */
+    /*  459 */ 0xa329e9d07bf41faaULL, /* GL_EXT_sRGB_write_control */
+    /*  460 */ 0x6c203c99634fa814ULL, /* GL_EXT_samplerless_texture_functions */
+    /*  461 */ 0xe045958c8c43c35fULL, /* GL_EXT_scalar_block_layout */
+    /*  462 */ 0x5da9f01e568b2e0bULL, /* GL_EXT_secondary_color */
+    /*  463 */ 0x40ea8dbcbb4d106fULL, /* GL_EXT_semaphore */
+    /*  464 */ 0xb3de6f78cadcbed7ULL, /* GL_EXT_semaphore_fd */
+    /*  465 */ 0xd80cf52931619f45ULL, /* GL_EXT_semaphore_win32 */
+    /*  466 */ 0xde7c2e65ed21d1e7ULL, /* GL_EXT_separate_depth_stencil */
+    /*  467 */ 0xb207ff65f8bf495dULL, /* GL_EXT_separate_shader_objects */
+    /*  468 */ 0xeb07329b2f67d2ecULL, /* GL_EXT_separate_specular_color */
+    /*  469 */ 0x49d751ecfad21a12ULL, /* GL_EXT_shader_16bit_storage */
+    /*  470 */ 0xf3d1b4d8ddf95897ULL, /* GL_EXT_shader_64bit_indexing */
+    /*  471 */ 0x9861ec1bd88d15cfULL, /* GL_EXT_shader_8bit_storage */
+    /*  472 */ 0x71c6281257d16bdfULL, /* GL_EXT_shader_atomic_float */
+    /*  473 */ 0x3b6516e3dbabfb91ULL, /* GL_EXT_shader_atomic_float2 */
+    /*  474 */ 0x59bd13c26a6e0f68ULL, /* GL_EXT_shader_atomic_int64 */
+    /*  475 */ 0x6854ef445a71e3b0ULL, /* GL_EXT_shader_clock */
+    /*  476 */ 0x6e599868ea3a939fULL, /* GL_EXT_shader_explicit_arithmetic_types */
+    /*  477 */ 0x38889dc6669f650dULL, /* GL_EXT_shader_explicit_arithmetic_types_float16 */
+    /*  478 */ 0x935e023eaa3a09f7ULL, /* GL_EXT_shader_explicit_arithmetic_types_float32 */
+    /*  479 */ 0x898fe8394abadf05ULL, /* GL_EXT_shader_explicit_arithmetic_types_float64 */
+    /*  480 */ 0x9177b5f32c341f00ULL, /* GL_EXT_shader_explicit_arithmetic_types_int16 */
+    /*  481 */ 0x974487e410e50b66ULL, /* GL_EXT_shader_explicit_arithmetic_types_int32 */
+    /*  482 */ 0x6cf4f9de748703f8ULL, /* GL_EXT_shader_explicit_arithmetic_types_int64 */
+    /*  483 */ 0x43904cfef5f6138eULL, /* GL_EXT_shader_explicit_arithmetic_types_int8 */
+    /*  484 */ 0x86da0f80c54cef33ULL, /* GL_EXT_shader_framebuffer_fetch */
+    /*  485 */ 0xcd3c990c9f8c0a64ULL, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+    /*  486 */ 0x17434ddfdf3a5893ULL, /* GL_EXT_shader_group_vote */
+    /*  487 */ 0xeab14f8fb076d3f3ULL, /* GL_EXT_shader_image_int64 */
+    /*  488 */ 0xc1de48ba5bbf7b01ULL, /* GL_EXT_shader_image_load_formatted */
+    /*  489 */ 0x6ab82341e3e65156ULL, /* GL_EXT_shader_image_load_store */
+    /*  490 */ 0xe19d3a68c60c0ef4ULL, /* GL_EXT_shader_implicit_conversions */
+    /*  491 */ 0x033287cccf9a6962ULL, /* GL_EXT_shader_integer_mix */
+    /*  492 */ 0xc25f86fd76d2ff53ULL, /* GL_EXT_shader_invocation_reorder */
+    /*  493 */ 0xd055bdf912abe3b0ULL, /* GL_EXT_shader_io_blocks */
+    /*  494 */ 0x07975202b868bf83ULL, /* GL_EXT_shader_non_constant_global_initializers */
+    /*  495 */ 0x49f7e4529e189129ULL, /* GL_EXT_shader_pixel_local_storage */
+    /*  496 */ 0x28720bf0be8ab661ULL, /* GL_EXT_shader_pixel_local_storage2 */
+    /*  497 */ 0x9b3693eac0a5b344ULL, /* GL_EXT_shader_quad_control */
+    /*  498 */ 0x28c00ec379a98b9dULL, /* GL_EXT_shader_realtime_clock */
+    /*  499 */ 0x3ef958340d410019ULL, /* GL_EXT_shader_samples_identical */
+    /*  500 */ 0xdb7ea225c0575a72ULL, /* GL_EXT_shader_subgroup_extended_types_float16 */
+    /*  501 */ 0x50620210b36d2a7eULL, /* GL_EXT_shader_subgroup_extended_types_int16 */
+    /*  502 */ 0xcaf721268b43e997ULL, /* GL_EXT_shader_subgroup_extended_types_int64 */
+    /*  503 */ 0x6de284e02f65aff5ULL, /* GL_EXT_shader_subgroup_extended_types_int8 */
+    /*  504 */ 0x0fbf30e41210d727ULL, /* GL_EXT_shader_texture_lod */
+    /*  505 */ 0x9383bd5e3c4d02ceULL, /* GL_EXT_shader_texture_samples */
+    /*  506 */ 0x0e7ba3c5e5be8403ULL, /* GL_EXT_shader_tile_image */
+    /*  507 */ 0xe504594d7646deb5ULL, /* GL_EXT_shadow_funcs */
+    /*  508 */ 0x7c7d332de021da36ULL, /* GL_EXT_shadow_samplers */
+    /*  509 */ 0x4851b197319900c7ULL, /* GL_EXT_shared_memory_block */
+    /*  510 */ 0xa39da1f69d0cad57ULL, /* GL_EXT_shared_texture_palette */
+    /*  511 */ 0x86ac1bf74755a73bULL, /* GL_EXT_sparse_texture */
+    /*  512 */ 0x81ed537411dae865ULL, /* GL_EXT_sparse_texture2 */
+    /*  513 */ 0x3e990113969288c9ULL, /* GL_EXT_spec_constant_composites */
+    /*  514 */ 0x5d049f1a9498df05ULL, /* GL_EXT_spirv_intrinsics */
+    /*  515 */ 0xe20fb1c3faf6f7d8ULL, /* GL_EXT_stencil_clear_tag */
+    /*  516 */ 0x629c334d67e5c718ULL, /* GL_EXT_stencil_two_side */
+    /*  517 */ 0x961b80206055e672ULL, /* GL_EXT_stencil_wrap */
+    /*  518 */ 0x2ca97e0716abd9e5ULL, /* GL_EXT_structured_descriptor_heap */
+    /*  519 */ 0x8a56add0af10cbb6ULL, /* GL_EXT_subgroup_uniform_control_flow */
+    /*  520 */ 0xf85c8111e381b059ULL, /* GL_EXT_subgroupuniform_qualifier */
+    /*  521 */ 0xe101571ccdddbe44ULL, /* GL_EXT_subtexture */
+    /*  522 */ 0x80fb7149e30bd23aULL, /* GL_EXT_terminate_invocation */
+    /*  523 */ 0x9e9a449841a4392bULL, /* GL_EXT_tessellation_point_size */
+    /*  524 */ 0xa694e21c70c92ac7ULL, /* GL_EXT_tessellation_shader */
+    /*  525 */ 0x7893ebdfb50f10a6ULL, /* GL_EXT_texture */
+    /*  526 */ 0x3c1975837c97841bULL, /* GL_EXT_texture3D */
+    /*  527 */ 0x2e4c3fc71fe20a24ULL, /* GL_EXT_texture_array */
+    /*  528 */ 0xf02848fc36653917ULL, /* GL_EXT_texture_border_clamp */
+    /*  529 */ 0x990b742e339cfdabULL, /* GL_EXT_texture_buffer */
+    /*  530 */ 0xe30b1bf963964b94ULL, /* GL_EXT_texture_buffer_object */
+    /*  531 */ 0x7c8af8bc6e29a35bULL, /* GL_EXT_texture_compression_astc_decode_mode */
+    /*  532 */ 0x8c12f4a29dd9872dULL, /* GL_EXT_texture_compression_bptc */
+    /*  533 */ 0x42f4b0934de6c2dcULL, /* GL_EXT_texture_compression_dxt1 */
+    /*  534 */ 0x789187ec36c3334eULL, /* GL_EXT_texture_compression_latc */
+    /*  535 */ 0x6d7076425ffdf707ULL, /* GL_EXT_texture_compression_rgtc */
+    /*  536 */ 0x675e8f3271d1d5caULL, /* GL_EXT_texture_compression_s3tc */
+    /*  537 */ 0x747ed54119078205ULL, /* GL_EXT_texture_compression_s3tc_srgb */
+    /*  538 */ 0x511d1308a8dfc13fULL, /* GL_EXT_texture_cube_map */
+    /*  539 */ 0x143e4c21a6ff53ccULL, /* GL_EXT_texture_cube_map_array */
+    /*  540 */ 0xd7d84a9c353851fdULL, /* GL_EXT_texture_env_add */
+    /*  541 */ 0x9d216b7a877bbcfbULL, /* GL_EXT_texture_env_combine */
+    /*  542 */ 0x4bacf852b1cc1a43ULL, /* GL_EXT_texture_env_dot3 */
+    /*  543 */ 0xeafde92a9cccc4edULL, /* GL_EXT_texture_filter_anisotropic */
+    /*  544 */ 0x7738fa89f1d13a13ULL, /* GL_EXT_texture_filter_minmax */
+    /*  545 */ 0x39751dec512ae77cULL, /* GL_EXT_texture_format_BGRA8888 */
+    /*  546 */ 0xeb53a2bedf43571dULL, /* GL_EXT_texture_format_sRGB_override */
+    /*  547 */ 0xaf09c3ff42c89eb5ULL, /* GL_EXT_texture_integer */
+    /*  548 */ 0x41cf52695838c61cULL, /* GL_EXT_texture_lod_bias */
+    /*  549 */ 0x17fb25156306ea61ULL, /* GL_EXT_texture_mirror_clamp */
+    /*  550 */ 0x9a5a807af7e26b3fULL, /* GL_EXT_texture_mirror_clamp_to_edge */
+    /*  551 */ 0x94b22c00bec3e518ULL, /* GL_EXT_texture_norm16 */
+    /*  552 */ 0x10827f593acd1ba7ULL, /* GL_EXT_texture_object */
+    /*  553 */ 0xbdcbb1418f18d3a4ULL, /* GL_EXT_texture_offset_non_const */
+    /*  554 */ 0x971e595b62f38066ULL, /* GL_EXT_texture_perturb_normal */
+    /*  555 */ 0x1e6eaad4a57ca1b5ULL, /* GL_EXT_texture_query_lod */
+    /*  556 */ 0x95f0b0bc421f25d3ULL, /* GL_EXT_texture_rg */
+    /*  557 */ 0xd43be8ff9c7c7adaULL, /* GL_EXT_texture_sRGB */
+    /*  558 */ 0xfe62dc3d8ab9f10bULL, /* GL_EXT_texture_sRGB_R8 */
+    /*  559 */ 0xcb6984e200d35ff9ULL, /* GL_EXT_texture_sRGB_RG8 */
+    /*  560 */ 0x2b44a8b2473d6e5fULL, /* GL_EXT_texture_sRGB_decode */
+    /*  561 */ 0x127856e58a250c1bULL, /* GL_EXT_texture_shadow_lod */
+    /*  562 */ 0x30a7dd27a9ac5760ULL, /* GL_EXT_texture_shared_exponent */
+    /*  563 */ 0xa2f8f4e45d997df3ULL, /* GL_EXT_texture_snorm */
+    /*  564 */ 0x154c4c8b80533dc0ULL, /* GL_EXT_texture_storage */
+    /*  565 */ 0x8768e67dadd2a7fdULL, /* GL_EXT_texture_storage_compression */
+    /*  566 */ 0x183ae240682f4ad7ULL, /* GL_EXT_texture_swizzle */
+    /*  567 */ 0x4a802d8de71af8e9ULL, /* GL_EXT_texture_type_2_10_10_10_REV */
+    /*  568 */ 0x19afe800141638dcULL, /* GL_EXT_texture_view */
+    /*  569 */ 0x4ab0caa70a996495ULL, /* GL_EXT_timer_query */
+    /*  570 */ 0x471536c0a27f5c81ULL, /* GL_EXT_transform_feedback */
+    /*  571 */ 0x924e7084bc277556ULL, /* GL_EXT_uniform_buffer_unsized_array */
+    /*  572 */ 0x1675c7c13b385f42ULL, /* GL_EXT_unpack_subimage */
+    /*  573 */ 0x2347ebc551d02975ULL, /* GL_EXT_vertex_array */
+    /*  574 */ 0xc5160cefc841200dULL, /* GL_EXT_vertex_array_bgra */
+    /*  575 */ 0xfe8f41c3d0888d86ULL, /* GL_EXT_vertex_attrib_64bit */
+    /*  576 */ 0x10ce9358a245f782ULL, /* GL_EXT_vertex_shader */
+    /*  577 */ 0x80e4c2ee68e62a5fULL, /* GL_EXT_vertex_weighting */
+    /*  578 */ 0x71431741b9e82753ULL, /* GL_EXT_vulkan_glsl_relaxed */
+    /*  579 */ 0xb7046ff80ce07f1aULL, /* GL_EXT_win32_keyed_mutex */
+    /*  580 */ 0x225b607d5cdf07d5ULL, /* GL_EXT_window_rectangles */
+    /*  581 */ 0x80306c2b70f53adaULL, /* GL_EXT_x11_sync_object */
+    /*  582 */ 0xaf38ae454737b45aULL, /* GL_FJ_shader_binary_GCCSO */
+    /*  583 */ 0x776d5f9ce5dc30adULL, /* GL_GREMEDY_frame_terminator */
+    /*  584 */ 0x2b64919ae0d632d6ULL, /* GL_GREMEDY_string_marker */
+    /*  585 */ 0x4ba0a53809cd8e1cULL, /* GL_HP_convolution_border_modes */
+    /*  586 */ 0x175101ef679b74d1ULL, /* GL_HP_image_transform */
+    /*  587 */ 0x21db09dff47e8865ULL, /* GL_HP_occlusion_test */
+    /*  588 */ 0xbccb311192bef9fcULL, /* GL_HP_texture_lighting */
+    /*  589 */ 0x3f692d999fbf45a2ULL, /* GL_HUAWEI_cluster_culling_shader */
+    /*  590 */ 0xf5546e69b4a74cb1ULL, /* GL_HUAWEI_program_binary */
+    /*  591 */ 0x1ca5a9610adbc615ULL, /* GL_HUAWEI_shader_binary */
+    /*  592 */ 0x01088281231ac4b3ULL, /* GL_HUAWEI_subpass_shading */
+    /*  593 */ 0x052c78ec9092b2bcULL, /* GL_IBM_cull_vertex */
+    /*  594 */ 0xbed7db565a3dcdb1ULL, /* GL_IBM_multimode_draw_arrays */
+    /*  595 */ 0xb0a341b3ba34bde7ULL, /* GL_IBM_rasterpos_clip */
+    /*  596 */ 0xe5d4e67e743793afULL, /* GL_IBM_static_data */
+    /*  597 */ 0x42e7c1e06f5230cbULL, /* GL_IBM_texture_mirrored_repeat */
+    /*  598 */ 0x3801878506a0d3e5ULL, /* GL_IBM_vertex_array_lists */
+    /*  599 */ 0xe966fe12585d0ee3ULL, /* GL_IMG_bindless_texture */
+    /*  600 */ 0xee05cb0623b18588ULL, /* GL_IMG_framebuffer_downsample */
+    /*  601 */ 0x6cd4bff21f14cba9ULL, /* GL_IMG_multisampled_render_to_texture */
+    /*  602 */ 0x10eae89c21411416ULL, /* GL_IMG_program_binary */
+    /*  603 */ 0xe1d246c5f2217570ULL, /* GL_IMG_read_format */
+    /*  604 */ 0x631524850de59dddULL, /* GL_IMG_shader_binary */
+    /*  605 */ 0x26bbd5573ad61282ULL, /* GL_IMG_texture_compression_pvrtc */
+    /*  606 */ 0x46869091dbce71a6ULL, /* GL_IMG_texture_compression_pvrtc2 */
+    /*  607 */ 0xd44d6d9763e6fd68ULL, /* GL_IMG_texture_filter_cubic */
+    /*  608 */ 0xf8c1cfe37858c556ULL, /* GL_INGR_blend_func_separate */
+    /*  609 */ 0x9d3ca51fe0f2a837ULL, /* GL_INGR_color_clamp */
+    /*  610 */ 0x231c00090b681c01ULL, /* GL_INGR_interlace_read */
+    /*  611 */ 0xc0f54564fa652ebaULL, /* GL_INTEL_blackhole_render */
+    /*  612 */ 0x8cfa061f6a006e62ULL, /* GL_INTEL_conservative_rasterization */
+    /*  613 */ 0x693a15be925d42bbULL, /* GL_INTEL_fragment_shader_ordering */
+    /*  614 */ 0x14386616e0282da8ULL, /* GL_INTEL_framebuffer_CMAA */
+    /*  615 */ 0xfe0a30102b2b7f11ULL, /* GL_INTEL_map_texture */
+    /*  616 */ 0x6d9138f92a97a9b2ULL, /* GL_INTEL_parallel_arrays */
+    /*  617 */ 0x331d1b2f1d575bd8ULL, /* GL_INTEL_performance_query */
+    /*  618 */ 0xd9d4c609dd72784cULL, /* GL_INTEL_shader_integer_functions2 */
+    /*  619 */ 0x898f16e7a19612feULL, /* GL_KHR_blend_equation_advanced */
+    /*  620 */ 0xa66b25957f58c923ULL, /* GL_KHR_blend_equation_advanced_coherent */
+    /*  621 */ 0x3adc9ab9c87fd235ULL, /* GL_KHR_compute_shader_derivatives */
+    /*  622 */ 0x0956a658c75ab600ULL, /* GL_KHR_context_flush_control */
+    /*  623 */ 0x836eea06917bcccbULL, /* GL_KHR_cooperative_matrix */
+    /*  624 */ 0x5e0c5b9607ac8784ULL, /* GL_KHR_debug */
+    /*  625 */ 0x08ce79df715e69dcULL, /* GL_KHR_memory_scope_semantics */
+    /*  626 */ 0x12316ddfcc85238eULL, /* GL_KHR_no_error */
+    /*  627 */ 0x3406b66e92343753ULL, /* GL_KHR_parallel_shader_compile */
+    /*  628 */ 0xfa6bb57654b50c92ULL, /* GL_KHR_robust_buffer_access_behavior */
+    /*  629 */ 0x474beac5f6910636ULL, /* GL_KHR_robustness */
+    /*  630 */ 0x65263f2081d063e7ULL, /* GL_KHR_shader_subgroup */
+    /*  631 */ 0x877be0bdc1f8d36cULL, /* GL_KHR_shader_subgroup_arithmetic */
+    /*  632 */ 0x61e703f91e0948f3ULL, /* GL_KHR_shader_subgroup_ballot */
+    /*  633 */ 0x5b9c554fd0d5a036ULL, /* GL_KHR_shader_subgroup_basic */
+    /*  634 */ 0xe1044b09af95d72aULL, /* GL_KHR_shader_subgroup_clustered */
+    /*  635 */ 0x4b76468cfb09dabcULL, /* GL_KHR_shader_subgroup_quad */
+    /*  636 */ 0x55436fcdf6a6d27dULL, /* GL_KHR_shader_subgroup_rotate */
+    /*  637 */ 0xaa09aac681765f3aULL, /* GL_KHR_shader_subgroup_shuffle */
+    /*  638 */ 0x56a562daeb0a2f26ULL, /* GL_KHR_shader_subgroup_shuffle_relative */
+    /*  639 */ 0x85bb9015d69ab32dULL, /* GL_KHR_shader_subgroup_vote */
+    /*  640 */ 0x24c80aab81e859b3ULL, /* GL_KHR_texture_compression_astc_hdr */
+    /*  641 */ 0x16f59295398b9d0aULL, /* GL_KHR_texture_compression_astc_ldr */
+    /*  642 */ 0xa4a29c6f56f2023eULL, /* GL_KHR_texture_compression_astc_sliced_3d */
+    /*  643 */ 0xcbbacf3d7c96adccULL, /* GL_KHR_vulkan_glsl */
+    /*  644 */ 0x70bbb44bbc67a914ULL, /* GL_MESAX_texture_stack */
+    /*  645 */ 0x4b833beb1f90e758ULL, /* GL_MESA_bgra */
+    /*  646 */ 0xf9cfb61b2f897c12ULL, /* GL_MESA_framebuffer_flip_x */
+    /*  647 */ 0xdf842b85f40b8f2dULL, /* GL_MESA_framebuffer_flip_y */
+    /*  648 */ 0xc735e4d56089513eULL, /* GL_MESA_framebuffer_swap_xy */
+    /*  649 */ 0x208599190bbb22ccULL, /* GL_MESA_map_buffer_client_pointer */
+    /*  650 */ 0xac7eeedfea22e53dULL, /* GL_MESA_pack_invert */
+    /*  651 */ 0xe164dc7b3064a548ULL, /* GL_MESA_program_binary_formats */
+    /*  652 */ 0x39376b06206502d6ULL, /* GL_MESA_resize_buffers */
+    /*  653 */ 0xa14ebc048c19e849ULL, /* GL_MESA_sampler_objects */
+    /*  654 */ 0x58e3c24874e50b2fULL, /* GL_MESA_shader_integer_functions */
+    /*  655 */ 0x7148e64fc5eef950ULL, /* GL_MESA_texture_const_bandwidth */
+    /*  656 */ 0x8ee739e5f4f16337ULL, /* GL_MESA_tile_raster_order */
+    /*  657 */ 0x00063de42ab739f6ULL, /* GL_MESA_window_pos */
+    /*  658 */ 0x05840d0e5ebfdb5dULL, /* GL_MESA_ycbcr_texture */
+    /*  659 */ 0x210f54fb5023bd27ULL, /* GL_NVX_blend_equation_advanced_multi_draw_buffers */
+    /*  660 */ 0xdb3d40c973a8401dULL, /* GL_NVX_conditional_render */
+    /*  661 */ 0xdba64e974cfda98bULL, /* GL_NVX_gpu_memory_info */
+    /*  662 */ 0xfadb1fc8cec16ab6ULL, /* GL_NVX_gpu_multicast2 */
+    /*  663 */ 0xcd2e0dc9329fd277ULL, /* GL_NVX_linked_gpu_multicast */
+    /*  664 */ 0xd9dac6ae420f2bc1ULL, /* GL_NVX_multiview_per_view_attributes */
+    /*  665 */ 0xd0ab24d9b21b5714ULL, /* GL_NVX_progress_fence */
+    /*  666 */ 0xf60ebf70e765dadeULL, /* GL_NV_alpha_to_coverage_dither_control */
+    /*  667 */ 0x0125c6b149dc763dULL, /* GL_NV_bindless_multi_draw_indirect */
+    /*  668 */ 0xbf25dd3d5b684860ULL, /* GL_NV_bindless_multi_draw_indirect_count */
+    /*  669 */ 0xfe0701cf0661b283ULL, /* GL_NV_bindless_texture */
+    /*  670 */ 0xdfb2fe6dc8d05e7bULL, /* GL_NV_blend_equation_advanced */
+    /*  671 */ 0x93143e8adaf57589ULL, /* GL_NV_blend_equation_advanced_coherent */
+    /*  672 */ 0xea9c32d0ef37492eULL, /* GL_NV_blend_minmax_factor */
+    /*  673 */ 0xcfb887fc69ba21e3ULL, /* GL_NV_blend_square */
+    /*  674 */ 0xa4c52c3b41a4fcadULL, /* GL_NV_clip_space_w_scaling */
+    /*  675 */ 0xd5cc92349ed5c556ULL, /* GL_NV_cluster_acceleration_structure */
+    /*  676 */ 0x86fd725bf0f0d470ULL, /* GL_NV_command_list */
+    /*  677 */ 0x909a590b136b2993ULL, /* GL_NV_compute_program5 */
+    /*  678 */ 0x6e8fcfc637ce5f42ULL, /* GL_NV_compute_shader_derivatives */
+    /*  679 */ 0x30dc18387f98fe17ULL, /* GL_NV_conditional_render */
+    /*  680 */ 0xe3492208f94da35fULL, /* GL_NV_conservative_raster */
+    /*  681 */ 0xd3d407b80b1805aeULL, /* GL_NV_conservative_raster_dilate */
+    /*  682 */ 0x10c99e7e01aae44fULL, /* GL_NV_conservative_raster_pre_snap */
+    /*  683 */ 0xf4ef9c1caf911a2cULL, /* GL_NV_conservative_raster_pre_snap_triangles */
+    /*  684 */ 0x9a8099482ede4695ULL, /* GL_NV_conservative_raster_underestimation */
+    /*  685 */ 0x82f2d3fffe63ccbaULL, /* GL_NV_cooperative_matrix */
+    /*  686 */ 0xc3e52c0f74e3a5b4ULL, /* GL_NV_cooperative_matrix2 */
+    /*  687 */ 0xaabf9ee854c39076ULL, /* GL_NV_cooperative_matrix_decode_vector */
+    /*  688 */ 0xc5b30d49db3f4c5dULL, /* GL_NV_cooperative_vector */
+    /*  689 */ 0x1250d4e984fabb8aULL, /* GL_NV_copy_buffer */
+    /*  690 */ 0xddf225eb383a722aULL, /* GL_NV_copy_depth_to_color */
+    /*  691 */ 0x542626fd538a9ee0ULL, /* GL_NV_copy_image */
+    /*  692 */ 0x1f3cf0884049a65cULL, /* GL_NV_coverage_sample */
+    /*  693 */ 0xa115ed21a9ad2718ULL, /* GL_NV_deep_texture3D */
+    /*  694 */ 0x11d0e662e981dd10ULL, /* GL_NV_depth_buffer_float */
+    /*  695 */ 0x25caf626c8dc4876ULL, /* GL_NV_depth_clamp */
+    /*  696 */ 0x23fb225c6189b719ULL, /* GL_NV_depth_nonlinear */
+    /*  697 */ 0xc7c2a14929f83872ULL, /* GL_NV_displacement_micromap */
+    /*  698 */ 0xe30effdb6e04aad2ULL, /* GL_NV_draw_buffers */
+    /*  699 */ 0x5cef483902a0a7d1ULL, /* GL_NV_draw_instanced */
+    /*  700 */ 0x0ac29b41db04db89ULL, /* GL_NV_draw_texture */
+    /*  701 */ 0x0c3ad3a0bb6ea832ULL, /* GL_NV_draw_vulkan_image */
+    /*  702 */ 0x86aaaa35812cc6e4ULL, /* GL_NV_evaluators */
+    /*  703 */ 0x0d0ad1150bf11b93ULL, /* GL_NV_explicit_attrib_location */
+    /*  704 */ 0xb1fb52088193eb75ULL, /* GL_NV_explicit_multisample */
+    /*  705 */ 0xdd319bbc193b0f81ULL, /* GL_NV_explicit_typecast */
+    /*  706 */ 0xf69d212a36261f45ULL, /* GL_NV_fbo_color_attachments */
+    /*  707 */ 0x9f9d6242407aaa0dULL, /* GL_NV_fence */
+    /*  708 */ 0x574a28d0edc9eb1fULL, /* GL_NV_fill_rectangle */
+    /*  709 */ 0x60178d619bd63acdULL, /* GL_NV_float_buffer */
+    /*  710 */ 0x3a25bd3423152eb5ULL, /* GL_NV_fog_distance */
+    /*  711 */ 0xbd0368ffaa60b1e1ULL, /* GL_NV_fragment_coverage_to_color */
+    /*  712 */ 0xd63f48ff142e3931ULL, /* GL_NV_fragment_program */
+    /*  713 */ 0x9607f3b2549a29c3ULL, /* GL_NV_fragment_program2 */
+    /*  714 */ 0x3fc3c14225294207ULL, /* GL_NV_fragment_program4 */
+    /*  715 */ 0x7e38a803870eb005ULL, /* GL_NV_fragment_program_option */
+    /*  716 */ 0x63f3491b75562351ULL, /* GL_NV_fragment_shader_barycentric */
+    /*  717 */ 0xf907528dfaacf5d1ULL, /* GL_NV_fragment_shader_interlock */
+    /*  718 */ 0xc7b0688e759eaccaULL, /* GL_NV_framebuffer_blit */
+    /*  719 */ 0x7690d69739f37d49ULL, /* GL_NV_framebuffer_mixed_samples */
+    /*  720 */ 0xd333a1d53faf1645ULL, /* GL_NV_framebuffer_multisample */
+    /*  721 */ 0xb7e1d7ede28f1eb6ULL, /* GL_NV_framebuffer_multisample_coverage */
+    /*  722 */ 0x42fb5b03beace82dULL, /* GL_NV_generate_mipmap_sRGB */
+    /*  723 */ 0xd649529b8b1dc13fULL, /* GL_NV_geometry_program4 */
+    /*  724 */ 0x85be2495755b8912ULL, /* GL_NV_geometry_shader4 */
+    /*  725 */ 0x2650d5fc619ace25ULL, /* GL_NV_geometry_shader_passthrough */
+    /*  726 */ 0x0f309973ce34369dULL, /* GL_NV_gpu_multicast */
+    /*  727 */ 0xb97d5c93298f0cd0ULL, /* GL_NV_gpu_program4 */
+    /*  728 */ 0xfee0597c2b98bd5aULL, /* GL_NV_gpu_program5 */
+    /*  729 */ 0x76ac1ada5bbc4ea2ULL, /* GL_NV_gpu_program5_mem_extended */
+    /*  730 */ 0x9ca801fbedd18a78ULL, /* GL_NV_gpu_shader5 */
+    /*  731 */ 0x185a8632c27d17b4ULL, /* GL_NV_half_float */
+    /*  732 */ 0xe34c3aba26b785e0ULL, /* GL_NV_image_formats */
+    /*  733 */ 0xc2e8b0284eeb3343ULL, /* GL_NV_instanced_arrays */
+    /*  734 */ 0xaeae3147a430714aULL, /* GL_NV_integer_cooperative_matrix */
+    /*  735 */ 0xa5628152267b8db5ULL, /* GL_NV_internalformat_sample_query */
+    /*  736 */ 0x4514ca3e8473d61dULL, /* GL_NV_light_max_exponent */
+    /*  737 */ 0xfc66f81ba1dde103ULL, /* GL_NV_linear_swept_spheres */
+    /*  738 */ 0xe91f9b1323143013ULL, /* GL_NV_memory_attachment */
+    /*  739 */ 0x529b823de64f6ca0ULL, /* GL_NV_memory_object_sparse */
+    /*  740 */ 0x2793373463edd95bULL, /* GL_NV_mesh_shader */
+    /*  741 */ 0x8d5187c2fb3e3879ULL, /* GL_NV_multisample_coverage */
+    /*  742 */ 0x92f77a4cfb0d4df3ULL, /* GL_NV_multisample_filter_hint */
+    /*  743 */ 0x5b891d5155380820ULL, /* GL_NV_non_square_matrices */
+    /*  744 */ 0xdff6cf35e1df2d8dULL, /* GL_NV_occlusion_query */
+    /*  745 */ 0xda29f4099a052321ULL, /* GL_NV_pack_subimage */
+    /*  746 */ 0x1a5932681cefa5ebULL, /* GL_NV_packed_depth_stencil */
+    /*  747 */ 0xbffccb846b13070aULL, /* GL_NV_parameter_buffer_object */
+    /*  748 */ 0xb153f109324c418bULL, /* GL_NV_parameter_buffer_object2 */
+    /*  749 */ 0x77bc468b065f8fdbULL, /* GL_NV_path_rendering */
+    /*  750 */ 0x2f70022ecb786aedULL, /* GL_NV_path_rendering_shared_edge */
+    /*  751 */ 0x0b44f2e633646ab5ULL, /* GL_NV_pixel_buffer_object */
+    /*  752 */ 0x43d8732157b4106dULL, /* GL_NV_pixel_data_range */
+    /*  753 */ 0x839efae2d0736a4cULL, /* GL_NV_point_sprite */
+    /*  754 */ 0x3330eb9a4ceb6c0cULL, /* GL_NV_polygon_mode */
+    /*  755 */ 0x6512c3d1922a98dbULL, /* GL_NV_present_video */
+    /*  756 */ 0x8c542b195b5b3c94ULL, /* GL_NV_primitive_restart */
+    /*  757 */ 0x0cacb49d8f1c105aULL, /* GL_NV_primitive_shading_rate */
+    /*  758 */ 0x2474fcd7c3d2a339ULL, /* GL_NV_push_constant_bank */
+    /*  759 */ 0x9b1b0441d8d19911ULL, /* GL_NV_query_resource */
+    /*  760 */ 0x15f0661a8638b338ULL, /* GL_NV_query_resource_tag */
+    /*  761 */ 0xdd74002f450fb368ULL, /* GL_NV_ray_tracing */
+    /*  762 */ 0x182d9aed7af08983ULL, /* GL_NV_ray_tracing_motion_blur */
+    /*  763 */ 0xb51b7c433236bd06ULL, /* GL_NV_read_buffer */
+    /*  764 */ 0xc91023f37354df43ULL, /* GL_NV_read_buffer_front */
+    /*  765 */ 0x3dfff3ed25362196ULL, /* GL_NV_read_depth */
+    /*  766 */ 0x55261906f55bb17aULL, /* GL_NV_read_depth_stencil */
+    /*  767 */ 0x7bab8fd7e4a04ee8ULL, /* GL_NV_read_stencil */
+    /*  768 */ 0xd791c5687139b905ULL, /* GL_NV_register_combiners */
+    /*  769 */ 0x8814ab530e95a798ULL, /* GL_NV_register_combiners2 */
+    /*  770 */ 0xb46bd57f88e91d64ULL, /* GL_NV_representative_fragment_test */
+    /*  771 */ 0xc4eada8b9cbe17c0ULL, /* GL_NV_robustness_video_memory_purge */
+    /*  772 */ 0x2c2775936dc2a882ULL, /* GL_NV_sRGB_formats */
+    /*  773 */ 0xc50ae467eedfefdeULL, /* GL_NV_sample_locations */
+    /*  774 */ 0x446a05466a6d6429ULL, /* GL_NV_sample_mask_override_coverage */
+    /*  775 */ 0x4247a4acbfcdb098ULL, /* GL_NV_scissor_exclusive */
+    /*  776 */ 0x0383e334dd39d9a0ULL, /* GL_NV_shader_atomic_counters */
+    /*  777 */ 0x02399be47930fbf4ULL, /* GL_NV_shader_atomic_float */
+    /*  778 */ 0x8c8c8962eadf1230ULL, /* GL_NV_shader_atomic_float64 */
+    /*  779 */ 0x4c3311286ab16152ULL, /* GL_NV_shader_atomic_fp16_vector */
+    /*  780 */ 0xb14dbc3c64a1326fULL, /* GL_NV_shader_atomic_int64 */
+    /*  781 */ 0x3ae6fc5c42bab2c2ULL, /* GL_NV_shader_buffer_load */
+    /*  782 */ 0x1c05604500113691ULL, /* GL_NV_shader_buffer_store */
+    /*  783 */ 0x22e85dcf4a44b2f7ULL, /* GL_NV_shader_invocation_reorder */
+    /*  784 */ 0xbb5c10f38325fdf8ULL, /* GL_NV_shader_noperspective_interpolation */
+    /*  785 */ 0x6d97890637a77774ULL, /* GL_NV_shader_sm_builtins */
+    /*  786 */ 0xaf5c0eb5c483eb28ULL, /* GL_NV_shader_storage_buffer_object */
+    /*  787 */ 0x826afa0d2f696f22ULL, /* GL_NV_shader_subgroup_partitioned */
+    /*  788 */ 0x7b3f8fad48cfd967ULL, /* GL_NV_shader_texture_footprint */
+    /*  789 */ 0xfd2aa76218c9354eULL, /* GL_NV_shader_thread_group */
+    /*  790 */ 0x74a053165bf8ada4ULL, /* GL_NV_shader_thread_shuffle */
+    /*  791 */ 0xf9355d5174ef4c70ULL, /* GL_NV_shading_rate_image */
+    /*  792 */ 0x28944cfc0cca07ecULL, /* GL_NV_shadow_samplers_array */
+    /*  793 */ 0xfdbd6232791ce36fULL, /* GL_NV_shadow_samplers_cube */
+    /*  794 */ 0x56dc6bb2a7d8736fULL, /* GL_NV_stereo_view_rendering */
+    /*  795 */ 0x2410081ec485d619ULL, /* GL_NV_tessellation_program5 */
+    /*  796 */ 0x6a6887942da6a4c4ULL, /* GL_NV_texgen_emboss */
+    /*  797 */ 0x35865e06d7292c9bULL, /* GL_NV_texgen_reflection */
+    /*  798 */ 0x282f885e0bfd25deULL, /* GL_NV_texture_barrier */
+    /*  799 */ 0x373989acbf486191ULL, /* GL_NV_texture_border_clamp */
+    /*  800 */ 0x4d5276bd5a1f04ceULL, /* GL_NV_texture_compression_s3tc_update */
+    /*  801 */ 0x25b70b1f5bbed713ULL, /* GL_NV_texture_compression_vtc */
+    /*  802 */ 0x84b70fe53fcdcde1ULL, /* GL_NV_texture_env_combine4 */
+    /*  803 */ 0x07e650e01fee3678ULL, /* GL_NV_texture_expand_normal */
+    /*  804 */ 0x4679eee96470073fULL, /* GL_NV_texture_multisample */
+    /*  805 */ 0xcba499c04274ad25ULL, /* GL_NV_texture_npot_2D_mipmap */
+    /*  806 */ 0xccbc8154a70c3605ULL, /* GL_NV_texture_rectangle */
+    /*  807 */ 0x5da6e59a7e51bc40ULL, /* GL_NV_texture_rectangle_compressed */
+    /*  808 */ 0x8a67a1269b408254ULL, /* GL_NV_texture_shader */
+    /*  809 */ 0x816b354fd0cd9228ULL, /* GL_NV_texture_shader2 */
+    /*  810 */ 0x5526327fa18acddeULL, /* GL_NV_texture_shader3 */
+    /*  811 */ 0x39f7dcc9a62c5153ULL, /* GL_NV_timeline_semaphore */
+    /*  812 */ 0xf09b77c741443fcbULL, /* GL_NV_transform_feedback */
+    /*  813 */ 0x32519ec17990e826ULL, /* GL_NV_transform_feedback2 */
+    /*  814 */ 0x5600eb6f04e474eeULL, /* GL_NV_uniform_buffer_std430_layout */
+    /*  815 */ 0x5a3050e67df48f2cULL, /* GL_NV_uniform_buffer_unified_memory */
+    /*  816 */ 0xc270d7ffe7e44b23ULL, /* GL_NV_vdpau_interop */
+    /*  817 */ 0x613710111a2944f7ULL, /* GL_NV_vdpau_interop2 */
+    /*  818 */ 0x2670ae7bcc80188eULL, /* GL_NV_vertex_array_range */
+    /*  819 */ 0x79ae834a103024c5ULL, /* GL_NV_vertex_array_range2 */
+    /*  820 */ 0xe688c60fe2e62039ULL, /* GL_NV_vertex_attrib_integer_64bit */
+    /*  821 */ 0x7e2fb60c66658e57ULL, /* GL_NV_vertex_buffer_unified_memory */
+    /*  822 */ 0x527413b984649803ULL, /* GL_NV_vertex_program */
+    /*  823 */ 0x7d2fc2b85898af18ULL, /* GL_NV_vertex_program1_1 */
+    /*  824 */ 0x2d5a70a0a1d00d78ULL, /* GL_NV_vertex_program2 */
+    /*  825 */ 0x747ed48148981054ULL, /* GL_NV_vertex_program2_option */
+    /*  826 */ 0xc13798df29c369e2ULL, /* GL_NV_vertex_program3 */
+    /*  827 */ 0xa796194638bbdc74ULL, /* GL_NV_vertex_program4 */
+    /*  828 */ 0x89ae752e4cfcfae8ULL, /* GL_NV_video_capture */
+    /*  829 */ 0x1b9db3e10e73323bULL, /* GL_NV_viewport_array */
+    /*  830 */ 0x4e9c3fc0856350f9ULL, /* GL_NV_viewport_array2 */
+    /*  831 */ 0xdf18b1c27e48f432ULL, /* GL_NV_viewport_swizzle */
+    /*  832 */ 0xc05411382c7e9b6fULL, /* GL_OES_EGL_image */
+    /*  833 */ 0xb3f47895b1c4d5f8ULL, /* GL_OES_EGL_image_external */
+    /*  834 */ 0xbbae531ab8d7e16fULL, /* GL_OES_EGL_image_external_essl3 */
+    /*  835 */ 0x55f4d891b16ad96cULL, /* GL_OES_byte_coordinates */
+    /*  836 */ 0x866125fa75aab774ULL, /* GL_OES_compressed_ETC1_RGB8_sub_texture */
+    /*  837 */ 0x5b4df7888b81a92bULL, /* GL_OES_compressed_ETC1_RGB8_texture */
+    /*  838 */ 0xd1ae5222afe37da5ULL, /* GL_OES_compressed_paletted_texture */
+    /*  839 */ 0xc5e1ddc1ea43276eULL, /* GL_OES_copy_image */
+    /*  840 */ 0xa3f0bbbc7660d96cULL, /* GL_OES_depth24 */
+    /*  841 */ 0xb8b2dd3478f1ec83ULL, /* GL_OES_depth32 */
+    /*  842 */ 0x67516f69dbc843f6ULL, /* GL_OES_depth_texture */
+    /*  843 */ 0x012b99c59ced284fULL, /* GL_OES_draw_buffers_indexed */
+    /*  844 */ 0x4638dd889d2b7eabULL, /* GL_OES_draw_elements_base_vertex */
+    /*  845 */ 0x29e68bee4a9705f1ULL, /* GL_OES_element_index_uint */
+    /*  846 */ 0xe0b0d82d6dc31daeULL, /* GL_OES_fbo_render_mipmap */
+    /*  847 */ 0x9f59932407436633ULL, /* GL_OES_fixed_point */
+    /*  848 */ 0x116a77aa55534c76ULL, /* GL_OES_fragment_precision_high */
+    /*  849 */ 0x5e6f26587d551ffcULL, /* GL_OES_geometry_point_size */
+    /*  850 */ 0xaa384a84e450d595ULL, /* GL_OES_geometry_shader */
+    /*  851 */ 0x503ad238c5e97931ULL, /* GL_OES_get_program_binary */
+    /*  852 */ 0x77f35c2a7a2bd390ULL, /* GL_OES_gpu_shader5 */
+    /*  853 */ 0x22e521fe25c89a3bULL, /* GL_OES_mapbuffer */
+    /*  854 */ 0xb124b23bca92b355ULL, /* GL_OES_packed_depth_stencil */
+    /*  855 */ 0x303e15e4f8fb9ee6ULL, /* GL_OES_primitive_bounding_box */
+    /*  856 */ 0xc8d3d0277204ac3dULL, /* GL_OES_query_matrix */
+    /*  857 */ 0xca46680e5cfc3e18ULL, /* GL_OES_read_format */
+    /*  858 */ 0xd6c9bec1dd5d5b89ULL, /* GL_OES_required_internalformat */
+    /*  859 */ 0xccb18f4e376e6c74ULL, /* GL_OES_rgb8_rgba8 */
+    /*  860 */ 0xcb740362814f4ca0ULL, /* GL_OES_sample_shading */
+    /*  861 */ 0x8f4eb2b127c21f67ULL, /* GL_OES_sample_variables */
+    /*  862 */ 0xa023718702859970ULL, /* GL_OES_shader_image_atomic */
+    /*  863 */ 0x8cc1262bb8c2d393ULL, /* GL_OES_shader_io_blocks */
+    /*  864 */ 0xc772b78382e1a793ULL, /* GL_OES_shader_multisample_interpolation */
+    /*  865 */ 0xbcbfeb8171756944ULL, /* GL_OES_single_precision */
+    /*  866 */ 0x4e9710576f516b4eULL, /* GL_OES_standard_derivatives */
+    /*  867 */ 0x79f1937e076eb6e0ULL, /* GL_OES_stencil1 */
+    /*  868 */ 0x7361db1a08c53c55ULL, /* GL_OES_stencil4 */
+    /*  869 */ 0x6df979b4adc4989bULL, /* GL_OES_surfaceless_context */
+    /*  870 */ 0xdc7532bffc48cb01ULL, /* GL_OES_tessellation_point_size */
+    /*  871 */ 0x8bbb4c0c94dc1415ULL, /* GL_OES_tessellation_shader */
+    /*  872 */ 0xccac53b0ed36c73cULL, /* GL_OES_texture_3D */
+    /*  873 */ 0xedc39fcb928c7be5ULL, /* GL_OES_texture_border_clamp */
+    /*  874 */ 0xc7d6a2d8a596bf50ULL, /* GL_OES_texture_buffer */
+    /*  875 */ 0x552cece98cadbaa6ULL, /* GL_OES_texture_compression_astc */
+    /*  876 */ 0xfad8c3de7cf9ffc4ULL, /* GL_OES_texture_cube_map_array */
+    /*  877 */ 0x32ed502b39dd1594ULL, /* GL_OES_texture_float */
+    /*  878 */ 0x5afe2be3731190e1ULL, /* GL_OES_texture_float_linear */
+    /*  879 */ 0xa9fdcf0e5b6803ddULL, /* GL_OES_texture_half_float */
+    /*  880 */ 0x0011e43010189be7ULL, /* GL_OES_texture_half_float_linear */
+    /*  881 */ 0xe706ff7638659b7eULL, /* GL_OES_texture_npot */
+    /*  882 */ 0xdfa8a0ccd9d60d53ULL, /* GL_OES_texture_stencil8 */
+    /*  883 */ 0xbc655ee4febdcfcaULL, /* GL_OES_texture_storage_multisample_2d_array */
+    /*  884 */ 0x8fc2a146f6290d39ULL, /* GL_OES_texture_view */
+    /*  885 */ 0x7cd6041965da7d3cULL, /* GL_OES_vertex_array_object */
+    /*  886 */ 0x8d77aa22bdd641e8ULL, /* GL_OES_vertex_half_float */
+    /*  887 */ 0x244e9e511573b959ULL, /* GL_OES_vertex_type_10_10_10_2 */
+    /*  888 */ 0x2e0ac92809baabbdULL, /* GL_OES_viewport_array */
+    /*  889 */ 0xe4756190e24cfae1ULL, /* GL_OML_interlace */
+    /*  890 */ 0xf00e1502b0d1f5d7ULL, /* GL_OML_resample */
+    /*  891 */ 0xee17f2c40613fa28ULL, /* GL_OML_subsample */
+    /*  892 */ 0x462789e64be7acd7ULL, /* GL_OVR_multiview */
+    /*  893 */ 0x4d3b083404c10e3fULL, /* GL_OVR_multiview2 */
+    /*  894 */ 0xdd9450d3b97e069bULL, /* GL_OVR_multiview_multisampled_render_to_texture */
+    /*  895 */ 0xb1df54452698a7beULL, /* GL_PGI_misc_hints */
+    /*  896 */ 0x830c412288059800ULL, /* GL_PGI_vertex_hints */
+    /*  897 */ 0x03b99dd37fd50188ULL, /* GL_QCOM_YUV_texture_gather */
+    /*  898 */ 0x3aa5ff0497f38e96ULL, /* GL_QCOM_alpha_test */
+    /*  899 */ 0x8b6f2c405eed8fc9ULL, /* GL_QCOM_binning_control */
+    /*  900 */ 0xf4d179d0eb998db1ULL, /* GL_QCOM_cooperative_matrix_conversion */
+    /*  901 */ 0xd69ddd5074f27947ULL, /* GL_QCOM_driver_control */
+    /*  902 */ 0x2cfff6c37fa549bcULL, /* GL_QCOM_extended_get */
+    /*  903 */ 0xa36cbb8c3a77c3a1ULL, /* GL_QCOM_extended_get2 */
+    /*  904 */ 0x1359ba3cc79be309ULL, /* GL_QCOM_frame_extrapolation */
+    /*  905 */ 0xa96b1c721f28a1c2ULL, /* GL_QCOM_framebuffer_foveated */
+    /*  906 */ 0xaa7b8918e97b02c0ULL, /* GL_QCOM_image_processing */
+    /*  907 */ 0x87abde46d2fd3251ULL, /* GL_QCOM_image_processing2 */
+    /*  908 */ 0x822886625bd76c4aULL, /* GL_QCOM_motion_estimation */
+    /*  909 */ 0x62c4f9e3d0cf2728ULL, /* GL_QCOM_perfmon_global_mode */
+    /*  910 */ 0x6667e13047800b18ULL, /* GL_QCOM_render_sRGB_R8_RG8 */
+    /*  911 */ 0x005a335cb406a184ULL, /* GL_QCOM_render_shared_exponent */
+    /*  912 */ 0x0668ea2d27f4b9c7ULL, /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
+    /*  913 */ 0x2f8fba53941074deULL, /* GL_QCOM_shader_framebuffer_fetch_rate */
+    /*  914 */ 0x360f4bc982306308ULL, /* GL_QCOM_shading_rate */
+    /*  915 */ 0xa23647ccb657fc93ULL, /* GL_QCOM_texture_foveated */
+    /*  916 */ 0xac6fb0841696dc5fULL, /* GL_QCOM_texture_foveated2 */
+    /*  917 */ 0xb7f306a63180d3dfULL, /* GL_QCOM_texture_foveated_subsampled_layout */
+    /*  918 */ 0x70d9c41ab20f93f9ULL, /* GL_QCOM_texture_lod_bias */
+    /*  919 */ 0x539f28eaf685b3e5ULL, /* GL_QCOM_tile_shading */
+    /*  920 */ 0x288ca2e6c7c5c86dULL, /* GL_QCOM_tiled_rendering */
+    /*  921 */ 0x28eabd27e2f106a8ULL, /* GL_QCOM_writeonly_rendering */
+    /*  922 */ 0xafb9cdf7b9a2826aULL, /* GL_QCOM_ycbcr_degamma */
+    /*  923 */ 0x14dac5dff736a3dfULL, /* GL_REND_screen_coordinates */
+    /*  924 */ 0x93469fe128fc0919ULL, /* GL_S3_s3tc */
+    /*  925 */ 0x8c7ee523e6ed026aULL, /* GL_SGIS_detail_texture */
+    /*  926 */ 0xe54deb13059b8c4cULL, /* GL_SGIS_fog_function */
+    /*  927 */ 0xb1b31f0af9b1e3c1ULL, /* GL_SGIS_generate_mipmap */
+    /*  928 */ 0x39568b3690efef18ULL, /* GL_SGIS_multisample */
+    /*  929 */ 0xf250c15acefa1ac9ULL, /* GL_SGIS_pixel_texture */
+    /*  930 */ 0x9b7bb525c279e853ULL, /* GL_SGIS_point_line_texgen */
+    /*  931 */ 0x4e3e0fa2dfafd5b4ULL, /* GL_SGIS_point_parameters */
+    /*  932 */ 0x4a4aa0671eb15c9fULL, /* GL_SGIS_sharpen_texture */
+    /*  933 */ 0xe3880e70b14a01efULL, /* GL_SGIS_texture4D */
+    /*  934 */ 0x70c7cab7e228743cULL, /* GL_SGIS_texture_border_clamp */
+    /*  935 */ 0x04eb37e0f3c4686aULL, /* GL_SGIS_texture_color_mask */
+    /*  936 */ 0xb6400bcd7a346c99ULL, /* GL_SGIS_texture_edge_clamp */
+    /*  937 */ 0xd79b6287779eca3fULL, /* GL_SGIS_texture_filter4 */
+    /*  938 */ 0xf25eb0173c775af1ULL, /* GL_SGIS_texture_lod */
+    /*  939 */ 0x4b818d48997acf33ULL, /* GL_SGIS_texture_select */
+    /*  940 */ 0x42053ed5c2789d8aULL, /* GL_SGIX_async */
+    /*  941 */ 0x9baec4623ae00aa8ULL, /* GL_SGIX_async_histogram */
+    /*  942 */ 0xbed04383395711b9ULL, /* GL_SGIX_async_pixel */
+    /*  943 */ 0xd3cc8d1ef603a7f6ULL, /* GL_SGIX_blend_alpha_minmax */
+    /*  944 */ 0xe60980f13acb1fe8ULL, /* GL_SGIX_calligraphic_fragment */
+    /*  945 */ 0x5d613989907c2996ULL, /* GL_SGIX_clipmap */
+    /*  946 */ 0x8fa248e9981db96eULL, /* GL_SGIX_convolution_accuracy */
+    /*  947 */ 0x47ef8f4254eec5a0ULL, /* GL_SGIX_depth_pass_instrument */
+    /*  948 */ 0x3489d57ce09fdb5eULL, /* GL_SGIX_depth_texture */
+    /*  949 */ 0x37a8cdae9276920fULL, /* GL_SGIX_flush_raster */
+    /*  950 */ 0x21b4c2f4db4fb980ULL, /* GL_SGIX_fog_offset */
+    /*  951 */ 0x5379c01e285814d7ULL, /* GL_SGIX_fragment_lighting */
+    /*  952 */ 0xbc4f1c742be26f3fULL, /* GL_SGIX_framezoom */
+    /*  953 */ 0xd8ea1ff9ab303390ULL, /* GL_SGIX_igloo_interface */
+    /*  954 */ 0x828685155c316d20ULL, /* GL_SGIX_instruments */
+    /*  955 */ 0xaf75b3c8a321fd9bULL, /* GL_SGIX_interlace */
+    /*  956 */ 0xac3c1477e6f161efULL, /* GL_SGIX_ir_instrument1 */
+    /*  957 */ 0xe6f72d5da01567e9ULL, /* GL_SGIX_list_priority */
+    /*  958 */ 0x945b05eefbbaf60cULL, /* GL_SGIX_pixel_texture */
+    /*  959 */ 0x3c667c7037c70246ULL, /* GL_SGIX_pixel_tiles */
+    /*  960 */ 0x17349f9e9a6e5976ULL, /* GL_SGIX_polynomial_ffd */
+    /*  961 */ 0xe64b4cbd5d5fe178ULL, /* GL_SGIX_reference_plane */
+    /*  962 */ 0x007a4678f7628880ULL, /* GL_SGIX_resample */
+    /*  963 */ 0xfc833b6c6a1f8cc1ULL, /* GL_SGIX_scalebias_hint */
+    /*  964 */ 0xfe04490bc9621226ULL, /* GL_SGIX_shadow */
+    /*  965 */ 0xa1f64483e1ed6c09ULL, /* GL_SGIX_shadow_ambient */
+    /*  966 */ 0x1b1eb2d33e2626cbULL, /* GL_SGIX_sprite */
+    /*  967 */ 0xab712623aed89578ULL, /* GL_SGIX_subsample */
+    /*  968 */ 0xf6707a8df70625ffULL, /* GL_SGIX_tag_sample_buffer */
+    /*  969 */ 0xb31cc86db966473bULL, /* GL_SGIX_texture_add_env */
+    /*  970 */ 0x8b7acea8e9290faeULL, /* GL_SGIX_texture_coordinate_clamp */
+    /*  971 */ 0xb5df7fecc6d921f7ULL, /* GL_SGIX_texture_lod_bias */
+    /*  972 */ 0xb819f1015daf16c4ULL, /* GL_SGIX_texture_multi_buffer */
+    /*  973 */ 0x3c9d7b66aea3cba1ULL, /* GL_SGIX_texture_scale_bias */
+    /*  974 */ 0xe9afc853af27422dULL, /* GL_SGIX_vertex_preclip */
+    /*  975 */ 0x3bb1183ffedb9c68ULL, /* GL_SGIX_ycrcb */
+    /*  976 */ 0x004ffc30998c20dbULL, /* GL_SGIX_ycrcb_subsample */
+    /*  977 */ 0x7ab4a4b4639c69dfULL, /* GL_SGIX_ycrcba */
+    /*  978 */ 0x014fc2d56670cd5aULL, /* GL_SGI_color_matrix */
+    /*  979 */ 0x5f28de108b449e5dULL, /* GL_SGI_color_table */
+    /*  980 */ 0xa03c2d1d2eeb1bd2ULL, /* GL_SGI_texture_color_table */
+    /*  981 */ 0xd3460591a825bcf6ULL, /* GL_SUNX_constant_data */
+    /*  982 */ 0x4e5296cda0471f61ULL, /* GL_SUN_convolution_border_modes */
+    /*  983 */ 0xe19c670da3369515ULL, /* GL_SUN_global_alpha */
+    /*  984 */ 0xbd8a54b9db901974ULL, /* GL_SUN_mesh_array */
+    /*  985 */ 0xa52af6dd6a5fb2d3ULL, /* GL_SUN_slice_accum */
+    /*  986 */ 0xbeb30cddf53ae288ULL, /* GL_SUN_triangle_list */
+    /*  987 */ 0xd0bf54f2a8798b55ULL, /* GL_SUN_vertex */
+    /*  988 */ 0x156892df7146814dULL, /* GL_VIV_shader_binary */
+    /*  989 */ 0xf09a257256bde8f6ULL, /* GL_WIN_phong_shading */
+    /*  990 */ 0x5a3e106713a38cffULL  /* GL_WIN_specular_fog */
 };
 
 /* ---- Feature PFN range table ---------------------------------------------
@@ -7218,11 +7215,11 @@ static void gloam_load_pfn_range_gl(GloamGLContext *context, GloamLoadFunc getPr
  * consecutive; the resolver processes them in a single forward pass.
  */
 static const GloamAliasPair_t kAliases_GL[] = {
-    {    4, 2927 }, /* glGetTexImage and glGetTexImageANGLE */
-    {    5, 2950 }, /* glLogicOp and glLogicOpANGLE */
+    {    4, 2926 }, /* glGetTexImage and glGetTexImageANGLE */
+    {    5, 2949 }, /* glLogicOp and glLogicOpANGLE */
     {    8, 2289 }, /* glPolygonMode and glPolygonModeNV */
-    {   46, 2928 }, /* glGetTexLevelParameterfv and glGetTexLevelParameterfvANGLE */
-    {   47, 2929 }, /* glGetTexLevelParameteriv and glGetTexLevelParameterivANGLE */
+    {   46, 2927 }, /* glGetTexLevelParameterfv and glGetTexLevelParameterfvANGLE */
+    {   47, 2928 }, /* glGetTexLevelParameteriv and glGetTexLevelParameterivANGLE */
     {   48, 1308 }, /* glCopyTexImage1D and glCopyTexImage1DEXT */
     {   49, 1310 }, /* glCopyTexSubImage1D and glCopyTexSubImage1DEXT */
     {   50, 1801 }, /* glTexSubImage1D and glTexSubImage1DEXT */
@@ -7238,7 +7235,7 @@ static const GloamAliasPair_t kAliases_GL[] = {
     {   65, 1033 }, /* glCompressedTexImage1D and glCompressedTexImage1DARB */
     {   66, 1036 }, /* glCompressedTexSubImage1D and glCompressedTexSubImage1DARB */
     {   67, 1039 }, /* glGetCompressedTexImage and glGetCompressedTexImageARB */
-    {   67, 2925 }, /* glGetCompressedTexImage and glGetCompressedTexImageANGLE */
+    {   67, 2924 }, /* glGetCompressedTexImage and glGetCompressedTexImageANGLE */
     {   68,  914 }, /* glActiveTexture and glActiveTextureARB */
     {   69, 1034 }, /* glCompressedTexImage2D and glCompressedTexImage2DARB */
     {   70, 1037 }, /* glCompressedTexSubImage2D and glCompressedTexSubImage2DARB */
@@ -7246,9 +7243,9 @@ static const GloamAliasPair_t kAliases_GL[] = {
     {   72, 1035 }, /* glCompressedTexImage3D and glCompressedTexImage3DARB */
     {   73, 1038 }, /* glCompressedTexSubImage3D and glCompressedTexSubImage3DARB */
     {   74, 1721 }, /* glMultiDrawArrays and glMultiDrawArraysEXT */
-    {   74, 2914 }, /* glMultiDrawArrays and glMultiDrawArraysANGLE */
+    {   74, 2913 }, /* glMultiDrawArrays and glMultiDrawArraysANGLE */
     {   75, 1722 }, /* glMultiDrawElements and glMultiDrawElementsEXT */
-    {   75, 2916 }, /* glMultiDrawElements and glMultiDrawElementsANGLE */
+    {   75, 2915 }, /* glMultiDrawElements and glMultiDrawElementsANGLE */
     {   76,  957 }, /* glPointParameterf and glPointParameterfARB */
     {   76, 1741 }, /* glPointParameterf and glPointParameterfEXT */
     {   76, 2731 }, /* glPointParameterf and glPointParameterfSGIS */
@@ -7529,8 +7526,8 @@ static const GloamAliasPair_t kAliases_GL[] = {
     {  304,  764 }, /* glIsSync and glIsSyncAPPLE */
     {  305,  765 }, /* glWaitSync and glWaitSyncAPPLE */
     {  306, 2078 }, /* glGetMultisamplefv and glGetMultisamplefvNV */
-    {  306, 2911 }, /* glGetMultisamplefv and glGetMultisamplefvANGLE */
-    {  307, 2912 }, /* glSampleMaski and glSampleMaskiANGLE */
+    {  306, 2910 }, /* glGetMultisamplefv and glGetMultisamplefvANGLE */
+    {  307, 2911 }, /* glSampleMaski and glSampleMaskiANGLE */
     {  308,  832 }, /* glFramebufferTexture and glFramebufferTextureARB */
     {  308, 1640 }, /* glFramebufferTexture and glFramebufferTextureEXT */
     {  308, 2641 }, /* glFramebufferTexture and glFramebufferTextureOES */
@@ -7542,7 +7539,7 @@ static const GloamAliasPair_t kAliases_GL[] = {
     {  311, 2537 }, /* glDrawRangeElementsBaseVertex and glDrawRangeElementsBaseVertexOES */
     {  312, 1602 }, /* glMultiDrawElementsBaseVertex and glMultiDrawElementsBaseVertexEXT */
     {  313, 1746 }, /* glProvokingVertex and glProvokingVertexEXT */
-    {  313, 2923 }, /* glProvokingVertex and glProvokingVertexANGLE */
+    {  313, 2922 }, /* glProvokingVertex and glProvokingVertexANGLE */
     {  316,  736 }, /* glVertexAttribDivisor and glVertexAttribDivisorANGLE */
     {  316,  907 }, /* glVertexAttribDivisor and glVertexAttribDivisorARB */
     {  316, 1689 }, /* glVertexAttribDivisor and glVertexAttribDivisorEXT */
@@ -7658,13 +7655,13 @@ static const GloamAliasPair_t kAliases_GL[] = {
     {  480, 1828 }, /* glTexStorage3D and glTexStorage3DEXT */
     {  482, 1794 }, /* glMemoryBarrier and glMemoryBarrierEXT */
     {  483, 1250 }, /* glDrawArraysInstancedBaseInstance and glDrawArraysInstancedBaseInstanceEXT */
-    {  483, 2918 }, /* glDrawArraysInstancedBaseInstance and glDrawArraysInstancedBaseInstanceANGLE */
+    {  483, 2917 }, /* glDrawArraysInstancedBaseInstance and glDrawArraysInstancedBaseInstanceANGLE */
     {  484, 1251 }, /* glDrawElementsInstancedBaseInstance and glDrawElementsInstancedBaseInstanceEXT */
     {  485, 1252 }, /* glDrawElementsInstancedBaseVertexBaseInstance and glDrawElementsInstancedBaseVertexBaseInstanceEXT */
-    {  485, 2919 }, /* glDrawElementsInstancedBaseVertexBaseInstance and glDrawElementsInstancedBaseVertexBaseInstanceANGLE */
+    {  485, 2918 }, /* glDrawElementsInstancedBaseVertexBaseInstance and glDrawElementsInstancedBaseVertexBaseInstanceANGLE */
     {  487, 1826 }, /* glTexStorage1D and glTexStorage1DEXT */
     {  488, 1607 }, /* glDrawTransformFeedbackInstanced and glDrawTransformFeedbackInstancedEXT */
-    {  501, 2913 }, /* glTexStorage2DMultisample and glTexStorage2DMultisampleANGLE */
+    {  501, 2912 }, /* glTexStorage2DMultisample and glTexStorage2DMultisampleANGLE */
     {  507, 1307 }, /* glCopyImageSubData and glCopyImageSubDataEXT */
     {  507, 2526 }, /* glCopyImageSubData and glCopyImageSubDataOES */
     {  508, 1815 }, /* glTexBufferRange and glTexBufferRangeEXT */
@@ -7717,7 +7714,7 @@ static const GloamAliasPair_t kAliases_GL[] = {
     {  657, 2647 }, /* glPrimitiveBoundingBox and glPrimitiveBoundingBoxOES */
     {  658, 1846 }, /* glGetPointerv and glGetPointervEXT */
     {  658, 1965 }, /* glGetPointerv and glGetPointervKHR */
-    {  658, 2952 }, /* glGetPointerv and glGetPointervANGLE */
+    {  658, 2951 }, /* glGetPointerv and glGetPointervANGLE */
     {  784, 1929 }, /* glGetTextureHandleARB and glGetTextureHandleIMG */
     {  785, 1930 }, /* glGetTextureSamplerHandleARB and glGetTextureSamplerHandleIMG */
     {  793, 1931 }, /* glProgramUniformHandleui64ARB and glProgramUniformHandleui64IMG */
@@ -8086,491 +8083,491 @@ static const uint16_t kExtIdx_gl[] = {
      307, /* GL_ATI_vertex_array_object */
      308, /* GL_ATI_vertex_attrib_array_object */
      309, /* GL_ATI_vertex_streams */
-     317, /* GL_EXT_422_pixels */
-     319, /* GL_EXT_EGL_image_storage */
-     321, /* GL_EXT_EGL_sync */
-     323, /* GL_EXT_abgr */
-     325, /* GL_EXT_bfloat16 */
-     326, /* GL_EXT_bgra */
-     327, /* GL_EXT_bindable_uniform */
-     328, /* GL_EXT_blend_color */
-     329, /* GL_EXT_blend_equation_separate */
-     331, /* GL_EXT_blend_func_separate */
-     332, /* GL_EXT_blend_logic_op */
-     333, /* GL_EXT_blend_minmax */
-     334, /* GL_EXT_blend_subtract */
-     335, /* GL_EXT_buffer_reference */
-     336, /* GL_EXT_buffer_reference2 */
-     337, /* GL_EXT_buffer_reference_uvec2 */
-     342, /* GL_EXT_clip_volume_hint */
-     343, /* GL_EXT_cmyka */
-     346, /* GL_EXT_color_subtable */
-     347, /* GL_EXT_compiled_vertex_array */
-     349, /* GL_EXT_control_flow_attributes */
-     350, /* GL_EXT_control_flow_attributes2 */
-     351, /* GL_EXT_convolution */
-     352, /* GL_EXT_coordinate_frame */
-     354, /* GL_EXT_copy_texture */
-     355, /* GL_EXT_cull_vertex */
-     356, /* GL_EXT_debug_label */
-     357, /* GL_EXT_debug_marker */
-     358, /* GL_EXT_debug_printf */
-     359, /* GL_EXT_demote_to_helper_invocation */
-     360, /* GL_EXT_depth_bounds_test */
-     362, /* GL_EXT_descriptor_heap */
-     363, /* GL_EXT_device_group */
-     364, /* GL_EXT_direct_state_access */
-     368, /* GL_EXT_draw_buffers2 */
-     371, /* GL_EXT_draw_instanced */
-     372, /* GL_EXT_draw_range_elements */
-     374, /* GL_EXT_expect_assume */
-     375, /* GL_EXT_external_buffer */
-     377, /* GL_EXT_float_e2m1 */
-     378, /* GL_EXT_float_e2m3 */
-     379, /* GL_EXT_float_e3m2 */
-     380, /* GL_EXT_float_e4m3 */
-     381, /* GL_EXT_float_e5m2 */
-     382, /* GL_EXT_float_mxint8 */
-     383, /* GL_EXT_float_ue8m0 */
-     384, /* GL_EXT_fog_coord */
-     386, /* GL_EXT_fragment_invocation_density */
-     387, /* GL_EXT_fragment_shader_barycentric */
-     388, /* GL_EXT_fragment_shading_rate */
-     389, /* GL_EXT_framebuffer_blit */
-     390, /* GL_EXT_framebuffer_blit_layers */
-     391, /* GL_EXT_framebuffer_multisample */
-     392, /* GL_EXT_framebuffer_multisample_blit_scaled */
-     393, /* GL_EXT_framebuffer_object */
-     394, /* GL_EXT_framebuffer_sRGB */
-     397, /* GL_EXT_geometry_shader4 */
-     398, /* GL_EXT_gpu_program_parameters */
-     399, /* GL_EXT_gpu_shader4 */
-     401, /* GL_EXT_histogram */
-     402, /* GL_EXT_index_array_formats */
-     403, /* GL_EXT_index_func */
-     404, /* GL_EXT_index_material */
-     405, /* GL_EXT_index_texture */
-     407, /* GL_EXT_integer_dot_product */
-     408, /* GL_EXT_light_texture */
-     409, /* GL_EXT_long_vector */
-     411, /* GL_EXT_maximal_reconvergence */
-     412, /* GL_EXT_memory_object */
-     413, /* GL_EXT_memory_object_fd */
-     414, /* GL_EXT_memory_object_win32 */
-     415, /* GL_EXT_mesh_shader */
-     416, /* GL_EXT_misc_attribute */
-     417, /* GL_EXT_multi_draw_arrays */
-     419, /* GL_EXT_multisample */
-     423, /* GL_EXT_multiview */
-     425, /* GL_EXT_multiview_tessellation_geometry_shader */
-     426, /* GL_EXT_multiview_texture_multisample */
-     427, /* GL_EXT_multiview_timer_query */
-     428, /* GL_EXT_nontemporal_keyword */
-     429, /* GL_EXT_nonuniform_qualifier */
-     430, /* GL_EXT_null_initializer */
-     432, /* GL_EXT_opacity_micromap */
-     433, /* GL_EXT_opacity_micromap_ray_query_mode */
-     434, /* GL_EXT_packed_depth_stencil */
-     435, /* GL_EXT_packed_float */
-     436, /* GL_EXT_packed_pixels */
-     437, /* GL_EXT_paletted_texture */
-     438, /* GL_EXT_pixel_buffer_object */
-     439, /* GL_EXT_pixel_transform */
-     440, /* GL_EXT_pixel_transform_color_table */
-     441, /* GL_EXT_point_parameters */
-     442, /* GL_EXT_polygon_offset */
-     443, /* GL_EXT_polygon_offset_clamp */
-     444, /* GL_EXT_post_depth_coverage */
-     447, /* GL_EXT_provoking_vertex */
-     449, /* GL_EXT_raster_multisample */
-     450, /* GL_EXT_ray_cull_mask */
-     451, /* GL_EXT_ray_flags_primitive_culling */
-     452, /* GL_EXT_ray_query */
-     453, /* GL_EXT_ray_tracing */
-     454, /* GL_EXT_ray_tracing_position_fetch */
-     457, /* GL_EXT_rescale_normal */
-     461, /* GL_EXT_samplerless_texture_functions */
-     462, /* GL_EXT_scalar_block_layout */
-     463, /* GL_EXT_secondary_color */
-     464, /* GL_EXT_semaphore */
-     465, /* GL_EXT_semaphore_fd */
-     466, /* GL_EXT_semaphore_win32 */
-     468, /* GL_EXT_separate_shader_objects */
-     469, /* GL_EXT_separate_specular_color */
-     470, /* GL_EXT_shader_16bit_storage */
-     471, /* GL_EXT_shader_64bit_indexing */
-     472, /* GL_EXT_shader_8bit_storage */
-     473, /* GL_EXT_shader_atomic_float */
-     474, /* GL_EXT_shader_atomic_float2 */
-     475, /* GL_EXT_shader_atomic_int64 */
-     477, /* GL_EXT_shader_explicit_arithmetic_types */
-     478, /* GL_EXT_shader_explicit_arithmetic_types_float16 */
-     479, /* GL_EXT_shader_explicit_arithmetic_types_float32 */
-     480, /* GL_EXT_shader_explicit_arithmetic_types_float64 */
-     481, /* GL_EXT_shader_explicit_arithmetic_types_int16 */
-     482, /* GL_EXT_shader_explicit_arithmetic_types_int32 */
-     483, /* GL_EXT_shader_explicit_arithmetic_types_int64 */
-     484, /* GL_EXT_shader_explicit_arithmetic_types_int8 */
-     485, /* GL_EXT_shader_framebuffer_fetch */
-     486, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
-     488, /* GL_EXT_shader_image_int64 */
-     489, /* GL_EXT_shader_image_load_formatted */
-     490, /* GL_EXT_shader_image_load_store */
-     492, /* GL_EXT_shader_integer_mix */
-     493, /* GL_EXT_shader_invocation_reorder */
-     498, /* GL_EXT_shader_quad_control */
-     499, /* GL_EXT_shader_realtime_clock */
-     500, /* GL_EXT_shader_samples_identical */
-     501, /* GL_EXT_shader_subgroup_extended_types_float16 */
-     502, /* GL_EXT_shader_subgroup_extended_types_int16 */
-     503, /* GL_EXT_shader_subgroup_extended_types_int64 */
-     504, /* GL_EXT_shader_subgroup_extended_types_int8 */
-     507, /* GL_EXT_shader_tile_image */
-     508, /* GL_EXT_shadow_funcs */
-     510, /* GL_EXT_shared_memory_block */
-     511, /* GL_EXT_shared_texture_palette */
-     513, /* GL_EXT_sparse_texture2 */
-     514, /* GL_EXT_spec_constant_composites */
-     515, /* GL_EXT_spirv_intrinsics */
-     516, /* GL_EXT_stencil_clear_tag */
-     517, /* GL_EXT_stencil_two_side */
-     518, /* GL_EXT_stencil_wrap */
-     519, /* GL_EXT_structured_descriptor_heap */
-     520, /* GL_EXT_subgroup_uniform_control_flow */
-     521, /* GL_EXT_subgroupuniform_qualifier */
-     522, /* GL_EXT_subtexture */
-     523, /* GL_EXT_terminate_invocation */
-     526, /* GL_EXT_texture */
-     527, /* GL_EXT_texture3D */
-     528, /* GL_EXT_texture_array */
-     531, /* GL_EXT_texture_buffer_object */
-     535, /* GL_EXT_texture_compression_latc */
-     536, /* GL_EXT_texture_compression_rgtc */
-     537, /* GL_EXT_texture_compression_s3tc */
-     539, /* GL_EXT_texture_cube_map */
-     541, /* GL_EXT_texture_env_add */
-     542, /* GL_EXT_texture_env_combine */
-     543, /* GL_EXT_texture_env_dot3 */
-     544, /* GL_EXT_texture_filter_anisotropic */
-     545, /* GL_EXT_texture_filter_minmax */
-     548, /* GL_EXT_texture_integer */
-     549, /* GL_EXT_texture_lod_bias */
-     550, /* GL_EXT_texture_mirror_clamp */
-     553, /* GL_EXT_texture_object */
-     554, /* GL_EXT_texture_offset_non_const */
-     555, /* GL_EXT_texture_perturb_normal */
-     558, /* GL_EXT_texture_sRGB */
-     559, /* GL_EXT_texture_sRGB_R8 */
-     560, /* GL_EXT_texture_sRGB_RG8 */
-     561, /* GL_EXT_texture_sRGB_decode */
-     562, /* GL_EXT_texture_shadow_lod */
-     563, /* GL_EXT_texture_shared_exponent */
-     564, /* GL_EXT_texture_snorm */
-     565, /* GL_EXT_texture_storage */
-     567, /* GL_EXT_texture_swizzle */
-     570, /* GL_EXT_timer_query */
-     571, /* GL_EXT_transform_feedback */
-     572, /* GL_EXT_uniform_buffer_unsized_array */
-     574, /* GL_EXT_vertex_array */
-     575, /* GL_EXT_vertex_array_bgra */
-     576, /* GL_EXT_vertex_attrib_64bit */
-     577, /* GL_EXT_vertex_shader */
-     578, /* GL_EXT_vertex_weighting */
-     579, /* GL_EXT_vulkan_glsl_relaxed */
-     580, /* GL_EXT_win32_keyed_mutex */
-     581, /* GL_EXT_window_rectangles */
-     582, /* GL_EXT_x11_sync_object */
-     584, /* GL_GREMEDY_frame_terminator */
-     585, /* GL_GREMEDY_string_marker */
-     586, /* GL_HP_convolution_border_modes */
-     587, /* GL_HP_image_transform */
-     588, /* GL_HP_occlusion_test */
-     589, /* GL_HP_texture_lighting */
-     590, /* GL_HUAWEI_cluster_culling_shader */
-     593, /* GL_HUAWEI_subpass_shading */
-     594, /* GL_IBM_cull_vertex */
-     595, /* GL_IBM_multimode_draw_arrays */
-     596, /* GL_IBM_rasterpos_clip */
-     597, /* GL_IBM_static_data */
-     598, /* GL_IBM_texture_mirrored_repeat */
-     599, /* GL_IBM_vertex_array_lists */
-     609, /* GL_INGR_blend_func_separate */
-     610, /* GL_INGR_color_clamp */
-     611, /* GL_INGR_interlace_read */
-     612, /* GL_INTEL_blackhole_render */
-     613, /* GL_INTEL_conservative_rasterization */
-     614, /* GL_INTEL_fragment_shader_ordering */
-     615, /* GL_INTEL_framebuffer_CMAA */
-     616, /* GL_INTEL_map_texture */
-     617, /* GL_INTEL_parallel_arrays */
-     618, /* GL_INTEL_performance_query */
-     619, /* GL_INTEL_shader_integer_functions2 */
-     620, /* GL_KHR_blend_equation_advanced */
-     621, /* GL_KHR_blend_equation_advanced_coherent */
-     622, /* GL_KHR_compute_shader_derivatives */
-     623, /* GL_KHR_context_flush_control */
-     624, /* GL_KHR_cooperative_matrix */
-     625, /* GL_KHR_debug */
-     626, /* GL_KHR_memory_scope_semantics */
-     627, /* GL_KHR_no_error */
-     628, /* GL_KHR_parallel_shader_compile */
-     629, /* GL_KHR_robust_buffer_access_behavior */
-     630, /* GL_KHR_robustness */
-     631, /* GL_KHR_shader_subgroup */
-     632, /* GL_KHR_shader_subgroup_arithmetic */
-     633, /* GL_KHR_shader_subgroup_ballot */
-     634, /* GL_KHR_shader_subgroup_basic */
-     635, /* GL_KHR_shader_subgroup_clustered */
-     636, /* GL_KHR_shader_subgroup_quad */
-     637, /* GL_KHR_shader_subgroup_rotate */
-     638, /* GL_KHR_shader_subgroup_shuffle */
-     639, /* GL_KHR_shader_subgroup_shuffle_relative */
-     640, /* GL_KHR_shader_subgroup_vote */
-     641, /* GL_KHR_texture_compression_astc_hdr */
-     642, /* GL_KHR_texture_compression_astc_ldr */
-     643, /* GL_KHR_texture_compression_astc_sliced_3d */
-     644, /* GL_KHR_vulkan_glsl */
-     645, /* GL_MESAX_texture_stack */
-     647, /* GL_MESA_framebuffer_flip_x */
-     648, /* GL_MESA_framebuffer_flip_y */
-     649, /* GL_MESA_framebuffer_swap_xy */
-     650, /* GL_MESA_map_buffer_client_pointer */
-     651, /* GL_MESA_pack_invert */
-     652, /* GL_MESA_program_binary_formats */
-     653, /* GL_MESA_resize_buffers */
-     655, /* GL_MESA_shader_integer_functions */
-     656, /* GL_MESA_texture_const_bandwidth */
-     657, /* GL_MESA_tile_raster_order */
-     658, /* GL_MESA_window_pos */
-     659, /* GL_MESA_ycbcr_texture */
-     660, /* GL_NVX_blend_equation_advanced_multi_draw_buffers */
-     661, /* GL_NVX_conditional_render */
-     662, /* GL_NVX_gpu_memory_info */
-     663, /* GL_NVX_gpu_multicast2 */
-     664, /* GL_NVX_linked_gpu_multicast */
-     665, /* GL_NVX_multiview_per_view_attributes */
-     666, /* GL_NVX_progress_fence */
-     667, /* GL_NV_alpha_to_coverage_dither_control */
-     668, /* GL_NV_bindless_multi_draw_indirect */
-     669, /* GL_NV_bindless_multi_draw_indirect_count */
-     670, /* GL_NV_bindless_texture */
-     671, /* GL_NV_blend_equation_advanced */
-     672, /* GL_NV_blend_equation_advanced_coherent */
-     673, /* GL_NV_blend_minmax_factor */
-     674, /* GL_NV_blend_square */
-     675, /* GL_NV_clip_space_w_scaling */
-     676, /* GL_NV_cluster_acceleration_structure */
-     677, /* GL_NV_command_list */
-     678, /* GL_NV_compute_program5 */
-     679, /* GL_NV_compute_shader_derivatives */
-     680, /* GL_NV_conditional_render */
-     681, /* GL_NV_conservative_raster */
-     682, /* GL_NV_conservative_raster_dilate */
-     683, /* GL_NV_conservative_raster_pre_snap */
-     684, /* GL_NV_conservative_raster_pre_snap_triangles */
-     685, /* GL_NV_conservative_raster_underestimation */
-     686, /* GL_NV_cooperative_matrix */
-     687, /* GL_NV_cooperative_matrix2 */
-     688, /* GL_NV_cooperative_matrix_decode_vector */
-     689, /* GL_NV_cooperative_vector */
-     691, /* GL_NV_copy_depth_to_color */
-     692, /* GL_NV_copy_image */
-     694, /* GL_NV_deep_texture3D */
-     695, /* GL_NV_depth_buffer_float */
-     696, /* GL_NV_depth_clamp */
-     698, /* GL_NV_displacement_micromap */
-     701, /* GL_NV_draw_texture */
-     702, /* GL_NV_draw_vulkan_image */
-     703, /* GL_NV_evaluators */
-     705, /* GL_NV_explicit_multisample */
-     706, /* GL_NV_explicit_typecast */
-     708, /* GL_NV_fence */
-     709, /* GL_NV_fill_rectangle */
-     710, /* GL_NV_float_buffer */
-     711, /* GL_NV_fog_distance */
-     712, /* GL_NV_fragment_coverage_to_color */
-     713, /* GL_NV_fragment_program */
-     714, /* GL_NV_fragment_program2 */
-     715, /* GL_NV_fragment_program4 */
-     716, /* GL_NV_fragment_program_option */
-     717, /* GL_NV_fragment_shader_barycentric */
-     718, /* GL_NV_fragment_shader_interlock */
-     720, /* GL_NV_framebuffer_mixed_samples */
-     722, /* GL_NV_framebuffer_multisample_coverage */
-     724, /* GL_NV_geometry_program4 */
-     725, /* GL_NV_geometry_shader4 */
-     726, /* GL_NV_geometry_shader_passthrough */
-     727, /* GL_NV_gpu_multicast */
-     728, /* GL_NV_gpu_program4 */
-     729, /* GL_NV_gpu_program5 */
-     730, /* GL_NV_gpu_program5_mem_extended */
-     731, /* GL_NV_gpu_shader5 */
-     732, /* GL_NV_half_float */
-     735, /* GL_NV_integer_cooperative_matrix */
-     736, /* GL_NV_internalformat_sample_query */
-     737, /* GL_NV_light_max_exponent */
-     738, /* GL_NV_linear_swept_spheres */
-     739, /* GL_NV_memory_attachment */
-     740, /* GL_NV_memory_object_sparse */
-     741, /* GL_NV_mesh_shader */
-     742, /* GL_NV_multisample_coverage */
-     743, /* GL_NV_multisample_filter_hint */
-     745, /* GL_NV_occlusion_query */
-     747, /* GL_NV_packed_depth_stencil */
-     748, /* GL_NV_parameter_buffer_object */
-     749, /* GL_NV_parameter_buffer_object2 */
-     750, /* GL_NV_path_rendering */
-     751, /* GL_NV_path_rendering_shared_edge */
-     753, /* GL_NV_pixel_data_range */
-     754, /* GL_NV_point_sprite */
-     756, /* GL_NV_present_video */
-     757, /* GL_NV_primitive_restart */
-     758, /* GL_NV_primitive_shading_rate */
-     759, /* GL_NV_push_constant_bank */
-     760, /* GL_NV_query_resource */
-     761, /* GL_NV_query_resource_tag */
-     762, /* GL_NV_ray_tracing */
-     763, /* GL_NV_ray_tracing_motion_blur */
-     769, /* GL_NV_register_combiners */
-     770, /* GL_NV_register_combiners2 */
-     771, /* GL_NV_representative_fragment_test */
-     772, /* GL_NV_robustness_video_memory_purge */
-     774, /* GL_NV_sample_locations */
-     775, /* GL_NV_sample_mask_override_coverage */
-     776, /* GL_NV_scissor_exclusive */
-     777, /* GL_NV_shader_atomic_counters */
-     778, /* GL_NV_shader_atomic_float */
-     779, /* GL_NV_shader_atomic_float64 */
-     780, /* GL_NV_shader_atomic_fp16_vector */
-     781, /* GL_NV_shader_atomic_int64 */
-     782, /* GL_NV_shader_buffer_load */
-     783, /* GL_NV_shader_buffer_store */
-     784, /* GL_NV_shader_invocation_reorder */
-     786, /* GL_NV_shader_sm_builtins */
-     787, /* GL_NV_shader_storage_buffer_object */
-     788, /* GL_NV_shader_subgroup_partitioned */
-     789, /* GL_NV_shader_texture_footprint */
-     790, /* GL_NV_shader_thread_group */
-     791, /* GL_NV_shader_thread_shuffle */
-     792, /* GL_NV_shading_rate_image */
-     795, /* GL_NV_stereo_view_rendering */
-     796, /* GL_NV_tessellation_program5 */
-     797, /* GL_NV_texgen_emboss */
-     798, /* GL_NV_texgen_reflection */
-     799, /* GL_NV_texture_barrier */
-     802, /* GL_NV_texture_compression_vtc */
-     803, /* GL_NV_texture_env_combine4 */
-     804, /* GL_NV_texture_expand_normal */
-     805, /* GL_NV_texture_multisample */
-     807, /* GL_NV_texture_rectangle */
-     808, /* GL_NV_texture_rectangle_compressed */
-     809, /* GL_NV_texture_shader */
-     810, /* GL_NV_texture_shader2 */
-     811, /* GL_NV_texture_shader3 */
-     812, /* GL_NV_timeline_semaphore */
-     813, /* GL_NV_transform_feedback */
-     814, /* GL_NV_transform_feedback2 */
-     815, /* GL_NV_uniform_buffer_std430_layout */
-     816, /* GL_NV_uniform_buffer_unified_memory */
-     817, /* GL_NV_vdpau_interop */
-     818, /* GL_NV_vdpau_interop2 */
-     819, /* GL_NV_vertex_array_range */
-     820, /* GL_NV_vertex_array_range2 */
-     821, /* GL_NV_vertex_attrib_integer_64bit */
-     822, /* GL_NV_vertex_buffer_unified_memory */
-     823, /* GL_NV_vertex_program */
-     824, /* GL_NV_vertex_program1_1 */
-     825, /* GL_NV_vertex_program2 */
-     826, /* GL_NV_vertex_program2_option */
-     827, /* GL_NV_vertex_program3 */
-     828, /* GL_NV_vertex_program4 */
-     829, /* GL_NV_video_capture */
-     831, /* GL_NV_viewport_array2 */
-     832, /* GL_NV_viewport_swizzle */
-     836, /* GL_OES_byte_coordinates */
-     839, /* GL_OES_compressed_paletted_texture */
-     848, /* GL_OES_fixed_point */
-     857, /* GL_OES_query_matrix */
-     858, /* GL_OES_read_format */
-     866, /* GL_OES_single_precision */
-     890, /* GL_OML_interlace */
-     891, /* GL_OML_resample */
-     892, /* GL_OML_subsample */
-     893, /* GL_OVR_multiview */
-     894, /* GL_OVR_multiview2 */
-     896, /* GL_PGI_misc_hints */
-     897, /* GL_PGI_vertex_hints */
-     901, /* GL_QCOM_cooperative_matrix_conversion */
-     907, /* GL_QCOM_image_processing */
-     908, /* GL_QCOM_image_processing2 */
-     920, /* GL_QCOM_tile_shading */
-     924, /* GL_REND_screen_coordinates */
-     925, /* GL_S3_s3tc */
-     926, /* GL_SGIS_detail_texture */
-     927, /* GL_SGIS_fog_function */
-     928, /* GL_SGIS_generate_mipmap */
-     929, /* GL_SGIS_multisample */
-     930, /* GL_SGIS_pixel_texture */
-     931, /* GL_SGIS_point_line_texgen */
-     932, /* GL_SGIS_point_parameters */
-     933, /* GL_SGIS_sharpen_texture */
-     934, /* GL_SGIS_texture4D */
-     935, /* GL_SGIS_texture_border_clamp */
-     936, /* GL_SGIS_texture_color_mask */
-     937, /* GL_SGIS_texture_edge_clamp */
-     938, /* GL_SGIS_texture_filter4 */
-     939, /* GL_SGIS_texture_lod */
-     940, /* GL_SGIS_texture_select */
-     941, /* GL_SGIX_async */
-     942, /* GL_SGIX_async_histogram */
-     943, /* GL_SGIX_async_pixel */
-     944, /* GL_SGIX_blend_alpha_minmax */
-     945, /* GL_SGIX_calligraphic_fragment */
-     946, /* GL_SGIX_clipmap */
-     947, /* GL_SGIX_convolution_accuracy */
-     948, /* GL_SGIX_depth_pass_instrument */
-     949, /* GL_SGIX_depth_texture */
-     950, /* GL_SGIX_flush_raster */
-     951, /* GL_SGIX_fog_offset */
-     952, /* GL_SGIX_fragment_lighting */
-     953, /* GL_SGIX_framezoom */
-     954, /* GL_SGIX_igloo_interface */
-     955, /* GL_SGIX_instruments */
-     956, /* GL_SGIX_interlace */
-     957, /* GL_SGIX_ir_instrument1 */
-     958, /* GL_SGIX_list_priority */
-     959, /* GL_SGIX_pixel_texture */
-     960, /* GL_SGIX_pixel_tiles */
-     961, /* GL_SGIX_polynomial_ffd */
-     962, /* GL_SGIX_reference_plane */
-     963, /* GL_SGIX_resample */
-     964, /* GL_SGIX_scalebias_hint */
-     965, /* GL_SGIX_shadow */
-     966, /* GL_SGIX_shadow_ambient */
-     967, /* GL_SGIX_sprite */
-     968, /* GL_SGIX_subsample */
-     969, /* GL_SGIX_tag_sample_buffer */
-     970, /* GL_SGIX_texture_add_env */
-     971, /* GL_SGIX_texture_coordinate_clamp */
-     972, /* GL_SGIX_texture_lod_bias */
-     973, /* GL_SGIX_texture_multi_buffer */
-     974, /* GL_SGIX_texture_scale_bias */
-     975, /* GL_SGIX_vertex_preclip */
-     976, /* GL_SGIX_ycrcb */
-     977, /* GL_SGIX_ycrcb_subsample */
-     978, /* GL_SGIX_ycrcba */
-     979, /* GL_SGI_color_matrix */
-     980, /* GL_SGI_color_table */
-     981, /* GL_SGI_texture_color_table */
-     982, /* GL_SUNX_constant_data */
-     983, /* GL_SUN_convolution_border_modes */
-     984, /* GL_SUN_global_alpha */
-     985, /* GL_SUN_mesh_array */
-     986, /* GL_SUN_slice_accum */
-     987, /* GL_SUN_triangle_list */
-     988, /* GL_SUN_vertex */
-     990, /* GL_WIN_phong_shading */
-     991, /* GL_WIN_specular_fog */
+     316, /* GL_EXT_422_pixels */
+     318, /* GL_EXT_EGL_image_storage */
+     320, /* GL_EXT_EGL_sync */
+     322, /* GL_EXT_abgr */
+     324, /* GL_EXT_bfloat16 */
+     325, /* GL_EXT_bgra */
+     326, /* GL_EXT_bindable_uniform */
+     327, /* GL_EXT_blend_color */
+     328, /* GL_EXT_blend_equation_separate */
+     330, /* GL_EXT_blend_func_separate */
+     331, /* GL_EXT_blend_logic_op */
+     332, /* GL_EXT_blend_minmax */
+     333, /* GL_EXT_blend_subtract */
+     334, /* GL_EXT_buffer_reference */
+     335, /* GL_EXT_buffer_reference2 */
+     336, /* GL_EXT_buffer_reference_uvec2 */
+     341, /* GL_EXT_clip_volume_hint */
+     342, /* GL_EXT_cmyka */
+     345, /* GL_EXT_color_subtable */
+     346, /* GL_EXT_compiled_vertex_array */
+     348, /* GL_EXT_control_flow_attributes */
+     349, /* GL_EXT_control_flow_attributes2 */
+     350, /* GL_EXT_convolution */
+     351, /* GL_EXT_coordinate_frame */
+     353, /* GL_EXT_copy_texture */
+     354, /* GL_EXT_cull_vertex */
+     355, /* GL_EXT_debug_label */
+     356, /* GL_EXT_debug_marker */
+     357, /* GL_EXT_debug_printf */
+     358, /* GL_EXT_demote_to_helper_invocation */
+     359, /* GL_EXT_depth_bounds_test */
+     361, /* GL_EXT_descriptor_heap */
+     362, /* GL_EXT_device_group */
+     363, /* GL_EXT_direct_state_access */
+     367, /* GL_EXT_draw_buffers2 */
+     370, /* GL_EXT_draw_instanced */
+     371, /* GL_EXT_draw_range_elements */
+     373, /* GL_EXT_expect_assume */
+     374, /* GL_EXT_external_buffer */
+     376, /* GL_EXT_float_e2m1 */
+     377, /* GL_EXT_float_e2m3 */
+     378, /* GL_EXT_float_e3m2 */
+     379, /* GL_EXT_float_e4m3 */
+     380, /* GL_EXT_float_e5m2 */
+     381, /* GL_EXT_float_mxint8 */
+     382, /* GL_EXT_float_ue8m0 */
+     383, /* GL_EXT_fog_coord */
+     385, /* GL_EXT_fragment_invocation_density */
+     386, /* GL_EXT_fragment_shader_barycentric */
+     387, /* GL_EXT_fragment_shading_rate */
+     388, /* GL_EXT_framebuffer_blit */
+     389, /* GL_EXT_framebuffer_blit_layers */
+     390, /* GL_EXT_framebuffer_multisample */
+     391, /* GL_EXT_framebuffer_multisample_blit_scaled */
+     392, /* GL_EXT_framebuffer_object */
+     393, /* GL_EXT_framebuffer_sRGB */
+     396, /* GL_EXT_geometry_shader4 */
+     397, /* GL_EXT_gpu_program_parameters */
+     398, /* GL_EXT_gpu_shader4 */
+     400, /* GL_EXT_histogram */
+     401, /* GL_EXT_index_array_formats */
+     402, /* GL_EXT_index_func */
+     403, /* GL_EXT_index_material */
+     404, /* GL_EXT_index_texture */
+     406, /* GL_EXT_integer_dot_product */
+     407, /* GL_EXT_light_texture */
+     408, /* GL_EXT_long_vector */
+     410, /* GL_EXT_maximal_reconvergence */
+     411, /* GL_EXT_memory_object */
+     412, /* GL_EXT_memory_object_fd */
+     413, /* GL_EXT_memory_object_win32 */
+     414, /* GL_EXT_mesh_shader */
+     415, /* GL_EXT_misc_attribute */
+     416, /* GL_EXT_multi_draw_arrays */
+     418, /* GL_EXT_multisample */
+     422, /* GL_EXT_multiview */
+     424, /* GL_EXT_multiview_tessellation_geometry_shader */
+     425, /* GL_EXT_multiview_texture_multisample */
+     426, /* GL_EXT_multiview_timer_query */
+     427, /* GL_EXT_nontemporal_keyword */
+     428, /* GL_EXT_nonuniform_qualifier */
+     429, /* GL_EXT_null_initializer */
+     431, /* GL_EXT_opacity_micromap */
+     432, /* GL_EXT_opacity_micromap_ray_query_mode */
+     433, /* GL_EXT_packed_depth_stencil */
+     434, /* GL_EXT_packed_float */
+     435, /* GL_EXT_packed_pixels */
+     436, /* GL_EXT_paletted_texture */
+     437, /* GL_EXT_pixel_buffer_object */
+     438, /* GL_EXT_pixel_transform */
+     439, /* GL_EXT_pixel_transform_color_table */
+     440, /* GL_EXT_point_parameters */
+     441, /* GL_EXT_polygon_offset */
+     442, /* GL_EXT_polygon_offset_clamp */
+     443, /* GL_EXT_post_depth_coverage */
+     446, /* GL_EXT_provoking_vertex */
+     448, /* GL_EXT_raster_multisample */
+     449, /* GL_EXT_ray_cull_mask */
+     450, /* GL_EXT_ray_flags_primitive_culling */
+     451, /* GL_EXT_ray_query */
+     452, /* GL_EXT_ray_tracing */
+     453, /* GL_EXT_ray_tracing_position_fetch */
+     456, /* GL_EXT_rescale_normal */
+     460, /* GL_EXT_samplerless_texture_functions */
+     461, /* GL_EXT_scalar_block_layout */
+     462, /* GL_EXT_secondary_color */
+     463, /* GL_EXT_semaphore */
+     464, /* GL_EXT_semaphore_fd */
+     465, /* GL_EXT_semaphore_win32 */
+     467, /* GL_EXT_separate_shader_objects */
+     468, /* GL_EXT_separate_specular_color */
+     469, /* GL_EXT_shader_16bit_storage */
+     470, /* GL_EXT_shader_64bit_indexing */
+     471, /* GL_EXT_shader_8bit_storage */
+     472, /* GL_EXT_shader_atomic_float */
+     473, /* GL_EXT_shader_atomic_float2 */
+     474, /* GL_EXT_shader_atomic_int64 */
+     476, /* GL_EXT_shader_explicit_arithmetic_types */
+     477, /* GL_EXT_shader_explicit_arithmetic_types_float16 */
+     478, /* GL_EXT_shader_explicit_arithmetic_types_float32 */
+     479, /* GL_EXT_shader_explicit_arithmetic_types_float64 */
+     480, /* GL_EXT_shader_explicit_arithmetic_types_int16 */
+     481, /* GL_EXT_shader_explicit_arithmetic_types_int32 */
+     482, /* GL_EXT_shader_explicit_arithmetic_types_int64 */
+     483, /* GL_EXT_shader_explicit_arithmetic_types_int8 */
+     484, /* GL_EXT_shader_framebuffer_fetch */
+     485, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+     487, /* GL_EXT_shader_image_int64 */
+     488, /* GL_EXT_shader_image_load_formatted */
+     489, /* GL_EXT_shader_image_load_store */
+     491, /* GL_EXT_shader_integer_mix */
+     492, /* GL_EXT_shader_invocation_reorder */
+     497, /* GL_EXT_shader_quad_control */
+     498, /* GL_EXT_shader_realtime_clock */
+     499, /* GL_EXT_shader_samples_identical */
+     500, /* GL_EXT_shader_subgroup_extended_types_float16 */
+     501, /* GL_EXT_shader_subgroup_extended_types_int16 */
+     502, /* GL_EXT_shader_subgroup_extended_types_int64 */
+     503, /* GL_EXT_shader_subgroup_extended_types_int8 */
+     506, /* GL_EXT_shader_tile_image */
+     507, /* GL_EXT_shadow_funcs */
+     509, /* GL_EXT_shared_memory_block */
+     510, /* GL_EXT_shared_texture_palette */
+     512, /* GL_EXT_sparse_texture2 */
+     513, /* GL_EXT_spec_constant_composites */
+     514, /* GL_EXT_spirv_intrinsics */
+     515, /* GL_EXT_stencil_clear_tag */
+     516, /* GL_EXT_stencil_two_side */
+     517, /* GL_EXT_stencil_wrap */
+     518, /* GL_EXT_structured_descriptor_heap */
+     519, /* GL_EXT_subgroup_uniform_control_flow */
+     520, /* GL_EXT_subgroupuniform_qualifier */
+     521, /* GL_EXT_subtexture */
+     522, /* GL_EXT_terminate_invocation */
+     525, /* GL_EXT_texture */
+     526, /* GL_EXT_texture3D */
+     527, /* GL_EXT_texture_array */
+     530, /* GL_EXT_texture_buffer_object */
+     534, /* GL_EXT_texture_compression_latc */
+     535, /* GL_EXT_texture_compression_rgtc */
+     536, /* GL_EXT_texture_compression_s3tc */
+     538, /* GL_EXT_texture_cube_map */
+     540, /* GL_EXT_texture_env_add */
+     541, /* GL_EXT_texture_env_combine */
+     542, /* GL_EXT_texture_env_dot3 */
+     543, /* GL_EXT_texture_filter_anisotropic */
+     544, /* GL_EXT_texture_filter_minmax */
+     547, /* GL_EXT_texture_integer */
+     548, /* GL_EXT_texture_lod_bias */
+     549, /* GL_EXT_texture_mirror_clamp */
+     552, /* GL_EXT_texture_object */
+     553, /* GL_EXT_texture_offset_non_const */
+     554, /* GL_EXT_texture_perturb_normal */
+     557, /* GL_EXT_texture_sRGB */
+     558, /* GL_EXT_texture_sRGB_R8 */
+     559, /* GL_EXT_texture_sRGB_RG8 */
+     560, /* GL_EXT_texture_sRGB_decode */
+     561, /* GL_EXT_texture_shadow_lod */
+     562, /* GL_EXT_texture_shared_exponent */
+     563, /* GL_EXT_texture_snorm */
+     564, /* GL_EXT_texture_storage */
+     566, /* GL_EXT_texture_swizzle */
+     569, /* GL_EXT_timer_query */
+     570, /* GL_EXT_transform_feedback */
+     571, /* GL_EXT_uniform_buffer_unsized_array */
+     573, /* GL_EXT_vertex_array */
+     574, /* GL_EXT_vertex_array_bgra */
+     575, /* GL_EXT_vertex_attrib_64bit */
+     576, /* GL_EXT_vertex_shader */
+     577, /* GL_EXT_vertex_weighting */
+     578, /* GL_EXT_vulkan_glsl_relaxed */
+     579, /* GL_EXT_win32_keyed_mutex */
+     580, /* GL_EXT_window_rectangles */
+     581, /* GL_EXT_x11_sync_object */
+     583, /* GL_GREMEDY_frame_terminator */
+     584, /* GL_GREMEDY_string_marker */
+     585, /* GL_HP_convolution_border_modes */
+     586, /* GL_HP_image_transform */
+     587, /* GL_HP_occlusion_test */
+     588, /* GL_HP_texture_lighting */
+     589, /* GL_HUAWEI_cluster_culling_shader */
+     592, /* GL_HUAWEI_subpass_shading */
+     593, /* GL_IBM_cull_vertex */
+     594, /* GL_IBM_multimode_draw_arrays */
+     595, /* GL_IBM_rasterpos_clip */
+     596, /* GL_IBM_static_data */
+     597, /* GL_IBM_texture_mirrored_repeat */
+     598, /* GL_IBM_vertex_array_lists */
+     608, /* GL_INGR_blend_func_separate */
+     609, /* GL_INGR_color_clamp */
+     610, /* GL_INGR_interlace_read */
+     611, /* GL_INTEL_blackhole_render */
+     612, /* GL_INTEL_conservative_rasterization */
+     613, /* GL_INTEL_fragment_shader_ordering */
+     614, /* GL_INTEL_framebuffer_CMAA */
+     615, /* GL_INTEL_map_texture */
+     616, /* GL_INTEL_parallel_arrays */
+     617, /* GL_INTEL_performance_query */
+     618, /* GL_INTEL_shader_integer_functions2 */
+     619, /* GL_KHR_blend_equation_advanced */
+     620, /* GL_KHR_blend_equation_advanced_coherent */
+     621, /* GL_KHR_compute_shader_derivatives */
+     622, /* GL_KHR_context_flush_control */
+     623, /* GL_KHR_cooperative_matrix */
+     624, /* GL_KHR_debug */
+     625, /* GL_KHR_memory_scope_semantics */
+     626, /* GL_KHR_no_error */
+     627, /* GL_KHR_parallel_shader_compile */
+     628, /* GL_KHR_robust_buffer_access_behavior */
+     629, /* GL_KHR_robustness */
+     630, /* GL_KHR_shader_subgroup */
+     631, /* GL_KHR_shader_subgroup_arithmetic */
+     632, /* GL_KHR_shader_subgroup_ballot */
+     633, /* GL_KHR_shader_subgroup_basic */
+     634, /* GL_KHR_shader_subgroup_clustered */
+     635, /* GL_KHR_shader_subgroup_quad */
+     636, /* GL_KHR_shader_subgroup_rotate */
+     637, /* GL_KHR_shader_subgroup_shuffle */
+     638, /* GL_KHR_shader_subgroup_shuffle_relative */
+     639, /* GL_KHR_shader_subgroup_vote */
+     640, /* GL_KHR_texture_compression_astc_hdr */
+     641, /* GL_KHR_texture_compression_astc_ldr */
+     642, /* GL_KHR_texture_compression_astc_sliced_3d */
+     643, /* GL_KHR_vulkan_glsl */
+     644, /* GL_MESAX_texture_stack */
+     646, /* GL_MESA_framebuffer_flip_x */
+     647, /* GL_MESA_framebuffer_flip_y */
+     648, /* GL_MESA_framebuffer_swap_xy */
+     649, /* GL_MESA_map_buffer_client_pointer */
+     650, /* GL_MESA_pack_invert */
+     651, /* GL_MESA_program_binary_formats */
+     652, /* GL_MESA_resize_buffers */
+     654, /* GL_MESA_shader_integer_functions */
+     655, /* GL_MESA_texture_const_bandwidth */
+     656, /* GL_MESA_tile_raster_order */
+     657, /* GL_MESA_window_pos */
+     658, /* GL_MESA_ycbcr_texture */
+     659, /* GL_NVX_blend_equation_advanced_multi_draw_buffers */
+     660, /* GL_NVX_conditional_render */
+     661, /* GL_NVX_gpu_memory_info */
+     662, /* GL_NVX_gpu_multicast2 */
+     663, /* GL_NVX_linked_gpu_multicast */
+     664, /* GL_NVX_multiview_per_view_attributes */
+     665, /* GL_NVX_progress_fence */
+     666, /* GL_NV_alpha_to_coverage_dither_control */
+     667, /* GL_NV_bindless_multi_draw_indirect */
+     668, /* GL_NV_bindless_multi_draw_indirect_count */
+     669, /* GL_NV_bindless_texture */
+     670, /* GL_NV_blend_equation_advanced */
+     671, /* GL_NV_blend_equation_advanced_coherent */
+     672, /* GL_NV_blend_minmax_factor */
+     673, /* GL_NV_blend_square */
+     674, /* GL_NV_clip_space_w_scaling */
+     675, /* GL_NV_cluster_acceleration_structure */
+     676, /* GL_NV_command_list */
+     677, /* GL_NV_compute_program5 */
+     678, /* GL_NV_compute_shader_derivatives */
+     679, /* GL_NV_conditional_render */
+     680, /* GL_NV_conservative_raster */
+     681, /* GL_NV_conservative_raster_dilate */
+     682, /* GL_NV_conservative_raster_pre_snap */
+     683, /* GL_NV_conservative_raster_pre_snap_triangles */
+     684, /* GL_NV_conservative_raster_underestimation */
+     685, /* GL_NV_cooperative_matrix */
+     686, /* GL_NV_cooperative_matrix2 */
+     687, /* GL_NV_cooperative_matrix_decode_vector */
+     688, /* GL_NV_cooperative_vector */
+     690, /* GL_NV_copy_depth_to_color */
+     691, /* GL_NV_copy_image */
+     693, /* GL_NV_deep_texture3D */
+     694, /* GL_NV_depth_buffer_float */
+     695, /* GL_NV_depth_clamp */
+     697, /* GL_NV_displacement_micromap */
+     700, /* GL_NV_draw_texture */
+     701, /* GL_NV_draw_vulkan_image */
+     702, /* GL_NV_evaluators */
+     704, /* GL_NV_explicit_multisample */
+     705, /* GL_NV_explicit_typecast */
+     707, /* GL_NV_fence */
+     708, /* GL_NV_fill_rectangle */
+     709, /* GL_NV_float_buffer */
+     710, /* GL_NV_fog_distance */
+     711, /* GL_NV_fragment_coverage_to_color */
+     712, /* GL_NV_fragment_program */
+     713, /* GL_NV_fragment_program2 */
+     714, /* GL_NV_fragment_program4 */
+     715, /* GL_NV_fragment_program_option */
+     716, /* GL_NV_fragment_shader_barycentric */
+     717, /* GL_NV_fragment_shader_interlock */
+     719, /* GL_NV_framebuffer_mixed_samples */
+     721, /* GL_NV_framebuffer_multisample_coverage */
+     723, /* GL_NV_geometry_program4 */
+     724, /* GL_NV_geometry_shader4 */
+     725, /* GL_NV_geometry_shader_passthrough */
+     726, /* GL_NV_gpu_multicast */
+     727, /* GL_NV_gpu_program4 */
+     728, /* GL_NV_gpu_program5 */
+     729, /* GL_NV_gpu_program5_mem_extended */
+     730, /* GL_NV_gpu_shader5 */
+     731, /* GL_NV_half_float */
+     734, /* GL_NV_integer_cooperative_matrix */
+     735, /* GL_NV_internalformat_sample_query */
+     736, /* GL_NV_light_max_exponent */
+     737, /* GL_NV_linear_swept_spheres */
+     738, /* GL_NV_memory_attachment */
+     739, /* GL_NV_memory_object_sparse */
+     740, /* GL_NV_mesh_shader */
+     741, /* GL_NV_multisample_coverage */
+     742, /* GL_NV_multisample_filter_hint */
+     744, /* GL_NV_occlusion_query */
+     746, /* GL_NV_packed_depth_stencil */
+     747, /* GL_NV_parameter_buffer_object */
+     748, /* GL_NV_parameter_buffer_object2 */
+     749, /* GL_NV_path_rendering */
+     750, /* GL_NV_path_rendering_shared_edge */
+     752, /* GL_NV_pixel_data_range */
+     753, /* GL_NV_point_sprite */
+     755, /* GL_NV_present_video */
+     756, /* GL_NV_primitive_restart */
+     757, /* GL_NV_primitive_shading_rate */
+     758, /* GL_NV_push_constant_bank */
+     759, /* GL_NV_query_resource */
+     760, /* GL_NV_query_resource_tag */
+     761, /* GL_NV_ray_tracing */
+     762, /* GL_NV_ray_tracing_motion_blur */
+     768, /* GL_NV_register_combiners */
+     769, /* GL_NV_register_combiners2 */
+     770, /* GL_NV_representative_fragment_test */
+     771, /* GL_NV_robustness_video_memory_purge */
+     773, /* GL_NV_sample_locations */
+     774, /* GL_NV_sample_mask_override_coverage */
+     775, /* GL_NV_scissor_exclusive */
+     776, /* GL_NV_shader_atomic_counters */
+     777, /* GL_NV_shader_atomic_float */
+     778, /* GL_NV_shader_atomic_float64 */
+     779, /* GL_NV_shader_atomic_fp16_vector */
+     780, /* GL_NV_shader_atomic_int64 */
+     781, /* GL_NV_shader_buffer_load */
+     782, /* GL_NV_shader_buffer_store */
+     783, /* GL_NV_shader_invocation_reorder */
+     785, /* GL_NV_shader_sm_builtins */
+     786, /* GL_NV_shader_storage_buffer_object */
+     787, /* GL_NV_shader_subgroup_partitioned */
+     788, /* GL_NV_shader_texture_footprint */
+     789, /* GL_NV_shader_thread_group */
+     790, /* GL_NV_shader_thread_shuffle */
+     791, /* GL_NV_shading_rate_image */
+     794, /* GL_NV_stereo_view_rendering */
+     795, /* GL_NV_tessellation_program5 */
+     796, /* GL_NV_texgen_emboss */
+     797, /* GL_NV_texgen_reflection */
+     798, /* GL_NV_texture_barrier */
+     801, /* GL_NV_texture_compression_vtc */
+     802, /* GL_NV_texture_env_combine4 */
+     803, /* GL_NV_texture_expand_normal */
+     804, /* GL_NV_texture_multisample */
+     806, /* GL_NV_texture_rectangle */
+     807, /* GL_NV_texture_rectangle_compressed */
+     808, /* GL_NV_texture_shader */
+     809, /* GL_NV_texture_shader2 */
+     810, /* GL_NV_texture_shader3 */
+     811, /* GL_NV_timeline_semaphore */
+     812, /* GL_NV_transform_feedback */
+     813, /* GL_NV_transform_feedback2 */
+     814, /* GL_NV_uniform_buffer_std430_layout */
+     815, /* GL_NV_uniform_buffer_unified_memory */
+     816, /* GL_NV_vdpau_interop */
+     817, /* GL_NV_vdpau_interop2 */
+     818, /* GL_NV_vertex_array_range */
+     819, /* GL_NV_vertex_array_range2 */
+     820, /* GL_NV_vertex_attrib_integer_64bit */
+     821, /* GL_NV_vertex_buffer_unified_memory */
+     822, /* GL_NV_vertex_program */
+     823, /* GL_NV_vertex_program1_1 */
+     824, /* GL_NV_vertex_program2 */
+     825, /* GL_NV_vertex_program2_option */
+     826, /* GL_NV_vertex_program3 */
+     827, /* GL_NV_vertex_program4 */
+     828, /* GL_NV_video_capture */
+     830, /* GL_NV_viewport_array2 */
+     831, /* GL_NV_viewport_swizzle */
+     835, /* GL_OES_byte_coordinates */
+     838, /* GL_OES_compressed_paletted_texture */
+     847, /* GL_OES_fixed_point */
+     856, /* GL_OES_query_matrix */
+     857, /* GL_OES_read_format */
+     865, /* GL_OES_single_precision */
+     889, /* GL_OML_interlace */
+     890, /* GL_OML_resample */
+     891, /* GL_OML_subsample */
+     892, /* GL_OVR_multiview */
+     893, /* GL_OVR_multiview2 */
+     895, /* GL_PGI_misc_hints */
+     896, /* GL_PGI_vertex_hints */
+     900, /* GL_QCOM_cooperative_matrix_conversion */
+     906, /* GL_QCOM_image_processing */
+     907, /* GL_QCOM_image_processing2 */
+     919, /* GL_QCOM_tile_shading */
+     923, /* GL_REND_screen_coordinates */
+     924, /* GL_S3_s3tc */
+     925, /* GL_SGIS_detail_texture */
+     926, /* GL_SGIS_fog_function */
+     927, /* GL_SGIS_generate_mipmap */
+     928, /* GL_SGIS_multisample */
+     929, /* GL_SGIS_pixel_texture */
+     930, /* GL_SGIS_point_line_texgen */
+     931, /* GL_SGIS_point_parameters */
+     932, /* GL_SGIS_sharpen_texture */
+     933, /* GL_SGIS_texture4D */
+     934, /* GL_SGIS_texture_border_clamp */
+     935, /* GL_SGIS_texture_color_mask */
+     936, /* GL_SGIS_texture_edge_clamp */
+     937, /* GL_SGIS_texture_filter4 */
+     938, /* GL_SGIS_texture_lod */
+     939, /* GL_SGIS_texture_select */
+     940, /* GL_SGIX_async */
+     941, /* GL_SGIX_async_histogram */
+     942, /* GL_SGIX_async_pixel */
+     943, /* GL_SGIX_blend_alpha_minmax */
+     944, /* GL_SGIX_calligraphic_fragment */
+     945, /* GL_SGIX_clipmap */
+     946, /* GL_SGIX_convolution_accuracy */
+     947, /* GL_SGIX_depth_pass_instrument */
+     948, /* GL_SGIX_depth_texture */
+     949, /* GL_SGIX_flush_raster */
+     950, /* GL_SGIX_fog_offset */
+     951, /* GL_SGIX_fragment_lighting */
+     952, /* GL_SGIX_framezoom */
+     953, /* GL_SGIX_igloo_interface */
+     954, /* GL_SGIX_instruments */
+     955, /* GL_SGIX_interlace */
+     956, /* GL_SGIX_ir_instrument1 */
+     957, /* GL_SGIX_list_priority */
+     958, /* GL_SGIX_pixel_texture */
+     959, /* GL_SGIX_pixel_tiles */
+     960, /* GL_SGIX_polynomial_ffd */
+     961, /* GL_SGIX_reference_plane */
+     962, /* GL_SGIX_resample */
+     963, /* GL_SGIX_scalebias_hint */
+     964, /* GL_SGIX_shadow */
+     965, /* GL_SGIX_shadow_ambient */
+     966, /* GL_SGIX_sprite */
+     967, /* GL_SGIX_subsample */
+     968, /* GL_SGIX_tag_sample_buffer */
+     969, /* GL_SGIX_texture_add_env */
+     970, /* GL_SGIX_texture_coordinate_clamp */
+     971, /* GL_SGIX_texture_lod_bias */
+     972, /* GL_SGIX_texture_multi_buffer */
+     973, /* GL_SGIX_texture_scale_bias */
+     974, /* GL_SGIX_vertex_preclip */
+     975, /* GL_SGIX_ycrcb */
+     976, /* GL_SGIX_ycrcb_subsample */
+     977, /* GL_SGIX_ycrcba */
+     978, /* GL_SGI_color_matrix */
+     979, /* GL_SGI_color_table */
+     980, /* GL_SGI_texture_color_table */
+     981, /* GL_SUNX_constant_data */
+     982, /* GL_SUN_convolution_border_modes */
+     983, /* GL_SUN_global_alpha */
+     984, /* GL_SUN_mesh_array */
+     985, /* GL_SUN_slice_accum */
+     986, /* GL_SUN_triangle_list */
+     987, /* GL_SUN_vertex */
+     989, /* GL_WIN_phong_shading */
+     990, /* GL_WIN_specular_fog */
 };
 
 /* Extension PFN range table for gl. */
@@ -8713,211 +8710,211 @@ static const GloamPfnRange_t kExtPfnRanges_gl[] = {
     {  307, 1188,   12 }, /* GL_ATI_vertex_array_object */
     {  308, 1200,    3 }, /* GL_ATI_vertex_attrib_array_object */
     {  309, 1203,   45 }, /* GL_ATI_vertex_streams */
-    {  319, 1248,    2 }, /* GL_EXT_EGL_image_storage */
-    {  327, 1253,    3 }, /* GL_EXT_bindable_uniform */
-    {  328, 1256,    1 }, /* GL_EXT_blend_color */
-    {  329, 1257,    1 }, /* GL_EXT_blend_equation_separate */
-    {  331, 1262,    1 }, /* GL_EXT_blend_func_separate */
-    {  333, 1263,    1 }, /* GL_EXT_blend_minmax */
-    {  346, 1268,    2 }, /* GL_EXT_color_subtable */
-    {  347, 1270,    2 }, /* GL_EXT_compiled_vertex_array */
-    {  351, 1272,   13 }, /* GL_EXT_convolution */
-    {  352, 1285,   22 }, /* GL_EXT_coordinate_frame */
-    {  354, 1308,    5 }, /* GL_EXT_copy_texture */
-    {  355, 1313,    2 }, /* GL_EXT_cull_vertex */
-    {  356, 1315,    2 }, /* GL_EXT_debug_label */
-    {  357, 1317,    3 }, /* GL_EXT_debug_marker */
-    {  360, 1320,    1 }, /* GL_EXT_depth_bounds_test */
-    {  364, 1321,  255 }, /* GL_EXT_direct_state_access */
-    {  368, 1516,    5 }, /* GL_EXT_draw_buffers2 */
-    {  368, 1590,    1 }, /* GL_EXT_draw_buffers2 */
-    {  371, 1603,    2 }, /* GL_EXT_draw_instanced */
-    {  372, 1605,    1 }, /* GL_EXT_draw_range_elements */
-    {  375, 1608,    2 }, /* GL_EXT_external_buffer */
-    {  384, 1610,    5 }, /* GL_EXT_fog_coord */
-    {  388, 1615,    4 }, /* GL_EXT_fragment_shading_rate */
-    {  389, 1619,    1 }, /* GL_EXT_framebuffer_blit */
-    {  390, 1620,    2 }, /* GL_EXT_framebuffer_blit_layers */
-    {  391, 1622,    1 }, /* GL_EXT_framebuffer_multisample */
-    {  393, 1623,   17 }, /* GL_EXT_framebuffer_object */
-    {  397, 1641,    1 }, /* GL_EXT_geometry_shader4 */
-    {  398, 1642,    2 }, /* GL_EXT_gpu_program_parameters */
-    {  399, 1261,    1 }, /* GL_EXT_gpu_shader4 */
-    {  399, 1644,   33 }, /* GL_EXT_gpu_shader4 */
-    {  401, 1677,   10 }, /* GL_EXT_histogram */
-    {  403, 1687,    1 }, /* GL_EXT_index_func */
-    {  404, 1688,    1 }, /* GL_EXT_index_material */
-    {  408, 1690,    3 }, /* GL_EXT_light_texture */
-    {  412, 1695,   19 }, /* GL_EXT_memory_object */
-    {  413, 1714,    1 }, /* GL_EXT_memory_object_fd */
-    {  414, 1715,    2 }, /* GL_EXT_memory_object_win32 */
-    {  415, 1717,    4 }, /* GL_EXT_mesh_shader */
-    {  417, 1721,    2 }, /* GL_EXT_multi_draw_arrays */
-    {  419, 1725,    2 }, /* GL_EXT_multisample */
-    {  437, 1731,    4 }, /* GL_EXT_paletted_texture */
-    {  439, 1735,    6 }, /* GL_EXT_pixel_transform */
-    {  441, 1741,    2 }, /* GL_EXT_point_parameters */
-    {  442, 1743,    1 }, /* GL_EXT_polygon_offset */
-    {  443, 1744,    1 }, /* GL_EXT_polygon_offset_clamp */
-    {  447, 1746,    1 }, /* GL_EXT_provoking_vertex */
-    {  449, 1747,    1 }, /* GL_EXT_raster_multisample */
-    {  464, 1712,    2 }, /* GL_EXT_semaphore */
-    {  464, 1752,    7 }, /* GL_EXT_semaphore */
-    {  465, 1759,    1 }, /* GL_EXT_semaphore_fd */
-    {  466, 1760,    2 }, /* GL_EXT_semaphore_win32 */
-    {  463, 1762,   17 }, /* GL_EXT_secondary_color */
-    {  468, 1779,    1 }, /* GL_EXT_separate_shader_objects */
-    {  468, 1782,    1 }, /* GL_EXT_separate_shader_objects */
-    {  468, 1790,    1 }, /* GL_EXT_separate_shader_objects */
-    {  486, 1792,    1 }, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
-    {  490, 1793,    2 }, /* GL_EXT_shader_image_load_store */
-    {  516, 1799,    1 }, /* GL_EXT_stencil_clear_tag */
-    {  517, 1800,    1 }, /* GL_EXT_stencil_two_side */
-    {  522, 1801,    2 }, /* GL_EXT_subtexture */
-    {  527, 1804,    2 }, /* GL_EXT_texture3D */
-    {  528, 1806,    1 }, /* GL_EXT_texture_array */
-    {  531, 1816,    1 }, /* GL_EXT_texture_buffer_object */
-    {  548, 1811,    4 }, /* GL_EXT_texture_integer */
-    {  548, 1817,    2 }, /* GL_EXT_texture_integer */
-    {  553, 1819,    6 }, /* GL_EXT_texture_object */
-    {  555, 1825,    1 }, /* GL_EXT_texture_perturb_normal */
-    {  565, 1554,    3 }, /* GL_EXT_texture_storage */
-    {  565, 1826,    3 }, /* GL_EXT_texture_storage */
-    {  812, 1832,    3 }, /* GL_NV_timeline_semaphore */
-    {  570, 1587,    2 }, /* GL_EXT_timer_query */
-    {  571, 1835,    7 }, /* GL_EXT_transform_feedback */
-    {  574, 1842,    9 }, /* GL_EXT_vertex_array */
-    {  576, 1851,   10 }, /* GL_EXT_vertex_attrib_64bit */
-    {  577, 1861,   42 }, /* GL_EXT_vertex_shader */
-    {  578, 1903,    3 }, /* GL_EXT_vertex_weighting */
-    {  580, 1906,    2 }, /* GL_EXT_win32_keyed_mutex */
-    {  581, 1908,    1 }, /* GL_EXT_window_rectangles */
-    {  582, 1909,    1 }, /* GL_EXT_x11_sync_object */
-    {  584, 1910,    1 }, /* GL_GREMEDY_frame_terminator */
-    {  585, 1911,    1 }, /* GL_GREMEDY_string_marker */
-    {  587, 1912,    6 }, /* GL_HP_image_transform */
-    {  595, 1918,    2 }, /* GL_IBM_multimode_draw_arrays */
-    {  597, 1920,    1 }, /* GL_IBM_static_data */
-    {  599, 1921,    8 }, /* GL_IBM_vertex_array_lists */
-    {  609, 1939,    1 }, /* GL_INGR_blend_func_separate */
-    {  615, 1940,    1 }, /* GL_INTEL_framebuffer_CMAA */
-    {  616, 1941,    3 }, /* GL_INTEL_map_texture */
-    {  617, 1944,    4 }, /* GL_INTEL_parallel_arrays */
-    {  618, 1948,   10 }, /* GL_INTEL_performance_query */
-    {  620, 1958,    1 }, /* GL_KHR_blend_equation_advanced */
-    {  625,  510,   10 }, /* GL_KHR_debug */
-    {  625,  658,    1 }, /* GL_KHR_debug */
-    {  630,  546,    5 }, /* GL_KHR_robustness */
-    {  628, 1975,    1 }, /* GL_KHR_parallel_shader_compile */
-    {  648, 1976,    2 }, /* GL_MESA_framebuffer_flip_y */
-    {  650, 1978,    2 }, /* GL_MESA_map_buffer_client_pointer */
-    {  653, 1980,    1 }, /* GL_MESA_resize_buffers */
-    {  658, 1981,   24 }, /* GL_MESA_window_pos */
-    {  661, 2005,    2 }, /* GL_NVX_conditional_render */
-    {  664, 2007,    3 }, /* GL_NVX_linked_gpu_multicast */
-    {  667, 2010,    1 }, /* GL_NV_alpha_to_coverage_dither_control */
-    {  668, 2011,    2 }, /* GL_NV_bindless_multi_draw_indirect */
-    {  669, 2013,    2 }, /* GL_NV_bindless_multi_draw_indirect_count */
-    {  670, 2015,   13 }, /* GL_NV_bindless_texture */
-    {  671, 2028,    2 }, /* GL_NV_blend_equation_advanced */
-    {  675, 2030,    1 }, /* GL_NV_clip_space_w_scaling */
-    {  677, 2031,   17 }, /* GL_NV_command_list */
-    {  680, 2048,    2 }, /* GL_NV_conditional_render */
-    {  681, 2050,    1 }, /* GL_NV_conservative_raster */
-    {  682, 2051,    1 }, /* GL_NV_conservative_raster_dilate */
-    {  684, 2052,    1 }, /* GL_NV_conservative_raster_pre_snap_triangles */
-    {  692, 2054,    1 }, /* GL_NV_copy_image */
-    {  695, 2057,    3 }, /* GL_NV_depth_buffer_float */
-    {  701, 2063,    1 }, /* GL_NV_draw_texture */
-    {  702, 2064,    5 }, /* GL_NV_draw_vulkan_image */
-    {  703, 2069,    9 }, /* GL_NV_evaluators */
-    {  705, 2078,    3 }, /* GL_NV_explicit_multisample */
-    {  708, 2081,    7 }, /* GL_NV_fence */
-    {  712, 2088,    1 }, /* GL_NV_fragment_coverage_to_color */
-    {  713, 2089,    6 }, /* GL_NV_fragment_program */
-    {  720, 1747,    1 }, /* GL_NV_framebuffer_mixed_samples */
-    {  720, 2096,    3 }, /* GL_NV_framebuffer_mixed_samples */
-    {  722, 2100,    1 }, /* GL_NV_framebuffer_multisample_coverage */
-    {  724, 1640,    1 }, /* GL_NV_geometry_program4 */
-    {  724, 1806,    1 }, /* GL_NV_geometry_program4 */
-    {  724, 2101,    2 }, /* GL_NV_geometry_program4 */
-    {  728, 2103,   16 }, /* GL_NV_gpu_program4 */
-    {  729, 2119,    2 }, /* GL_NV_gpu_program5 */
-    {  731,  674,   33 }, /* GL_NV_gpu_shader5 */
-    {  732, 2121,   46 }, /* GL_NV_half_float */
-    {  736, 2168,    1 }, /* GL_NV_internalformat_sample_query */
-    {  727, 2169,   12 }, /* GL_NV_gpu_multicast */
-    {  663, 2181,    6 }, /* GL_NVX_gpu_multicast2 */
-    {  666, 2187,    4 }, /* GL_NVX_progress_fence */
-    {  739, 2191,    6 }, /* GL_NV_memory_attachment */
-    {  740, 2197,    4 }, /* GL_NV_memory_object_sparse */
-    {  741, 2201,    4 }, /* GL_NV_mesh_shader */
-    {  745, 2211,    7 }, /* GL_NV_occlusion_query */
-    {  748, 2218,    3 }, /* GL_NV_parameter_buffer_object */
-    {  750, 1557,   19 }, /* GL_NV_path_rendering */
-    {  750, 2221,   64 }, /* GL_NV_path_rendering */
-    {  753, 2285,    2 }, /* GL_NV_pixel_data_range */
-    {  754, 2287,    2 }, /* GL_NV_point_sprite */
-    {  756, 2290,    6 }, /* GL_NV_present_video */
-    {  757, 2296,    2 }, /* GL_NV_primitive_restart */
-    {  760, 2298,    1 }, /* GL_NV_query_resource */
-    {  761, 2299,    3 }, /* GL_NV_query_resource_tag */
-    {  769, 2303,   13 }, /* GL_NV_register_combiners */
-    {  770, 2316,    2 }, /* GL_NV_register_combiners2 */
-    {  774, 2318,    3 }, /* GL_NV_sample_locations */
-    {  776, 2321,    2 }, /* GL_NV_scissor_exclusive */
-    {  782,  707,    1 }, /* GL_NV_shader_buffer_load */
-    {  782, 2323,   13 }, /* GL_NV_shader_buffer_load */
-    {  792, 2336,    7 }, /* GL_NV_shading_rate_image */
-    {  799, 2343,    1 }, /* GL_NV_texture_barrier */
-    {  805, 2344,    6 }, /* GL_NV_texture_multisample */
-    {  813, 2350,   12 }, /* GL_NV_transform_feedback */
-    {  814, 2362,    7 }, /* GL_NV_transform_feedback2 */
-    {  817, 2369,   10 }, /* GL_NV_vdpau_interop */
-    {  818, 2379,    1 }, /* GL_NV_vdpau_interop2 */
-    {  819, 2380,    2 }, /* GL_NV_vertex_array_range */
-    {  821, 2382,   19 }, /* GL_NV_vertex_attrib_integer_64bit */
-    {  822, 2401,   12 }, /* GL_NV_vertex_buffer_unified_memory */
-    {  823, 2413,   64 }, /* GL_NV_vertex_program */
-    {  828, 1654,   23 }, /* GL_NV_vertex_program4 */
-    {  829, 2477,   12 }, /* GL_NV_video_capture */
-    {  832, 2501,    1 }, /* GL_NV_viewport_swizzle */
-    {  836, 2504,   22 }, /* GL_OES_byte_coordinates */
-    {  848, 2538,  103 }, /* GL_OES_fixed_point */
-    {  857, 2648,    1 }, /* GL_OES_query_matrix */
-    {  866, 2650,    6 }, /* GL_OES_single_precision */
-    {  893, 2688,    2 }, /* GL_OVR_multiview */
-    {  896, 2691,    1 }, /* GL_PGI_misc_hints */
-    {  926, 2719,    2 }, /* GL_SGIS_detail_texture */
-    {  927, 2721,    2 }, /* GL_SGIS_fog_function */
-    {  929, 2723,    2 }, /* GL_SGIS_multisample */
-    {  930, 2725,    6 }, /* GL_SGIS_pixel_texture */
-    {  932, 2731,    2 }, /* GL_SGIS_point_parameters */
-    {  933, 2733,    2 }, /* GL_SGIS_sharpen_texture */
-    {  934, 2735,    2 }, /* GL_SGIS_texture4D */
-    {  936, 2737,    1 }, /* GL_SGIS_texture_color_mask */
-    {  938, 2738,    2 }, /* GL_SGIS_texture_filter4 */
-    {  941, 2740,    6 }, /* GL_SGIX_async */
-    {  950, 2746,    1 }, /* GL_SGIX_flush_raster */
-    {  952, 2747,   18 }, /* GL_SGIX_fragment_lighting */
-    {  953, 2765,    1 }, /* GL_SGIX_framezoom */
-    {  954, 2766,    1 }, /* GL_SGIX_igloo_interface */
-    {  955, 2767,    6 }, /* GL_SGIX_instruments */
-    {  958, 2773,    6 }, /* GL_SGIX_list_priority */
-    {  959, 2779,    1 }, /* GL_SGIX_pixel_texture */
-    {  961, 2780,    4 }, /* GL_SGIX_polynomial_ffd */
-    {  962, 2784,    1 }, /* GL_SGIX_reference_plane */
-    {  967, 2785,    4 }, /* GL_SGIX_sprite */
-    {  969, 2789,    1 }, /* GL_SGIX_tag_sample_buffer */
-    {  980, 2790,    7 }, /* GL_SGI_color_table */
-    {  982, 2797,    1 }, /* GL_SUNX_constant_data */
-    {  984, 2798,    8 }, /* GL_SUN_global_alpha */
-    {  985, 2806,    1 }, /* GL_SUN_mesh_array */
-    {  987, 2807,    7 }, /* GL_SUN_triangle_list */
-    {  988, 2814,   40 }, /* GL_SUN_vertex */
-    {   58, 2930,    4 }, /* GL_ANGLE_memory_object_flags */
-    {   59, 2934,    1 }, /* GL_ANGLE_memory_object_fuchsia */
-    {   74, 2935,    1 }, /* GL_ANGLE_semaphore_fuchsia */
+    {  318, 1248,    2 }, /* GL_EXT_EGL_image_storage */
+    {  326, 1253,    3 }, /* GL_EXT_bindable_uniform */
+    {  327, 1256,    1 }, /* GL_EXT_blend_color */
+    {  328, 1257,    1 }, /* GL_EXT_blend_equation_separate */
+    {  330, 1262,    1 }, /* GL_EXT_blend_func_separate */
+    {  332, 1263,    1 }, /* GL_EXT_blend_minmax */
+    {  345, 1268,    2 }, /* GL_EXT_color_subtable */
+    {  346, 1270,    2 }, /* GL_EXT_compiled_vertex_array */
+    {  350, 1272,   13 }, /* GL_EXT_convolution */
+    {  351, 1285,   22 }, /* GL_EXT_coordinate_frame */
+    {  353, 1308,    5 }, /* GL_EXT_copy_texture */
+    {  354, 1313,    2 }, /* GL_EXT_cull_vertex */
+    {  355, 1315,    2 }, /* GL_EXT_debug_label */
+    {  356, 1317,    3 }, /* GL_EXT_debug_marker */
+    {  359, 1320,    1 }, /* GL_EXT_depth_bounds_test */
+    {  363, 1321,  255 }, /* GL_EXT_direct_state_access */
+    {  367, 1516,    5 }, /* GL_EXT_draw_buffers2 */
+    {  367, 1590,    1 }, /* GL_EXT_draw_buffers2 */
+    {  370, 1603,    2 }, /* GL_EXT_draw_instanced */
+    {  371, 1605,    1 }, /* GL_EXT_draw_range_elements */
+    {  374, 1608,    2 }, /* GL_EXT_external_buffer */
+    {  383, 1610,    5 }, /* GL_EXT_fog_coord */
+    {  387, 1615,    4 }, /* GL_EXT_fragment_shading_rate */
+    {  388, 1619,    1 }, /* GL_EXT_framebuffer_blit */
+    {  389, 1620,    2 }, /* GL_EXT_framebuffer_blit_layers */
+    {  390, 1622,    1 }, /* GL_EXT_framebuffer_multisample */
+    {  392, 1623,   17 }, /* GL_EXT_framebuffer_object */
+    {  396, 1641,    1 }, /* GL_EXT_geometry_shader4 */
+    {  397, 1642,    2 }, /* GL_EXT_gpu_program_parameters */
+    {  398, 1261,    1 }, /* GL_EXT_gpu_shader4 */
+    {  398, 1644,   33 }, /* GL_EXT_gpu_shader4 */
+    {  400, 1677,   10 }, /* GL_EXT_histogram */
+    {  402, 1687,    1 }, /* GL_EXT_index_func */
+    {  403, 1688,    1 }, /* GL_EXT_index_material */
+    {  407, 1690,    3 }, /* GL_EXT_light_texture */
+    {  411, 1695,   19 }, /* GL_EXT_memory_object */
+    {  412, 1714,    1 }, /* GL_EXT_memory_object_fd */
+    {  413, 1715,    2 }, /* GL_EXT_memory_object_win32 */
+    {  414, 1717,    4 }, /* GL_EXT_mesh_shader */
+    {  416, 1721,    2 }, /* GL_EXT_multi_draw_arrays */
+    {  418, 1725,    2 }, /* GL_EXT_multisample */
+    {  436, 1731,    4 }, /* GL_EXT_paletted_texture */
+    {  438, 1735,    6 }, /* GL_EXT_pixel_transform */
+    {  440, 1741,    2 }, /* GL_EXT_point_parameters */
+    {  441, 1743,    1 }, /* GL_EXT_polygon_offset */
+    {  442, 1744,    1 }, /* GL_EXT_polygon_offset_clamp */
+    {  446, 1746,    1 }, /* GL_EXT_provoking_vertex */
+    {  448, 1747,    1 }, /* GL_EXT_raster_multisample */
+    {  463, 1712,    2 }, /* GL_EXT_semaphore */
+    {  463, 1752,    7 }, /* GL_EXT_semaphore */
+    {  464, 1759,    1 }, /* GL_EXT_semaphore_fd */
+    {  465, 1760,    2 }, /* GL_EXT_semaphore_win32 */
+    {  462, 1762,   17 }, /* GL_EXT_secondary_color */
+    {  467, 1779,    1 }, /* GL_EXT_separate_shader_objects */
+    {  467, 1782,    1 }, /* GL_EXT_separate_shader_objects */
+    {  467, 1790,    1 }, /* GL_EXT_separate_shader_objects */
+    {  485, 1792,    1 }, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+    {  489, 1793,    2 }, /* GL_EXT_shader_image_load_store */
+    {  515, 1799,    1 }, /* GL_EXT_stencil_clear_tag */
+    {  516, 1800,    1 }, /* GL_EXT_stencil_two_side */
+    {  521, 1801,    2 }, /* GL_EXT_subtexture */
+    {  526, 1804,    2 }, /* GL_EXT_texture3D */
+    {  527, 1806,    1 }, /* GL_EXT_texture_array */
+    {  530, 1816,    1 }, /* GL_EXT_texture_buffer_object */
+    {  547, 1811,    4 }, /* GL_EXT_texture_integer */
+    {  547, 1817,    2 }, /* GL_EXT_texture_integer */
+    {  552, 1819,    6 }, /* GL_EXT_texture_object */
+    {  554, 1825,    1 }, /* GL_EXT_texture_perturb_normal */
+    {  564, 1554,    3 }, /* GL_EXT_texture_storage */
+    {  564, 1826,    3 }, /* GL_EXT_texture_storage */
+    {  811, 1832,    3 }, /* GL_NV_timeline_semaphore */
+    {  569, 1587,    2 }, /* GL_EXT_timer_query */
+    {  570, 1835,    7 }, /* GL_EXT_transform_feedback */
+    {  573, 1842,    9 }, /* GL_EXT_vertex_array */
+    {  575, 1851,   10 }, /* GL_EXT_vertex_attrib_64bit */
+    {  576, 1861,   42 }, /* GL_EXT_vertex_shader */
+    {  577, 1903,    3 }, /* GL_EXT_vertex_weighting */
+    {  579, 1906,    2 }, /* GL_EXT_win32_keyed_mutex */
+    {  580, 1908,    1 }, /* GL_EXT_window_rectangles */
+    {  581, 1909,    1 }, /* GL_EXT_x11_sync_object */
+    {  583, 1910,    1 }, /* GL_GREMEDY_frame_terminator */
+    {  584, 1911,    1 }, /* GL_GREMEDY_string_marker */
+    {  586, 1912,    6 }, /* GL_HP_image_transform */
+    {  594, 1918,    2 }, /* GL_IBM_multimode_draw_arrays */
+    {  596, 1920,    1 }, /* GL_IBM_static_data */
+    {  598, 1921,    8 }, /* GL_IBM_vertex_array_lists */
+    {  608, 1939,    1 }, /* GL_INGR_blend_func_separate */
+    {  614, 1940,    1 }, /* GL_INTEL_framebuffer_CMAA */
+    {  615, 1941,    3 }, /* GL_INTEL_map_texture */
+    {  616, 1944,    4 }, /* GL_INTEL_parallel_arrays */
+    {  617, 1948,   10 }, /* GL_INTEL_performance_query */
+    {  619, 1958,    1 }, /* GL_KHR_blend_equation_advanced */
+    {  624,  510,   10 }, /* GL_KHR_debug */
+    {  624,  658,    1 }, /* GL_KHR_debug */
+    {  629,  546,    5 }, /* GL_KHR_robustness */
+    {  627, 1975,    1 }, /* GL_KHR_parallel_shader_compile */
+    {  647, 1976,    2 }, /* GL_MESA_framebuffer_flip_y */
+    {  649, 1978,    2 }, /* GL_MESA_map_buffer_client_pointer */
+    {  652, 1980,    1 }, /* GL_MESA_resize_buffers */
+    {  657, 1981,   24 }, /* GL_MESA_window_pos */
+    {  660, 2005,    2 }, /* GL_NVX_conditional_render */
+    {  663, 2007,    3 }, /* GL_NVX_linked_gpu_multicast */
+    {  666, 2010,    1 }, /* GL_NV_alpha_to_coverage_dither_control */
+    {  667, 2011,    2 }, /* GL_NV_bindless_multi_draw_indirect */
+    {  668, 2013,    2 }, /* GL_NV_bindless_multi_draw_indirect_count */
+    {  669, 2015,   13 }, /* GL_NV_bindless_texture */
+    {  670, 2028,    2 }, /* GL_NV_blend_equation_advanced */
+    {  674, 2030,    1 }, /* GL_NV_clip_space_w_scaling */
+    {  676, 2031,   17 }, /* GL_NV_command_list */
+    {  679, 2048,    2 }, /* GL_NV_conditional_render */
+    {  680, 2050,    1 }, /* GL_NV_conservative_raster */
+    {  681, 2051,    1 }, /* GL_NV_conservative_raster_dilate */
+    {  683, 2052,    1 }, /* GL_NV_conservative_raster_pre_snap_triangles */
+    {  691, 2054,    1 }, /* GL_NV_copy_image */
+    {  694, 2057,    3 }, /* GL_NV_depth_buffer_float */
+    {  700, 2063,    1 }, /* GL_NV_draw_texture */
+    {  701, 2064,    5 }, /* GL_NV_draw_vulkan_image */
+    {  702, 2069,    9 }, /* GL_NV_evaluators */
+    {  704, 2078,    3 }, /* GL_NV_explicit_multisample */
+    {  707, 2081,    7 }, /* GL_NV_fence */
+    {  711, 2088,    1 }, /* GL_NV_fragment_coverage_to_color */
+    {  712, 2089,    6 }, /* GL_NV_fragment_program */
+    {  719, 1747,    1 }, /* GL_NV_framebuffer_mixed_samples */
+    {  719, 2096,    3 }, /* GL_NV_framebuffer_mixed_samples */
+    {  721, 2100,    1 }, /* GL_NV_framebuffer_multisample_coverage */
+    {  723, 1640,    1 }, /* GL_NV_geometry_program4 */
+    {  723, 1806,    1 }, /* GL_NV_geometry_program4 */
+    {  723, 2101,    2 }, /* GL_NV_geometry_program4 */
+    {  727, 2103,   16 }, /* GL_NV_gpu_program4 */
+    {  728, 2119,    2 }, /* GL_NV_gpu_program5 */
+    {  730,  674,   33 }, /* GL_NV_gpu_shader5 */
+    {  731, 2121,   46 }, /* GL_NV_half_float */
+    {  735, 2168,    1 }, /* GL_NV_internalformat_sample_query */
+    {  726, 2169,   12 }, /* GL_NV_gpu_multicast */
+    {  662, 2181,    6 }, /* GL_NVX_gpu_multicast2 */
+    {  665, 2187,    4 }, /* GL_NVX_progress_fence */
+    {  738, 2191,    6 }, /* GL_NV_memory_attachment */
+    {  739, 2197,    4 }, /* GL_NV_memory_object_sparse */
+    {  740, 2201,    4 }, /* GL_NV_mesh_shader */
+    {  744, 2211,    7 }, /* GL_NV_occlusion_query */
+    {  747, 2218,    3 }, /* GL_NV_parameter_buffer_object */
+    {  749, 1557,   19 }, /* GL_NV_path_rendering */
+    {  749, 2221,   64 }, /* GL_NV_path_rendering */
+    {  752, 2285,    2 }, /* GL_NV_pixel_data_range */
+    {  753, 2287,    2 }, /* GL_NV_point_sprite */
+    {  755, 2290,    6 }, /* GL_NV_present_video */
+    {  756, 2296,    2 }, /* GL_NV_primitive_restart */
+    {  759, 2298,    1 }, /* GL_NV_query_resource */
+    {  760, 2299,    3 }, /* GL_NV_query_resource_tag */
+    {  768, 2303,   13 }, /* GL_NV_register_combiners */
+    {  769, 2316,    2 }, /* GL_NV_register_combiners2 */
+    {  773, 2318,    3 }, /* GL_NV_sample_locations */
+    {  775, 2321,    2 }, /* GL_NV_scissor_exclusive */
+    {  781,  707,    1 }, /* GL_NV_shader_buffer_load */
+    {  781, 2323,   13 }, /* GL_NV_shader_buffer_load */
+    {  791, 2336,    7 }, /* GL_NV_shading_rate_image */
+    {  798, 2343,    1 }, /* GL_NV_texture_barrier */
+    {  804, 2344,    6 }, /* GL_NV_texture_multisample */
+    {  812, 2350,   12 }, /* GL_NV_transform_feedback */
+    {  813, 2362,    7 }, /* GL_NV_transform_feedback2 */
+    {  816, 2369,   10 }, /* GL_NV_vdpau_interop */
+    {  817, 2379,    1 }, /* GL_NV_vdpau_interop2 */
+    {  818, 2380,    2 }, /* GL_NV_vertex_array_range */
+    {  820, 2382,   19 }, /* GL_NV_vertex_attrib_integer_64bit */
+    {  821, 2401,   12 }, /* GL_NV_vertex_buffer_unified_memory */
+    {  822, 2413,   64 }, /* GL_NV_vertex_program */
+    {  827, 1654,   23 }, /* GL_NV_vertex_program4 */
+    {  828, 2477,   12 }, /* GL_NV_video_capture */
+    {  831, 2501,    1 }, /* GL_NV_viewport_swizzle */
+    {  835, 2504,   22 }, /* GL_OES_byte_coordinates */
+    {  847, 2538,  103 }, /* GL_OES_fixed_point */
+    {  856, 2648,    1 }, /* GL_OES_query_matrix */
+    {  865, 2650,    6 }, /* GL_OES_single_precision */
+    {  892, 2688,    2 }, /* GL_OVR_multiview */
+    {  895, 2691,    1 }, /* GL_PGI_misc_hints */
+    {  925, 2719,    2 }, /* GL_SGIS_detail_texture */
+    {  926, 2721,    2 }, /* GL_SGIS_fog_function */
+    {  928, 2723,    2 }, /* GL_SGIS_multisample */
+    {  929, 2725,    6 }, /* GL_SGIS_pixel_texture */
+    {  931, 2731,    2 }, /* GL_SGIS_point_parameters */
+    {  932, 2733,    2 }, /* GL_SGIS_sharpen_texture */
+    {  933, 2735,    2 }, /* GL_SGIS_texture4D */
+    {  935, 2737,    1 }, /* GL_SGIS_texture_color_mask */
+    {  937, 2738,    2 }, /* GL_SGIS_texture_filter4 */
+    {  940, 2740,    6 }, /* GL_SGIX_async */
+    {  949, 2746,    1 }, /* GL_SGIX_flush_raster */
+    {  951, 2747,   18 }, /* GL_SGIX_fragment_lighting */
+    {  952, 2765,    1 }, /* GL_SGIX_framezoom */
+    {  953, 2766,    1 }, /* GL_SGIX_igloo_interface */
+    {  954, 2767,    6 }, /* GL_SGIX_instruments */
+    {  957, 2773,    6 }, /* GL_SGIX_list_priority */
+    {  958, 2779,    1 }, /* GL_SGIX_pixel_texture */
+    {  960, 2780,    4 }, /* GL_SGIX_polynomial_ffd */
+    {  961, 2784,    1 }, /* GL_SGIX_reference_plane */
+    {  966, 2785,    4 }, /* GL_SGIX_sprite */
+    {  968, 2789,    1 }, /* GL_SGIX_tag_sample_buffer */
+    {  979, 2790,    7 }, /* GL_SGI_color_table */
+    {  981, 2797,    1 }, /* GL_SUNX_constant_data */
+    {  983, 2798,    8 }, /* GL_SUN_global_alpha */
+    {  984, 2806,    1 }, /* GL_SUN_mesh_array */
+    {  986, 2807,    7 }, /* GL_SUN_triangle_list */
+    {  987, 2814,   40 }, /* GL_SUN_vertex */
+    {   58, 2929,    4 }, /* GL_ANGLE_memory_object_flags */
+    {   59, 2933,    1 }, /* GL_ANGLE_memory_object_fuchsia */
+    {   74, 2934,    1 }, /* GL_ANGLE_semaphore_fuchsia */
 };
 
 /* Search pre-baked kExtHashes_GL against the sorted driver hash list and set
@@ -9109,382 +9106,381 @@ static const uint16_t kExtIdx_gles2[] = {
      310, /* GL_CHROMIUM_bind_uniform_location */
      311, /* GL_CHROMIUM_copy_compressed_texture */
      312, /* GL_CHROMIUM_copy_texture */
-     313, /* GL_CHROMIUM_framebuffer_mixed_samples */
-     314, /* GL_CHROMIUM_lose_context */
-     315, /* GL_DMP_program_binary */
-     316, /* GL_DMP_shader_binary */
-     318, /* GL_EXT_EGL_image_array */
-     319, /* GL_EXT_EGL_image_storage */
-     320, /* GL_EXT_EGL_image_storage_compression */
-     322, /* GL_EXT_YUV_target */
-     324, /* GL_EXT_base_instance */
-     325, /* GL_EXT_bfloat16 */
-     330, /* GL_EXT_blend_func_extended */
-     333, /* GL_EXT_blend_minmax */
-     335, /* GL_EXT_buffer_reference */
-     336, /* GL_EXT_buffer_reference2 */
-     337, /* GL_EXT_buffer_reference_uvec2 */
-     338, /* GL_EXT_buffer_storage */
-     339, /* GL_EXT_clear_texture */
-     340, /* GL_EXT_clip_control */
-     341, /* GL_EXT_clip_cull_distance */
-     344, /* GL_EXT_color_buffer_float */
-     345, /* GL_EXT_color_buffer_half_float */
-     348, /* GL_EXT_conservative_depth */
-     349, /* GL_EXT_control_flow_attributes */
-     350, /* GL_EXT_control_flow_attributes2 */
-     353, /* GL_EXT_copy_image */
-     356, /* GL_EXT_debug_label */
-     357, /* GL_EXT_debug_marker */
-     359, /* GL_EXT_demote_to_helper_invocation */
-     361, /* GL_EXT_depth_clamp */
-     362, /* GL_EXT_descriptor_heap */
-     363, /* GL_EXT_device_group */
-     365, /* GL_EXT_discard_framebuffer */
-     366, /* GL_EXT_disjoint_timer_query */
-     367, /* GL_EXT_draw_buffers */
-     369, /* GL_EXT_draw_buffers_indexed */
-     370, /* GL_EXT_draw_elements_base_vertex */
-     371, /* GL_EXT_draw_instanced */
-     373, /* GL_EXT_draw_transform_feedback */
-     374, /* GL_EXT_expect_assume */
-     375, /* GL_EXT_external_buffer */
-     376, /* GL_EXT_float_blend */
-     377, /* GL_EXT_float_e2m1 */
-     378, /* GL_EXT_float_e2m3 */
-     379, /* GL_EXT_float_e3m2 */
-     380, /* GL_EXT_float_e4m3 */
-     381, /* GL_EXT_float_e5m2 */
-     382, /* GL_EXT_float_mxint8 */
-     383, /* GL_EXT_float_ue8m0 */
-     385, /* GL_EXT_frag_depth */
-     386, /* GL_EXT_fragment_invocation_density */
-     387, /* GL_EXT_fragment_shader_barycentric */
-     388, /* GL_EXT_fragment_shading_rate */
-     390, /* GL_EXT_framebuffer_blit_layers */
-     395, /* GL_EXT_geometry_point_size */
-     396, /* GL_EXT_geometry_shader */
-     400, /* GL_EXT_gpu_shader5 */
-     406, /* GL_EXT_instanced_arrays */
-     407, /* GL_EXT_integer_dot_product */
-     410, /* GL_EXT_map_buffer_range */
-     411, /* GL_EXT_maximal_reconvergence */
-     412, /* GL_EXT_memory_object */
-     413, /* GL_EXT_memory_object_fd */
-     414, /* GL_EXT_memory_object_win32 */
-     415, /* GL_EXT_mesh_shader */
-     417, /* GL_EXT_multi_draw_arrays */
-     418, /* GL_EXT_multi_draw_indirect */
-     420, /* GL_EXT_multisampled_compatibility */
-     421, /* GL_EXT_multisampled_render_to_texture */
-     422, /* GL_EXT_multisampled_render_to_texture2 */
-     423, /* GL_EXT_multiview */
-     424, /* GL_EXT_multiview_draw_buffers */
-     425, /* GL_EXT_multiview_tessellation_geometry_shader */
-     426, /* GL_EXT_multiview_texture_multisample */
-     427, /* GL_EXT_multiview_timer_query */
-     428, /* GL_EXT_nontemporal_keyword */
-     430, /* GL_EXT_null_initializer */
-     431, /* GL_EXT_occlusion_query_boolean */
-     443, /* GL_EXT_polygon_offset_clamp */
-     444, /* GL_EXT_post_depth_coverage */
-     445, /* GL_EXT_primitive_bounding_box */
-     446, /* GL_EXT_protected_textures */
-     448, /* GL_EXT_pvrtc_sRGB */
-     449, /* GL_EXT_raster_multisample */
-     455, /* GL_EXT_read_format_bgra */
-     456, /* GL_EXT_render_snorm */
-     458, /* GL_EXT_robustness */
-     459, /* GL_EXT_sRGB */
-     460, /* GL_EXT_sRGB_write_control */
-     461, /* GL_EXT_samplerless_texture_functions */
-     462, /* GL_EXT_scalar_block_layout */
-     464, /* GL_EXT_semaphore */
-     465, /* GL_EXT_semaphore_fd */
-     466, /* GL_EXT_semaphore_win32 */
-     467, /* GL_EXT_separate_depth_stencil */
-     468, /* GL_EXT_separate_shader_objects */
-     470, /* GL_EXT_shader_16bit_storage */
-     471, /* GL_EXT_shader_64bit_indexing */
-     472, /* GL_EXT_shader_8bit_storage */
-     476, /* GL_EXT_shader_clock */
-     477, /* GL_EXT_shader_explicit_arithmetic_types */
-     478, /* GL_EXT_shader_explicit_arithmetic_types_float16 */
-     479, /* GL_EXT_shader_explicit_arithmetic_types_float32 */
-     480, /* GL_EXT_shader_explicit_arithmetic_types_float64 */
-     481, /* GL_EXT_shader_explicit_arithmetic_types_int16 */
-     482, /* GL_EXT_shader_explicit_arithmetic_types_int32 */
-     483, /* GL_EXT_shader_explicit_arithmetic_types_int64 */
-     484, /* GL_EXT_shader_explicit_arithmetic_types_int8 */
-     485, /* GL_EXT_shader_framebuffer_fetch */
-     486, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
-     487, /* GL_EXT_shader_group_vote */
-     488, /* GL_EXT_shader_image_int64 */
-     491, /* GL_EXT_shader_implicit_conversions */
-     492, /* GL_EXT_shader_integer_mix */
-     494, /* GL_EXT_shader_io_blocks */
-     495, /* GL_EXT_shader_non_constant_global_initializers */
-     496, /* GL_EXT_shader_pixel_local_storage */
-     497, /* GL_EXT_shader_pixel_local_storage2 */
-     498, /* GL_EXT_shader_quad_control */
-     499, /* GL_EXT_shader_realtime_clock */
-     500, /* GL_EXT_shader_samples_identical */
-     501, /* GL_EXT_shader_subgroup_extended_types_float16 */
-     502, /* GL_EXT_shader_subgroup_extended_types_int16 */
-     503, /* GL_EXT_shader_subgroup_extended_types_int64 */
-     504, /* GL_EXT_shader_subgroup_extended_types_int8 */
-     505, /* GL_EXT_shader_texture_lod */
-     506, /* GL_EXT_shader_texture_samples */
-     509, /* GL_EXT_shadow_samplers */
-     510, /* GL_EXT_shared_memory_block */
-     512, /* GL_EXT_sparse_texture */
-     513, /* GL_EXT_sparse_texture2 */
-     514, /* GL_EXT_spec_constant_composites */
-     519, /* GL_EXT_structured_descriptor_heap */
-     520, /* GL_EXT_subgroup_uniform_control_flow */
-     523, /* GL_EXT_terminate_invocation */
-     524, /* GL_EXT_tessellation_point_size */
-     525, /* GL_EXT_tessellation_shader */
-     529, /* GL_EXT_texture_border_clamp */
-     530, /* GL_EXT_texture_buffer */
-     532, /* GL_EXT_texture_compression_astc_decode_mode */
-     533, /* GL_EXT_texture_compression_bptc */
-     534, /* GL_EXT_texture_compression_dxt1 */
-     536, /* GL_EXT_texture_compression_rgtc */
-     537, /* GL_EXT_texture_compression_s3tc */
-     538, /* GL_EXT_texture_compression_s3tc_srgb */
-     540, /* GL_EXT_texture_cube_map_array */
-     544, /* GL_EXT_texture_filter_anisotropic */
-     545, /* GL_EXT_texture_filter_minmax */
-     546, /* GL_EXT_texture_format_BGRA8888 */
-     547, /* GL_EXT_texture_format_sRGB_override */
-     551, /* GL_EXT_texture_mirror_clamp_to_edge */
-     552, /* GL_EXT_texture_norm16 */
-     554, /* GL_EXT_texture_offset_non_const */
-     556, /* GL_EXT_texture_query_lod */
-     557, /* GL_EXT_texture_rg */
-     559, /* GL_EXT_texture_sRGB_R8 */
-     560, /* GL_EXT_texture_sRGB_RG8 */
-     561, /* GL_EXT_texture_sRGB_decode */
-     562, /* GL_EXT_texture_shadow_lod */
-     565, /* GL_EXT_texture_storage */
-     566, /* GL_EXT_texture_storage_compression */
-     568, /* GL_EXT_texture_type_2_10_10_10_REV */
-     569, /* GL_EXT_texture_view */
-     573, /* GL_EXT_unpack_subimage */
-     579, /* GL_EXT_vulkan_glsl_relaxed */
-     580, /* GL_EXT_win32_keyed_mutex */
-     581, /* GL_EXT_window_rectangles */
-     583, /* GL_FJ_shader_binary_GCCSO */
-     590, /* GL_HUAWEI_cluster_culling_shader */
-     591, /* GL_HUAWEI_program_binary */
-     592, /* GL_HUAWEI_shader_binary */
-     593, /* GL_HUAWEI_subpass_shading */
-     600, /* GL_IMG_bindless_texture */
-     601, /* GL_IMG_framebuffer_downsample */
-     602, /* GL_IMG_multisampled_render_to_texture */
-     603, /* GL_IMG_program_binary */
-     604, /* GL_IMG_read_format */
-     605, /* GL_IMG_shader_binary */
-     606, /* GL_IMG_texture_compression_pvrtc */
-     607, /* GL_IMG_texture_compression_pvrtc2 */
-     608, /* GL_IMG_texture_filter_cubic */
-     612, /* GL_INTEL_blackhole_render */
-     613, /* GL_INTEL_conservative_rasterization */
-     615, /* GL_INTEL_framebuffer_CMAA */
-     618, /* GL_INTEL_performance_query */
-     619, /* GL_INTEL_shader_integer_functions2 */
-     620, /* GL_KHR_blend_equation_advanced */
-     621, /* GL_KHR_blend_equation_advanced_coherent */
-     622, /* GL_KHR_compute_shader_derivatives */
-     623, /* GL_KHR_context_flush_control */
-     624, /* GL_KHR_cooperative_matrix */
-     625, /* GL_KHR_debug */
-     626, /* GL_KHR_memory_scope_semantics */
-     627, /* GL_KHR_no_error */
-     628, /* GL_KHR_parallel_shader_compile */
-     629, /* GL_KHR_robust_buffer_access_behavior */
-     630, /* GL_KHR_robustness */
-     631, /* GL_KHR_shader_subgroup */
-     632, /* GL_KHR_shader_subgroup_arithmetic */
-     633, /* GL_KHR_shader_subgroup_ballot */
-     634, /* GL_KHR_shader_subgroup_basic */
-     635, /* GL_KHR_shader_subgroup_clustered */
-     636, /* GL_KHR_shader_subgroup_quad */
-     637, /* GL_KHR_shader_subgroup_rotate */
-     638, /* GL_KHR_shader_subgroup_shuffle */
-     639, /* GL_KHR_shader_subgroup_shuffle_relative */
-     640, /* GL_KHR_shader_subgroup_vote */
-     641, /* GL_KHR_texture_compression_astc_hdr */
-     642, /* GL_KHR_texture_compression_astc_ldr */
-     643, /* GL_KHR_texture_compression_astc_sliced_3d */
-     644, /* GL_KHR_vulkan_glsl */
-     646, /* GL_MESA_bgra */
-     647, /* GL_MESA_framebuffer_flip_x */
-     648, /* GL_MESA_framebuffer_flip_y */
-     649, /* GL_MESA_framebuffer_swap_xy */
-     652, /* GL_MESA_program_binary_formats */
-     654, /* GL_MESA_sampler_objects */
-     655, /* GL_MESA_shader_integer_functions */
-     656, /* GL_MESA_texture_const_bandwidth */
-     660, /* GL_NVX_blend_equation_advanced_multi_draw_buffers */
-     670, /* GL_NV_bindless_texture */
-     671, /* GL_NV_blend_equation_advanced */
-     672, /* GL_NV_blend_equation_advanced_coherent */
-     673, /* GL_NV_blend_minmax_factor */
-     675, /* GL_NV_clip_space_w_scaling */
-     679, /* GL_NV_compute_shader_derivatives */
-     680, /* GL_NV_conditional_render */
-     681, /* GL_NV_conservative_raster */
-     683, /* GL_NV_conservative_raster_pre_snap */
-     684, /* GL_NV_conservative_raster_pre_snap_triangles */
-     686, /* GL_NV_cooperative_matrix */
-     687, /* GL_NV_cooperative_matrix2 */
-     688, /* GL_NV_cooperative_matrix_decode_vector */
-     689, /* GL_NV_cooperative_vector */
-     690, /* GL_NV_copy_buffer */
-     693, /* GL_NV_coverage_sample */
-     697, /* GL_NV_depth_nonlinear */
-     699, /* GL_NV_draw_buffers */
-     700, /* GL_NV_draw_instanced */
-     702, /* GL_NV_draw_vulkan_image */
-     704, /* GL_NV_explicit_attrib_location */
-     706, /* GL_NV_explicit_typecast */
-     707, /* GL_NV_fbo_color_attachments */
-     708, /* GL_NV_fence */
-     709, /* GL_NV_fill_rectangle */
-     712, /* GL_NV_fragment_coverage_to_color */
-     717, /* GL_NV_fragment_shader_barycentric */
-     718, /* GL_NV_fragment_shader_interlock */
-     719, /* GL_NV_framebuffer_blit */
-     720, /* GL_NV_framebuffer_mixed_samples */
-     721, /* GL_NV_framebuffer_multisample */
-     723, /* GL_NV_generate_mipmap_sRGB */
-     726, /* GL_NV_geometry_shader_passthrough */
-     731, /* GL_NV_gpu_shader5 */
-     733, /* GL_NV_image_formats */
-     734, /* GL_NV_instanced_arrays */
-     735, /* GL_NV_integer_cooperative_matrix */
-     736, /* GL_NV_internalformat_sample_query */
-     739, /* GL_NV_memory_attachment */
-     740, /* GL_NV_memory_object_sparse */
-     741, /* GL_NV_mesh_shader */
-     744, /* GL_NV_non_square_matrices */
-     746, /* GL_NV_pack_subimage */
-     750, /* GL_NV_path_rendering */
-     751, /* GL_NV_path_rendering_shared_edge */
-     752, /* GL_NV_pixel_buffer_object */
-     755, /* GL_NV_polygon_mode */
-     758, /* GL_NV_primitive_shading_rate */
-     764, /* GL_NV_read_buffer */
-     765, /* GL_NV_read_buffer_front */
-     766, /* GL_NV_read_depth */
-     767, /* GL_NV_read_depth_stencil */
-     768, /* GL_NV_read_stencil */
-     771, /* GL_NV_representative_fragment_test */
-     773, /* GL_NV_sRGB_formats */
-     774, /* GL_NV_sample_locations */
-     775, /* GL_NV_sample_mask_override_coverage */
-     776, /* GL_NV_scissor_exclusive */
-     780, /* GL_NV_shader_atomic_fp16_vector */
-     785, /* GL_NV_shader_noperspective_interpolation */
-     786, /* GL_NV_shader_sm_builtins */
-     788, /* GL_NV_shader_subgroup_partitioned */
-     789, /* GL_NV_shader_texture_footprint */
-     792, /* GL_NV_shading_rate_image */
-     793, /* GL_NV_shadow_samplers_array */
-     794, /* GL_NV_shadow_samplers_cube */
-     795, /* GL_NV_stereo_view_rendering */
-     799, /* GL_NV_texture_barrier */
-     800, /* GL_NV_texture_border_clamp */
-     801, /* GL_NV_texture_compression_s3tc_update */
-     806, /* GL_NV_texture_npot_2D_mipmap */
-     812, /* GL_NV_timeline_semaphore */
-     830, /* GL_NV_viewport_array */
-     831, /* GL_NV_viewport_array2 */
-     832, /* GL_NV_viewport_swizzle */
-     833, /* GL_OES_EGL_image */
-     834, /* GL_OES_EGL_image_external */
-     835, /* GL_OES_EGL_image_external_essl3 */
-     837, /* GL_OES_compressed_ETC1_RGB8_sub_texture */
-     838, /* GL_OES_compressed_ETC1_RGB8_texture */
-     839, /* GL_OES_compressed_paletted_texture */
-     840, /* GL_OES_copy_image */
-     841, /* GL_OES_depth24 */
-     842, /* GL_OES_depth32 */
-     843, /* GL_OES_depth_texture */
-     844, /* GL_OES_draw_buffers_indexed */
-     845, /* GL_OES_draw_elements_base_vertex */
-     846, /* GL_OES_element_index_uint */
-     847, /* GL_OES_fbo_render_mipmap */
-     849, /* GL_OES_fragment_precision_high */
-     850, /* GL_OES_geometry_point_size */
-     851, /* GL_OES_geometry_shader */
-     852, /* GL_OES_get_program_binary */
-     853, /* GL_OES_gpu_shader5 */
-     854, /* GL_OES_mapbuffer */
-     855, /* GL_OES_packed_depth_stencil */
-     856, /* GL_OES_primitive_bounding_box */
-     859, /* GL_OES_required_internalformat */
-     860, /* GL_OES_rgb8_rgba8 */
-     861, /* GL_OES_sample_shading */
-     862, /* GL_OES_sample_variables */
-     863, /* GL_OES_shader_image_atomic */
-     864, /* GL_OES_shader_io_blocks */
-     865, /* GL_OES_shader_multisample_interpolation */
-     867, /* GL_OES_standard_derivatives */
-     868, /* GL_OES_stencil1 */
-     869, /* GL_OES_stencil4 */
-     870, /* GL_OES_surfaceless_context */
-     871, /* GL_OES_tessellation_point_size */
-     872, /* GL_OES_tessellation_shader */
-     873, /* GL_OES_texture_3D */
-     874, /* GL_OES_texture_border_clamp */
-     875, /* GL_OES_texture_buffer */
-     876, /* GL_OES_texture_compression_astc */
-     877, /* GL_OES_texture_cube_map_array */
-     878, /* GL_OES_texture_float */
-     879, /* GL_OES_texture_float_linear */
-     880, /* GL_OES_texture_half_float */
-     881, /* GL_OES_texture_half_float_linear */
-     882, /* GL_OES_texture_npot */
-     883, /* GL_OES_texture_stencil8 */
-     884, /* GL_OES_texture_storage_multisample_2d_array */
-     885, /* GL_OES_texture_view */
-     886, /* GL_OES_vertex_array_object */
-     887, /* GL_OES_vertex_half_float */
-     888, /* GL_OES_vertex_type_10_10_10_2 */
-     889, /* GL_OES_viewport_array */
-     893, /* GL_OVR_multiview */
-     894, /* GL_OVR_multiview2 */
-     895, /* GL_OVR_multiview_multisampled_render_to_texture */
-     898, /* GL_QCOM_YUV_texture_gather */
-     899, /* GL_QCOM_alpha_test */
-     900, /* GL_QCOM_binning_control */
-     901, /* GL_QCOM_cooperative_matrix_conversion */
-     902, /* GL_QCOM_driver_control */
-     903, /* GL_QCOM_extended_get */
-     904, /* GL_QCOM_extended_get2 */
-     905, /* GL_QCOM_frame_extrapolation */
-     906, /* GL_QCOM_framebuffer_foveated */
-     907, /* GL_QCOM_image_processing */
-     908, /* GL_QCOM_image_processing2 */
-     909, /* GL_QCOM_motion_estimation */
-     910, /* GL_QCOM_perfmon_global_mode */
-     911, /* GL_QCOM_render_sRGB_R8_RG8 */
-     912, /* GL_QCOM_render_shared_exponent */
-     913, /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
-     914, /* GL_QCOM_shader_framebuffer_fetch_rate */
-     915, /* GL_QCOM_shading_rate */
-     916, /* GL_QCOM_texture_foveated */
-     917, /* GL_QCOM_texture_foveated2 */
-     918, /* GL_QCOM_texture_foveated_subsampled_layout */
-     919, /* GL_QCOM_texture_lod_bias */
-     920, /* GL_QCOM_tile_shading */
-     921, /* GL_QCOM_tiled_rendering */
-     922, /* GL_QCOM_writeonly_rendering */
-     923, /* GL_QCOM_ycbcr_degamma */
-     989, /* GL_VIV_shader_binary */
+     313, /* GL_CHROMIUM_lose_context */
+     314, /* GL_DMP_program_binary */
+     315, /* GL_DMP_shader_binary */
+     317, /* GL_EXT_EGL_image_array */
+     318, /* GL_EXT_EGL_image_storage */
+     319, /* GL_EXT_EGL_image_storage_compression */
+     321, /* GL_EXT_YUV_target */
+     323, /* GL_EXT_base_instance */
+     324, /* GL_EXT_bfloat16 */
+     329, /* GL_EXT_blend_func_extended */
+     332, /* GL_EXT_blend_minmax */
+     334, /* GL_EXT_buffer_reference */
+     335, /* GL_EXT_buffer_reference2 */
+     336, /* GL_EXT_buffer_reference_uvec2 */
+     337, /* GL_EXT_buffer_storage */
+     338, /* GL_EXT_clear_texture */
+     339, /* GL_EXT_clip_control */
+     340, /* GL_EXT_clip_cull_distance */
+     343, /* GL_EXT_color_buffer_float */
+     344, /* GL_EXT_color_buffer_half_float */
+     347, /* GL_EXT_conservative_depth */
+     348, /* GL_EXT_control_flow_attributes */
+     349, /* GL_EXT_control_flow_attributes2 */
+     352, /* GL_EXT_copy_image */
+     355, /* GL_EXT_debug_label */
+     356, /* GL_EXT_debug_marker */
+     358, /* GL_EXT_demote_to_helper_invocation */
+     360, /* GL_EXT_depth_clamp */
+     361, /* GL_EXT_descriptor_heap */
+     362, /* GL_EXT_device_group */
+     364, /* GL_EXT_discard_framebuffer */
+     365, /* GL_EXT_disjoint_timer_query */
+     366, /* GL_EXT_draw_buffers */
+     368, /* GL_EXT_draw_buffers_indexed */
+     369, /* GL_EXT_draw_elements_base_vertex */
+     370, /* GL_EXT_draw_instanced */
+     372, /* GL_EXT_draw_transform_feedback */
+     373, /* GL_EXT_expect_assume */
+     374, /* GL_EXT_external_buffer */
+     375, /* GL_EXT_float_blend */
+     376, /* GL_EXT_float_e2m1 */
+     377, /* GL_EXT_float_e2m3 */
+     378, /* GL_EXT_float_e3m2 */
+     379, /* GL_EXT_float_e4m3 */
+     380, /* GL_EXT_float_e5m2 */
+     381, /* GL_EXT_float_mxint8 */
+     382, /* GL_EXT_float_ue8m0 */
+     384, /* GL_EXT_frag_depth */
+     385, /* GL_EXT_fragment_invocation_density */
+     386, /* GL_EXT_fragment_shader_barycentric */
+     387, /* GL_EXT_fragment_shading_rate */
+     389, /* GL_EXT_framebuffer_blit_layers */
+     394, /* GL_EXT_geometry_point_size */
+     395, /* GL_EXT_geometry_shader */
+     399, /* GL_EXT_gpu_shader5 */
+     405, /* GL_EXT_instanced_arrays */
+     406, /* GL_EXT_integer_dot_product */
+     409, /* GL_EXT_map_buffer_range */
+     410, /* GL_EXT_maximal_reconvergence */
+     411, /* GL_EXT_memory_object */
+     412, /* GL_EXT_memory_object_fd */
+     413, /* GL_EXT_memory_object_win32 */
+     414, /* GL_EXT_mesh_shader */
+     416, /* GL_EXT_multi_draw_arrays */
+     417, /* GL_EXT_multi_draw_indirect */
+     419, /* GL_EXT_multisampled_compatibility */
+     420, /* GL_EXT_multisampled_render_to_texture */
+     421, /* GL_EXT_multisampled_render_to_texture2 */
+     422, /* GL_EXT_multiview */
+     423, /* GL_EXT_multiview_draw_buffers */
+     424, /* GL_EXT_multiview_tessellation_geometry_shader */
+     425, /* GL_EXT_multiview_texture_multisample */
+     426, /* GL_EXT_multiview_timer_query */
+     427, /* GL_EXT_nontemporal_keyword */
+     429, /* GL_EXT_null_initializer */
+     430, /* GL_EXT_occlusion_query_boolean */
+     442, /* GL_EXT_polygon_offset_clamp */
+     443, /* GL_EXT_post_depth_coverage */
+     444, /* GL_EXT_primitive_bounding_box */
+     445, /* GL_EXT_protected_textures */
+     447, /* GL_EXT_pvrtc_sRGB */
+     448, /* GL_EXT_raster_multisample */
+     454, /* GL_EXT_read_format_bgra */
+     455, /* GL_EXT_render_snorm */
+     457, /* GL_EXT_robustness */
+     458, /* GL_EXT_sRGB */
+     459, /* GL_EXT_sRGB_write_control */
+     460, /* GL_EXT_samplerless_texture_functions */
+     461, /* GL_EXT_scalar_block_layout */
+     463, /* GL_EXT_semaphore */
+     464, /* GL_EXT_semaphore_fd */
+     465, /* GL_EXT_semaphore_win32 */
+     466, /* GL_EXT_separate_depth_stencil */
+     467, /* GL_EXT_separate_shader_objects */
+     469, /* GL_EXT_shader_16bit_storage */
+     470, /* GL_EXT_shader_64bit_indexing */
+     471, /* GL_EXT_shader_8bit_storage */
+     475, /* GL_EXT_shader_clock */
+     476, /* GL_EXT_shader_explicit_arithmetic_types */
+     477, /* GL_EXT_shader_explicit_arithmetic_types_float16 */
+     478, /* GL_EXT_shader_explicit_arithmetic_types_float32 */
+     479, /* GL_EXT_shader_explicit_arithmetic_types_float64 */
+     480, /* GL_EXT_shader_explicit_arithmetic_types_int16 */
+     481, /* GL_EXT_shader_explicit_arithmetic_types_int32 */
+     482, /* GL_EXT_shader_explicit_arithmetic_types_int64 */
+     483, /* GL_EXT_shader_explicit_arithmetic_types_int8 */
+     484, /* GL_EXT_shader_framebuffer_fetch */
+     485, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+     486, /* GL_EXT_shader_group_vote */
+     487, /* GL_EXT_shader_image_int64 */
+     490, /* GL_EXT_shader_implicit_conversions */
+     491, /* GL_EXT_shader_integer_mix */
+     493, /* GL_EXT_shader_io_blocks */
+     494, /* GL_EXT_shader_non_constant_global_initializers */
+     495, /* GL_EXT_shader_pixel_local_storage */
+     496, /* GL_EXT_shader_pixel_local_storage2 */
+     497, /* GL_EXT_shader_quad_control */
+     498, /* GL_EXT_shader_realtime_clock */
+     499, /* GL_EXT_shader_samples_identical */
+     500, /* GL_EXT_shader_subgroup_extended_types_float16 */
+     501, /* GL_EXT_shader_subgroup_extended_types_int16 */
+     502, /* GL_EXT_shader_subgroup_extended_types_int64 */
+     503, /* GL_EXT_shader_subgroup_extended_types_int8 */
+     504, /* GL_EXT_shader_texture_lod */
+     505, /* GL_EXT_shader_texture_samples */
+     508, /* GL_EXT_shadow_samplers */
+     509, /* GL_EXT_shared_memory_block */
+     511, /* GL_EXT_sparse_texture */
+     512, /* GL_EXT_sparse_texture2 */
+     513, /* GL_EXT_spec_constant_composites */
+     518, /* GL_EXT_structured_descriptor_heap */
+     519, /* GL_EXT_subgroup_uniform_control_flow */
+     522, /* GL_EXT_terminate_invocation */
+     523, /* GL_EXT_tessellation_point_size */
+     524, /* GL_EXT_tessellation_shader */
+     528, /* GL_EXT_texture_border_clamp */
+     529, /* GL_EXT_texture_buffer */
+     531, /* GL_EXT_texture_compression_astc_decode_mode */
+     532, /* GL_EXT_texture_compression_bptc */
+     533, /* GL_EXT_texture_compression_dxt1 */
+     535, /* GL_EXT_texture_compression_rgtc */
+     536, /* GL_EXT_texture_compression_s3tc */
+     537, /* GL_EXT_texture_compression_s3tc_srgb */
+     539, /* GL_EXT_texture_cube_map_array */
+     543, /* GL_EXT_texture_filter_anisotropic */
+     544, /* GL_EXT_texture_filter_minmax */
+     545, /* GL_EXT_texture_format_BGRA8888 */
+     546, /* GL_EXT_texture_format_sRGB_override */
+     550, /* GL_EXT_texture_mirror_clamp_to_edge */
+     551, /* GL_EXT_texture_norm16 */
+     553, /* GL_EXT_texture_offset_non_const */
+     555, /* GL_EXT_texture_query_lod */
+     556, /* GL_EXT_texture_rg */
+     558, /* GL_EXT_texture_sRGB_R8 */
+     559, /* GL_EXT_texture_sRGB_RG8 */
+     560, /* GL_EXT_texture_sRGB_decode */
+     561, /* GL_EXT_texture_shadow_lod */
+     564, /* GL_EXT_texture_storage */
+     565, /* GL_EXT_texture_storage_compression */
+     567, /* GL_EXT_texture_type_2_10_10_10_REV */
+     568, /* GL_EXT_texture_view */
+     572, /* GL_EXT_unpack_subimage */
+     578, /* GL_EXT_vulkan_glsl_relaxed */
+     579, /* GL_EXT_win32_keyed_mutex */
+     580, /* GL_EXT_window_rectangles */
+     582, /* GL_FJ_shader_binary_GCCSO */
+     589, /* GL_HUAWEI_cluster_culling_shader */
+     590, /* GL_HUAWEI_program_binary */
+     591, /* GL_HUAWEI_shader_binary */
+     592, /* GL_HUAWEI_subpass_shading */
+     599, /* GL_IMG_bindless_texture */
+     600, /* GL_IMG_framebuffer_downsample */
+     601, /* GL_IMG_multisampled_render_to_texture */
+     602, /* GL_IMG_program_binary */
+     603, /* GL_IMG_read_format */
+     604, /* GL_IMG_shader_binary */
+     605, /* GL_IMG_texture_compression_pvrtc */
+     606, /* GL_IMG_texture_compression_pvrtc2 */
+     607, /* GL_IMG_texture_filter_cubic */
+     611, /* GL_INTEL_blackhole_render */
+     612, /* GL_INTEL_conservative_rasterization */
+     614, /* GL_INTEL_framebuffer_CMAA */
+     617, /* GL_INTEL_performance_query */
+     618, /* GL_INTEL_shader_integer_functions2 */
+     619, /* GL_KHR_blend_equation_advanced */
+     620, /* GL_KHR_blend_equation_advanced_coherent */
+     621, /* GL_KHR_compute_shader_derivatives */
+     622, /* GL_KHR_context_flush_control */
+     623, /* GL_KHR_cooperative_matrix */
+     624, /* GL_KHR_debug */
+     625, /* GL_KHR_memory_scope_semantics */
+     626, /* GL_KHR_no_error */
+     627, /* GL_KHR_parallel_shader_compile */
+     628, /* GL_KHR_robust_buffer_access_behavior */
+     629, /* GL_KHR_robustness */
+     630, /* GL_KHR_shader_subgroup */
+     631, /* GL_KHR_shader_subgroup_arithmetic */
+     632, /* GL_KHR_shader_subgroup_ballot */
+     633, /* GL_KHR_shader_subgroup_basic */
+     634, /* GL_KHR_shader_subgroup_clustered */
+     635, /* GL_KHR_shader_subgroup_quad */
+     636, /* GL_KHR_shader_subgroup_rotate */
+     637, /* GL_KHR_shader_subgroup_shuffle */
+     638, /* GL_KHR_shader_subgroup_shuffle_relative */
+     639, /* GL_KHR_shader_subgroup_vote */
+     640, /* GL_KHR_texture_compression_astc_hdr */
+     641, /* GL_KHR_texture_compression_astc_ldr */
+     642, /* GL_KHR_texture_compression_astc_sliced_3d */
+     643, /* GL_KHR_vulkan_glsl */
+     645, /* GL_MESA_bgra */
+     646, /* GL_MESA_framebuffer_flip_x */
+     647, /* GL_MESA_framebuffer_flip_y */
+     648, /* GL_MESA_framebuffer_swap_xy */
+     651, /* GL_MESA_program_binary_formats */
+     653, /* GL_MESA_sampler_objects */
+     654, /* GL_MESA_shader_integer_functions */
+     655, /* GL_MESA_texture_const_bandwidth */
+     659, /* GL_NVX_blend_equation_advanced_multi_draw_buffers */
+     669, /* GL_NV_bindless_texture */
+     670, /* GL_NV_blend_equation_advanced */
+     671, /* GL_NV_blend_equation_advanced_coherent */
+     672, /* GL_NV_blend_minmax_factor */
+     674, /* GL_NV_clip_space_w_scaling */
+     678, /* GL_NV_compute_shader_derivatives */
+     679, /* GL_NV_conditional_render */
+     680, /* GL_NV_conservative_raster */
+     682, /* GL_NV_conservative_raster_pre_snap */
+     683, /* GL_NV_conservative_raster_pre_snap_triangles */
+     685, /* GL_NV_cooperative_matrix */
+     686, /* GL_NV_cooperative_matrix2 */
+     687, /* GL_NV_cooperative_matrix_decode_vector */
+     688, /* GL_NV_cooperative_vector */
+     689, /* GL_NV_copy_buffer */
+     692, /* GL_NV_coverage_sample */
+     696, /* GL_NV_depth_nonlinear */
+     698, /* GL_NV_draw_buffers */
+     699, /* GL_NV_draw_instanced */
+     701, /* GL_NV_draw_vulkan_image */
+     703, /* GL_NV_explicit_attrib_location */
+     705, /* GL_NV_explicit_typecast */
+     706, /* GL_NV_fbo_color_attachments */
+     707, /* GL_NV_fence */
+     708, /* GL_NV_fill_rectangle */
+     711, /* GL_NV_fragment_coverage_to_color */
+     716, /* GL_NV_fragment_shader_barycentric */
+     717, /* GL_NV_fragment_shader_interlock */
+     718, /* GL_NV_framebuffer_blit */
+     719, /* GL_NV_framebuffer_mixed_samples */
+     720, /* GL_NV_framebuffer_multisample */
+     722, /* GL_NV_generate_mipmap_sRGB */
+     725, /* GL_NV_geometry_shader_passthrough */
+     730, /* GL_NV_gpu_shader5 */
+     732, /* GL_NV_image_formats */
+     733, /* GL_NV_instanced_arrays */
+     734, /* GL_NV_integer_cooperative_matrix */
+     735, /* GL_NV_internalformat_sample_query */
+     738, /* GL_NV_memory_attachment */
+     739, /* GL_NV_memory_object_sparse */
+     740, /* GL_NV_mesh_shader */
+     743, /* GL_NV_non_square_matrices */
+     745, /* GL_NV_pack_subimage */
+     749, /* GL_NV_path_rendering */
+     750, /* GL_NV_path_rendering_shared_edge */
+     751, /* GL_NV_pixel_buffer_object */
+     754, /* GL_NV_polygon_mode */
+     757, /* GL_NV_primitive_shading_rate */
+     763, /* GL_NV_read_buffer */
+     764, /* GL_NV_read_buffer_front */
+     765, /* GL_NV_read_depth */
+     766, /* GL_NV_read_depth_stencil */
+     767, /* GL_NV_read_stencil */
+     770, /* GL_NV_representative_fragment_test */
+     772, /* GL_NV_sRGB_formats */
+     773, /* GL_NV_sample_locations */
+     774, /* GL_NV_sample_mask_override_coverage */
+     775, /* GL_NV_scissor_exclusive */
+     779, /* GL_NV_shader_atomic_fp16_vector */
+     784, /* GL_NV_shader_noperspective_interpolation */
+     785, /* GL_NV_shader_sm_builtins */
+     787, /* GL_NV_shader_subgroup_partitioned */
+     788, /* GL_NV_shader_texture_footprint */
+     791, /* GL_NV_shading_rate_image */
+     792, /* GL_NV_shadow_samplers_array */
+     793, /* GL_NV_shadow_samplers_cube */
+     794, /* GL_NV_stereo_view_rendering */
+     798, /* GL_NV_texture_barrier */
+     799, /* GL_NV_texture_border_clamp */
+     800, /* GL_NV_texture_compression_s3tc_update */
+     805, /* GL_NV_texture_npot_2D_mipmap */
+     811, /* GL_NV_timeline_semaphore */
+     829, /* GL_NV_viewport_array */
+     830, /* GL_NV_viewport_array2 */
+     831, /* GL_NV_viewport_swizzle */
+     832, /* GL_OES_EGL_image */
+     833, /* GL_OES_EGL_image_external */
+     834, /* GL_OES_EGL_image_external_essl3 */
+     836, /* GL_OES_compressed_ETC1_RGB8_sub_texture */
+     837, /* GL_OES_compressed_ETC1_RGB8_texture */
+     838, /* GL_OES_compressed_paletted_texture */
+     839, /* GL_OES_copy_image */
+     840, /* GL_OES_depth24 */
+     841, /* GL_OES_depth32 */
+     842, /* GL_OES_depth_texture */
+     843, /* GL_OES_draw_buffers_indexed */
+     844, /* GL_OES_draw_elements_base_vertex */
+     845, /* GL_OES_element_index_uint */
+     846, /* GL_OES_fbo_render_mipmap */
+     848, /* GL_OES_fragment_precision_high */
+     849, /* GL_OES_geometry_point_size */
+     850, /* GL_OES_geometry_shader */
+     851, /* GL_OES_get_program_binary */
+     852, /* GL_OES_gpu_shader5 */
+     853, /* GL_OES_mapbuffer */
+     854, /* GL_OES_packed_depth_stencil */
+     855, /* GL_OES_primitive_bounding_box */
+     858, /* GL_OES_required_internalformat */
+     859, /* GL_OES_rgb8_rgba8 */
+     860, /* GL_OES_sample_shading */
+     861, /* GL_OES_sample_variables */
+     862, /* GL_OES_shader_image_atomic */
+     863, /* GL_OES_shader_io_blocks */
+     864, /* GL_OES_shader_multisample_interpolation */
+     866, /* GL_OES_standard_derivatives */
+     867, /* GL_OES_stencil1 */
+     868, /* GL_OES_stencil4 */
+     869, /* GL_OES_surfaceless_context */
+     870, /* GL_OES_tessellation_point_size */
+     871, /* GL_OES_tessellation_shader */
+     872, /* GL_OES_texture_3D */
+     873, /* GL_OES_texture_border_clamp */
+     874, /* GL_OES_texture_buffer */
+     875, /* GL_OES_texture_compression_astc */
+     876, /* GL_OES_texture_cube_map_array */
+     877, /* GL_OES_texture_float */
+     878, /* GL_OES_texture_float_linear */
+     879, /* GL_OES_texture_half_float */
+     880, /* GL_OES_texture_half_float_linear */
+     881, /* GL_OES_texture_npot */
+     882, /* GL_OES_texture_stencil8 */
+     883, /* GL_OES_texture_storage_multisample_2d_array */
+     884, /* GL_OES_texture_view */
+     885, /* GL_OES_vertex_array_object */
+     886, /* GL_OES_vertex_half_float */
+     887, /* GL_OES_vertex_type_10_10_10_2 */
+     888, /* GL_OES_viewport_array */
+     892, /* GL_OVR_multiview */
+     893, /* GL_OVR_multiview2 */
+     894, /* GL_OVR_multiview_multisampled_render_to_texture */
+     897, /* GL_QCOM_YUV_texture_gather */
+     898, /* GL_QCOM_alpha_test */
+     899, /* GL_QCOM_binning_control */
+     900, /* GL_QCOM_cooperative_matrix_conversion */
+     901, /* GL_QCOM_driver_control */
+     902, /* GL_QCOM_extended_get */
+     903, /* GL_QCOM_extended_get2 */
+     904, /* GL_QCOM_frame_extrapolation */
+     905, /* GL_QCOM_framebuffer_foveated */
+     906, /* GL_QCOM_image_processing */
+     907, /* GL_QCOM_image_processing2 */
+     908, /* GL_QCOM_motion_estimation */
+     909, /* GL_QCOM_perfmon_global_mode */
+     910, /* GL_QCOM_render_sRGB_R8_RG8 */
+     911, /* GL_QCOM_render_shared_exponent */
+     912, /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
+     913, /* GL_QCOM_shader_framebuffer_fetch_rate */
+     914, /* GL_QCOM_shading_rate */
+     915, /* GL_QCOM_texture_foveated */
+     916, /* GL_QCOM_texture_foveated2 */
+     917, /* GL_QCOM_texture_foveated_subsampled_layout */
+     918, /* GL_QCOM_texture_lod_bias */
+     919, /* GL_QCOM_tile_shading */
+     920, /* GL_QCOM_tiled_rendering */
+     921, /* GL_QCOM_writeonly_rendering */
+     922, /* GL_QCOM_ycbcr_degamma */
+     988, /* GL_VIV_shader_binary */
 };
 
 /* Extension PFN range table for gles2. */
@@ -9499,172 +9495,171 @@ static const GloamPfnRange_t kExtPfnRanges_gles2[] = {
     {   95,  754,    2 }, /* GL_APPLE_framebuffer_multisample */
     {  100,  759,    7 }, /* GL_APPLE_sync */
     {  286, 1159,    1 }, /* GL_ARM_shader_core_properties */
-    {  319, 1248,    2 }, /* GL_EXT_EGL_image_storage */
-    {  324, 1250,    3 }, /* GL_EXT_base_instance */
-    {  330, 1258,    4 }, /* GL_EXT_blend_func_extended */
-    {  338, 1264,    1 }, /* GL_EXT_buffer_storage */
-    {  339, 1265,    2 }, /* GL_EXT_clear_texture */
-    {  340, 1267,    1 }, /* GL_EXT_clip_control */
-    {  353, 1307,    1 }, /* GL_EXT_copy_image */
-    {  356, 1315,    2 }, /* GL_EXT_debug_label */
-    {  357, 1317,    3 }, /* GL_EXT_debug_marker */
-    {  365, 1576,    1 }, /* GL_EXT_discard_framebuffer */
-    {  366, 1577,   12 }, /* GL_EXT_disjoint_timer_query */
-    {  367, 1589,    1 }, /* GL_EXT_draw_buffers */
-    {  369, 1591,    8 }, /* GL_EXT_draw_buffers_indexed */
-    {  370, 1599,    4 }, /* GL_EXT_draw_elements_base_vertex */
-    {  371, 1603,    2 }, /* GL_EXT_draw_instanced */
-    {  373, 1606,    2 }, /* GL_EXT_draw_transform_feedback */
-    {  375, 1608,    2 }, /* GL_EXT_external_buffer */
-    {  388, 1615,    4 }, /* GL_EXT_fragment_shading_rate */
-    {  390, 1620,    2 }, /* GL_EXT_framebuffer_blit_layers */
-    {  396, 1640,    1 }, /* GL_EXT_geometry_shader */
-    {  406, 1603,    2 }, /* GL_EXT_instanced_arrays */
-    {  406, 1689,    1 }, /* GL_EXT_instanced_arrays */
-    {  410, 1693,    2 }, /* GL_EXT_map_buffer_range */
-    {  412, 1695,    7 }, /* GL_EXT_memory_object */
-    {  412, 1703,    4 }, /* GL_EXT_memory_object */
-    {  412, 1708,    6 }, /* GL_EXT_memory_object */
-    {  413, 1714,    1 }, /* GL_EXT_memory_object_fd */
-    {  414, 1715,    2 }, /* GL_EXT_memory_object_win32 */
-    {  415, 1717,    4 }, /* GL_EXT_mesh_shader */
-    {  417, 1721,    2 }, /* GL_EXT_multi_draw_arrays */
-    {  418, 1723,    2 }, /* GL_EXT_multi_draw_indirect */
-    {  421, 1622,    1 }, /* GL_EXT_multisampled_render_to_texture */
-    {  421, 1727,    1 }, /* GL_EXT_multisampled_render_to_texture */
-    {  424, 1728,    3 }, /* GL_EXT_multiview_draw_buffers */
-    {  431, 1580,    7 }, /* GL_EXT_occlusion_query_boolean */
-    {  443, 1744,    1 }, /* GL_EXT_polygon_offset_clamp */
-    {  445, 1745,    1 }, /* GL_EXT_primitive_bounding_box */
-    {  449, 1747,    1 }, /* GL_EXT_raster_multisample */
-    {  458, 1748,    4 }, /* GL_EXT_robustness */
-    {  464, 1712,    2 }, /* GL_EXT_semaphore */
-    {  464, 1752,    7 }, /* GL_EXT_semaphore */
-    {  465, 1759,    1 }, /* GL_EXT_semaphore_fd */
-    {  466, 1760,    2 }, /* GL_EXT_semaphore_win32 */
-    {  468, 1521,   33 }, /* GL_EXT_separate_shader_objects */
-    {  468, 1641,    1 }, /* GL_EXT_separate_shader_objects */
-    {  468, 1780,    2 }, /* GL_EXT_separate_shader_objects */
-    {  468, 1783,    7 }, /* GL_EXT_separate_shader_objects */
-    {  468, 1791,    1 }, /* GL_EXT_separate_shader_objects */
-    {  486, 1792,    1 }, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
-    {  497, 1795,    3 }, /* GL_EXT_shader_pixel_local_storage2 */
-    {  512, 1798,    1 }, /* GL_EXT_sparse_texture */
-    {  525, 1803,    1 }, /* GL_EXT_tessellation_shader */
-    {  529, 1807,    8 }, /* GL_EXT_texture_border_clamp */
-    {  530, 1815,    2 }, /* GL_EXT_texture_buffer */
-    {  565, 1554,    3 }, /* GL_EXT_texture_storage */
-    {  565, 1826,    3 }, /* GL_EXT_texture_storage */
-    {  566, 1829,    2 }, /* GL_EXT_texture_storage_compression */
-    {  569, 1831,    1 }, /* GL_EXT_texture_view */
-    {  812, 1832,    3 }, /* GL_NV_timeline_semaphore */
-    {  580, 1906,    2 }, /* GL_EXT_win32_keyed_mutex */
-    {  581, 1908,    1 }, /* GL_EXT_window_rectangles */
-    {  600, 1929,    6 }, /* GL_IMG_bindless_texture */
-    {  601, 1935,    2 }, /* GL_IMG_framebuffer_downsample */
-    {  602, 1937,    2 }, /* GL_IMG_multisampled_render_to_texture */
-    {  615, 1940,    1 }, /* GL_INTEL_framebuffer_CMAA */
-    {  618, 1948,   10 }, /* GL_INTEL_performance_query */
-    {  620, 1958,    1 }, /* GL_KHR_blend_equation_advanced */
-    {  625, 1959,   11 }, /* GL_KHR_debug */
-    {  630, 1970,    5 }, /* GL_KHR_robustness */
-    {  628, 1975,    1 }, /* GL_KHR_parallel_shader_compile */
-    {  648, 1976,    2 }, /* GL_MESA_framebuffer_flip_y */
-    {  654,  317,   10 }, /* GL_MESA_sampler_objects */
-    {  670, 2015,   13 }, /* GL_NV_bindless_texture */
-    {  671, 2028,    2 }, /* GL_NV_blend_equation_advanced */
-    {  675, 2030,    1 }, /* GL_NV_clip_space_w_scaling */
-    {  680, 2048,    2 }, /* GL_NV_conditional_render */
-    {  681, 2050,    1 }, /* GL_NV_conservative_raster */
-    {  684, 2052,    1 }, /* GL_NV_conservative_raster_pre_snap_triangles */
-    {  690, 2053,    1 }, /* GL_NV_copy_buffer */
-    {  693, 2055,    2 }, /* GL_NV_coverage_sample */
-    {  699, 2060,    1 }, /* GL_NV_draw_buffers */
-    {  700, 2061,    2 }, /* GL_NV_draw_instanced */
-    {  702, 2064,    5 }, /* GL_NV_draw_vulkan_image */
-    {  708, 2081,    7 }, /* GL_NV_fence */
-    {  712, 2088,    1 }, /* GL_NV_fragment_coverage_to_color */
-    {  719, 2095,    1 }, /* GL_NV_framebuffer_blit */
-    {  720, 1747,    1 }, /* GL_NV_framebuffer_mixed_samples */
-    {  720, 2096,    3 }, /* GL_NV_framebuffer_mixed_samples */
-    {  721, 2099,    1 }, /* GL_NV_framebuffer_multisample */
-    {  731,  674,   33 }, /* GL_NV_gpu_shader5 */
-    {  734, 2167,    1 }, /* GL_NV_instanced_arrays */
-    {  736, 2168,    1 }, /* GL_NV_internalformat_sample_query */
-    {  739, 2191,    6 }, /* GL_NV_memory_attachment */
-    {  740, 2197,    4 }, /* GL_NV_memory_object_sparse */
-    {  741, 2201,    4 }, /* GL_NV_mesh_shader */
-    {  744, 2205,    6 }, /* GL_NV_non_square_matrices */
-    {  750, 1557,   19 }, /* GL_NV_path_rendering */
-    {  750, 2221,    7 }, /* GL_NV_path_rendering */
-    {  750, 2230,    9 }, /* GL_NV_path_rendering */
-    {  750, 2241,   11 }, /* GL_NV_path_rendering */
-    {  750, 2253,    4 }, /* GL_NV_path_rendering */
-    {  750, 2258,   14 }, /* GL_NV_path_rendering */
-    {  750, 2273,   12 }, /* GL_NV_path_rendering */
-    {  755, 2289,    1 }, /* GL_NV_polygon_mode */
-    {  764, 2302,    1 }, /* GL_NV_read_buffer */
-    {  774, 2318,    3 }, /* GL_NV_sample_locations */
-    {  776, 2321,    2 }, /* GL_NV_scissor_exclusive */
-    {  792, 2336,    7 }, /* GL_NV_shading_rate_image */
-    {  799, 2343,    1 }, /* GL_NV_texture_barrier */
-    {  830, 2489,   12 }, /* GL_NV_viewport_array */
-    {  832, 2501,    1 }, /* GL_NV_viewport_swizzle */
-    {  833, 2502,    2 }, /* GL_OES_EGL_image */
-    {  834, 2503,    1 }, /* GL_OES_EGL_image_external */
-    {  840, 2526,    1 }, /* GL_OES_copy_image */
-    {  844, 2527,    8 }, /* GL_OES_draw_buffers_indexed */
-    {  845, 1602,    1 }, /* GL_OES_draw_elements_base_vertex */
-    {  845, 2535,    3 }, /* GL_OES_draw_elements_base_vertex */
-    {  851, 2641,    1 }, /* GL_OES_geometry_shader */
-    {  852, 2642,    2 }, /* GL_OES_get_program_binary */
-    {  854, 2644,    3 }, /* GL_OES_mapbuffer */
-    {  856, 2647,    1 }, /* GL_OES_primitive_bounding_box */
-    {  861, 2649,    1 }, /* GL_OES_sample_shading */
-    {  872, 2656,    1 }, /* GL_OES_tessellation_shader */
-    {  873, 2657,    6 }, /* GL_OES_texture_3D */
-    {  874, 2663,    8 }, /* GL_OES_texture_border_clamp */
-    {  875, 2671,    2 }, /* GL_OES_texture_buffer */
-    {  884, 2673,    1 }, /* GL_OES_texture_storage_multisample_2d_array */
-    {  885, 2674,    1 }, /* GL_OES_texture_view */
-    {  886, 2675,    4 }, /* GL_OES_vertex_array_object */
-    {  889, 2532,    3 }, /* GL_OES_viewport_array */
-    {  889, 2679,    9 }, /* GL_OES_viewport_array */
-    {  893, 2688,    2 }, /* GL_OVR_multiview */
-    {  895, 2690,    1 }, /* GL_OVR_multiview_multisampled_render_to_texture */
-    {  899, 2692,    1 }, /* GL_QCOM_alpha_test */
-    {  902, 2693,    4 }, /* GL_QCOM_driver_control */
-    {  903, 2697,    8 }, /* GL_QCOM_extended_get */
-    {  904, 2705,    4 }, /* GL_QCOM_extended_get2 */
-    {  906, 2709,    2 }, /* GL_QCOM_framebuffer_foveated */
-    {  909, 2711,    2 }, /* GL_QCOM_motion_estimation */
-    {  905, 2713,    1 }, /* GL_QCOM_frame_extrapolation */
-    {  916, 2714,    1 }, /* GL_QCOM_texture_foveated */
-    {  913, 2715,    1 }, /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
-    {  915, 2716,    1 }, /* GL_QCOM_shading_rate */
-    {  921, 2717,    2 }, /* GL_QCOM_tiled_rendering */
+    {  318, 1248,    2 }, /* GL_EXT_EGL_image_storage */
+    {  323, 1250,    3 }, /* GL_EXT_base_instance */
+    {  329, 1258,    4 }, /* GL_EXT_blend_func_extended */
+    {  337, 1264,    1 }, /* GL_EXT_buffer_storage */
+    {  338, 1265,    2 }, /* GL_EXT_clear_texture */
+    {  339, 1267,    1 }, /* GL_EXT_clip_control */
+    {  352, 1307,    1 }, /* GL_EXT_copy_image */
+    {  355, 1315,    2 }, /* GL_EXT_debug_label */
+    {  356, 1317,    3 }, /* GL_EXT_debug_marker */
+    {  364, 1576,    1 }, /* GL_EXT_discard_framebuffer */
+    {  365, 1577,   12 }, /* GL_EXT_disjoint_timer_query */
+    {  366, 1589,    1 }, /* GL_EXT_draw_buffers */
+    {  368, 1591,    8 }, /* GL_EXT_draw_buffers_indexed */
+    {  369, 1599,    4 }, /* GL_EXT_draw_elements_base_vertex */
+    {  370, 1603,    2 }, /* GL_EXT_draw_instanced */
+    {  372, 1606,    2 }, /* GL_EXT_draw_transform_feedback */
+    {  374, 1608,    2 }, /* GL_EXT_external_buffer */
+    {  387, 1615,    4 }, /* GL_EXT_fragment_shading_rate */
+    {  389, 1620,    2 }, /* GL_EXT_framebuffer_blit_layers */
+    {  395, 1640,    1 }, /* GL_EXT_geometry_shader */
+    {  405, 1603,    2 }, /* GL_EXT_instanced_arrays */
+    {  405, 1689,    1 }, /* GL_EXT_instanced_arrays */
+    {  409, 1693,    2 }, /* GL_EXT_map_buffer_range */
+    {  411, 1695,    7 }, /* GL_EXT_memory_object */
+    {  411, 1703,    4 }, /* GL_EXT_memory_object */
+    {  411, 1708,    6 }, /* GL_EXT_memory_object */
+    {  412, 1714,    1 }, /* GL_EXT_memory_object_fd */
+    {  413, 1715,    2 }, /* GL_EXT_memory_object_win32 */
+    {  414, 1717,    4 }, /* GL_EXT_mesh_shader */
+    {  416, 1721,    2 }, /* GL_EXT_multi_draw_arrays */
+    {  417, 1723,    2 }, /* GL_EXT_multi_draw_indirect */
+    {  420, 1622,    1 }, /* GL_EXT_multisampled_render_to_texture */
+    {  420, 1727,    1 }, /* GL_EXT_multisampled_render_to_texture */
+    {  423, 1728,    3 }, /* GL_EXT_multiview_draw_buffers */
+    {  430, 1580,    7 }, /* GL_EXT_occlusion_query_boolean */
+    {  442, 1744,    1 }, /* GL_EXT_polygon_offset_clamp */
+    {  444, 1745,    1 }, /* GL_EXT_primitive_bounding_box */
+    {  448, 1747,    1 }, /* GL_EXT_raster_multisample */
+    {  457, 1748,    4 }, /* GL_EXT_robustness */
+    {  463, 1712,    2 }, /* GL_EXT_semaphore */
+    {  463, 1752,    7 }, /* GL_EXT_semaphore */
+    {  464, 1759,    1 }, /* GL_EXT_semaphore_fd */
+    {  465, 1760,    2 }, /* GL_EXT_semaphore_win32 */
+    {  467, 1521,   33 }, /* GL_EXT_separate_shader_objects */
+    {  467, 1641,    1 }, /* GL_EXT_separate_shader_objects */
+    {  467, 1780,    2 }, /* GL_EXT_separate_shader_objects */
+    {  467, 1783,    7 }, /* GL_EXT_separate_shader_objects */
+    {  467, 1791,    1 }, /* GL_EXT_separate_shader_objects */
+    {  485, 1792,    1 }, /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+    {  496, 1795,    3 }, /* GL_EXT_shader_pixel_local_storage2 */
+    {  511, 1798,    1 }, /* GL_EXT_sparse_texture */
+    {  524, 1803,    1 }, /* GL_EXT_tessellation_shader */
+    {  528, 1807,    8 }, /* GL_EXT_texture_border_clamp */
+    {  529, 1815,    2 }, /* GL_EXT_texture_buffer */
+    {  564, 1554,    3 }, /* GL_EXT_texture_storage */
+    {  564, 1826,    3 }, /* GL_EXT_texture_storage */
+    {  565, 1829,    2 }, /* GL_EXT_texture_storage_compression */
+    {  568, 1831,    1 }, /* GL_EXT_texture_view */
+    {  811, 1832,    3 }, /* GL_NV_timeline_semaphore */
+    {  579, 1906,    2 }, /* GL_EXT_win32_keyed_mutex */
+    {  580, 1908,    1 }, /* GL_EXT_window_rectangles */
+    {  599, 1929,    6 }, /* GL_IMG_bindless_texture */
+    {  600, 1935,    2 }, /* GL_IMG_framebuffer_downsample */
+    {  601, 1937,    2 }, /* GL_IMG_multisampled_render_to_texture */
+    {  614, 1940,    1 }, /* GL_INTEL_framebuffer_CMAA */
+    {  617, 1948,   10 }, /* GL_INTEL_performance_query */
+    {  619, 1958,    1 }, /* GL_KHR_blend_equation_advanced */
+    {  624, 1959,   11 }, /* GL_KHR_debug */
+    {  629, 1970,    5 }, /* GL_KHR_robustness */
+    {  627, 1975,    1 }, /* GL_KHR_parallel_shader_compile */
+    {  647, 1976,    2 }, /* GL_MESA_framebuffer_flip_y */
+    {  653,  317,   10 }, /* GL_MESA_sampler_objects */
+    {  669, 2015,   13 }, /* GL_NV_bindless_texture */
+    {  670, 2028,    2 }, /* GL_NV_blend_equation_advanced */
+    {  674, 2030,    1 }, /* GL_NV_clip_space_w_scaling */
+    {  679, 2048,    2 }, /* GL_NV_conditional_render */
+    {  680, 2050,    1 }, /* GL_NV_conservative_raster */
+    {  683, 2052,    1 }, /* GL_NV_conservative_raster_pre_snap_triangles */
+    {  689, 2053,    1 }, /* GL_NV_copy_buffer */
+    {  692, 2055,    2 }, /* GL_NV_coverage_sample */
+    {  698, 2060,    1 }, /* GL_NV_draw_buffers */
+    {  699, 2061,    2 }, /* GL_NV_draw_instanced */
+    {  701, 2064,    5 }, /* GL_NV_draw_vulkan_image */
+    {  707, 2081,    7 }, /* GL_NV_fence */
+    {  711, 2088,    1 }, /* GL_NV_fragment_coverage_to_color */
+    {  718, 2095,    1 }, /* GL_NV_framebuffer_blit */
+    {  719, 1747,    1 }, /* GL_NV_framebuffer_mixed_samples */
+    {  719, 2096,    3 }, /* GL_NV_framebuffer_mixed_samples */
+    {  720, 2099,    1 }, /* GL_NV_framebuffer_multisample */
+    {  730,  674,   33 }, /* GL_NV_gpu_shader5 */
+    {  733, 2167,    1 }, /* GL_NV_instanced_arrays */
+    {  735, 2168,    1 }, /* GL_NV_internalformat_sample_query */
+    {  738, 2191,    6 }, /* GL_NV_memory_attachment */
+    {  739, 2197,    4 }, /* GL_NV_memory_object_sparse */
+    {  740, 2201,    4 }, /* GL_NV_mesh_shader */
+    {  743, 2205,    6 }, /* GL_NV_non_square_matrices */
+    {  749, 1557,   19 }, /* GL_NV_path_rendering */
+    {  749, 2221,    7 }, /* GL_NV_path_rendering */
+    {  749, 2230,    9 }, /* GL_NV_path_rendering */
+    {  749, 2241,   11 }, /* GL_NV_path_rendering */
+    {  749, 2253,    4 }, /* GL_NV_path_rendering */
+    {  749, 2258,   14 }, /* GL_NV_path_rendering */
+    {  749, 2273,   12 }, /* GL_NV_path_rendering */
+    {  754, 2289,    1 }, /* GL_NV_polygon_mode */
+    {  763, 2302,    1 }, /* GL_NV_read_buffer */
+    {  773, 2318,    3 }, /* GL_NV_sample_locations */
+    {  775, 2321,    2 }, /* GL_NV_scissor_exclusive */
+    {  791, 2336,    7 }, /* GL_NV_shading_rate_image */
+    {  798, 2343,    1 }, /* GL_NV_texture_barrier */
+    {  829, 2489,   12 }, /* GL_NV_viewport_array */
+    {  831, 2501,    1 }, /* GL_NV_viewport_swizzle */
+    {  832, 2502,    2 }, /* GL_OES_EGL_image */
+    {  833, 2503,    1 }, /* GL_OES_EGL_image_external */
+    {  839, 2526,    1 }, /* GL_OES_copy_image */
+    {  843, 2527,    8 }, /* GL_OES_draw_buffers_indexed */
+    {  844, 1602,    1 }, /* GL_OES_draw_elements_base_vertex */
+    {  844, 2535,    3 }, /* GL_OES_draw_elements_base_vertex */
+    {  850, 2641,    1 }, /* GL_OES_geometry_shader */
+    {  851, 2642,    2 }, /* GL_OES_get_program_binary */
+    {  853, 2644,    3 }, /* GL_OES_mapbuffer */
+    {  855, 2647,    1 }, /* GL_OES_primitive_bounding_box */
+    {  860, 2649,    1 }, /* GL_OES_sample_shading */
+    {  871, 2656,    1 }, /* GL_OES_tessellation_shader */
+    {  872, 2657,    6 }, /* GL_OES_texture_3D */
+    {  873, 2663,    8 }, /* GL_OES_texture_border_clamp */
+    {  874, 2671,    2 }, /* GL_OES_texture_buffer */
+    {  883, 2673,    1 }, /* GL_OES_texture_storage_multisample_2d_array */
+    {  884, 2674,    1 }, /* GL_OES_texture_view */
+    {  885, 2675,    4 }, /* GL_OES_vertex_array_object */
+    {  888, 2532,    3 }, /* GL_OES_viewport_array */
+    {  888, 2679,    9 }, /* GL_OES_viewport_array */
+    {  892, 2688,    2 }, /* GL_OVR_multiview */
+    {  894, 2690,    1 }, /* GL_OVR_multiview_multisampled_render_to_texture */
+    {  898, 2692,    1 }, /* GL_QCOM_alpha_test */
+    {  901, 2693,    4 }, /* GL_QCOM_driver_control */
+    {  902, 2697,    8 }, /* GL_QCOM_extended_get */
+    {  903, 2705,    4 }, /* GL_QCOM_extended_get2 */
+    {  905, 2709,    2 }, /* GL_QCOM_framebuffer_foveated */
+    {  908, 2711,    2 }, /* GL_QCOM_motion_estimation */
+    {  904, 2713,    1 }, /* GL_QCOM_frame_extrapolation */
+    {  915, 2714,    1 }, /* GL_QCOM_texture_foveated */
+    {  912, 2715,    1 }, /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
+    {  914, 2716,    1 }, /* GL_QCOM_shading_rate */
+    {  920, 2717,    2 }, /* GL_QCOM_tiled_rendering */
     {  310, 2854,    1 }, /* GL_CHROMIUM_bind_uniform_location */
-    {  313, 2855,    1 }, /* GL_CHROMIUM_framebuffer_mixed_samples */
-    {  312, 2856,    2 }, /* GL_CHROMIUM_copy_texture */
-    {  311, 2858,    1 }, /* GL_CHROMIUM_copy_compressed_texture */
-    {   69, 2859,    1 }, /* GL_ANGLE_request_extension */
-    {   84, 2860,    2 }, /* GL_ANGLE_vulkan_image */
-    {   71, 2862,   47 }, /* GL_ANGLE_robust_client_memory */
-    {   49, 2909,    2 }, /* GL_ANGLE_copy_texture_3d */
-    {   81, 2911,    3 }, /* GL_ANGLE_texture_multisample */
-    {   61, 2914,    4 }, /* GL_ANGLE_multi_draw */
-    {   45, 2918,    4 }, /* GL_ANGLE_base_vertex_base_instance */
-    {   63, 2922,    1 }, /* GL_ANGLE_polygon_mode */
-    {   67, 2923,    1 }, /* GL_ANGLE_provoking_vertex */
-    {  314, 2924,    1 }, /* GL_CHROMIUM_lose_context */
-    {   53, 2925,    3 }, /* GL_ANGLE_get_image */
-    {   55, 2928,    2 }, /* GL_ANGLE_get_tex_level_parameter */
-    {   58, 2930,    4 }, /* GL_ANGLE_memory_object_flags */
-    {   59, 2934,    1 }, /* GL_ANGLE_memory_object_fuchsia */
-    {   74, 2935,    1 }, /* GL_ANGLE_semaphore_fuchsia */
-    {   76, 2936,   14 }, /* GL_ANGLE_shader_pixel_local_storage */
-    {   57, 2950,    1 }, /* GL_ANGLE_logic_op */
-    {   46, 2951,    2 }, /* GL_ANGLE_blob_cache */
+    {  312, 2855,    2 }, /* GL_CHROMIUM_copy_texture */
+    {  311, 2857,    1 }, /* GL_CHROMIUM_copy_compressed_texture */
+    {   69, 2858,    1 }, /* GL_ANGLE_request_extension */
+    {   84, 2859,    2 }, /* GL_ANGLE_vulkan_image */
+    {   71, 2861,   47 }, /* GL_ANGLE_robust_client_memory */
+    {   49, 2908,    2 }, /* GL_ANGLE_copy_texture_3d */
+    {   81, 2910,    3 }, /* GL_ANGLE_texture_multisample */
+    {   61, 2913,    4 }, /* GL_ANGLE_multi_draw */
+    {   45, 2917,    4 }, /* GL_ANGLE_base_vertex_base_instance */
+    {   63, 2921,    1 }, /* GL_ANGLE_polygon_mode */
+    {   67, 2922,    1 }, /* GL_ANGLE_provoking_vertex */
+    {  313, 2923,    1 }, /* GL_CHROMIUM_lose_context */
+    {   53, 2924,    3 }, /* GL_ANGLE_get_image */
+    {   55, 2927,    2 }, /* GL_ANGLE_get_tex_level_parameter */
+    {   58, 2929,    4 }, /* GL_ANGLE_memory_object_flags */
+    {   59, 2933,    1 }, /* GL_ANGLE_memory_object_fuchsia */
+    {   74, 2934,    1 }, /* GL_ANGLE_semaphore_fuchsia */
+    {   76, 2935,   14 }, /* GL_ANGLE_shader_pixel_local_storage */
+    {   57, 2949,    1 }, /* GL_ANGLE_logic_op */
+    {   46, 2950,    2 }, /* GL_ANGLE_blob_cache */
 };
 
 /* Search pre-baked kExtHashes_GL against the sorted driver hash list and set
