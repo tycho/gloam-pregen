@@ -39,8 +39,8 @@
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/gl.xml",
-      "commit": "9d527dbc81bb76e35ba284fe385ed8a5ddb90cbc",
-      "blob": "902d7aabcd5e6d6fdb348b20f1a1b9733dac5fbb"
+      "commit": "e8f7cd0e35ac8d6f5667a021ff83d04b1fec41ef",
+      "blob": "7492d15565b79cf3844e3402858582f649677fec"
     },
     "gl_angle_ext.xml": {
       "repo": "angle/angle",
@@ -94,7 +94,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "b15268544ea3e50c07b1411541617d0eb201de87",
+      "blob": "cfce48a69e0f97ffa742f211b8e705c7e0ce172f",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -124,7 +124,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "5addffbfb698f61d3e4b7e7e43b4da24aafea915",
+      "blob": "66342fdc2eae72ffd3b24e60c6639ace83597c44",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",

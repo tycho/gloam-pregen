@@ -28,8 +28,8 @@
  *     xxhash.h (blob dceb921)
  *   KhronosGroup/EGL-Registry (3d7796b)
  *     api/KHR/khrplatform.h (blob 0164644)
- *   KhronosGroup/OpenGL-Registry (9d527db)
- *     xml/gl.xml (blob 902d7aa)
+ *   KhronosGroup/OpenGL-Registry (e8f7cd0)
+ *     xml/gl.xml (blob 7492d15)
  *   tycho/gloam-registry (1f5959b)
  *     xml/glsl_exts.xml (blob 943fe5f)
  *
@@ -1369,6 +1369,7 @@ struct _cl_event;
 #define GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM 0x00000004
 #define GL_TEXTURE_DEFORMATION_BIT_SGIX 0x00000001
 #define GL_GEOMETRY_DEFORMATION_BIT_SGIX 0x00000002
+#define GL_CLIENT_POINTER_RELEASE_ALL_MESA 0x00000001
 #define GL_TERMINATE_SEQUENCE_COMMAND_NV 0x0000
 #define GL_NOP_COMMAND_NV 0x0001
 #define GL_DRAW_ELEMENTS_COMMAND_NV 0x0002
@@ -6570,6 +6571,15 @@ struct _cl_event;
 #define GL_PROGRAM_BINARY_HUAWEI 0x9771
 #define GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT 0x9780
 #define GL_BUFFER_CLIENT_POINTER_SIZE_MESA 0x9790
+#define GL_CLIENT_POINTER_STREAM_DRAW_MESA 0x9791
+#define GL_CLIENT_POINTER_STREAM_READ_MESA 0x9792
+#define GL_CLIENT_POINTER_STREAM_COPY_MESA 0x9793
+#define GL_CLIENT_POINTER_STATIC_DRAW_MESA 0x9794
+#define GL_CLIENT_POINTER_STATIC_READ_MESA 0x9795
+#define GL_CLIENT_POINTER_STATIC_COPY_MESA 0x9796
+#define GL_CLIENT_POINTER_DYNAMIC_DRAW_MESA 0x9797
+#define GL_CLIENT_POINTER_DYNAMIC_READ_MESA 0x9798
+#define GL_CLIENT_POINTER_DYNAMIC_COPY_MESA 0x9799
 #define GL_RASTER_POSITION_UNCLIPPED_IBM 0x19262
 #define GL_CULL_VERTEX_IBM 103050
 #define GL_ALL_STATIC_DATA_IBM 103060
@@ -8848,7 +8858,7 @@ typedef void (APIENTRYP PFNGLMAXSHADERCOMPILERTHREADSKHRPROC)(GLuint count);
 typedef void (APIENTRYP PFNGLFRAMEBUFFERPARAMETERIMESAPROC)(GLenum target, GLenum pname, GLint param);
 typedef void (APIENTRYP PFNGLGETFRAMEBUFFERPARAMETERIVMESAPROC)(GLenum target, GLenum pname, GLint * params);
 typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC)(void * addr, GLsizeiptr size);
-typedef void* (APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC)(GLsizeiptr * size);
+typedef void* (APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC)(GLbitfield flags, GLsizeiptr * size);
 typedef void (APIENTRYP PFNGLRESIZEBUFFERSMESAPROC)(void);
 typedef void (APIENTRYP PFNGLWINDOWPOS2DMESAPROC)(GLdouble x, GLdouble y);
 typedef void (APIENTRYP PFNGLWINDOWPOS2DVMESAPROC)(const GLdouble * v);
@@ -16840,7 +16850,7 @@ void glMaxShaderCompilerThreadsKHR(GLuint count);
 void glFramebufferParameteriMESA(GLenum target, GLenum pname, GLint param);
 void glGetFramebufferParameterivMESA(GLenum target, GLenum pname, GLint * params);
 void glAddClientPointerRangeMESA(void * addr, GLsizeiptr size);
-void* glReleaseClientPointerRangeMESA(GLsizeiptr * size);
+void* glReleaseClientPointerRangeMESA(GLbitfield flags, GLsizeiptr * size);
 void glResizeBuffersMESA(void);
 void glWindowPos2dMESA(GLdouble x, GLdouble y);
 void glWindowPos2dvMESA(const GLdouble * v);
