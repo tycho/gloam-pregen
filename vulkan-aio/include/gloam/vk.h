@@ -3,7 +3,7 @@
  *
  *   gloam --api vk --fetch --out-path vulkan-aio --quiet c --alias --loader
  *
- * Extensions: all (472 included)
+ * Extensions: all (473 included)
  *
  * Copyright (c) 2026 Steven Noonan
  * SPDX-License-Identifier: MIT
@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   KhronosGroup/Vulkan-Docs (67e47d0)
- *     xml/vk.xml (blob d196496)
+ *   KhronosGroup/Vulkan-Docs (7227da1)
+ *     xml/vk.xml (blob 92881a5)
  *   KhronosGroup/Vulkan-Headers (e3b1eec)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob 5347b36)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob e262e96)
@@ -210,6 +210,7 @@ extern "C" {
 #define VK_EXT_color_write_enable 1
 #define VK_EXT_conditional_rendering 1
 #define VK_EXT_conservative_rasterization 1
+#define VK_EXT_cooperative_matrix_maintenance1 1
 #define VK_EXT_custom_border_color 1
 #define VK_EXT_custom_resolve 1
 #define VK_EXT_debug_marker 1
@@ -2116,8 +2117,8 @@ extern "C" {
 #define VK_KHR_MAINTENANCE_11_EXTENSION_NAME "VK_KHR_maintenance11"
 #define VK_ARM_EXTENSION_659_SPEC_VERSION 0
 #define VK_ARM_EXTENSION_659_EXTENSION_NAME "VK_ARM_extension_659"
-#define VK_EXT_EXTENSION_660_SPEC_VERSION 0
-#define VK_EXT_EXTENSION_660_EXTENSION_NAME "VK_EXT_extension_660"
+#define VK_EXT_COOPERATIVE_MATRIX_MAINTENANCE_1_SPEC_VERSION 1
+#define VK_EXT_COOPERATIVE_MATRIX_MAINTENANCE_1_EXTENSION_NAME "VK_EXT_cooperative_matrix_maintenance1"
 #define VK_KHR_EXTENSION_661_SPEC_VERSION 0
 #define VK_KHR_EXTENSION_661_EXTENSION_NAME "VK_KHR_extension_661"
 #define VK_VALVE_EXTENSION_662_SPEC_VERSION 0
@@ -2200,6 +2201,14 @@ extern "C" {
 #define VK_EXT_EXTENSION_700_EXTENSION_NAME "VK_EXT_extension_700"
 #define VK_EXT_EXTENSION_701_SPEC_VERSION 0
 #define VK_EXT_EXTENSION_701_EXTENSION_NAME "VK_EXT_extension_701"
+#define VK_KHR_EXTENSION_702_SPEC_VERSION 0
+#define VK_KHR_EXTENSION_702_EXTENSION_NAME "VK_KHR_extension_702"
+#define VK_NV_EXTENSION_703_SPEC_VERSION 0
+#define VK_NV_EXTENSION_703_EXTENSION_NAME "VK_NV_extension_703"
+#define VK_EXT_EXTENSION_704_SPEC_VERSION 0
+#define VK_EXT_EXTENSION_704_EXTENSION_NAME "VK_EXT_extension_704"
+#define VK_EXT_EXTENSION_705_SPEC_VERSION 0
+#define VK_EXT_EXTENSION_705_EXTENSION_NAME "VK_EXT_extension_705"
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 
@@ -4246,6 +4255,9 @@ typedef enum VkStructureType {
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COMPUTE_OCCUPANCY_PRIORITY_FEATURES_NV = 1000645001,
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MAINTENANCE_11_FEATURES_KHR = 1000657000,
     VK_STRUCTURE_TYPE_QUEUE_FAMILY_OPTIMAL_IMAGE_TRANSFER_GRANULARITY_PROPERTIES_KHR = 1000657001,
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_MAINTENANCE_1_FEATURES_EXT = 1000659000,
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_INFO_2_EXT = 1000659001,
+    VK_STRUCTURE_TYPE_COOPERATIVE_MATRIX_PROPERTIES_2_EXT = 1000659002,
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_SUBGROUP_PARTITIONED_FEATURES_EXT = 1000662000,
     VK_STRUCTURE_TYPE_UBM_SURFACE_CREATE_INFO_SEC = 1000664000,
     VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_4_KHR = 1000668000,
@@ -6472,6 +6484,7 @@ typedef enum VkDriverId {
     VK_DRIVER_ID_MESA_KOSMICKRISP = 28 /* Mesa open source project */,
     VK_DRIVER_ID_MESA_GFXSTREAM = 29 /* Mesa open source project */,
     VK_DRIVER_ID_APE_SOFT = 30 /* Ape open source project */,
+    VK_DRIVER_ID_RESERVED_31 = 31 /* Reserved for undisclosed driver project */,
     VK_DRIVER_ID_AMD_PROPRIETARY_KHR = VK_DRIVER_ID_AMD_PROPRIETARY,
     VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR = VK_DRIVER_ID_AMD_OPEN_SOURCE,
     VK_DRIVER_ID_MESA_RADV_KHR = VK_DRIVER_ID_MESA_RADV,
@@ -7538,6 +7551,11 @@ typedef enum VkVideoEncodeFlagBitsKHR {
     VK_VIDEO_ENCODE_WITH_EMPHASIS_MAP_BIT_KHR = 0x0000000000000002,
     VK_VIDEO_ENCODE_FLAG_BITS_KHR_MAX_ENUM = 0x7FFFFFFF
 } VkVideoEncodeFlagBitsKHR;
+
+typedef enum VkCooperativeMatrixFlagBitsEXT {
+    VK_COOPERATIVE_MATRIX_SATURATING_ACCUMULATION_BIT_EXT = 0x0000000000000001,
+    VK_COOPERATIVE_MATRIX_FLAG_BITS_EXT_MAX_ENUM = 0x7FFFFFFF
+} VkCooperativeMatrixFlagBitsEXT;
 
 typedef enum VkVideoEncodeUsageFlagBitsKHR {
     VK_VIDEO_ENCODE_USAGE_DEFAULT_KHR = 0,
@@ -8836,7 +8854,7 @@ typedef enum VkImageTilingControlEXT {
  * same platform guard are coalesced into a single #ifdef/#endif block.
  */
 /* Version of this file */
-#define VK_HEADER_VERSION 358
+#define VK_HEADER_VERSION 359
 
 #define VK_DEFINE_HANDLE(object) typedef struct object##_T* object;
 
@@ -10588,6 +10606,18 @@ typedef struct VkPhysicalDeviceShaderObjectPropertiesEXT {
     uint32_t                                                             shaderBinaryVersion;
 } VkPhysicalDeviceShaderObjectPropertiesEXT;
 
+typedef struct VkCooperativeMatrixProperties2EXT {
+    VkStructureType sType;
+    void*                             pNext;
+    uint32_t                            MGranularity;
+    uint32_t                            NGranularity;
+    uint32_t                            KGranularity;
+    VkComponentTypeKHR                  AType;
+    VkComponentTypeKHR                  BType;
+    VkComponentTypeKHR                  CType;
+    VkComponentTypeKHR                  ResultType;
+} VkCooperativeMatrixProperties2EXT;
+
 #if defined(VK_ENABLE_BETA_EXTENSIONS)
 typedef struct VkPhysicalDeviceShaderEnqueuePropertiesAMDX {
     VkStructureType sType;
@@ -12141,6 +12171,8 @@ typedef VkFlags VkVideoEncodeAV1StdFlagsKHR;
 typedef VkFlags VkVideoEncodeAV1RateControlFlagsKHR;
 
 typedef VkFlags VkVideoEncodeAV1SuperblockSizeFlagsKHR;
+
+typedef VkFlags VkCooperativeMatrixFlagsEXT;
 
 typedef VkFlags64 VkAccessFlags2;
 
@@ -15503,6 +15535,16 @@ typedef struct VkPhysicalDeviceShaderOCPMicroscalingTypesFeaturesEXT {
     VkBool32                            shaderMXInt8;
 } VkPhysicalDeviceShaderOCPMicroscalingTypesFeaturesEXT;
 
+typedef struct VkPhysicalDeviceCooperativeMatrixMaintenance1FeaturesEXT {
+    VkStructureType sType;
+    void*               pNext;
+    VkBool32                             cooperativeMatrixProperties2;
+    VkBool32                              cooperativeMatrixReductions;
+    VkBool32                             cooperativeMatrixConversions;
+    VkBool32                    cooperativeMatrixPerElementOperations;
+    VkBool32                           cooperativeMatrixGetCoordinate;
+} VkPhysicalDeviceCooperativeMatrixMaintenance1FeaturesEXT;
+
 typedef struct VkDisplayModeParametersKHR {
     VkExtent2D                       visibleRegion;
     uint32_t   refreshRate;
@@ -18435,6 +18477,15 @@ typedef struct VkVideoEncodeAV1CapabilitiesKHR {
     VkBool32              requiresGopRemainingFrames;
     VkVideoEncodeAV1StdFlagsKHR stdSyntaxFlags;
 } VkVideoEncodeAV1CapabilitiesKHR;
+
+typedef struct VkPhysicalDeviceCooperativeMatrixInfo2EXT {
+    VkStructureType sType;
+    const void*         pNext;
+    VkScopeKHR                          scope;
+    uint32_t            invocations;
+    uint32_t            subgroupSize;
+    VkCooperativeMatrixFlagsEXT flags;
+} VkPhysicalDeviceCooperativeMatrixInfo2EXT;
 
 typedef struct VkMemoryBarrier2 {
     VkStructureType sType;
@@ -23178,6 +23229,7 @@ typedef void (VKAPI_PTR *PFN_vkCmdBeginCustomResolveEXT)(VkCommandBuffer command
 typedef void (VKAPI_PTR *PFN_vkCmdEndRendering2KHR)(VkCommandBuffer commandBuffer, const VkRenderingEndInfoKHR* pRenderingEndInfo);
 typedef VkResult (VKAPI_PTR *PFN_vkGetPhysicalDeviceQueueFamilyDataGraphOpticalFlowImageFormatsARM)(VkPhysicalDevice physicalDevice, uint32_t queueFamilyIndex, const VkQueueFamilyDataGraphPropertiesARM* pQueueFamilyDataGraphProperties, const VkDataGraphOpticalFlowImageFormatInfoARM* pOpticalFlowImageFormatInfo, uint32_t* pFormatCount, VkDataGraphOpticalFlowImageFormatPropertiesARM* pImageFormatProperties);
 typedef void (VKAPI_PTR *PFN_vkCmdSetComputeOccupancyPriorityNV)(VkCommandBuffer commandBuffer, const VkComputeOccupancyPriorityParametersNV* pParameters);
+typedef VkResult (VKAPI_PTR *PFN_vkGetPhysicalDeviceCooperativeMatrixProperties2EXT)(VkPhysicalDevice physicalDevice, const VkPhysicalDeviceCooperativeMatrixInfo2EXT* pCooperativeMatrixInfo, uint32_t* pPropertyCount, VkCooperativeMatrixProperties2EXT* pProperties);
 #if defined(VK_USE_PLATFORM_UBM_SEC)
 typedef VkResult (VKAPI_PTR *PFN_vkCreateUbmSurfaceSEC)(VkInstance instance, const VkUbmSurfaceCreateInfoSEC* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 typedef VkBool32 (VKAPI_PTR *PFN_vkGetPhysicalDeviceUbmPresentationSupportSEC)(VkPhysicalDevice physicalDevice, uint32_t queueFamilyIndex, struct ubm_device* device);
@@ -23208,7 +23260,7 @@ typedef struct GloamVulkanContext {
     };
 
     union {
-        unsigned char extArray[472];
+        unsigned char extArray[473];
         struct {
         /*    0 */ unsigned char AMDX_dense_geometry_format;
         /*    1 */ unsigned char AMDX_shader_enqueue;
@@ -23266,427 +23318,428 @@ typedef struct GloamVulkanContext {
         /*   53 */ unsigned char EXT_color_write_enable;
         /*   54 */ unsigned char EXT_conditional_rendering;
         /*   55 */ unsigned char EXT_conservative_rasterization;
-        /*   56 */ unsigned char EXT_custom_border_color;
-        /*   57 */ unsigned char EXT_custom_resolve;
-        /*   58 */ unsigned char EXT_debug_marker;
-        /*   59 */ unsigned char EXT_debug_report;
-        /*   60 */ unsigned char EXT_debug_utils;
-        /*   61 */ unsigned char EXT_depth_bias_control;
-        /*   62 */ unsigned char EXT_depth_clamp_control;
-        /*   63 */ unsigned char EXT_depth_clamp_zero_one;
-        /*   64 */ unsigned char EXT_depth_clip_control;
-        /*   65 */ unsigned char EXT_depth_clip_enable;
-        /*   66 */ unsigned char EXT_depth_range_unrestricted;
-        /*   67 */ unsigned char EXT_descriptor_buffer;
-        /*   68 */ unsigned char EXT_descriptor_heap;
-        /*   69 */ unsigned char EXT_descriptor_indexing;
-        /*   70 */ unsigned char EXT_device_address_binding_report;
-        /*   71 */ unsigned char EXT_device_fault;
-        /*   72 */ unsigned char EXT_device_generated_commands;
-        /*   73 */ unsigned char EXT_device_memory_report;
-        /*   74 */ unsigned char EXT_direct_mode_display;
-        /*   75 */ unsigned char EXT_directfb_surface;
-        /*   76 */ unsigned char EXT_discard_rectangles;
-        /*   77 */ unsigned char EXT_display_control;
-        /*   78 */ unsigned char EXT_display_surface_counter;
-        /*   79 */ unsigned char EXT_dynamic_rendering_unused_attachments;
-        /*   80 */ unsigned char EXT_extended_dynamic_state;
-        /*   81 */ unsigned char EXT_extended_dynamic_state2;
-        /*   82 */ unsigned char EXT_extended_dynamic_state3;
-        /*   83 */ unsigned char EXT_external_memory_acquire_unmodified;
-        /*   84 */ unsigned char EXT_external_memory_dma_buf;
-        /*   85 */ unsigned char EXT_external_memory_host;
-        /*   86 */ unsigned char EXT_external_memory_metal;
-        /*   87 */ unsigned char EXT_filter_cubic;
-        /*   88 */ unsigned char EXT_fragment_density_map;
-        /*   89 */ unsigned char EXT_fragment_density_map2;
-        /*   90 */ unsigned char EXT_fragment_density_map_offset;
-        /*   91 */ unsigned char EXT_fragment_shader_interlock;
-        /*   92 */ unsigned char EXT_frame_boundary;
-        /*   93 */ unsigned char EXT_full_screen_exclusive;
-        /*   94 */ unsigned char EXT_global_priority;
-        /*   95 */ unsigned char EXT_global_priority_query;
-        /*   96 */ unsigned char EXT_graphics_pipeline_library;
-        /*   97 */ unsigned char EXT_hdr_metadata;
-        /*   98 */ unsigned char EXT_headless_surface;
-        /*   99 */ unsigned char EXT_host_image_copy;
-        /*  100 */ unsigned char EXT_host_query_reset;
-        /*  101 */ unsigned char EXT_image_2d_view_of_3d;
-        /*  102 */ unsigned char EXT_image_compression_control;
-        /*  103 */ unsigned char EXT_image_compression_control_swapchain;
-        /*  104 */ unsigned char EXT_image_drm_format_modifier;
-        /*  105 */ unsigned char EXT_image_robustness;
-        /*  106 */ unsigned char EXT_image_sliced_view_of_3d;
-        /*  107 */ unsigned char EXT_image_tiling_control;
-        /*  108 */ unsigned char EXT_image_view_min_lod;
-        /*  109 */ unsigned char EXT_index_type_uint8;
-        /*  110 */ unsigned char EXT_inline_uniform_block;
-        /*  111 */ unsigned char EXT_layer_settings;
-        /*  112 */ unsigned char EXT_legacy_dithering;
-        /*  113 */ unsigned char EXT_legacy_vertex_attributes;
-        /*  114 */ unsigned char EXT_line_rasterization;
-        /*  115 */ unsigned char EXT_load_store_op_none;
-        /*  116 */ unsigned char EXT_map_memory_placed;
-        /*  117 */ unsigned char EXT_memory_budget;
-        /*  118 */ unsigned char EXT_memory_decompression;
-        /*  119 */ unsigned char EXT_memory_priority;
-        /*  120 */ unsigned char EXT_mesh_shader;
-        /*  121 */ unsigned char EXT_metal_objects;
-        /*  122 */ unsigned char EXT_metal_surface;
-        /*  123 */ unsigned char EXT_multi_draw;
-        /*  124 */ unsigned char EXT_multisampled_render_to_single_sampled;
-        /*  125 */ unsigned char EXT_multisampled_render_to_swapchain;
-        /*  126 */ unsigned char EXT_mutable_descriptor_type;
-        /*  127 */ unsigned char EXT_nested_command_buffer;
-        /*  128 */ unsigned char EXT_non_seamless_cube_map;
-        /*  129 */ unsigned char EXT_opacity_micromap;
-        /*  130 */ unsigned char EXT_pageable_device_local_memory;
-        /*  131 */ unsigned char EXT_pci_bus_info;
-        /*  132 */ unsigned char EXT_physical_device_drm;
-        /*  133 */ unsigned char EXT_pipeline_creation_cache_control;
-        /*  134 */ unsigned char EXT_pipeline_creation_feedback;
-        /*  135 */ unsigned char EXT_pipeline_library_group_handles;
-        /*  136 */ unsigned char EXT_pipeline_properties;
-        /*  137 */ unsigned char EXT_pipeline_protected_access;
-        /*  138 */ unsigned char EXT_pipeline_robustness;
-        /*  139 */ unsigned char EXT_post_depth_coverage;
-        /*  140 */ unsigned char EXT_present_mode_fifo_latest_ready;
-        /*  141 */ unsigned char EXT_present_timing;
-        /*  142 */ unsigned char EXT_primitive_restart_index;
-        /*  143 */ unsigned char EXT_primitive_topology_list_restart;
-        /*  144 */ unsigned char EXT_primitives_generated_query;
-        /*  145 */ unsigned char EXT_private_data;
-        /*  146 */ unsigned char EXT_provoking_vertex;
-        /*  147 */ unsigned char EXT_queue_family_foreign;
-        /*  148 */ unsigned char EXT_rasterization_order_attachment_access;
-        /*  149 */ unsigned char EXT_ray_tracing_invocation_reorder;
-        /*  150 */ unsigned char EXT_rgba10x6_formats;
-        /*  151 */ unsigned char EXT_robustness2;
-        /*  152 */ unsigned char EXT_sample_locations;
-        /*  153 */ unsigned char EXT_sampler_filter_minmax;
-        /*  154 */ unsigned char EXT_scalar_block_layout;
-        /*  155 */ unsigned char EXT_separate_stencil_usage;
-        /*  156 */ unsigned char EXT_shader_64bit_indexing;
-        /*  157 */ unsigned char EXT_shader_atomic_float;
-        /*  158 */ unsigned char EXT_shader_atomic_float2;
-        /*  159 */ unsigned char EXT_shader_demote_to_helper_invocation;
-        /*  160 */ unsigned char EXT_shader_float8;
-        /*  161 */ unsigned char EXT_shader_image_atomic_int64;
-        /*  162 */ unsigned char EXT_shader_long_vector;
-        /*  163 */ unsigned char EXT_shader_module_identifier;
-        /*  164 */ unsigned char EXT_shader_object;
-        /*  165 */ unsigned char EXT_shader_ocp_microscaling_types;
-        /*  166 */ unsigned char EXT_shader_replicated_composites;
-        /*  167 */ unsigned char EXT_shader_split_barrier;
-        /*  168 */ unsigned char EXT_shader_stencil_export;
-        /*  169 */ unsigned char EXT_shader_subgroup_ballot;
-        /*  170 */ unsigned char EXT_shader_subgroup_partitioned;
-        /*  171 */ unsigned char EXT_shader_subgroup_vote;
-        /*  172 */ unsigned char EXT_shader_tile_image;
-        /*  173 */ unsigned char EXT_shader_uniform_buffer_unsized_array;
-        /*  174 */ unsigned char EXT_shader_viewport_index_layer;
-        /*  175 */ unsigned char EXT_subgroup_size_control;
-        /*  176 */ unsigned char EXT_subpass_merge_feedback;
-        /*  177 */ unsigned char EXT_surface_maintenance1;
-        /*  178 */ unsigned char EXT_swapchain_colorspace;
-        /*  179 */ unsigned char EXT_swapchain_maintenance1;
-        /*  180 */ unsigned char EXT_texel_buffer_alignment;
-        /*  181 */ unsigned char EXT_texture_compression_astc_3d;
-        /*  182 */ unsigned char EXT_texture_compression_astc_hdr;
-        /*  183 */ unsigned char EXT_tooling_info;
-        /*  184 */ unsigned char EXT_transform_feedback;
-        /*  185 */ unsigned char EXT_validation_cache;
-        /*  186 */ unsigned char EXT_validation_features;
-        /*  187 */ unsigned char EXT_validation_flags;
-        /*  188 */ unsigned char EXT_vertex_attribute_divisor;
-        /*  189 */ unsigned char EXT_vertex_attribute_robustness;
-        /*  190 */ unsigned char EXT_vertex_input_dynamic_state;
-        /*  191 */ unsigned char EXT_ycbcr_2plane_444_formats;
-        /*  192 */ unsigned char EXT_ycbcr_image_arrays;
-        /*  193 */ unsigned char EXT_zero_initialize_device_memory;
-        /*  194 */ unsigned char FUCHSIA_buffer_collection;
-        /*  195 */ unsigned char FUCHSIA_external_memory;
-        /*  196 */ unsigned char FUCHSIA_external_semaphore;
-        /*  197 */ unsigned char FUCHSIA_imagepipe_surface;
-        /*  198 */ unsigned char GGP_frame_token;
-        /*  199 */ unsigned char GGP_stream_descriptor_surface;
-        /*  200 */ unsigned char GOOGLE_decorate_string;
-        /*  201 */ unsigned char GOOGLE_display_timing;
-        /*  202 */ unsigned char GOOGLE_hlsl_functionality1;
-        /*  203 */ unsigned char GOOGLE_surfaceless_query;
-        /*  204 */ unsigned char GOOGLE_user_type;
-        /*  205 */ unsigned char HUAWEI_cluster_culling_shader;
-        /*  206 */ unsigned char HUAWEI_hdr_vivid;
-        /*  207 */ unsigned char HUAWEI_invocation_mask;
-        /*  208 */ unsigned char HUAWEI_subpass_shading;
-        /*  209 */ unsigned char IMG_filter_cubic;
-        /*  210 */ unsigned char IMG_filter_linear_2d;
-        /*  211 */ unsigned char IMG_format_pvrtc;
-        /*  212 */ unsigned char IMG_relaxed_line_rasterization;
-        /*  213 */ unsigned char INTEL_performance_query;
-        /*  214 */ unsigned char INTEL_shader_integer_functions2;
-        /*  215 */ unsigned char KHR_16bit_storage;
-        /*  216 */ unsigned char KHR_8bit_storage;
-        /*  217 */ unsigned char KHR_acceleration_structure;
-        /*  218 */ unsigned char KHR_android_surface;
-        /*  219 */ unsigned char KHR_bind_memory2;
-        /*  220 */ unsigned char KHR_buffer_device_address;
-        /*  221 */ unsigned char KHR_calibrated_timestamps;
-        /*  222 */ unsigned char KHR_compute_shader_derivatives;
-        /*  223 */ unsigned char KHR_cooperative_matrix;
-        /*  224 */ unsigned char KHR_copy_commands2;
-        /*  225 */ unsigned char KHR_copy_memory_indirect;
-        /*  226 */ unsigned char KHR_create_renderpass2;
-        /*  227 */ unsigned char KHR_dedicated_allocation;
-        /*  228 */ unsigned char KHR_deferred_host_operations;
-        /*  229 */ unsigned char KHR_depth_clamp_zero_one;
-        /*  230 */ unsigned char KHR_depth_stencil_resolve;
-        /*  231 */ unsigned char KHR_descriptor_update_template;
-        /*  232 */ unsigned char KHR_device_address_commands;
-        /*  233 */ unsigned char KHR_device_fault;
-        /*  234 */ unsigned char KHR_device_group;
-        /*  235 */ unsigned char KHR_device_group_creation;
-        /*  236 */ unsigned char KHR_display;
-        /*  237 */ unsigned char KHR_display_swapchain;
-        /*  238 */ unsigned char KHR_draw_indirect_count;
-        /*  239 */ unsigned char KHR_driver_properties;
-        /*  240 */ unsigned char KHR_dynamic_rendering;
-        /*  241 */ unsigned char KHR_dynamic_rendering_local_read;
-        /*  242 */ unsigned char KHR_extended_flags;
-        /*  243 */ unsigned char KHR_external_fence;
-        /*  244 */ unsigned char KHR_external_fence_capabilities;
-        /*  245 */ unsigned char KHR_external_fence_fd;
-        /*  246 */ unsigned char KHR_external_fence_win32;
-        /*  247 */ unsigned char KHR_external_memory;
-        /*  248 */ unsigned char KHR_external_memory_capabilities;
-        /*  249 */ unsigned char KHR_external_memory_fd;
-        /*  250 */ unsigned char KHR_external_memory_win32;
-        /*  251 */ unsigned char KHR_external_semaphore;
-        /*  252 */ unsigned char KHR_external_semaphore_capabilities;
-        /*  253 */ unsigned char KHR_external_semaphore_fd;
-        /*  254 */ unsigned char KHR_external_semaphore_win32;
-        /*  255 */ unsigned char KHR_format_feature_flags2;
-        /*  256 */ unsigned char KHR_fragment_shader_barycentric;
-        /*  257 */ unsigned char KHR_fragment_shading_rate;
-        /*  258 */ unsigned char KHR_get_display_properties2;
-        /*  259 */ unsigned char KHR_get_memory_requirements2;
-        /*  260 */ unsigned char KHR_get_physical_device_properties2;
-        /*  261 */ unsigned char KHR_get_surface_capabilities2;
-        /*  262 */ unsigned char KHR_global_priority;
-        /*  263 */ unsigned char KHR_image_format_list;
-        /*  264 */ unsigned char KHR_imageless_framebuffer;
-        /*  265 */ unsigned char KHR_incremental_present;
-        /*  266 */ unsigned char KHR_index_type_uint8;
-        /*  267 */ unsigned char KHR_internally_synchronized_queues;
-        /*  268 */ unsigned char KHR_line_rasterization;
-        /*  269 */ unsigned char KHR_load_store_op_none;
-        /*  270 */ unsigned char KHR_maintenance1;
-        /*  271 */ unsigned char KHR_maintenance10;
-        /*  272 */ unsigned char KHR_maintenance11;
-        /*  273 */ unsigned char KHR_maintenance2;
-        /*  274 */ unsigned char KHR_maintenance3;
-        /*  275 */ unsigned char KHR_maintenance4;
-        /*  276 */ unsigned char KHR_maintenance5;
-        /*  277 */ unsigned char KHR_maintenance6;
-        /*  278 */ unsigned char KHR_maintenance7;
-        /*  279 */ unsigned char KHR_maintenance8;
-        /*  280 */ unsigned char KHR_maintenance9;
-        /*  281 */ unsigned char KHR_map_memory2;
-        /*  282 */ unsigned char KHR_multiview;
-        /*  283 */ unsigned char KHR_opacity_micromap;
-        /*  284 */ unsigned char KHR_performance_query;
-        /*  285 */ unsigned char KHR_pipeline_binary;
-        /*  286 */ unsigned char KHR_pipeline_executable_properties;
-        /*  287 */ unsigned char KHR_pipeline_library;
-        /*  288 */ unsigned char KHR_portability_enumeration;
-        /*  289 */ unsigned char KHR_portability_subset;
-        /*  290 */ unsigned char KHR_present_id;
-        /*  291 */ unsigned char KHR_present_id2;
-        /*  292 */ unsigned char KHR_present_mode_fifo_latest_ready;
-        /*  293 */ unsigned char KHR_present_wait;
-        /*  294 */ unsigned char KHR_present_wait2;
-        /*  295 */ unsigned char KHR_push_descriptor;
-        /*  296 */ unsigned char KHR_ray_query;
-        /*  297 */ unsigned char KHR_ray_tracing_maintenance1;
-        /*  298 */ unsigned char KHR_ray_tracing_pipeline;
-        /*  299 */ unsigned char KHR_ray_tracing_position_fetch;
-        /*  300 */ unsigned char KHR_relaxed_block_layout;
-        /*  301 */ unsigned char KHR_robustness2;
-        /*  302 */ unsigned char KHR_sampler_mirror_clamp_to_edge;
-        /*  303 */ unsigned char KHR_sampler_ycbcr_conversion;
-        /*  304 */ unsigned char KHR_separate_depth_stencil_layouts;
-        /*  305 */ unsigned char KHR_shader_abort;
-        /*  306 */ unsigned char KHR_shader_atomic_int64;
-        /*  307 */ unsigned char KHR_shader_bfloat16;
-        /*  308 */ unsigned char KHR_shader_clock;
-        /*  309 */ unsigned char KHR_shader_constant_data;
-        /*  310 */ unsigned char KHR_shader_draw_parameters;
-        /*  311 */ unsigned char KHR_shader_expect_assume;
-        /*  312 */ unsigned char KHR_shader_float16_int8;
-        /*  313 */ unsigned char KHR_shader_float_controls;
-        /*  314 */ unsigned char KHR_shader_float_controls2;
-        /*  315 */ unsigned char KHR_shader_fma;
-        /*  316 */ unsigned char KHR_shader_integer_dot_product;
-        /*  317 */ unsigned char KHR_shader_maximal_reconvergence;
-        /*  318 */ unsigned char KHR_shader_non_semantic_info;
-        /*  319 */ unsigned char KHR_shader_quad_control;
-        /*  320 */ unsigned char KHR_shader_relaxed_extended_instruction;
-        /*  321 */ unsigned char KHR_shader_subgroup_extended_types;
-        /*  322 */ unsigned char KHR_shader_subgroup_rotate;
-        /*  323 */ unsigned char KHR_shader_subgroup_uniform_control_flow;
-        /*  324 */ unsigned char KHR_shader_terminate_invocation;
-        /*  325 */ unsigned char KHR_shader_untyped_pointers;
-        /*  326 */ unsigned char KHR_shared_presentable_image;
-        /*  327 */ unsigned char KHR_spirv_1_4;
-        /*  328 */ unsigned char KHR_storage_buffer_storage_class;
-        /*  329 */ unsigned char KHR_surface;
-        /*  330 */ unsigned char KHR_surface_maintenance1;
-        /*  331 */ unsigned char KHR_surface_protected_capabilities;
-        /*  332 */ unsigned char KHR_swapchain;
-        /*  333 */ unsigned char KHR_swapchain_maintenance1;
-        /*  334 */ unsigned char KHR_swapchain_mutable_format;
-        /*  335 */ unsigned char KHR_synchronization2;
-        /*  336 */ unsigned char KHR_timeline_semaphore;
-        /*  337 */ unsigned char KHR_unified_image_layouts;
-        /*  338 */ unsigned char KHR_uniform_buffer_standard_layout;
-        /*  339 */ unsigned char KHR_variable_pointers;
-        /*  340 */ unsigned char KHR_vertex_attribute_divisor;
-        /*  341 */ unsigned char KHR_video_decode_av1;
-        /*  342 */ unsigned char KHR_video_decode_h264;
-        /*  343 */ unsigned char KHR_video_decode_h265;
-        /*  344 */ unsigned char KHR_video_decode_queue;
-        /*  345 */ unsigned char KHR_video_decode_vp9;
-        /*  346 */ unsigned char KHR_video_encode_av1;
-        /*  347 */ unsigned char KHR_video_encode_feedback2;
-        /*  348 */ unsigned char KHR_video_encode_h264;
-        /*  349 */ unsigned char KHR_video_encode_h265;
-        /*  350 */ unsigned char KHR_video_encode_intra_refresh;
-        /*  351 */ unsigned char KHR_video_encode_quantization_map;
-        /*  352 */ unsigned char KHR_video_encode_queue;
-        /*  353 */ unsigned char KHR_video_maintenance1;
-        /*  354 */ unsigned char KHR_video_maintenance2;
-        /*  355 */ unsigned char KHR_video_queue;
-        /*  356 */ unsigned char KHR_vulkan_memory_model;
-        /*  357 */ unsigned char KHR_wayland_surface;
-        /*  358 */ unsigned char KHR_win32_keyed_mutex;
-        /*  359 */ unsigned char KHR_win32_surface;
-        /*  360 */ unsigned char KHR_workgroup_memory_explicit_layout;
-        /*  361 */ unsigned char KHR_xcb_surface;
-        /*  362 */ unsigned char KHR_xlib_surface;
-        /*  363 */ unsigned char KHR_zero_initialize_workgroup_memory;
-        /*  364 */ unsigned char LUNARG_direct_driver_loading;
-        /*  365 */ unsigned char MESA_image_alignment_control;
-        /*  366 */ unsigned char MSFT_layered_driver;
-        /*  367 */ unsigned char MVK_ios_surface;
-        /*  368 */ unsigned char MVK_macos_surface;
-        /*  369 */ unsigned char NN_vi_surface;
-        /*  370 */ unsigned char NVX_binary_import;
-        /*  371 */ unsigned char NVX_image_view_handle;
-        /*  372 */ unsigned char NVX_multiview_per_view_attributes;
-        /*  373 */ unsigned char NV_acquire_winrt_display;
-        /*  374 */ unsigned char NV_clip_space_w_scaling;
-        /*  375 */ unsigned char NV_cluster_acceleration_structure;
-        /*  376 */ unsigned char NV_command_buffer_inheritance;
-        /*  377 */ unsigned char NV_compute_occupancy_priority;
-        /*  378 */ unsigned char NV_compute_shader_derivatives;
-        /*  379 */ unsigned char NV_cooperative_matrix;
-        /*  380 */ unsigned char NV_cooperative_matrix2;
-        /*  381 */ unsigned char NV_cooperative_matrix_decode_vector;
-        /*  382 */ unsigned char NV_cooperative_vector;
-        /*  383 */ unsigned char NV_copy_memory_indirect;
-        /*  384 */ unsigned char NV_corner_sampled_image;
-        /*  385 */ unsigned char NV_coverage_reduction_mode;
-        /*  386 */ unsigned char NV_cuda_kernel_launch;
-        /*  387 */ unsigned char NV_dedicated_allocation;
-        /*  388 */ unsigned char NV_dedicated_allocation_image_aliasing;
-        /*  389 */ unsigned char NV_descriptor_pool_overallocation;
-        /*  390 */ unsigned char NV_device_diagnostic_checkpoints;
-        /*  391 */ unsigned char NV_device_diagnostics_config;
-        /*  392 */ unsigned char NV_device_generated_commands;
-        /*  393 */ unsigned char NV_device_generated_commands_compute;
-        /*  394 */ unsigned char NV_displacement_micromap;
-        /*  395 */ unsigned char NV_display_stereo;
-        /*  396 */ unsigned char NV_extended_sparse_address_space;
-        /*  397 */ unsigned char NV_external_compute_queue;
-        /*  398 */ unsigned char NV_external_memory;
-        /*  399 */ unsigned char NV_external_memory_capabilities;
-        /*  400 */ unsigned char NV_external_memory_rdma;
-        /*  401 */ unsigned char NV_external_memory_win32;
-        /*  402 */ unsigned char NV_fill_rectangle;
-        /*  403 */ unsigned char NV_fragment_coverage_to_color;
-        /*  404 */ unsigned char NV_fragment_shader_barycentric;
-        /*  405 */ unsigned char NV_fragment_shading_rate_enums;
-        /*  406 */ unsigned char NV_framebuffer_mixed_samples;
-        /*  407 */ unsigned char NV_geometry_shader_passthrough;
-        /*  408 */ unsigned char NV_glsl_shader;
-        /*  409 */ unsigned char NV_inherited_viewport_scissor;
-        /*  410 */ unsigned char NV_linear_color_attachment;
-        /*  411 */ unsigned char NV_low_latency;
-        /*  412 */ unsigned char NV_low_latency2;
-        /*  413 */ unsigned char NV_memory_decompression;
-        /*  414 */ unsigned char NV_mesh_shader;
-        /*  415 */ unsigned char NV_optical_flow;
-        /*  416 */ unsigned char NV_partitioned_acceleration_structure;
-        /*  417 */ unsigned char NV_per_stage_descriptor_set;
-        /*  418 */ unsigned char NV_present_barrier;
-        /*  419 */ unsigned char NV_present_metering;
-        /*  420 */ unsigned char NV_push_constant_bank;
-        /*  421 */ unsigned char NV_raw_access_chains;
-        /*  422 */ unsigned char NV_ray_tracing;
-        /*  423 */ unsigned char NV_ray_tracing_invocation_reorder;
-        /*  424 */ unsigned char NV_ray_tracing_linear_swept_spheres;
-        /*  425 */ unsigned char NV_ray_tracing_motion_blur;
-        /*  426 */ unsigned char NV_ray_tracing_validation;
-        /*  427 */ unsigned char NV_representative_fragment_test;
-        /*  428 */ unsigned char NV_sample_mask_override_coverage;
-        /*  429 */ unsigned char NV_scissor_exclusive;
-        /*  430 */ unsigned char NV_shader_atomic_float16_vector;
-        /*  431 */ unsigned char NV_shader_image_footprint;
-        /*  432 */ unsigned char NV_shader_sm_builtins;
-        /*  433 */ unsigned char NV_shader_subgroup_partitioned;
-        /*  434 */ unsigned char NV_shading_rate_image;
-        /*  435 */ unsigned char NV_viewport_array2;
-        /*  436 */ unsigned char NV_viewport_swizzle;
-        /*  437 */ unsigned char NV_win32_keyed_mutex;
-        /*  438 */ unsigned char OHOS_external_memory;
-        /*  439 */ unsigned char OHOS_surface;
-        /*  440 */ unsigned char QCOM_cooperative_matrix_conversion;
-        /*  441 */ unsigned char QCOM_data_graph_model;
-        /*  442 */ unsigned char QCOM_elapsed_timer_query;
-        /*  443 */ unsigned char QCOM_filter_cubic_clamp;
-        /*  444 */ unsigned char QCOM_filter_cubic_weights;
-        /*  445 */ unsigned char QCOM_fragment_density_map_offset;
-        /*  446 */ unsigned char QCOM_image_processing;
-        /*  447 */ unsigned char QCOM_image_processing2;
-        /*  448 */ unsigned char QCOM_image_processing3;
-        /*  449 */ unsigned char QCOM_multiview_per_view_render_areas;
-        /*  450 */ unsigned char QCOM_multiview_per_view_viewports;
-        /*  451 */ unsigned char QCOM_queue_perf_hint;
-        /*  452 */ unsigned char QCOM_render_pass_shader_resolve;
-        /*  453 */ unsigned char QCOM_render_pass_store_ops;
-        /*  454 */ unsigned char QCOM_render_pass_transform;
-        /*  455 */ unsigned char QCOM_rotated_copy_commands;
-        /*  456 */ unsigned char QCOM_shader_multiple_wait_queues;
-        /*  457 */ unsigned char QCOM_tile_memory_heap;
-        /*  458 */ unsigned char QCOM_tile_properties;
-        /*  459 */ unsigned char QCOM_tile_shading;
-        /*  460 */ unsigned char QCOM_ycbcr_degamma;
-        /*  461 */ unsigned char QNX_external_memory_screen_buffer;
-        /*  462 */ unsigned char QNX_screen_surface;
-        /*  463 */ unsigned char SEC_amigo_profiling;
-        /*  464 */ unsigned char SEC_pipeline_cache_incremental_mode;
-        /*  465 */ unsigned char SEC_throttle_hint;
-        /*  466 */ unsigned char SEC_ubm_surface;
-        /*  467 */ unsigned char VALVE_descriptor_set_host_mapping;
-        /*  468 */ unsigned char VALVE_fragment_density_map_layered;
-        /*  469 */ unsigned char VALVE_mutable_descriptor_type;
-        /*  470 */ unsigned char VALVE_shader_mixed_float_dot_product;
-        /*  471 */ unsigned char VALVE_video_encode_rgb_conversion;
+        /*   56 */ unsigned char EXT_cooperative_matrix_maintenance1;
+        /*   57 */ unsigned char EXT_custom_border_color;
+        /*   58 */ unsigned char EXT_custom_resolve;
+        /*   59 */ unsigned char EXT_debug_marker;
+        /*   60 */ unsigned char EXT_debug_report;
+        /*   61 */ unsigned char EXT_debug_utils;
+        /*   62 */ unsigned char EXT_depth_bias_control;
+        /*   63 */ unsigned char EXT_depth_clamp_control;
+        /*   64 */ unsigned char EXT_depth_clamp_zero_one;
+        /*   65 */ unsigned char EXT_depth_clip_control;
+        /*   66 */ unsigned char EXT_depth_clip_enable;
+        /*   67 */ unsigned char EXT_depth_range_unrestricted;
+        /*   68 */ unsigned char EXT_descriptor_buffer;
+        /*   69 */ unsigned char EXT_descriptor_heap;
+        /*   70 */ unsigned char EXT_descriptor_indexing;
+        /*   71 */ unsigned char EXT_device_address_binding_report;
+        /*   72 */ unsigned char EXT_device_fault;
+        /*   73 */ unsigned char EXT_device_generated_commands;
+        /*   74 */ unsigned char EXT_device_memory_report;
+        /*   75 */ unsigned char EXT_direct_mode_display;
+        /*   76 */ unsigned char EXT_directfb_surface;
+        /*   77 */ unsigned char EXT_discard_rectangles;
+        /*   78 */ unsigned char EXT_display_control;
+        /*   79 */ unsigned char EXT_display_surface_counter;
+        /*   80 */ unsigned char EXT_dynamic_rendering_unused_attachments;
+        /*   81 */ unsigned char EXT_extended_dynamic_state;
+        /*   82 */ unsigned char EXT_extended_dynamic_state2;
+        /*   83 */ unsigned char EXT_extended_dynamic_state3;
+        /*   84 */ unsigned char EXT_external_memory_acquire_unmodified;
+        /*   85 */ unsigned char EXT_external_memory_dma_buf;
+        /*   86 */ unsigned char EXT_external_memory_host;
+        /*   87 */ unsigned char EXT_external_memory_metal;
+        /*   88 */ unsigned char EXT_filter_cubic;
+        /*   89 */ unsigned char EXT_fragment_density_map;
+        /*   90 */ unsigned char EXT_fragment_density_map2;
+        /*   91 */ unsigned char EXT_fragment_density_map_offset;
+        /*   92 */ unsigned char EXT_fragment_shader_interlock;
+        /*   93 */ unsigned char EXT_frame_boundary;
+        /*   94 */ unsigned char EXT_full_screen_exclusive;
+        /*   95 */ unsigned char EXT_global_priority;
+        /*   96 */ unsigned char EXT_global_priority_query;
+        /*   97 */ unsigned char EXT_graphics_pipeline_library;
+        /*   98 */ unsigned char EXT_hdr_metadata;
+        /*   99 */ unsigned char EXT_headless_surface;
+        /*  100 */ unsigned char EXT_host_image_copy;
+        /*  101 */ unsigned char EXT_host_query_reset;
+        /*  102 */ unsigned char EXT_image_2d_view_of_3d;
+        /*  103 */ unsigned char EXT_image_compression_control;
+        /*  104 */ unsigned char EXT_image_compression_control_swapchain;
+        /*  105 */ unsigned char EXT_image_drm_format_modifier;
+        /*  106 */ unsigned char EXT_image_robustness;
+        /*  107 */ unsigned char EXT_image_sliced_view_of_3d;
+        /*  108 */ unsigned char EXT_image_tiling_control;
+        /*  109 */ unsigned char EXT_image_view_min_lod;
+        /*  110 */ unsigned char EXT_index_type_uint8;
+        /*  111 */ unsigned char EXT_inline_uniform_block;
+        /*  112 */ unsigned char EXT_layer_settings;
+        /*  113 */ unsigned char EXT_legacy_dithering;
+        /*  114 */ unsigned char EXT_legacy_vertex_attributes;
+        /*  115 */ unsigned char EXT_line_rasterization;
+        /*  116 */ unsigned char EXT_load_store_op_none;
+        /*  117 */ unsigned char EXT_map_memory_placed;
+        /*  118 */ unsigned char EXT_memory_budget;
+        /*  119 */ unsigned char EXT_memory_decompression;
+        /*  120 */ unsigned char EXT_memory_priority;
+        /*  121 */ unsigned char EXT_mesh_shader;
+        /*  122 */ unsigned char EXT_metal_objects;
+        /*  123 */ unsigned char EXT_metal_surface;
+        /*  124 */ unsigned char EXT_multi_draw;
+        /*  125 */ unsigned char EXT_multisampled_render_to_single_sampled;
+        /*  126 */ unsigned char EXT_multisampled_render_to_swapchain;
+        /*  127 */ unsigned char EXT_mutable_descriptor_type;
+        /*  128 */ unsigned char EXT_nested_command_buffer;
+        /*  129 */ unsigned char EXT_non_seamless_cube_map;
+        /*  130 */ unsigned char EXT_opacity_micromap;
+        /*  131 */ unsigned char EXT_pageable_device_local_memory;
+        /*  132 */ unsigned char EXT_pci_bus_info;
+        /*  133 */ unsigned char EXT_physical_device_drm;
+        /*  134 */ unsigned char EXT_pipeline_creation_cache_control;
+        /*  135 */ unsigned char EXT_pipeline_creation_feedback;
+        /*  136 */ unsigned char EXT_pipeline_library_group_handles;
+        /*  137 */ unsigned char EXT_pipeline_properties;
+        /*  138 */ unsigned char EXT_pipeline_protected_access;
+        /*  139 */ unsigned char EXT_pipeline_robustness;
+        /*  140 */ unsigned char EXT_post_depth_coverage;
+        /*  141 */ unsigned char EXT_present_mode_fifo_latest_ready;
+        /*  142 */ unsigned char EXT_present_timing;
+        /*  143 */ unsigned char EXT_primitive_restart_index;
+        /*  144 */ unsigned char EXT_primitive_topology_list_restart;
+        /*  145 */ unsigned char EXT_primitives_generated_query;
+        /*  146 */ unsigned char EXT_private_data;
+        /*  147 */ unsigned char EXT_provoking_vertex;
+        /*  148 */ unsigned char EXT_queue_family_foreign;
+        /*  149 */ unsigned char EXT_rasterization_order_attachment_access;
+        /*  150 */ unsigned char EXT_ray_tracing_invocation_reorder;
+        /*  151 */ unsigned char EXT_rgba10x6_formats;
+        /*  152 */ unsigned char EXT_robustness2;
+        /*  153 */ unsigned char EXT_sample_locations;
+        /*  154 */ unsigned char EXT_sampler_filter_minmax;
+        /*  155 */ unsigned char EXT_scalar_block_layout;
+        /*  156 */ unsigned char EXT_separate_stencil_usage;
+        /*  157 */ unsigned char EXT_shader_64bit_indexing;
+        /*  158 */ unsigned char EXT_shader_atomic_float;
+        /*  159 */ unsigned char EXT_shader_atomic_float2;
+        /*  160 */ unsigned char EXT_shader_demote_to_helper_invocation;
+        /*  161 */ unsigned char EXT_shader_float8;
+        /*  162 */ unsigned char EXT_shader_image_atomic_int64;
+        /*  163 */ unsigned char EXT_shader_long_vector;
+        /*  164 */ unsigned char EXT_shader_module_identifier;
+        /*  165 */ unsigned char EXT_shader_object;
+        /*  166 */ unsigned char EXT_shader_ocp_microscaling_types;
+        /*  167 */ unsigned char EXT_shader_replicated_composites;
+        /*  168 */ unsigned char EXT_shader_split_barrier;
+        /*  169 */ unsigned char EXT_shader_stencil_export;
+        /*  170 */ unsigned char EXT_shader_subgroup_ballot;
+        /*  171 */ unsigned char EXT_shader_subgroup_partitioned;
+        /*  172 */ unsigned char EXT_shader_subgroup_vote;
+        /*  173 */ unsigned char EXT_shader_tile_image;
+        /*  174 */ unsigned char EXT_shader_uniform_buffer_unsized_array;
+        /*  175 */ unsigned char EXT_shader_viewport_index_layer;
+        /*  176 */ unsigned char EXT_subgroup_size_control;
+        /*  177 */ unsigned char EXT_subpass_merge_feedback;
+        /*  178 */ unsigned char EXT_surface_maintenance1;
+        /*  179 */ unsigned char EXT_swapchain_colorspace;
+        /*  180 */ unsigned char EXT_swapchain_maintenance1;
+        /*  181 */ unsigned char EXT_texel_buffer_alignment;
+        /*  182 */ unsigned char EXT_texture_compression_astc_3d;
+        /*  183 */ unsigned char EXT_texture_compression_astc_hdr;
+        /*  184 */ unsigned char EXT_tooling_info;
+        /*  185 */ unsigned char EXT_transform_feedback;
+        /*  186 */ unsigned char EXT_validation_cache;
+        /*  187 */ unsigned char EXT_validation_features;
+        /*  188 */ unsigned char EXT_validation_flags;
+        /*  189 */ unsigned char EXT_vertex_attribute_divisor;
+        /*  190 */ unsigned char EXT_vertex_attribute_robustness;
+        /*  191 */ unsigned char EXT_vertex_input_dynamic_state;
+        /*  192 */ unsigned char EXT_ycbcr_2plane_444_formats;
+        /*  193 */ unsigned char EXT_ycbcr_image_arrays;
+        /*  194 */ unsigned char EXT_zero_initialize_device_memory;
+        /*  195 */ unsigned char FUCHSIA_buffer_collection;
+        /*  196 */ unsigned char FUCHSIA_external_memory;
+        /*  197 */ unsigned char FUCHSIA_external_semaphore;
+        /*  198 */ unsigned char FUCHSIA_imagepipe_surface;
+        /*  199 */ unsigned char GGP_frame_token;
+        /*  200 */ unsigned char GGP_stream_descriptor_surface;
+        /*  201 */ unsigned char GOOGLE_decorate_string;
+        /*  202 */ unsigned char GOOGLE_display_timing;
+        /*  203 */ unsigned char GOOGLE_hlsl_functionality1;
+        /*  204 */ unsigned char GOOGLE_surfaceless_query;
+        /*  205 */ unsigned char GOOGLE_user_type;
+        /*  206 */ unsigned char HUAWEI_cluster_culling_shader;
+        /*  207 */ unsigned char HUAWEI_hdr_vivid;
+        /*  208 */ unsigned char HUAWEI_invocation_mask;
+        /*  209 */ unsigned char HUAWEI_subpass_shading;
+        /*  210 */ unsigned char IMG_filter_cubic;
+        /*  211 */ unsigned char IMG_filter_linear_2d;
+        /*  212 */ unsigned char IMG_format_pvrtc;
+        /*  213 */ unsigned char IMG_relaxed_line_rasterization;
+        /*  214 */ unsigned char INTEL_performance_query;
+        /*  215 */ unsigned char INTEL_shader_integer_functions2;
+        /*  216 */ unsigned char KHR_16bit_storage;
+        /*  217 */ unsigned char KHR_8bit_storage;
+        /*  218 */ unsigned char KHR_acceleration_structure;
+        /*  219 */ unsigned char KHR_android_surface;
+        /*  220 */ unsigned char KHR_bind_memory2;
+        /*  221 */ unsigned char KHR_buffer_device_address;
+        /*  222 */ unsigned char KHR_calibrated_timestamps;
+        /*  223 */ unsigned char KHR_compute_shader_derivatives;
+        /*  224 */ unsigned char KHR_cooperative_matrix;
+        /*  225 */ unsigned char KHR_copy_commands2;
+        /*  226 */ unsigned char KHR_copy_memory_indirect;
+        /*  227 */ unsigned char KHR_create_renderpass2;
+        /*  228 */ unsigned char KHR_dedicated_allocation;
+        /*  229 */ unsigned char KHR_deferred_host_operations;
+        /*  230 */ unsigned char KHR_depth_clamp_zero_one;
+        /*  231 */ unsigned char KHR_depth_stencil_resolve;
+        /*  232 */ unsigned char KHR_descriptor_update_template;
+        /*  233 */ unsigned char KHR_device_address_commands;
+        /*  234 */ unsigned char KHR_device_fault;
+        /*  235 */ unsigned char KHR_device_group;
+        /*  236 */ unsigned char KHR_device_group_creation;
+        /*  237 */ unsigned char KHR_display;
+        /*  238 */ unsigned char KHR_display_swapchain;
+        /*  239 */ unsigned char KHR_draw_indirect_count;
+        /*  240 */ unsigned char KHR_driver_properties;
+        /*  241 */ unsigned char KHR_dynamic_rendering;
+        /*  242 */ unsigned char KHR_dynamic_rendering_local_read;
+        /*  243 */ unsigned char KHR_extended_flags;
+        /*  244 */ unsigned char KHR_external_fence;
+        /*  245 */ unsigned char KHR_external_fence_capabilities;
+        /*  246 */ unsigned char KHR_external_fence_fd;
+        /*  247 */ unsigned char KHR_external_fence_win32;
+        /*  248 */ unsigned char KHR_external_memory;
+        /*  249 */ unsigned char KHR_external_memory_capabilities;
+        /*  250 */ unsigned char KHR_external_memory_fd;
+        /*  251 */ unsigned char KHR_external_memory_win32;
+        /*  252 */ unsigned char KHR_external_semaphore;
+        /*  253 */ unsigned char KHR_external_semaphore_capabilities;
+        /*  254 */ unsigned char KHR_external_semaphore_fd;
+        /*  255 */ unsigned char KHR_external_semaphore_win32;
+        /*  256 */ unsigned char KHR_format_feature_flags2;
+        /*  257 */ unsigned char KHR_fragment_shader_barycentric;
+        /*  258 */ unsigned char KHR_fragment_shading_rate;
+        /*  259 */ unsigned char KHR_get_display_properties2;
+        /*  260 */ unsigned char KHR_get_memory_requirements2;
+        /*  261 */ unsigned char KHR_get_physical_device_properties2;
+        /*  262 */ unsigned char KHR_get_surface_capabilities2;
+        /*  263 */ unsigned char KHR_global_priority;
+        /*  264 */ unsigned char KHR_image_format_list;
+        /*  265 */ unsigned char KHR_imageless_framebuffer;
+        /*  266 */ unsigned char KHR_incremental_present;
+        /*  267 */ unsigned char KHR_index_type_uint8;
+        /*  268 */ unsigned char KHR_internally_synchronized_queues;
+        /*  269 */ unsigned char KHR_line_rasterization;
+        /*  270 */ unsigned char KHR_load_store_op_none;
+        /*  271 */ unsigned char KHR_maintenance1;
+        /*  272 */ unsigned char KHR_maintenance10;
+        /*  273 */ unsigned char KHR_maintenance11;
+        /*  274 */ unsigned char KHR_maintenance2;
+        /*  275 */ unsigned char KHR_maintenance3;
+        /*  276 */ unsigned char KHR_maintenance4;
+        /*  277 */ unsigned char KHR_maintenance5;
+        /*  278 */ unsigned char KHR_maintenance6;
+        /*  279 */ unsigned char KHR_maintenance7;
+        /*  280 */ unsigned char KHR_maintenance8;
+        /*  281 */ unsigned char KHR_maintenance9;
+        /*  282 */ unsigned char KHR_map_memory2;
+        /*  283 */ unsigned char KHR_multiview;
+        /*  284 */ unsigned char KHR_opacity_micromap;
+        /*  285 */ unsigned char KHR_performance_query;
+        /*  286 */ unsigned char KHR_pipeline_binary;
+        /*  287 */ unsigned char KHR_pipeline_executable_properties;
+        /*  288 */ unsigned char KHR_pipeline_library;
+        /*  289 */ unsigned char KHR_portability_enumeration;
+        /*  290 */ unsigned char KHR_portability_subset;
+        /*  291 */ unsigned char KHR_present_id;
+        /*  292 */ unsigned char KHR_present_id2;
+        /*  293 */ unsigned char KHR_present_mode_fifo_latest_ready;
+        /*  294 */ unsigned char KHR_present_wait;
+        /*  295 */ unsigned char KHR_present_wait2;
+        /*  296 */ unsigned char KHR_push_descriptor;
+        /*  297 */ unsigned char KHR_ray_query;
+        /*  298 */ unsigned char KHR_ray_tracing_maintenance1;
+        /*  299 */ unsigned char KHR_ray_tracing_pipeline;
+        /*  300 */ unsigned char KHR_ray_tracing_position_fetch;
+        /*  301 */ unsigned char KHR_relaxed_block_layout;
+        /*  302 */ unsigned char KHR_robustness2;
+        /*  303 */ unsigned char KHR_sampler_mirror_clamp_to_edge;
+        /*  304 */ unsigned char KHR_sampler_ycbcr_conversion;
+        /*  305 */ unsigned char KHR_separate_depth_stencil_layouts;
+        /*  306 */ unsigned char KHR_shader_abort;
+        /*  307 */ unsigned char KHR_shader_atomic_int64;
+        /*  308 */ unsigned char KHR_shader_bfloat16;
+        /*  309 */ unsigned char KHR_shader_clock;
+        /*  310 */ unsigned char KHR_shader_constant_data;
+        /*  311 */ unsigned char KHR_shader_draw_parameters;
+        /*  312 */ unsigned char KHR_shader_expect_assume;
+        /*  313 */ unsigned char KHR_shader_float16_int8;
+        /*  314 */ unsigned char KHR_shader_float_controls;
+        /*  315 */ unsigned char KHR_shader_float_controls2;
+        /*  316 */ unsigned char KHR_shader_fma;
+        /*  317 */ unsigned char KHR_shader_integer_dot_product;
+        /*  318 */ unsigned char KHR_shader_maximal_reconvergence;
+        /*  319 */ unsigned char KHR_shader_non_semantic_info;
+        /*  320 */ unsigned char KHR_shader_quad_control;
+        /*  321 */ unsigned char KHR_shader_relaxed_extended_instruction;
+        /*  322 */ unsigned char KHR_shader_subgroup_extended_types;
+        /*  323 */ unsigned char KHR_shader_subgroup_rotate;
+        /*  324 */ unsigned char KHR_shader_subgroup_uniform_control_flow;
+        /*  325 */ unsigned char KHR_shader_terminate_invocation;
+        /*  326 */ unsigned char KHR_shader_untyped_pointers;
+        /*  327 */ unsigned char KHR_shared_presentable_image;
+        /*  328 */ unsigned char KHR_spirv_1_4;
+        /*  329 */ unsigned char KHR_storage_buffer_storage_class;
+        /*  330 */ unsigned char KHR_surface;
+        /*  331 */ unsigned char KHR_surface_maintenance1;
+        /*  332 */ unsigned char KHR_surface_protected_capabilities;
+        /*  333 */ unsigned char KHR_swapchain;
+        /*  334 */ unsigned char KHR_swapchain_maintenance1;
+        /*  335 */ unsigned char KHR_swapchain_mutable_format;
+        /*  336 */ unsigned char KHR_synchronization2;
+        /*  337 */ unsigned char KHR_timeline_semaphore;
+        /*  338 */ unsigned char KHR_unified_image_layouts;
+        /*  339 */ unsigned char KHR_uniform_buffer_standard_layout;
+        /*  340 */ unsigned char KHR_variable_pointers;
+        /*  341 */ unsigned char KHR_vertex_attribute_divisor;
+        /*  342 */ unsigned char KHR_video_decode_av1;
+        /*  343 */ unsigned char KHR_video_decode_h264;
+        /*  344 */ unsigned char KHR_video_decode_h265;
+        /*  345 */ unsigned char KHR_video_decode_queue;
+        /*  346 */ unsigned char KHR_video_decode_vp9;
+        /*  347 */ unsigned char KHR_video_encode_av1;
+        /*  348 */ unsigned char KHR_video_encode_feedback2;
+        /*  349 */ unsigned char KHR_video_encode_h264;
+        /*  350 */ unsigned char KHR_video_encode_h265;
+        /*  351 */ unsigned char KHR_video_encode_intra_refresh;
+        /*  352 */ unsigned char KHR_video_encode_quantization_map;
+        /*  353 */ unsigned char KHR_video_encode_queue;
+        /*  354 */ unsigned char KHR_video_maintenance1;
+        /*  355 */ unsigned char KHR_video_maintenance2;
+        /*  356 */ unsigned char KHR_video_queue;
+        /*  357 */ unsigned char KHR_vulkan_memory_model;
+        /*  358 */ unsigned char KHR_wayland_surface;
+        /*  359 */ unsigned char KHR_win32_keyed_mutex;
+        /*  360 */ unsigned char KHR_win32_surface;
+        /*  361 */ unsigned char KHR_workgroup_memory_explicit_layout;
+        /*  362 */ unsigned char KHR_xcb_surface;
+        /*  363 */ unsigned char KHR_xlib_surface;
+        /*  364 */ unsigned char KHR_zero_initialize_workgroup_memory;
+        /*  365 */ unsigned char LUNARG_direct_driver_loading;
+        /*  366 */ unsigned char MESA_image_alignment_control;
+        /*  367 */ unsigned char MSFT_layered_driver;
+        /*  368 */ unsigned char MVK_ios_surface;
+        /*  369 */ unsigned char MVK_macos_surface;
+        /*  370 */ unsigned char NN_vi_surface;
+        /*  371 */ unsigned char NVX_binary_import;
+        /*  372 */ unsigned char NVX_image_view_handle;
+        /*  373 */ unsigned char NVX_multiview_per_view_attributes;
+        /*  374 */ unsigned char NV_acquire_winrt_display;
+        /*  375 */ unsigned char NV_clip_space_w_scaling;
+        /*  376 */ unsigned char NV_cluster_acceleration_structure;
+        /*  377 */ unsigned char NV_command_buffer_inheritance;
+        /*  378 */ unsigned char NV_compute_occupancy_priority;
+        /*  379 */ unsigned char NV_compute_shader_derivatives;
+        /*  380 */ unsigned char NV_cooperative_matrix;
+        /*  381 */ unsigned char NV_cooperative_matrix2;
+        /*  382 */ unsigned char NV_cooperative_matrix_decode_vector;
+        /*  383 */ unsigned char NV_cooperative_vector;
+        /*  384 */ unsigned char NV_copy_memory_indirect;
+        /*  385 */ unsigned char NV_corner_sampled_image;
+        /*  386 */ unsigned char NV_coverage_reduction_mode;
+        /*  387 */ unsigned char NV_cuda_kernel_launch;
+        /*  388 */ unsigned char NV_dedicated_allocation;
+        /*  389 */ unsigned char NV_dedicated_allocation_image_aliasing;
+        /*  390 */ unsigned char NV_descriptor_pool_overallocation;
+        /*  391 */ unsigned char NV_device_diagnostic_checkpoints;
+        /*  392 */ unsigned char NV_device_diagnostics_config;
+        /*  393 */ unsigned char NV_device_generated_commands;
+        /*  394 */ unsigned char NV_device_generated_commands_compute;
+        /*  395 */ unsigned char NV_displacement_micromap;
+        /*  396 */ unsigned char NV_display_stereo;
+        /*  397 */ unsigned char NV_extended_sparse_address_space;
+        /*  398 */ unsigned char NV_external_compute_queue;
+        /*  399 */ unsigned char NV_external_memory;
+        /*  400 */ unsigned char NV_external_memory_capabilities;
+        /*  401 */ unsigned char NV_external_memory_rdma;
+        /*  402 */ unsigned char NV_external_memory_win32;
+        /*  403 */ unsigned char NV_fill_rectangle;
+        /*  404 */ unsigned char NV_fragment_coverage_to_color;
+        /*  405 */ unsigned char NV_fragment_shader_barycentric;
+        /*  406 */ unsigned char NV_fragment_shading_rate_enums;
+        /*  407 */ unsigned char NV_framebuffer_mixed_samples;
+        /*  408 */ unsigned char NV_geometry_shader_passthrough;
+        /*  409 */ unsigned char NV_glsl_shader;
+        /*  410 */ unsigned char NV_inherited_viewport_scissor;
+        /*  411 */ unsigned char NV_linear_color_attachment;
+        /*  412 */ unsigned char NV_low_latency;
+        /*  413 */ unsigned char NV_low_latency2;
+        /*  414 */ unsigned char NV_memory_decompression;
+        /*  415 */ unsigned char NV_mesh_shader;
+        /*  416 */ unsigned char NV_optical_flow;
+        /*  417 */ unsigned char NV_partitioned_acceleration_structure;
+        /*  418 */ unsigned char NV_per_stage_descriptor_set;
+        /*  419 */ unsigned char NV_present_barrier;
+        /*  420 */ unsigned char NV_present_metering;
+        /*  421 */ unsigned char NV_push_constant_bank;
+        /*  422 */ unsigned char NV_raw_access_chains;
+        /*  423 */ unsigned char NV_ray_tracing;
+        /*  424 */ unsigned char NV_ray_tracing_invocation_reorder;
+        /*  425 */ unsigned char NV_ray_tracing_linear_swept_spheres;
+        /*  426 */ unsigned char NV_ray_tracing_motion_blur;
+        /*  427 */ unsigned char NV_ray_tracing_validation;
+        /*  428 */ unsigned char NV_representative_fragment_test;
+        /*  429 */ unsigned char NV_sample_mask_override_coverage;
+        /*  430 */ unsigned char NV_scissor_exclusive;
+        /*  431 */ unsigned char NV_shader_atomic_float16_vector;
+        /*  432 */ unsigned char NV_shader_image_footprint;
+        /*  433 */ unsigned char NV_shader_sm_builtins;
+        /*  434 */ unsigned char NV_shader_subgroup_partitioned;
+        /*  435 */ unsigned char NV_shading_rate_image;
+        /*  436 */ unsigned char NV_viewport_array2;
+        /*  437 */ unsigned char NV_viewport_swizzle;
+        /*  438 */ unsigned char NV_win32_keyed_mutex;
+        /*  439 */ unsigned char OHOS_external_memory;
+        /*  440 */ unsigned char OHOS_surface;
+        /*  441 */ unsigned char QCOM_cooperative_matrix_conversion;
+        /*  442 */ unsigned char QCOM_data_graph_model;
+        /*  443 */ unsigned char QCOM_elapsed_timer_query;
+        /*  444 */ unsigned char QCOM_filter_cubic_clamp;
+        /*  445 */ unsigned char QCOM_filter_cubic_weights;
+        /*  446 */ unsigned char QCOM_fragment_density_map_offset;
+        /*  447 */ unsigned char QCOM_image_processing;
+        /*  448 */ unsigned char QCOM_image_processing2;
+        /*  449 */ unsigned char QCOM_image_processing3;
+        /*  450 */ unsigned char QCOM_multiview_per_view_render_areas;
+        /*  451 */ unsigned char QCOM_multiview_per_view_viewports;
+        /*  452 */ unsigned char QCOM_queue_perf_hint;
+        /*  453 */ unsigned char QCOM_render_pass_shader_resolve;
+        /*  454 */ unsigned char QCOM_render_pass_store_ops;
+        /*  455 */ unsigned char QCOM_render_pass_transform;
+        /*  456 */ unsigned char QCOM_rotated_copy_commands;
+        /*  457 */ unsigned char QCOM_shader_multiple_wait_queues;
+        /*  458 */ unsigned char QCOM_tile_memory_heap;
+        /*  459 */ unsigned char QCOM_tile_properties;
+        /*  460 */ unsigned char QCOM_tile_shading;
+        /*  461 */ unsigned char QCOM_ycbcr_degamma;
+        /*  462 */ unsigned char QNX_external_memory_screen_buffer;
+        /*  463 */ unsigned char QNX_screen_surface;
+        /*  464 */ unsigned char SEC_amigo_profiling;
+        /*  465 */ unsigned char SEC_pipeline_cache_incremental_mode;
+        /*  466 */ unsigned char SEC_throttle_hint;
+        /*  467 */ unsigned char SEC_ubm_surface;
+        /*  468 */ unsigned char VALVE_descriptor_set_host_mapping;
+        /*  469 */ unsigned char VALVE_fragment_density_map_layered;
+        /*  470 */ unsigned char VALVE_mutable_descriptor_type;
+        /*  471 */ unsigned char VALVE_shader_mixed_float_dot_product;
+        /*  472 */ unsigned char VALVE_video_encode_rgb_conversion;
         };
     };
 
     union {
-        void *pfnArray[841];
+        void *pfnArray[842];
         struct {
         /*    0 */ PFN_vkAllocateCommandBuffers AllocateCommandBuffers;
         /*    1 */ PFN_vkAllocateDescriptorSets AllocateDescriptorSets;
@@ -24678,14 +24731,15 @@ typedef struct GloamVulkanContext {
         /*  835 */ PFN_vkCmdEndRendering2KHR CmdEndRendering2KHR;
         /*  836 */ PFN_vkGetPhysicalDeviceQueueFamilyDataGraphOpticalFlowImageFormatsARM GetPhysicalDeviceQueueFamilyDataGraphOpticalFlowImageFormatsARM;
         /*  837 */ PFN_vkCmdSetComputeOccupancyPriorityNV CmdSetComputeOccupancyPriorityNV;
+        /*  838 */ PFN_vkGetPhysicalDeviceCooperativeMatrixProperties2EXT GetPhysicalDeviceCooperativeMatrixProperties2EXT;
 #if defined(VK_USE_PLATFORM_UBM_SEC)
-        /*  838 */ PFN_vkCreateUbmSurfaceSEC CreateUbmSurfaceSEC;
-        /*  839 */ PFN_vkGetPhysicalDeviceUbmPresentationSupportSEC GetPhysicalDeviceUbmPresentationSupportSEC;
+        /*  839 */ PFN_vkCreateUbmSurfaceSEC CreateUbmSurfaceSEC;
+        /*  840 */ PFN_vkGetPhysicalDeviceUbmPresentationSupportSEC GetPhysicalDeviceUbmPresentationSupportSEC;
 #else
-        /*  838 */ void *_pad838;
         /*  839 */ void *_pad839;
+        /*  840 */ void *_pad840;
 #endif
-        /*  840 */ PFN_vkCmdSetPrimitiveRestartIndexEXT CmdSetPrimitiveRestartIndexEXT;
+        /*  841 */ PFN_vkCmdSetPrimitiveRestartIndexEXT CmdSetPrimitiveRestartIndexEXT;
         };
     };
 
@@ -24792,6 +24846,7 @@ extern GloamVulkanContext gloam_vk_context;
 #define GLOAM_VK_EXT_color_write_enable (gloam_vk_context.EXT_color_write_enable)
 #define GLOAM_VK_EXT_conditional_rendering (gloam_vk_context.EXT_conditional_rendering)
 #define GLOAM_VK_EXT_conservative_rasterization (gloam_vk_context.EXT_conservative_rasterization)
+#define GLOAM_VK_EXT_cooperative_matrix_maintenance1 (gloam_vk_context.EXT_cooperative_matrix_maintenance1)
 #define GLOAM_VK_EXT_custom_border_color (gloam_vk_context.EXT_custom_border_color)
 #define GLOAM_VK_EXT_custom_resolve (gloam_vk_context.EXT_custom_resolve)
 #define GLOAM_VK_EXT_debug_marker (gloam_vk_context.EXT_debug_marker)
@@ -27835,6 +27890,9 @@ GLOAM_FORCE_INLINE VkResult vkGetPhysicalDeviceQueueFamilyDataGraphOpticalFlowIm
 }
 GLOAM_FORCE_INLINE void vkCmdSetComputeOccupancyPriorityNV(VkCommandBuffer commandBuffer, const VkComputeOccupancyPriorityParametersNV* pParameters) {
     gloam_vk_context.CmdSetComputeOccupancyPriorityNV(commandBuffer, pParameters);
+}
+GLOAM_FORCE_INLINE VkResult vkGetPhysicalDeviceCooperativeMatrixProperties2EXT(VkPhysicalDevice physicalDevice, const VkPhysicalDeviceCooperativeMatrixInfo2EXT* pCooperativeMatrixInfo, uint32_t* pPropertyCount, VkCooperativeMatrixProperties2EXT* pProperties) {
+    return gloam_vk_context.GetPhysicalDeviceCooperativeMatrixProperties2EXT(physicalDevice, pCooperativeMatrixInfo, pPropertyCount, pProperties);
 }
 #if defined(VK_USE_PLATFORM_UBM_SEC)
 GLOAM_FORCE_INLINE VkResult vkCreateUbmSurfaceSEC(VkInstance instance, const VkUbmSurfaceCreateInfoSEC* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface) {
