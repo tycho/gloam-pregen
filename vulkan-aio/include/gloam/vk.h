@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   KhronosGroup/Vulkan-Docs (1d7b391)
- *     xml/vk.xml (blob 3de1d5f)
+ *   KhronosGroup/Vulkan-Docs (090f1b1)
+ *     xml/vk.xml (blob e046fba)
  *   KhronosGroup/Vulkan-Headers (e3b1eec)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob 5347b36)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob e262e96)
@@ -2209,6 +2209,10 @@ extern "C" {
 #define VK_EXT_EXTENSION_704_EXTENSION_NAME "VK_EXT_extension_704"
 #define VK_EXT_EXTENSION_705_SPEC_VERSION 0
 #define VK_EXT_EXTENSION_705_EXTENSION_NAME "VK_EXT_extension_705"
+#define VK_EXT_EXTENSION_706_SPEC_VERSION 0
+#define VK_EXT_EXTENSION_706_EXTENSION_NAME "VK_EXT_extension_706"
+#define VK_EXT_EXTENSION_707_SPEC_VERSION 0
+#define VK_EXT_EXTENSION_707_EXTENSION_NAME "VK_EXT_extension_707"
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 
@@ -8854,7 +8858,7 @@ typedef enum VkImageTilingControlEXT {
  * same platform guard are coalesced into a single #ifdef/#endif block.
  */
 /* Version of this file */
-#define VK_HEADER_VERSION 359
+#define VK_HEADER_VERSION 360
 
 #define VK_DEFINE_HANDLE(object) typedef struct object##_T* object;
 
