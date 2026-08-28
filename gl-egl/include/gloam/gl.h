@@ -28,8 +28,8 @@
  *     xxhash.h (blob dceb921)
  *   KhronosGroup/EGL-Registry (3d7796b)
  *     api/KHR/khrplatform.h (blob 0164644)
- *   KhronosGroup/OpenGL-Registry (e8f7cd0)
- *     xml/gl.xml (blob 7492d15)
+ *   KhronosGroup/OpenGL-Registry (1cdd228)
+ *     xml/gl.xml (blob ff26373)
  *   tycho/gloam-registry (1f5959b)
  *     xml/glsl_exts.xml (blob 943fe5f)
  *

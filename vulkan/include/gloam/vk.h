@@ -3,7 +3,7 @@
  *
  *   gloam --api vk --fetch --out-path vulkan --quiet c --alias --loader --external-headers
  *
- * Extensions: all (473 included)
+ * Extensions: all (474 included)
  *
  * Copyright (c) 2026 Steven Noonan
  * SPDX-License-Identifier: MIT
@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
- *   KhronosGroup/Vulkan-Docs (090f1b1)
- *     xml/vk.xml (blob e046fba)
+ *   KhronosGroup/Vulkan-Docs (20a9e58)
+ *     xml/vk.xml (blob caddc54)
  *   KhronosGroup/Vulkan-Headers (e3b1eec)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob 5347b36)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob e262e96)
@@ -199,7 +199,7 @@ typedef struct GloamVulkanContext {
     };
 
     union {
-        unsigned char extArray[473];
+        unsigned char extArray[474];
         struct {
         /*    0 */ unsigned char AMDX_dense_geometry_format;
         /*    1 */ unsigned char AMDX_shader_enqueue;
@@ -622,58 +622,59 @@ typedef struct GloamVulkanContext {
         /*  418 */ unsigned char NV_per_stage_descriptor_set;
         /*  419 */ unsigned char NV_present_barrier;
         /*  420 */ unsigned char NV_present_metering;
-        /*  421 */ unsigned char NV_push_constant_bank;
-        /*  422 */ unsigned char NV_raw_access_chains;
-        /*  423 */ unsigned char NV_ray_tracing;
-        /*  424 */ unsigned char NV_ray_tracing_invocation_reorder;
-        /*  425 */ unsigned char NV_ray_tracing_linear_swept_spheres;
-        /*  426 */ unsigned char NV_ray_tracing_motion_blur;
-        /*  427 */ unsigned char NV_ray_tracing_validation;
-        /*  428 */ unsigned char NV_representative_fragment_test;
-        /*  429 */ unsigned char NV_sample_mask_override_coverage;
-        /*  430 */ unsigned char NV_scissor_exclusive;
-        /*  431 */ unsigned char NV_shader_atomic_float16_vector;
-        /*  432 */ unsigned char NV_shader_image_footprint;
-        /*  433 */ unsigned char NV_shader_sm_builtins;
-        /*  434 */ unsigned char NV_shader_subgroup_partitioned;
-        /*  435 */ unsigned char NV_shading_rate_image;
-        /*  436 */ unsigned char NV_viewport_array2;
-        /*  437 */ unsigned char NV_viewport_swizzle;
-        /*  438 */ unsigned char NV_win32_keyed_mutex;
-        /*  439 */ unsigned char OHOS_external_memory;
-        /*  440 */ unsigned char OHOS_surface;
-        /*  441 */ unsigned char QCOM_cooperative_matrix_conversion;
-        /*  442 */ unsigned char QCOM_data_graph_model;
-        /*  443 */ unsigned char QCOM_elapsed_timer_query;
-        /*  444 */ unsigned char QCOM_filter_cubic_clamp;
-        /*  445 */ unsigned char QCOM_filter_cubic_weights;
-        /*  446 */ unsigned char QCOM_fragment_density_map_offset;
-        /*  447 */ unsigned char QCOM_image_processing;
-        /*  448 */ unsigned char QCOM_image_processing2;
-        /*  449 */ unsigned char QCOM_image_processing3;
-        /*  450 */ unsigned char QCOM_multiview_per_view_render_areas;
-        /*  451 */ unsigned char QCOM_multiview_per_view_viewports;
-        /*  452 */ unsigned char QCOM_queue_perf_hint;
-        /*  453 */ unsigned char QCOM_render_pass_shader_resolve;
-        /*  454 */ unsigned char QCOM_render_pass_store_ops;
-        /*  455 */ unsigned char QCOM_render_pass_transform;
-        /*  456 */ unsigned char QCOM_rotated_copy_commands;
-        /*  457 */ unsigned char QCOM_shader_multiple_wait_queues;
-        /*  458 */ unsigned char QCOM_tile_memory_heap;
-        /*  459 */ unsigned char QCOM_tile_properties;
-        /*  460 */ unsigned char QCOM_tile_shading;
-        /*  461 */ unsigned char QCOM_ycbcr_degamma;
-        /*  462 */ unsigned char QNX_external_memory_screen_buffer;
-        /*  463 */ unsigned char QNX_screen_surface;
-        /*  464 */ unsigned char SEC_amigo_profiling;
-        /*  465 */ unsigned char SEC_pipeline_cache_incremental_mode;
-        /*  466 */ unsigned char SEC_throttle_hint;
-        /*  467 */ unsigned char SEC_ubm_surface;
-        /*  468 */ unsigned char VALVE_descriptor_set_host_mapping;
-        /*  469 */ unsigned char VALVE_fragment_density_map_layered;
-        /*  470 */ unsigned char VALVE_mutable_descriptor_type;
-        /*  471 */ unsigned char VALVE_shader_mixed_float_dot_product;
-        /*  472 */ unsigned char VALVE_video_encode_rgb_conversion;
+        /*  421 */ unsigned char NV_private_data_base_handle;
+        /*  422 */ unsigned char NV_push_constant_bank;
+        /*  423 */ unsigned char NV_raw_access_chains;
+        /*  424 */ unsigned char NV_ray_tracing;
+        /*  425 */ unsigned char NV_ray_tracing_invocation_reorder;
+        /*  426 */ unsigned char NV_ray_tracing_linear_swept_spheres;
+        /*  427 */ unsigned char NV_ray_tracing_motion_blur;
+        /*  428 */ unsigned char NV_ray_tracing_validation;
+        /*  429 */ unsigned char NV_representative_fragment_test;
+        /*  430 */ unsigned char NV_sample_mask_override_coverage;
+        /*  431 */ unsigned char NV_scissor_exclusive;
+        /*  432 */ unsigned char NV_shader_atomic_float16_vector;
+        /*  433 */ unsigned char NV_shader_image_footprint;
+        /*  434 */ unsigned char NV_shader_sm_builtins;
+        /*  435 */ unsigned char NV_shader_subgroup_partitioned;
+        /*  436 */ unsigned char NV_shading_rate_image;
+        /*  437 */ unsigned char NV_viewport_array2;
+        /*  438 */ unsigned char NV_viewport_swizzle;
+        /*  439 */ unsigned char NV_win32_keyed_mutex;
+        /*  440 */ unsigned char OHOS_external_memory;
+        /*  441 */ unsigned char OHOS_surface;
+        /*  442 */ unsigned char QCOM_cooperative_matrix_conversion;
+        /*  443 */ unsigned char QCOM_data_graph_model;
+        /*  444 */ unsigned char QCOM_elapsed_timer_query;
+        /*  445 */ unsigned char QCOM_filter_cubic_clamp;
+        /*  446 */ unsigned char QCOM_filter_cubic_weights;
+        /*  447 */ unsigned char QCOM_fragment_density_map_offset;
+        /*  448 */ unsigned char QCOM_image_processing;
+        /*  449 */ unsigned char QCOM_image_processing2;
+        /*  450 */ unsigned char QCOM_image_processing3;
+        /*  451 */ unsigned char QCOM_multiview_per_view_render_areas;
+        /*  452 */ unsigned char QCOM_multiview_per_view_viewports;
+        /*  453 */ unsigned char QCOM_queue_perf_hint;
+        /*  454 */ unsigned char QCOM_render_pass_shader_resolve;
+        /*  455 */ unsigned char QCOM_render_pass_store_ops;
+        /*  456 */ unsigned char QCOM_render_pass_transform;
+        /*  457 */ unsigned char QCOM_rotated_copy_commands;
+        /*  458 */ unsigned char QCOM_shader_multiple_wait_queues;
+        /*  459 */ unsigned char QCOM_tile_memory_heap;
+        /*  460 */ unsigned char QCOM_tile_properties;
+        /*  461 */ unsigned char QCOM_tile_shading;
+        /*  462 */ unsigned char QCOM_ycbcr_degamma;
+        /*  463 */ unsigned char QNX_external_memory_screen_buffer;
+        /*  464 */ unsigned char QNX_screen_surface;
+        /*  465 */ unsigned char SEC_amigo_profiling;
+        /*  466 */ unsigned char SEC_pipeline_cache_incremental_mode;
+        /*  467 */ unsigned char SEC_throttle_hint;
+        /*  468 */ unsigned char SEC_ubm_surface;
+        /*  469 */ unsigned char VALVE_descriptor_set_host_mapping;
+        /*  470 */ unsigned char VALVE_fragment_density_map_layered;
+        /*  471 */ unsigned char VALVE_mutable_descriptor_type;
+        /*  472 */ unsigned char VALVE_shader_mixed_float_dot_product;
+        /*  473 */ unsigned char VALVE_video_encode_rgb_conversion;
         };
     };
 
@@ -1728,7 +1729,7 @@ extern GloamVulkanContext gloam_vk_context;
  */
 typedef struct GloamVulkanExtensions {
     union {
-        unsigned char extArray[473];
+        unsigned char extArray[474];
         struct {
         /*    0 */ unsigned char AMDX_dense_geometry_format;
         /*    1 */ unsigned char AMDX_shader_enqueue;
@@ -2151,58 +2152,59 @@ typedef struct GloamVulkanExtensions {
         /*  418 */ unsigned char NV_per_stage_descriptor_set;
         /*  419 */ unsigned char NV_present_barrier;
         /*  420 */ unsigned char NV_present_metering;
-        /*  421 */ unsigned char NV_push_constant_bank;
-        /*  422 */ unsigned char NV_raw_access_chains;
-        /*  423 */ unsigned char NV_ray_tracing;
-        /*  424 */ unsigned char NV_ray_tracing_invocation_reorder;
-        /*  425 */ unsigned char NV_ray_tracing_linear_swept_spheres;
-        /*  426 */ unsigned char NV_ray_tracing_motion_blur;
-        /*  427 */ unsigned char NV_ray_tracing_validation;
-        /*  428 */ unsigned char NV_representative_fragment_test;
-        /*  429 */ unsigned char NV_sample_mask_override_coverage;
-        /*  430 */ unsigned char NV_scissor_exclusive;
-        /*  431 */ unsigned char NV_shader_atomic_float16_vector;
-        /*  432 */ unsigned char NV_shader_image_footprint;
-        /*  433 */ unsigned char NV_shader_sm_builtins;
-        /*  434 */ unsigned char NV_shader_subgroup_partitioned;
-        /*  435 */ unsigned char NV_shading_rate_image;
-        /*  436 */ unsigned char NV_viewport_array2;
-        /*  437 */ unsigned char NV_viewport_swizzle;
-        /*  438 */ unsigned char NV_win32_keyed_mutex;
-        /*  439 */ unsigned char OHOS_external_memory;
-        /*  440 */ unsigned char OHOS_surface;
-        /*  441 */ unsigned char QCOM_cooperative_matrix_conversion;
-        /*  442 */ unsigned char QCOM_data_graph_model;
-        /*  443 */ unsigned char QCOM_elapsed_timer_query;
-        /*  444 */ unsigned char QCOM_filter_cubic_clamp;
-        /*  445 */ unsigned char QCOM_filter_cubic_weights;
-        /*  446 */ unsigned char QCOM_fragment_density_map_offset;
-        /*  447 */ unsigned char QCOM_image_processing;
-        /*  448 */ unsigned char QCOM_image_processing2;
-        /*  449 */ unsigned char QCOM_image_processing3;
-        /*  450 */ unsigned char QCOM_multiview_per_view_render_areas;
-        /*  451 */ unsigned char QCOM_multiview_per_view_viewports;
-        /*  452 */ unsigned char QCOM_queue_perf_hint;
-        /*  453 */ unsigned char QCOM_render_pass_shader_resolve;
-        /*  454 */ unsigned char QCOM_render_pass_store_ops;
-        /*  455 */ unsigned char QCOM_render_pass_transform;
-        /*  456 */ unsigned char QCOM_rotated_copy_commands;
-        /*  457 */ unsigned char QCOM_shader_multiple_wait_queues;
-        /*  458 */ unsigned char QCOM_tile_memory_heap;
-        /*  459 */ unsigned char QCOM_tile_properties;
-        /*  460 */ unsigned char QCOM_tile_shading;
-        /*  461 */ unsigned char QCOM_ycbcr_degamma;
-        /*  462 */ unsigned char QNX_external_memory_screen_buffer;
-        /*  463 */ unsigned char QNX_screen_surface;
-        /*  464 */ unsigned char SEC_amigo_profiling;
-        /*  465 */ unsigned char SEC_pipeline_cache_incremental_mode;
-        /*  466 */ unsigned char SEC_throttle_hint;
-        /*  467 */ unsigned char SEC_ubm_surface;
-        /*  468 */ unsigned char VALVE_descriptor_set_host_mapping;
-        /*  469 */ unsigned char VALVE_fragment_density_map_layered;
-        /*  470 */ unsigned char VALVE_mutable_descriptor_type;
-        /*  471 */ unsigned char VALVE_shader_mixed_float_dot_product;
-        /*  472 */ unsigned char VALVE_video_encode_rgb_conversion;
+        /*  421 */ unsigned char NV_private_data_base_handle;
+        /*  422 */ unsigned char NV_push_constant_bank;
+        /*  423 */ unsigned char NV_raw_access_chains;
+        /*  424 */ unsigned char NV_ray_tracing;
+        /*  425 */ unsigned char NV_ray_tracing_invocation_reorder;
+        /*  426 */ unsigned char NV_ray_tracing_linear_swept_spheres;
+        /*  427 */ unsigned char NV_ray_tracing_motion_blur;
+        /*  428 */ unsigned char NV_ray_tracing_validation;
+        /*  429 */ unsigned char NV_representative_fragment_test;
+        /*  430 */ unsigned char NV_sample_mask_override_coverage;
+        /*  431 */ unsigned char NV_scissor_exclusive;
+        /*  432 */ unsigned char NV_shader_atomic_float16_vector;
+        /*  433 */ unsigned char NV_shader_image_footprint;
+        /*  434 */ unsigned char NV_shader_sm_builtins;
+        /*  435 */ unsigned char NV_shader_subgroup_partitioned;
+        /*  436 */ unsigned char NV_shading_rate_image;
+        /*  437 */ unsigned char NV_viewport_array2;
+        /*  438 */ unsigned char NV_viewport_swizzle;
+        /*  439 */ unsigned char NV_win32_keyed_mutex;
+        /*  440 */ unsigned char OHOS_external_memory;
+        /*  441 */ unsigned char OHOS_surface;
+        /*  442 */ unsigned char QCOM_cooperative_matrix_conversion;
+        /*  443 */ unsigned char QCOM_data_graph_model;
+        /*  444 */ unsigned char QCOM_elapsed_timer_query;
+        /*  445 */ unsigned char QCOM_filter_cubic_clamp;
+        /*  446 */ unsigned char QCOM_filter_cubic_weights;
+        /*  447 */ unsigned char QCOM_fragment_density_map_offset;
+        /*  448 */ unsigned char QCOM_image_processing;
+        /*  449 */ unsigned char QCOM_image_processing2;
+        /*  450 */ unsigned char QCOM_image_processing3;
+        /*  451 */ unsigned char QCOM_multiview_per_view_render_areas;
+        /*  452 */ unsigned char QCOM_multiview_per_view_viewports;
+        /*  453 */ unsigned char QCOM_queue_perf_hint;
+        /*  454 */ unsigned char QCOM_render_pass_shader_resolve;
+        /*  455 */ unsigned char QCOM_render_pass_store_ops;
+        /*  456 */ unsigned char QCOM_render_pass_transform;
+        /*  457 */ unsigned char QCOM_rotated_copy_commands;
+        /*  458 */ unsigned char QCOM_shader_multiple_wait_queues;
+        /*  459 */ unsigned char QCOM_tile_memory_heap;
+        /*  460 */ unsigned char QCOM_tile_properties;
+        /*  461 */ unsigned char QCOM_tile_shading;
+        /*  462 */ unsigned char QCOM_ycbcr_degamma;
+        /*  463 */ unsigned char QNX_external_memory_screen_buffer;
+        /*  464 */ unsigned char QNX_screen_surface;
+        /*  465 */ unsigned char SEC_amigo_profiling;
+        /*  466 */ unsigned char SEC_pipeline_cache_incremental_mode;
+        /*  467 */ unsigned char SEC_throttle_hint;
+        /*  468 */ unsigned char SEC_ubm_surface;
+        /*  469 */ unsigned char VALVE_descriptor_set_host_mapping;
+        /*  470 */ unsigned char VALVE_fragment_density_map_layered;
+        /*  471 */ unsigned char VALVE_mutable_descriptor_type;
+        /*  472 */ unsigned char VALVE_shader_mixed_float_dot_product;
+        /*  473 */ unsigned char VALVE_video_encode_rgb_conversion;
         };
     };
 } GloamVulkanExtensions;
@@ -2688,6 +2690,7 @@ typedef struct GloamVulkanExtensions {
 #define GLOAM_VK_NV_per_stage_descriptor_set (gloam_vk_context.NV_per_stage_descriptor_set)
 #define GLOAM_VK_NV_present_barrier (gloam_vk_context.NV_present_barrier)
 #define GLOAM_VK_NV_present_metering (gloam_vk_context.NV_present_metering)
+#define GLOAM_VK_NV_private_data_base_handle (gloam_vk_context.NV_private_data_base_handle)
 #define GLOAM_VK_NV_push_constant_bank (gloam_vk_context.NV_push_constant_bank)
 #define GLOAM_VK_NV_raw_access_chains (gloam_vk_context.NV_raw_access_chains)
 #define GLOAM_VK_NV_ray_tracing (gloam_vk_context.NV_ray_tracing)
