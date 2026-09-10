@@ -22,7 +22,7 @@
  *
  * Generated from the following upstream sources:
  *
- *   angle/angle (ff48557)
+ *   angle/angle (9fda9a7)
  *     scripts/gl_angle_ext.xml (blob 5953358)
  *   Cyan4973/xxHash (e573d4d)
  *     xxhash.h (blob dceb921)
