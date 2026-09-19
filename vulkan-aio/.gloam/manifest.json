@@ -109,14 +109,14 @@
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
-      "commit": "e103f5f1ed345acc83de15632e04d50e6dbdbfa1",
-      "blob": "4e040bdc47cc92751b05a1266aad6882d696e1c6"
+      "commit": "1798053afaa7ee83ae21adee5649238be8a66197",
+      "blob": "951a187f1c272f4cbe0fee52dc10fb9482aac11b"
     }
   },
   "output": [
     {
       "path": "include/gloam/vk.h",
-      "blob": "412261e80b3682ef7598a84316c8af54b9094266",
+      "blob": "b76c650df1e97e2855776f4167547481b31b7d25",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -240,7 +240,7 @@
     },
     {
       "path": "include/xxhash.h",
-      "blob": "4e040bdc47cc92751b05a1266aad6882d696e1c6",
+      "blob": "951a187f1c272f4cbe0fee52dc10fb9482aac11b",
       "verbatim": true,
       "derived_from": [
         "xxhash.h"
@@ -248,7 +248,7 @@
     },
     {
       "path": "src/vk.c",
-      "blob": "c18a3666f755b63d6298e2f1fd57ab9943dce7e2",
+      "blob": "337d20c51cdbcb7584ebffe31dad0b004c5e2abb",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
