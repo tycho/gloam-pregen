@@ -11,22 +11,22 @@
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/EGL/eglplatform.h",
-      "commit": "3d7796b3721d93976b6bfe536aa97bbc4bce8667",
+      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
       "blob": "6786afd90b685895efa25b302afba68fc8296941"
     },
     "KHR/khrplatform.h": {
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/KHR/khrplatform.h",
-      "commit": "3d7796b3721d93976b6bfe536aa97bbc4bce8667",
+      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
       "blob": "01646449caedc958effc3b450360aefd260671ab"
     },
     "egl.xml": {
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/egl.xml",
-      "commit": "3d7796b3721d93976b6bfe536aa97bbc4bce8667",
-      "blob": "ec184e75dfdb5d5244febe18a8f380cdea60bd03"
+      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
+      "blob": "e937823199839abcc7b0844ee7cd519242ef8396"
     },
     "egl_angle_ext.xml": {
       "repo": "angle/angle",
