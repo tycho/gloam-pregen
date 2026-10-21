@@ -24,8 +24,8 @@
  *
  *   angle/angle (2c5e2a5)
  *     scripts/gl_angle_ext.xml (blob 67eca0d)
- *   Cyan4973/xxHash (1798053)
- *     xxhash.h (blob 951a187)
+ *   Cyan4973/xxHash (ca4675f)
+ *     xxhash.h (blob 41e95fc)
  *   KhronosGroup/EGL-Registry (db3425b)
  *     api/KHR/khrplatform.h (blob 0164644)
  *   KhronosGroup/OpenGL-Registry (1cdd228)
