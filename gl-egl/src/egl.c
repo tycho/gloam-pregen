@@ -24,8 +24,8 @@
  *
  *   angle/angle (2c5e2a5)
  *     scripts/egl_angle_ext.xml (blob e1d9b36)
- *   Cyan4973/xxHash (ca4675f)
- *     xxhash.h (blob 41e95fc)
+ *   Cyan4973/xxHash (d9dfb82)
+ *     xxhash.h (blob e2fd12a)
  *   KhronosGroup/EGL-Registry (db3425b)
  *     api/EGL/eglplatform.h (blob 6786afd)
  *     api/KHR/khrplatform.h (blob 0164644)

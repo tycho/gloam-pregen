@@ -60,8 +60,8 @@
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
-      "commit": "ca4675fff1dbbf54c9094aca3fd32355cb2d0dcd",
-      "blob": "41e95fc12b927eeea3b6b6029f1a6001dcacefa8"
+      "commit": "d9dfb8203cd67c576f1d46965ef5c0e48582196d",
+      "blob": "e2fd12a22c79de2d0fbd714d924d1396e1aa1b63"
     }
   },
   "output": [
@@ -83,7 +83,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "f8e14a98a6b10fe39b4eea4d72491ac53ae66392",
+      "blob": "caa528f882b87e70b75cfff363dfd442294648cb",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -94,7 +94,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "1b423c0a226ec46f7ae49a6ff691d437cde0a377",
+      "blob": "8a1ee70d20368dea9bbc2d94ecdce5fe67a8668e",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -105,7 +105,7 @@
     },
     {
       "path": "include/xxhash.h",
-      "blob": "41e95fc12b927eeea3b6b6029f1a6001dcacefa8",
+      "blob": "e2fd12a22c79de2d0fbd714d924d1396e1aa1b63",
       "verbatim": true,
       "derived_from": [
         "xxhash.h"
@@ -113,7 +113,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "1c13fa53dd9484337aecd98944960296a4d00c25",
+      "blob": "073ee63358f552f33ec615cbadf15b349ee1c156",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -124,7 +124,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "02b50dfda051c07df5c2fb54467c2ede0a16faff",
+      "blob": "b1f02bfebec7ed2e053d407881552b75b0ad2c2e",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
