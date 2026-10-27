@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "gloam": {
-    "version": "0.7.4",
-    "describe": "0.7.4",
+    "version": "0.7.5",
+    "describe": "0.7.5",
     "commit": "",
     "command_line": "gloam --api gl:core,gles2,egl --merge --fetch --out-path gl-egl --quiet c --alias --loader"
   },
@@ -60,8 +60,8 @@
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
-      "commit": "e7bfdc8fe8d37dbeb0dbf8393650180211bf915d",
-      "blob": "f6ddcbb9cac8af260773fa3ec9d6ec4231601fc2"
+      "commit": "5ae18f71dbe46e580da708e742c7bd095aca3782",
+      "blob": "99dc9544d4953538209ec0491a47043f00d51583"
     }
   },
   "output": [
@@ -83,7 +83,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "49e636fb93e3b0841579ff8d736643b0e2531a9e",
+      "blob": "d759a1a1ae1b8bdf57dcdc469fe672598437cfc1",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -94,7 +94,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "8db224514e92b6a6cffcc7d6881fcae4aee62d31",
+      "blob": "faf2f6f616ba1b29eeedb81804093c511f745a57",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -105,7 +105,7 @@
     },
     {
       "path": "include/xxhash.h",
-      "blob": "f6ddcbb9cac8af260773fa3ec9d6ec4231601fc2",
+      "blob": "99dc9544d4953538209ec0491a47043f00d51583",
       "verbatim": true,
       "derived_from": [
         "xxhash.h"
@@ -113,7 +113,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "6475270c7392845fb926ae0e49bdcfc9c9423175",
+      "blob": "ebcb03641df138f7dd7ba6a783a67486ffa287ed",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -124,7 +124,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "d39cf4e31526acd74bea0cd196d56cf8f2454bba",
+      "blob": "fbfbddc29a1b7c1cd5d278aadb1d833ad670ff92",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",

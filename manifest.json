@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "gloam": {
-    "version": "0.7.4",
-    "describe": "0.7.4",
+    "version": "0.7.5",
+    "describe": "0.7.5",
     "commit": "",
     "command_line": "gloam --fetch lock --out manifest.json"
   },
@@ -172,8 +172,8 @@
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
-      "commit": "e7bfdc8fe8d37dbeb0dbf8393650180211bf915d",
-      "blob": "f6ddcbb9cac8af260773fa3ec9d6ec4231601fc2"
+      "commit": "5ae18f71dbe46e580da708e742c7bd095aca3782",
+      "blob": "99dc9544d4953538209ec0491a47043f00d51583"
     }
   },
   "output": []
