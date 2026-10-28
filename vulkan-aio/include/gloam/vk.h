@@ -18,10 +18,10 @@
  *
  * Generated from the following upstream sources:
  *
- *   Cyan4973/xxHash (5ae18f7)
- *     xxhash.h (blob 99dc954)
- *   KhronosGroup/Vulkan-Docs (a8b088a)
- *     xml/vk.xml (blob 6c92759)
+ *   Cyan4973/xxHash (658147a)
+ *     xxhash.h (blob 5aaf793)
+ *   KhronosGroup/Vulkan-Docs (7030459)
+ *     xml/vk.xml (blob 3159798)
  *   KhronosGroup/Vulkan-Headers (b0c3dd6)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob c25080a)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 11f9e7b)
@@ -6541,6 +6541,7 @@ typedef enum VkDriverId {
     VK_DRIVER_ID_APEX = 32 /* Apex Compute */,
     VK_DRIVER_ID_NIKKI = 33 /* nikki Vulkan-on-WebGPU implementation */,
     VK_DRIVER_ID_MOMOTEN = 34 /* momoten Vulkan-on-OpenCL implementation */,
+    VK_DRIVER_ID_AURORA_BOREALIS = 35 /* Aurora Silicon */,
     VK_DRIVER_ID_AMD_PROPRIETARY_KHR = VK_DRIVER_ID_AMD_PROPRIETARY,
     VK_DRIVER_ID_AMD_OPEN_SOURCE_KHR = VK_DRIVER_ID_AMD_OPEN_SOURCE,
     VK_DRIVER_ID_MESA_RADV_KHR = VK_DRIVER_ID_MESA_RADV,
