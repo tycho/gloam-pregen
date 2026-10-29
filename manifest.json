@@ -172,8 +172,8 @@
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
-      "commit": "658147a68334e6b6b959194651f84e2842432d1b",
-      "blob": "5aaf79334c9990156e4f49a47b409e4440efc9f0"
+      "commit": "2ec67caeb18ec15ae60c0853174331089acddfc0",
+      "blob": "744b6cbc4df6b944fce649405fd2755ee5ba7a3a"
     }
   },
   "output": []

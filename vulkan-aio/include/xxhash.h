@@ -787,7 +787,7 @@ XXH_PUBLIC_API XXH_PUREF XXH128_hash_t XXH3_128bits(XXH_NOESCAPE const void* dat
  * @return The calculated 128-bit variant of XXH3 value.
  *
  * @note
- *    seed == 0 produces the same results as @ref XXH3_64bits().
+ *    seed == 0 produces the same results as @ref XXH3_128bits().
  *
  * This variant generates a custom secret on the fly based on default secret
  * altered using the @p seed value.
@@ -1383,7 +1383,7 @@ XXH_PUBLIC_API XXH_PUREF XXH128_hash_t XXH128(XXH_NOESCAPE const void* data, siz
  *    int main(int argc, char* argv[])
  *    {
  *        char secret[XXH3_SECRET_SIZE_MIN];
- *        if (argv != 3) { return 1; }
+ *        if (argc != 3) { return 1; }
  *        XXH3_generateSecret(secret, sizeof(secret), argv[1], strlen(argv[1]));
  *        XXH64_hash_t h = XXH3_64bits_withSecret(
  *             argv[2], strlen(argv[2]),
@@ -1423,7 +1423,7 @@ XXH_PUBLIC_API XXH_errorcode XXH3_generateSecret(XXH_NOESCAPE void* secretBuffer
  *        unsigned char secret[XXH3_SECRET_DEFAULT_SIZE];
  *    public:
  *        HashFast(XXH64_hash_t s) {
- *            XXH3_generateSecret_fromSeed(secret, seed);
+ *            XXH3_generateSecret_fromSeed(secret, s);
  *        }
  *        size_t operator()(const std::string& x) const {
  *            return size_t{
@@ -1450,8 +1450,8 @@ XXH_PUBLIC_API void XXH3_generateSecret_fromSeed(XXH_NOESCAPE void* secretBuffer
  * @param seed       The 64-bit seed to alter the hash result predictably.
  *
  * These variants generate hash values using either:
- * - @p seed for "short" keys (< @ref XXH3_MIDSIZE_MAX = 240 bytes)
- * - @p secret for "large" keys (>= @ref XXH3_MIDSIZE_MAX).
+ * - @p seed for "short" keys (<= @ref XXH3_MIDSIZE_MAX = 240 bytes)
+ * - @p secret for "large" keys (> @ref XXH3_MIDSIZE_MAX).
  *
  * This generally benefits speed, compared to `_withSeed()` or `_withSecret()`.
  * `_withSeed()` has to generate the secret on the fly for "large" keys.
@@ -1488,8 +1488,7 @@ XXH3_64bits_withSecretandSeed(XXH_NOESCAPE const void* data, size_t len,
  * @param secretSize The length of @p secret, in bytes (must be >= XXH3_SECRET_SIZE_MIN)
  * @param seed64     The 64-bit seed to alter the hash result predictably.
  *
- * @return @ref XXH_OK on success.
- * @return @ref XXH_ERROR on failure.
+ * @return The calculated 128-bit XXH3 hash value.
  *
  * @see XXH3_64bits_withSecretandSeed(): contract is the same.
  */
@@ -2928,6 +2927,7 @@ XXH_FORCE_INLINE xxh_u64 XXH3_mix16B(const xxh_u8* XXH_RESTRICT input,
 #define XXH_STRIPE_LEN 64
 #define XXH_SECRET_CONSUME_RATE 8
 #define XXH_ACC_NB (XXH_STRIPE_LEN / sizeof(xxh_u64))
+#define XXH_SECRET_LASTACC_START 7
 
 #ifdef XXH_OLD_NAMES
 #  define STRIPE_LEN XXH_STRIPE_LEN
@@ -3874,6 +3874,96 @@ XXH3_initCustomSecret_rvv(void* XXH_RESTRICT customSecret, xxh_u64 seed64)
         }
     }
 }
+
+XXH_FORCE_INLINE void
+XXH3_hashLong_internal_loop_rvv(xxh_u64* XXH_RESTRICT acc,
+                      const xxh_u8* XXH_RESTRICT input, size_t len,
+                      const xxh_u8* XXH_RESTRICT secret, size_t secretSize)
+{
+    size_t const nbStripesPerBlock = (secretSize - XXH_STRIPE_LEN) / XXH_SECRET_CONSUME_RATE;
+    size_t const block_len = XXH_STRIPE_LEN * nbStripesPerBlock;
+    size_t const nb_blocks = (len - 1) / block_len;
+
+    size_t vl = XXH_RVOP(vsetvl_e64m1)(2);
+    static const uint64_t swap_mask[2] = {1, 0};
+    vuint64m1_t xswap_mask = XXH_RVOP(vle64_v_u64m1)(swap_mask, vl);
+    const xxh_u64* xacc = (const xxh_u64*)acc;
+    size_t n;
+
+    vuint64m1_t r0 = XXH_RVOP(vle64_v_u64m1)(xacc + 0, vl);
+    vuint64m1_t r1 = XXH_RVOP(vle64_v_u64m1)(xacc + 2, vl);
+    vuint64m1_t r2 = XXH_RVOP(vle64_v_u64m1)(xacc + 4, vl);
+    vuint64m1_t r3 = XXH_RVOP(vle64_v_u64m1)(xacc + 6, vl);
+
+#define XXH_RVV_ACC_LANE(R, XI, XS)                                   \
+    {                                                                  \
+        vuint64m1_t d_ = XXH_RVCAST(u8m1_u64m1)(XXH_RVOP(vle8_v_u8m1)((const uint8_t*)(XI), 16)); \
+        vuint64m1_t k_ = XXH_RVCAST(u8m1_u64m1)(XXH_RVOP(vle8_v_u8m1)((const uint8_t*)(XS), 16)); \
+        vuint64m1_t dk_ = XXH_RVOP(vxor_vv_u64m1)(d_, k_, vl);        \
+        vuint64m1_t hi_ = XXH_RVOP(vsrl_vx_u64m1)(dk_, 32, vl);       \
+        vuint64m1_t lo_ = XXH_RVOP(vand_vx_u64m1)(dk_, 0xffffffff, vl); \
+        vuint64m1_t sw_ = XXH_RVOP(vrgather_vv_u64m1)(d_, xswap_mask, vl); \
+        R = XXH_RVOP(vmacc_vv_u64m1)(R, lo_, hi_, vl);                \
+        R = XXH_RVOP(vadd_vv_u64m1)(R, sw_, vl);                       \
+    }
+
+#define XXH_RVV_SCRAMBLE_LANE(R, XS)                                  \
+    {                                                                  \
+        vuint64m1_t k_ = XXH_RVCAST(u8m1_u64m1)(XXH_RVOP(vle8_v_u8m1)((const uint8_t*)(XS), 16)); \
+        vuint64m1_t s_ = XXH_RVOP(vsrl_vx_u64m1)(R, 47, vl);          \
+        R = XXH_RVOP(vxor_vv_u64m1)(R, s_, vl);                        \
+        R = XXH_RVOP(vxor_vv_u64m1)(R, k_, vl);                        \
+        R = XXH_RVOP(vmul_vx_u64m1)(R, XXH_PRIME32_1, vl);             \
+    }
+
+    for (n = 0; n < nb_blocks; n++) {
+        const xxh_u8* xin  = input + n*block_len;
+        size_t s;
+        for (s = 0; s < nbStripesPerBlock; s++) {
+            const xxh_u8* si = xin + s*XXH_STRIPE_LEN;
+            const xxh_u8* sk = secret + s*XXH_SECRET_CONSUME_RATE;
+            XXH_RVV_ACC_LANE(r0, si + 0, sk + 0)
+            XXH_RVV_ACC_LANE(r1, si + 16, sk + 16)
+            XXH_RVV_ACC_LANE(r2, si + 32, sk + 32)
+            XXH_RVV_ACC_LANE(r3, si + 48, sk + 48)
+        }
+        {   const uint8_t* sc = secret + secretSize - XXH_STRIPE_LEN;
+            XXH_RVV_SCRAMBLE_LANE(r0, sc + 0)
+            XXH_RVV_SCRAMBLE_LANE(r1, sc + 16)
+            XXH_RVV_SCRAMBLE_LANE(r2, sc + 32)
+            XXH_RVV_SCRAMBLE_LANE(r3, sc + 48)
+        }
+    }
+
+    {   size_t const nbStripes = ((len - 1) - (block_len * nb_blocks)) / XXH_STRIPE_LEN;
+        const xxh_u8* xin = input + nb_blocks*block_len;
+        size_t s;
+        for (s = 0; s < nbStripes; s++) {
+            const xxh_u8* si = xin + s*XXH_STRIPE_LEN;
+            const xxh_u8* sk = secret + s*XXH_SECRET_CONSUME_RATE;
+            XXH_RVV_ACC_LANE(r0, si + 0, sk + 0)
+            XXH_RVV_ACC_LANE(r1, si + 16, sk + 16)
+            XXH_RVV_ACC_LANE(r2, si + 32, sk + 32)
+            XXH_RVV_ACC_LANE(r3, si + 48, sk + 48)
+        }
+        {   const xxh_u8* si = input + len - XXH_STRIPE_LEN;
+            const xxh_u8* sk = secret + secretSize - XXH_STRIPE_LEN - XXH_SECRET_LASTACC_START;
+            XXH_RVV_ACC_LANE(r0, si + 0, sk + 0)
+            XXH_RVV_ACC_LANE(r1, si + 16, sk + 16)
+            XXH_RVV_ACC_LANE(r2, si + 32, sk + 32)
+            XXH_RVV_ACC_LANE(r3, si + 48, sk + 48)
+        }
+    }
+
+#undef XXH_RVV_SCRAMBLE_LANE
+#undef XXH_RVV_ACC_LANE
+
+    XXH_RVOP(vse64_v_u64m1)(acc + 0, r0, vl);
+    XXH_RVOP(vse64_v_u64m1)(acc + 2, r1, vl);
+    XXH_RVOP(vse64_v_u64m1)(acc + 4, r2, vl);
+    XXH_RVOP(vse64_v_u64m1)(acc + 6, r3, vl);
+}
+#define XXH3_hashLong_internal_loop_simd XXH3_hashLong_internal_loop_rvv
 #endif
 
 #endif
@@ -4076,6 +4166,12 @@ XXH3_hashLong_internal_loop(xxh_u64* XXH_RESTRICT acc,
                       const xxh_u8* XXH_RESTRICT secret, size_t secretSize,
                             XXH3_f_accumulate f_acc,
                             XXH3_f_scrambleAcc f_scramble)
+#ifdef XXH3_hashLong_internal_loop_simd
+{
+    (void)f_acc; (void)f_scramble;
+    XXH3_hashLong_internal_loop_simd(acc, input, len, secret, secretSize);
+}
+#else
 {
     size_t const nbStripesPerBlock = (secretSize - XXH_STRIPE_LEN) / XXH_SECRET_CONSUME_RATE;
     size_t const block_len = XXH_STRIPE_LEN * nbStripesPerBlock;
@@ -4096,10 +4192,10 @@ XXH3_hashLong_internal_loop(xxh_u64* XXH_RESTRICT acc,
         f_acc(acc, input + nb_blocks*block_len, secret, nbStripes);
 
         {   const xxh_u8* const p = input + len - XXH_STRIPE_LEN;
-#define XXH_SECRET_LASTACC_START 7
             XXH3_accumulate_512(acc, p, secret + secretSize - XXH_STRIPE_LEN - XXH_SECRET_LASTACC_START);
     }   }
 }
+#endif
 
 XXH_FORCE_INLINE xxh_u64
 XXH3_mix2Accs(const xxh_u64* XXH_RESTRICT acc, const xxh_u8* XXH_RESTRICT secret)

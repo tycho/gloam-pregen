@@ -18,8 +18,8 @@
  *
  * Generated from the following upstream sources:
  *
- *   Cyan4973/xxHash (658147a)
- *     xxhash.h (blob 5aaf793)
+ *   Cyan4973/xxHash (2ec67ca)
+ *     xxhash.h (blob 744b6cb)
  *   KhronosGroup/Vulkan-Docs (7030459)
  *     xml/vk.xml (blob 3159798)
  *   KhronosGroup/Vulkan-Headers (b0c3dd6)
