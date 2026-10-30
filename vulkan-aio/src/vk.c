@@ -3,7 +3,7 @@
  *
  *   gloam --api vk --fetch --out-path vulkan-aio --quiet c --alias --loader
  *
- * Extensions: all (479 included)
+ * Extensions: all (480 included)
  *
  * Copyright (c) 2026 Steven Noonan
  * SPDX-License-Identifier: MIT
@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (2ec67ca)
  *     xxhash.h (blob 744b6cb)
- *   KhronosGroup/Vulkan-Docs (7030459)
- *     xml/vk.xml (blob 3159798)
+ *   KhronosGroup/Vulkan-Docs (b94f8bd)
+ *     xml/vk.xml (blob 0ecb178)
  *   KhronosGroup/Vulkan-Headers (b0c3dd6)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob c25080a)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 11f9e7b)
@@ -3119,208 +3119,209 @@ static const uint64_t kExtHashes_Vulkan[] = {
     /*  274 */ 0xe3c8335cc1581a67ULL, /* VK_KHR_maintenance1 */
     /*  275 */ 0xfc226b9c5b522a9eULL, /* VK_KHR_maintenance10 */
     /*  276 */ 0x15b904b443d4931bULL, /* VK_KHR_maintenance11 */
-    /*  277 */ 0x8ffe792f51cd1450ULL, /* VK_KHR_maintenance2 */
-    /*  278 */ 0xea219cc76502a8afULL, /* VK_KHR_maintenance3 */
-    /*  279 */ 0xa66e463f036dae4aULL, /* VK_KHR_maintenance4 */
-    /*  280 */ 0xc5e86b535cee6698ULL, /* VK_KHR_maintenance5 */
-    /*  281 */ 0xf60b7de240a15ab4ULL, /* VK_KHR_maintenance6 */
-    /*  282 */ 0x3d59040ce3c13f21ULL, /* VK_KHR_maintenance7 */
-    /*  283 */ 0xb6892d36c521b488ULL, /* VK_KHR_maintenance8 */
-    /*  284 */ 0xbc9d8954b3903237ULL, /* VK_KHR_maintenance9 */
-    /*  285 */ 0x64d252cf56a64addULL, /* VK_KHR_map_memory2 */
-    /*  286 */ 0x5af12378bc6d7169ULL, /* VK_KHR_multiview */
-    /*  287 */ 0x02261b15f9980647ULL, /* VK_KHR_opacity_micromap */
-    /*  288 */ 0x1bb74dfe8d7e0b31ULL, /* VK_KHR_performance_query */
-    /*  289 */ 0x935d834a6c18d3edULL, /* VK_KHR_pipeline_binary */
-    /*  290 */ 0x91248c6b162c4180ULL, /* VK_KHR_pipeline_executable_properties */
-    /*  291 */ 0x039c65d87fb09ca9ULL, /* VK_KHR_pipeline_library */
-    /*  292 */ 0xea6293c5af3cbcc9ULL, /* VK_KHR_pipeline_library_group_handles */
-    /*  293 */ 0x28644eeb112058b6ULL, /* VK_KHR_portability_enumeration */
-    /*  294 */ 0xac06576b97f9486aULL, /* VK_KHR_portability_subset */
-    /*  295 */ 0xe82e301141092b1eULL, /* VK_KHR_present_id */
-    /*  296 */ 0x209717f94a827c5fULL, /* VK_KHR_present_id2 */
-    /*  297 */ 0x9ebcb805ef6af243ULL, /* VK_KHR_present_mode_fifo_latest_ready */
-    /*  298 */ 0x47954f24ddf5185eULL, /* VK_KHR_present_wait */
-    /*  299 */ 0x2822277cba1268a0ULL, /* VK_KHR_present_wait2 */
-    /*  300 */ 0x2123bacd888c07ecULL, /* VK_KHR_push_descriptor */
-    /*  301 */ 0x8bf873804879f2cfULL, /* VK_KHR_ray_query */
-    /*  302 */ 0x9df3df162357e4b0ULL, /* VK_KHR_ray_tracing_maintenance1 */
-    /*  303 */ 0xaef707cb154a81afULL, /* VK_KHR_ray_tracing_pipeline */
-    /*  304 */ 0x697f77ef7ba14203ULL, /* VK_KHR_ray_tracing_position_fetch */
-    /*  305 */ 0x4b17e19fd947a1d3ULL, /* VK_KHR_relaxed_block_layout */
-    /*  306 */ 0xaab0786abb72567aULL, /* VK_KHR_robustness2 */
-    /*  307 */ 0x5d5e936103817cdaULL, /* VK_KHR_sampler_mirror_clamp_to_edge */
-    /*  308 */ 0x22004cfa79ba7177ULL, /* VK_KHR_sampler_ycbcr_conversion */
-    /*  309 */ 0xba2c0ae86fd11630ULL, /* VK_KHR_separate_depth_stencil_layouts */
-    /*  310 */ 0xa39bc9aedf2a1f08ULL, /* VK_KHR_shader_abort */
-    /*  311 */ 0xb16f5fd69d97f3a1ULL, /* VK_KHR_shader_atomic_int64 */
-    /*  312 */ 0xd49205e9c445114aULL, /* VK_KHR_shader_bfloat16 */
-    /*  313 */ 0xeee9708671fa7c77ULL, /* VK_KHR_shader_clock */
-    /*  314 */ 0x13529a7c9e5d154aULL, /* VK_KHR_shader_constant_data */
-    /*  315 */ 0xb35fc4bdb32f3d81ULL, /* VK_KHR_shader_draw_parameters */
-    /*  316 */ 0xab0eda6676f1fd31ULL, /* VK_KHR_shader_expect_assume */
-    /*  317 */ 0x4dad563cb513c7c9ULL, /* VK_KHR_shader_float16_int8 */
-    /*  318 */ 0x548b20a76c855b46ULL, /* VK_KHR_shader_float_controls */
-    /*  319 */ 0xa1150eef92f851e8ULL, /* VK_KHR_shader_float_controls2 */
-    /*  320 */ 0x725086eb3e9d141fULL, /* VK_KHR_shader_fma */
-    /*  321 */ 0x9d14cd5379daf7cbULL, /* VK_KHR_shader_integer_dot_product */
-    /*  322 */ 0x42aefa5598fde4abULL, /* VK_KHR_shader_maximal_reconvergence */
-    /*  323 */ 0xb38332d7467f8474ULL, /* VK_KHR_shader_non_semantic_info */
-    /*  324 */ 0xab3f0af6d5504bf4ULL, /* VK_KHR_shader_quad_control */
-    /*  325 */ 0x1bdfe042874be24fULL, /* VK_KHR_shader_relaxed_extended_instruction */
-    /*  326 */ 0xcda588b0d067d48fULL, /* VK_KHR_shader_subgroup_extended_types */
-    /*  327 */ 0xd0836c7a4d04b579ULL, /* VK_KHR_shader_subgroup_rotate */
-    /*  328 */ 0x64fbf5bc74afe199ULL, /* VK_KHR_shader_subgroup_uniform_control_flow */
-    /*  329 */ 0x6e5fde40560b40a9ULL, /* VK_KHR_shader_terminate_invocation */
-    /*  330 */ 0x9264c3e61ed27e2fULL, /* VK_KHR_shader_untyped_pointers */
-    /*  331 */ 0x7e6871b03dee137bULL, /* VK_KHR_shared_presentable_image */
-    /*  332 */ 0x06c03c1c3db9815dULL, /* VK_KHR_spirv_1_4 */
-    /*  333 */ 0x743f86c26df32ea2ULL, /* VK_KHR_storage_buffer_storage_class */
-    /*  334 */ 0x2c4f009293a35548ULL, /* VK_KHR_surface */
-    /*  335 */ 0x2447a025c1b4d0ffULL, /* VK_KHR_surface_maintenance1 */
-    /*  336 */ 0xa8506d9aef558591ULL, /* VK_KHR_surface_protected_capabilities */
-    /*  337 */ 0x6cefabf4c944ccecULL, /* VK_KHR_swapchain */
-    /*  338 */ 0x8d650abfe09cadb2ULL, /* VK_KHR_swapchain_maintenance1 */
-    /*  339 */ 0x2149e839e759e400ULL, /* VK_KHR_swapchain_mutable_format */
-    /*  340 */ 0xf1cfa2ea69e6ec0eULL, /* VK_KHR_synchronization2 */
-    /*  341 */ 0x61ed378f50459bf2ULL, /* VK_KHR_timeline_semaphore */
-    /*  342 */ 0xfbb615f2cdb7e18fULL, /* VK_KHR_unified_image_layouts */
-    /*  343 */ 0x3334ed809879d360ULL, /* VK_KHR_uniform_buffer_standard_layout */
-    /*  344 */ 0x6146df22dcb09470ULL, /* VK_KHR_variable_pointers */
-    /*  345 */ 0xcfd1e6704e4a4227ULL, /* VK_KHR_vertex_attribute_divisor */
-    /*  346 */ 0x4ccc16568a9a2944ULL, /* VK_KHR_video_decode_av1 */
-    /*  347 */ 0x0093b60d00888052ULL, /* VK_KHR_video_decode_h264 */
-    /*  348 */ 0x4116f6bec0017e79ULL, /* VK_KHR_video_decode_h265 */
-    /*  349 */ 0x363dac5e35a2f1eeULL, /* VK_KHR_video_decode_queue */
-    /*  350 */ 0xc656a5824a51a00eULL, /* VK_KHR_video_decode_vp9 */
-    /*  351 */ 0x35e683e888a7a54cULL, /* VK_KHR_video_encode_av1 */
-    /*  352 */ 0xd7e108316f38b325ULL, /* VK_KHR_video_encode_feedback2 */
-    /*  353 */ 0xa77247c5899dc785ULL, /* VK_KHR_video_encode_h264 */
-    /*  354 */ 0x8b86366e33c748eeULL, /* VK_KHR_video_encode_h265 */
-    /*  355 */ 0x02882dc081b4a9a3ULL, /* VK_KHR_video_encode_intra_refresh */
-    /*  356 */ 0x3f1a8c895b8e8debULL, /* VK_KHR_video_encode_quantization_map */
-    /*  357 */ 0xdda14264a3bda234ULL, /* VK_KHR_video_encode_queue */
-    /*  358 */ 0x9fb8181989e29256ULL, /* VK_KHR_video_maintenance1 */
-    /*  359 */ 0xfd1949eb2a3c752bULL, /* VK_KHR_video_maintenance2 */
-    /*  360 */ 0xc3d1c9b40515a6a4ULL, /* VK_KHR_video_queue */
-    /*  361 */ 0x34899ec7a7b17614ULL, /* VK_KHR_vulkan_memory_model */
-    /*  362 */ 0x906fcab3e0d202a5ULL, /* VK_KHR_wayland_surface */
-    /*  363 */ 0x19d48609837c8701ULL, /* VK_KHR_win32_keyed_mutex */
-    /*  364 */ 0xc93557e7cef43233ULL, /* VK_KHR_win32_surface */
-    /*  365 */ 0x75ee32f09cdd8db9ULL, /* VK_KHR_workgroup_memory_explicit_layout */
-    /*  366 */ 0x32a481baaa637e2cULL, /* VK_KHR_xcb_surface */
-    /*  367 */ 0x863c0e309551346eULL, /* VK_KHR_xlib_surface */
-    /*  368 */ 0x58d24a21f116065bULL, /* VK_KHR_zero_initialize_workgroup_memory */
-    /*  369 */ 0x5615881540a7f6d8ULL, /* VK_LUNARG_direct_driver_loading */
-    /*  370 */ 0x6f8fb9c8b46fc189ULL, /* VK_MESA_image_alignment_control */
-    /*  371 */ 0xc1c930637836bf44ULL, /* VK_MSFT_layered_driver */
-    /*  372 */ 0x489cf2a16640d39eULL, /* VK_MVK_ios_surface */
-    /*  373 */ 0x3274c65edf45286cULL, /* VK_MVK_macos_surface */
-    /*  374 */ 0x53643314731ac57aULL, /* VK_NN_vi_surface */
-    /*  375 */ 0x5bf53745255ccc0eULL, /* VK_NVX_binary_import */
-    /*  376 */ 0x20b59934a97efd1cULL, /* VK_NVX_image_view_handle */
-    /*  377 */ 0x112ee8733e2b22b3ULL, /* VK_NVX_multiview_per_view_attributes */
-    /*  378 */ 0x71fe862eee072b1eULL, /* VK_NV_acquire_winrt_display */
-    /*  379 */ 0x9217a69de789d3feULL, /* VK_NV_clip_space_w_scaling */
-    /*  380 */ 0x5d2cfdaf5ecc308bULL, /* VK_NV_cluster_acceleration_structure */
-    /*  381 */ 0xad1ba91484f69ca3ULL, /* VK_NV_command_buffer_inheritance */
-    /*  382 */ 0x9e21a0bcf274063aULL, /* VK_NV_compute_occupancy_priority */
-    /*  383 */ 0x21d19e30b520bdd6ULL, /* VK_NV_compute_shader_derivatives */
-    /*  384 */ 0x069e842b3b51cefbULL, /* VK_NV_cooperative_matrix */
-    /*  385 */ 0xfecfd80519026209ULL, /* VK_NV_cooperative_matrix2 */
-    /*  386 */ 0x446337509f542c99ULL, /* VK_NV_cooperative_matrix_decode_vector */
-    /*  387 */ 0x9b6d5b7725490586ULL, /* VK_NV_cooperative_vector */
-    /*  388 */ 0xce889f8d6b40e84fULL, /* VK_NV_copy_memory_indirect */
-    /*  389 */ 0xed85b1ac0329a8cdULL, /* VK_NV_corner_sampled_image */
-    /*  390 */ 0x81b617790445f852ULL, /* VK_NV_coverage_reduction_mode */
-    /*  391 */ 0x3644690c3bd14289ULL, /* VK_NV_cuda_kernel_launch */
-    /*  392 */ 0xbb81f8243fcc7db5ULL, /* VK_NV_dedicated_allocation */
-    /*  393 */ 0x00ce18bba106c2adULL, /* VK_NV_dedicated_allocation_image_aliasing */
-    /*  394 */ 0x23bcacd889bea60cULL, /* VK_NV_descriptor_pool_overallocation */
-    /*  395 */ 0xf03dfd81ad17796fULL, /* VK_NV_device_diagnostic_checkpoints */
-    /*  396 */ 0xc8050fbd31afc5b5ULL, /* VK_NV_device_diagnostics_config */
-    /*  397 */ 0xee7bfcd5523cff09ULL, /* VK_NV_device_generated_commands */
-    /*  398 */ 0x2ff0ded4f3f040e9ULL, /* VK_NV_device_generated_commands_compute */
-    /*  399 */ 0xc07b5e2a89ddc607ULL, /* VK_NV_displacement_micromap */
-    /*  400 */ 0x5138c2f68bcb3608ULL, /* VK_NV_display_stereo */
-    /*  401 */ 0xb2344e462fd9ef1bULL, /* VK_NV_extended_sparse_address_space */
-    /*  402 */ 0xd15b433c649fb093ULL, /* VK_NV_external_compute_queue */
-    /*  403 */ 0xab0f59a00375b1ecULL, /* VK_NV_external_memory */
-    /*  404 */ 0x518148eb9166b4b9ULL, /* VK_NV_external_memory_capabilities */
-    /*  405 */ 0x3c96386b301a3cdcULL, /* VK_NV_external_memory_rdma */
-    /*  406 */ 0xcf69c3e7cbd068e4ULL, /* VK_NV_external_memory_win32 */
-    /*  407 */ 0xdf9a65a432a12606ULL, /* VK_NV_fill_rectangle */
-    /*  408 */ 0x9a6fda1e2f4f9096ULL, /* VK_NV_fragment_coverage_to_color */
-    /*  409 */ 0xc294d55a56858fb6ULL, /* VK_NV_fragment_shader_barycentric */
-    /*  410 */ 0x2ece12f465807058ULL, /* VK_NV_fragment_shading_rate_enums */
-    /*  411 */ 0x4caba51b111c61b9ULL, /* VK_NV_framebuffer_mixed_samples */
-    /*  412 */ 0xe0c4918343f3874cULL, /* VK_NV_geometry_shader_passthrough */
-    /*  413 */ 0xd659873b3f6bc024ULL, /* VK_NV_glsl_shader */
-    /*  414 */ 0xe39346d87fc9aa45ULL, /* VK_NV_inherited_viewport_scissor */
-    /*  415 */ 0x52fcc4c2d713dad4ULL, /* VK_NV_linear_color_attachment */
-    /*  416 */ 0xb58daf9c015becf7ULL, /* VK_NV_low_latency */
-    /*  417 */ 0xa9eb852dfd7a1eceULL, /* VK_NV_low_latency2 */
-    /*  418 */ 0x6c878fdbf1e4a7fbULL, /* VK_NV_memory_decompression */
-    /*  419 */ 0x7401a89f84bc926bULL, /* VK_NV_mesh_shader */
-    /*  420 */ 0x929112526891454eULL, /* VK_NV_optical_flow */
-    /*  421 */ 0x6e9d1f60324c4761ULL, /* VK_NV_partitioned_acceleration_structure */
-    /*  422 */ 0x5e0416a20f89c9f4ULL, /* VK_NV_per_stage_descriptor_set */
-    /*  423 */ 0x48102b2d563a8028ULL, /* VK_NV_present_barrier */
-    /*  424 */ 0xe16f6927a8473cabULL, /* VK_NV_present_metering */
-    /*  425 */ 0xbcc230d50e458d67ULL, /* VK_NV_private_data_base_handle */
-    /*  426 */ 0x8a4300fc934ecbe8ULL, /* VK_NV_push_constant_bank */
-    /*  427 */ 0xc20950e0cbc5bdc0ULL, /* VK_NV_raw_access_chains */
-    /*  428 */ 0x3d4e9e0bb54735feULL, /* VK_NV_ray_tracing */
-    /*  429 */ 0xe12f14699c6db9dbULL, /* VK_NV_ray_tracing_invocation_reorder */
-    /*  430 */ 0x4157611d54ac1bc1ULL, /* VK_NV_ray_tracing_linear_swept_spheres */
-    /*  431 */ 0xba4184e5104338cbULL, /* VK_NV_ray_tracing_motion_blur */
-    /*  432 */ 0x451532c42bd881b2ULL, /* VK_NV_ray_tracing_validation */
-    /*  433 */ 0x92ccabdfa0a3d6e4ULL, /* VK_NV_representative_fragment_test */
-    /*  434 */ 0xc4d99252b7b7843fULL, /* VK_NV_sample_mask_override_coverage */
-    /*  435 */ 0xd4d2cda699fc74aeULL, /* VK_NV_scissor_exclusive */
-    /*  436 */ 0xb8974b1af4c34b58ULL, /* VK_NV_shader_atomic_float16_vector */
-    /*  437 */ 0x52f9f98f09f18085ULL, /* VK_NV_shader_image_footprint */
-    /*  438 */ 0xc394473a75e21d7cULL, /* VK_NV_shader_sm_builtins */
-    /*  439 */ 0x5b6c5e76d8a8364eULL, /* VK_NV_shader_subgroup_partitioned */
-    /*  440 */ 0xcac204d487e563d3ULL, /* VK_NV_shading_rate_image */
-    /*  441 */ 0xfc6e35d06ddf634eULL, /* VK_NV_viewport_array2 */
-    /*  442 */ 0x7748ea26eecd7e90ULL, /* VK_NV_viewport_swizzle */
-    /*  443 */ 0x7e4ac6b10102b887ULL, /* VK_NV_win32_keyed_mutex */
-    /*  444 */ 0xc6aa2bfbecbd52c7ULL, /* VK_OHOS_external_memory */
-    /*  445 */ 0xfb89dacebce47785ULL, /* VK_OHOS_surface */
-    /*  446 */ 0x6e25495f0f9c0331ULL, /* VK_QCOM_cooperative_matrix_conversion */
-    /*  447 */ 0x401c0cb6fb4e6f91ULL, /* VK_QCOM_data_graph_model */
-    /*  448 */ 0x9168a220590469fdULL, /* VK_QCOM_elapsed_timer_query */
-    /*  449 */ 0x5c76ad884426c86cULL, /* VK_QCOM_filter_cubic_clamp */
-    /*  450 */ 0xc7386bbfd1b9b423ULL, /* VK_QCOM_filter_cubic_weights */
-    /*  451 */ 0xff445069da66b635ULL, /* VK_QCOM_fragment_density_map_offset */
-    /*  452 */ 0xa6cab4106375cdfaULL, /* VK_QCOM_image_processing */
-    /*  453 */ 0xa4a1ae34c2527a4aULL, /* VK_QCOM_image_processing2 */
-    /*  454 */ 0x07c8dac4f7edd907ULL, /* VK_QCOM_image_processing3 */
-    /*  455 */ 0xbff750af2234e2ceULL, /* VK_QCOM_multiview_per_view_render_areas */
-    /*  456 */ 0x876a51c6df08420aULL, /* VK_QCOM_multiview_per_view_viewports */
-    /*  457 */ 0x3091c81eb1bef9bdULL, /* VK_QCOM_queue_perf_hint */
-    /*  458 */ 0xa3b4fc40f185c799ULL, /* VK_QCOM_render_pass_shader_resolve */
-    /*  459 */ 0x9b5c2a0bc41e00cdULL, /* VK_QCOM_render_pass_store_ops */
-    /*  460 */ 0x8d33cd618c723019ULL, /* VK_QCOM_render_pass_transform */
-    /*  461 */ 0xd5a3f971e2e8b5c9ULL, /* VK_QCOM_rotated_copy_commands */
-    /*  462 */ 0xf1e6039c26b058b9ULL, /* VK_QCOM_shader_multiple_wait_queues */
-    /*  463 */ 0x73244ac23f3ec04aULL, /* VK_QCOM_tile_memory_heap */
-    /*  464 */ 0xc37b456dbdf5565fULL, /* VK_QCOM_tile_properties */
-    /*  465 */ 0x80b039482dfe4631ULL, /* VK_QCOM_tile_shading */
-    /*  466 */ 0x49bfbd9f92e0b029ULL, /* VK_QCOM_ycbcr_degamma */
-    /*  467 */ 0xc2e6f6dcc7614aceULL, /* VK_QNX_external_memory_screen_buffer */
-    /*  468 */ 0x236bd86b3b17cf06ULL, /* VK_QNX_screen_surface */
-    /*  469 */ 0xe6fed416ddebf8d0ULL, /* VK_SEC_amigo_profiling */
-    /*  470 */ 0x8501d958b34af871ULL, /* VK_SEC_pipeline_cache_incremental_mode */
-    /*  471 */ 0xd4a79bb9ef473eebULL, /* VK_SEC_throttle_hint */
-    /*  472 */ 0xf2db0e65fc3b0eafULL, /* VK_SEC_ubm_surface */
-    /*  473 */ 0x93b3ceab4d9d7e46ULL, /* VK_VALVE_buffer_device_address_allocation_alignment */
-    /*  474 */ 0x45542cac22bd41a7ULL, /* VK_VALVE_descriptor_set_host_mapping */
-    /*  475 */ 0x7aab48db428bd31bULL, /* VK_VALVE_fragment_density_map_layered */
-    /*  476 */ 0x38c73d4ab66a4942ULL, /* VK_VALVE_mutable_descriptor_type */
-    /*  477 */ 0x9d00e44ab9b69551ULL, /* VK_VALVE_shader_mixed_float_dot_product */
-    /*  478 */ 0x5674ed8bc838fecbULL  /* VK_VALVE_video_encode_rgb_conversion */
+    /*  277 */ 0x1a3d2bbb226f7b0bULL, /* VK_KHR_maintenance12 */
+    /*  278 */ 0x8ffe792f51cd1450ULL, /* VK_KHR_maintenance2 */
+    /*  279 */ 0xea219cc76502a8afULL, /* VK_KHR_maintenance3 */
+    /*  280 */ 0xa66e463f036dae4aULL, /* VK_KHR_maintenance4 */
+    /*  281 */ 0xc5e86b535cee6698ULL, /* VK_KHR_maintenance5 */
+    /*  282 */ 0xf60b7de240a15ab4ULL, /* VK_KHR_maintenance6 */
+    /*  283 */ 0x3d59040ce3c13f21ULL, /* VK_KHR_maintenance7 */
+    /*  284 */ 0xb6892d36c521b488ULL, /* VK_KHR_maintenance8 */
+    /*  285 */ 0xbc9d8954b3903237ULL, /* VK_KHR_maintenance9 */
+    /*  286 */ 0x64d252cf56a64addULL, /* VK_KHR_map_memory2 */
+    /*  287 */ 0x5af12378bc6d7169ULL, /* VK_KHR_multiview */
+    /*  288 */ 0x02261b15f9980647ULL, /* VK_KHR_opacity_micromap */
+    /*  289 */ 0x1bb74dfe8d7e0b31ULL, /* VK_KHR_performance_query */
+    /*  290 */ 0x935d834a6c18d3edULL, /* VK_KHR_pipeline_binary */
+    /*  291 */ 0x91248c6b162c4180ULL, /* VK_KHR_pipeline_executable_properties */
+    /*  292 */ 0x039c65d87fb09ca9ULL, /* VK_KHR_pipeline_library */
+    /*  293 */ 0xea6293c5af3cbcc9ULL, /* VK_KHR_pipeline_library_group_handles */
+    /*  294 */ 0x28644eeb112058b6ULL, /* VK_KHR_portability_enumeration */
+    /*  295 */ 0xac06576b97f9486aULL, /* VK_KHR_portability_subset */
+    /*  296 */ 0xe82e301141092b1eULL, /* VK_KHR_present_id */
+    /*  297 */ 0x209717f94a827c5fULL, /* VK_KHR_present_id2 */
+    /*  298 */ 0x9ebcb805ef6af243ULL, /* VK_KHR_present_mode_fifo_latest_ready */
+    /*  299 */ 0x47954f24ddf5185eULL, /* VK_KHR_present_wait */
+    /*  300 */ 0x2822277cba1268a0ULL, /* VK_KHR_present_wait2 */
+    /*  301 */ 0x2123bacd888c07ecULL, /* VK_KHR_push_descriptor */
+    /*  302 */ 0x8bf873804879f2cfULL, /* VK_KHR_ray_query */
+    /*  303 */ 0x9df3df162357e4b0ULL, /* VK_KHR_ray_tracing_maintenance1 */
+    /*  304 */ 0xaef707cb154a81afULL, /* VK_KHR_ray_tracing_pipeline */
+    /*  305 */ 0x697f77ef7ba14203ULL, /* VK_KHR_ray_tracing_position_fetch */
+    /*  306 */ 0x4b17e19fd947a1d3ULL, /* VK_KHR_relaxed_block_layout */
+    /*  307 */ 0xaab0786abb72567aULL, /* VK_KHR_robustness2 */
+    /*  308 */ 0x5d5e936103817cdaULL, /* VK_KHR_sampler_mirror_clamp_to_edge */
+    /*  309 */ 0x22004cfa79ba7177ULL, /* VK_KHR_sampler_ycbcr_conversion */
+    /*  310 */ 0xba2c0ae86fd11630ULL, /* VK_KHR_separate_depth_stencil_layouts */
+    /*  311 */ 0xa39bc9aedf2a1f08ULL, /* VK_KHR_shader_abort */
+    /*  312 */ 0xb16f5fd69d97f3a1ULL, /* VK_KHR_shader_atomic_int64 */
+    /*  313 */ 0xd49205e9c445114aULL, /* VK_KHR_shader_bfloat16 */
+    /*  314 */ 0xeee9708671fa7c77ULL, /* VK_KHR_shader_clock */
+    /*  315 */ 0x13529a7c9e5d154aULL, /* VK_KHR_shader_constant_data */
+    /*  316 */ 0xb35fc4bdb32f3d81ULL, /* VK_KHR_shader_draw_parameters */
+    /*  317 */ 0xab0eda6676f1fd31ULL, /* VK_KHR_shader_expect_assume */
+    /*  318 */ 0x4dad563cb513c7c9ULL, /* VK_KHR_shader_float16_int8 */
+    /*  319 */ 0x548b20a76c855b46ULL, /* VK_KHR_shader_float_controls */
+    /*  320 */ 0xa1150eef92f851e8ULL, /* VK_KHR_shader_float_controls2 */
+    /*  321 */ 0x725086eb3e9d141fULL, /* VK_KHR_shader_fma */
+    /*  322 */ 0x9d14cd5379daf7cbULL, /* VK_KHR_shader_integer_dot_product */
+    /*  323 */ 0x42aefa5598fde4abULL, /* VK_KHR_shader_maximal_reconvergence */
+    /*  324 */ 0xb38332d7467f8474ULL, /* VK_KHR_shader_non_semantic_info */
+    /*  325 */ 0xab3f0af6d5504bf4ULL, /* VK_KHR_shader_quad_control */
+    /*  326 */ 0x1bdfe042874be24fULL, /* VK_KHR_shader_relaxed_extended_instruction */
+    /*  327 */ 0xcda588b0d067d48fULL, /* VK_KHR_shader_subgroup_extended_types */
+    /*  328 */ 0xd0836c7a4d04b579ULL, /* VK_KHR_shader_subgroup_rotate */
+    /*  329 */ 0x64fbf5bc74afe199ULL, /* VK_KHR_shader_subgroup_uniform_control_flow */
+    /*  330 */ 0x6e5fde40560b40a9ULL, /* VK_KHR_shader_terminate_invocation */
+    /*  331 */ 0x9264c3e61ed27e2fULL, /* VK_KHR_shader_untyped_pointers */
+    /*  332 */ 0x7e6871b03dee137bULL, /* VK_KHR_shared_presentable_image */
+    /*  333 */ 0x06c03c1c3db9815dULL, /* VK_KHR_spirv_1_4 */
+    /*  334 */ 0x743f86c26df32ea2ULL, /* VK_KHR_storage_buffer_storage_class */
+    /*  335 */ 0x2c4f009293a35548ULL, /* VK_KHR_surface */
+    /*  336 */ 0x2447a025c1b4d0ffULL, /* VK_KHR_surface_maintenance1 */
+    /*  337 */ 0xa8506d9aef558591ULL, /* VK_KHR_surface_protected_capabilities */
+    /*  338 */ 0x6cefabf4c944ccecULL, /* VK_KHR_swapchain */
+    /*  339 */ 0x8d650abfe09cadb2ULL, /* VK_KHR_swapchain_maintenance1 */
+    /*  340 */ 0x2149e839e759e400ULL, /* VK_KHR_swapchain_mutable_format */
+    /*  341 */ 0xf1cfa2ea69e6ec0eULL, /* VK_KHR_synchronization2 */
+    /*  342 */ 0x61ed378f50459bf2ULL, /* VK_KHR_timeline_semaphore */
+    /*  343 */ 0xfbb615f2cdb7e18fULL, /* VK_KHR_unified_image_layouts */
+    /*  344 */ 0x3334ed809879d360ULL, /* VK_KHR_uniform_buffer_standard_layout */
+    /*  345 */ 0x6146df22dcb09470ULL, /* VK_KHR_variable_pointers */
+    /*  346 */ 0xcfd1e6704e4a4227ULL, /* VK_KHR_vertex_attribute_divisor */
+    /*  347 */ 0x4ccc16568a9a2944ULL, /* VK_KHR_video_decode_av1 */
+    /*  348 */ 0x0093b60d00888052ULL, /* VK_KHR_video_decode_h264 */
+    /*  349 */ 0x4116f6bec0017e79ULL, /* VK_KHR_video_decode_h265 */
+    /*  350 */ 0x363dac5e35a2f1eeULL, /* VK_KHR_video_decode_queue */
+    /*  351 */ 0xc656a5824a51a00eULL, /* VK_KHR_video_decode_vp9 */
+    /*  352 */ 0x35e683e888a7a54cULL, /* VK_KHR_video_encode_av1 */
+    /*  353 */ 0xd7e108316f38b325ULL, /* VK_KHR_video_encode_feedback2 */
+    /*  354 */ 0xa77247c5899dc785ULL, /* VK_KHR_video_encode_h264 */
+    /*  355 */ 0x8b86366e33c748eeULL, /* VK_KHR_video_encode_h265 */
+    /*  356 */ 0x02882dc081b4a9a3ULL, /* VK_KHR_video_encode_intra_refresh */
+    /*  357 */ 0x3f1a8c895b8e8debULL, /* VK_KHR_video_encode_quantization_map */
+    /*  358 */ 0xdda14264a3bda234ULL, /* VK_KHR_video_encode_queue */
+    /*  359 */ 0x9fb8181989e29256ULL, /* VK_KHR_video_maintenance1 */
+    /*  360 */ 0xfd1949eb2a3c752bULL, /* VK_KHR_video_maintenance2 */
+    /*  361 */ 0xc3d1c9b40515a6a4ULL, /* VK_KHR_video_queue */
+    /*  362 */ 0x34899ec7a7b17614ULL, /* VK_KHR_vulkan_memory_model */
+    /*  363 */ 0x906fcab3e0d202a5ULL, /* VK_KHR_wayland_surface */
+    /*  364 */ 0x19d48609837c8701ULL, /* VK_KHR_win32_keyed_mutex */
+    /*  365 */ 0xc93557e7cef43233ULL, /* VK_KHR_win32_surface */
+    /*  366 */ 0x75ee32f09cdd8db9ULL, /* VK_KHR_workgroup_memory_explicit_layout */
+    /*  367 */ 0x32a481baaa637e2cULL, /* VK_KHR_xcb_surface */
+    /*  368 */ 0x863c0e309551346eULL, /* VK_KHR_xlib_surface */
+    /*  369 */ 0x58d24a21f116065bULL, /* VK_KHR_zero_initialize_workgroup_memory */
+    /*  370 */ 0x5615881540a7f6d8ULL, /* VK_LUNARG_direct_driver_loading */
+    /*  371 */ 0x6f8fb9c8b46fc189ULL, /* VK_MESA_image_alignment_control */
+    /*  372 */ 0xc1c930637836bf44ULL, /* VK_MSFT_layered_driver */
+    /*  373 */ 0x489cf2a16640d39eULL, /* VK_MVK_ios_surface */
+    /*  374 */ 0x3274c65edf45286cULL, /* VK_MVK_macos_surface */
+    /*  375 */ 0x53643314731ac57aULL, /* VK_NN_vi_surface */
+    /*  376 */ 0x5bf53745255ccc0eULL, /* VK_NVX_binary_import */
+    /*  377 */ 0x20b59934a97efd1cULL, /* VK_NVX_image_view_handle */
+    /*  378 */ 0x112ee8733e2b22b3ULL, /* VK_NVX_multiview_per_view_attributes */
+    /*  379 */ 0x71fe862eee072b1eULL, /* VK_NV_acquire_winrt_display */
+    /*  380 */ 0x9217a69de789d3feULL, /* VK_NV_clip_space_w_scaling */
+    /*  381 */ 0x5d2cfdaf5ecc308bULL, /* VK_NV_cluster_acceleration_structure */
+    /*  382 */ 0xad1ba91484f69ca3ULL, /* VK_NV_command_buffer_inheritance */
+    /*  383 */ 0x9e21a0bcf274063aULL, /* VK_NV_compute_occupancy_priority */
+    /*  384 */ 0x21d19e30b520bdd6ULL, /* VK_NV_compute_shader_derivatives */
+    /*  385 */ 0x069e842b3b51cefbULL, /* VK_NV_cooperative_matrix */
+    /*  386 */ 0xfecfd80519026209ULL, /* VK_NV_cooperative_matrix2 */
+    /*  387 */ 0x446337509f542c99ULL, /* VK_NV_cooperative_matrix_decode_vector */
+    /*  388 */ 0x9b6d5b7725490586ULL, /* VK_NV_cooperative_vector */
+    /*  389 */ 0xce889f8d6b40e84fULL, /* VK_NV_copy_memory_indirect */
+    /*  390 */ 0xed85b1ac0329a8cdULL, /* VK_NV_corner_sampled_image */
+    /*  391 */ 0x81b617790445f852ULL, /* VK_NV_coverage_reduction_mode */
+    /*  392 */ 0x3644690c3bd14289ULL, /* VK_NV_cuda_kernel_launch */
+    /*  393 */ 0xbb81f8243fcc7db5ULL, /* VK_NV_dedicated_allocation */
+    /*  394 */ 0x00ce18bba106c2adULL, /* VK_NV_dedicated_allocation_image_aliasing */
+    /*  395 */ 0x23bcacd889bea60cULL, /* VK_NV_descriptor_pool_overallocation */
+    /*  396 */ 0xf03dfd81ad17796fULL, /* VK_NV_device_diagnostic_checkpoints */
+    /*  397 */ 0xc8050fbd31afc5b5ULL, /* VK_NV_device_diagnostics_config */
+    /*  398 */ 0xee7bfcd5523cff09ULL, /* VK_NV_device_generated_commands */
+    /*  399 */ 0x2ff0ded4f3f040e9ULL, /* VK_NV_device_generated_commands_compute */
+    /*  400 */ 0xc07b5e2a89ddc607ULL, /* VK_NV_displacement_micromap */
+    /*  401 */ 0x5138c2f68bcb3608ULL, /* VK_NV_display_stereo */
+    /*  402 */ 0xb2344e462fd9ef1bULL, /* VK_NV_extended_sparse_address_space */
+    /*  403 */ 0xd15b433c649fb093ULL, /* VK_NV_external_compute_queue */
+    /*  404 */ 0xab0f59a00375b1ecULL, /* VK_NV_external_memory */
+    /*  405 */ 0x518148eb9166b4b9ULL, /* VK_NV_external_memory_capabilities */
+    /*  406 */ 0x3c96386b301a3cdcULL, /* VK_NV_external_memory_rdma */
+    /*  407 */ 0xcf69c3e7cbd068e4ULL, /* VK_NV_external_memory_win32 */
+    /*  408 */ 0xdf9a65a432a12606ULL, /* VK_NV_fill_rectangle */
+    /*  409 */ 0x9a6fda1e2f4f9096ULL, /* VK_NV_fragment_coverage_to_color */
+    /*  410 */ 0xc294d55a56858fb6ULL, /* VK_NV_fragment_shader_barycentric */
+    /*  411 */ 0x2ece12f465807058ULL, /* VK_NV_fragment_shading_rate_enums */
+    /*  412 */ 0x4caba51b111c61b9ULL, /* VK_NV_framebuffer_mixed_samples */
+    /*  413 */ 0xe0c4918343f3874cULL, /* VK_NV_geometry_shader_passthrough */
+    /*  414 */ 0xd659873b3f6bc024ULL, /* VK_NV_glsl_shader */
+    /*  415 */ 0xe39346d87fc9aa45ULL, /* VK_NV_inherited_viewport_scissor */
+    /*  416 */ 0x52fcc4c2d713dad4ULL, /* VK_NV_linear_color_attachment */
+    /*  417 */ 0xb58daf9c015becf7ULL, /* VK_NV_low_latency */
+    /*  418 */ 0xa9eb852dfd7a1eceULL, /* VK_NV_low_latency2 */
+    /*  419 */ 0x6c878fdbf1e4a7fbULL, /* VK_NV_memory_decompression */
+    /*  420 */ 0x7401a89f84bc926bULL, /* VK_NV_mesh_shader */
+    /*  421 */ 0x929112526891454eULL, /* VK_NV_optical_flow */
+    /*  422 */ 0x6e9d1f60324c4761ULL, /* VK_NV_partitioned_acceleration_structure */
+    /*  423 */ 0x5e0416a20f89c9f4ULL, /* VK_NV_per_stage_descriptor_set */
+    /*  424 */ 0x48102b2d563a8028ULL, /* VK_NV_present_barrier */
+    /*  425 */ 0xe16f6927a8473cabULL, /* VK_NV_present_metering */
+    /*  426 */ 0xbcc230d50e458d67ULL, /* VK_NV_private_data_base_handle */
+    /*  427 */ 0x8a4300fc934ecbe8ULL, /* VK_NV_push_constant_bank */
+    /*  428 */ 0xc20950e0cbc5bdc0ULL, /* VK_NV_raw_access_chains */
+    /*  429 */ 0x3d4e9e0bb54735feULL, /* VK_NV_ray_tracing */
+    /*  430 */ 0xe12f14699c6db9dbULL, /* VK_NV_ray_tracing_invocation_reorder */
+    /*  431 */ 0x4157611d54ac1bc1ULL, /* VK_NV_ray_tracing_linear_swept_spheres */
+    /*  432 */ 0xba4184e5104338cbULL, /* VK_NV_ray_tracing_motion_blur */
+    /*  433 */ 0x451532c42bd881b2ULL, /* VK_NV_ray_tracing_validation */
+    /*  434 */ 0x92ccabdfa0a3d6e4ULL, /* VK_NV_representative_fragment_test */
+    /*  435 */ 0xc4d99252b7b7843fULL, /* VK_NV_sample_mask_override_coverage */
+    /*  436 */ 0xd4d2cda699fc74aeULL, /* VK_NV_scissor_exclusive */
+    /*  437 */ 0xb8974b1af4c34b58ULL, /* VK_NV_shader_atomic_float16_vector */
+    /*  438 */ 0x52f9f98f09f18085ULL, /* VK_NV_shader_image_footprint */
+    /*  439 */ 0xc394473a75e21d7cULL, /* VK_NV_shader_sm_builtins */
+    /*  440 */ 0x5b6c5e76d8a8364eULL, /* VK_NV_shader_subgroup_partitioned */
+    /*  441 */ 0xcac204d487e563d3ULL, /* VK_NV_shading_rate_image */
+    /*  442 */ 0xfc6e35d06ddf634eULL, /* VK_NV_viewport_array2 */
+    /*  443 */ 0x7748ea26eecd7e90ULL, /* VK_NV_viewport_swizzle */
+    /*  444 */ 0x7e4ac6b10102b887ULL, /* VK_NV_win32_keyed_mutex */
+    /*  445 */ 0xc6aa2bfbecbd52c7ULL, /* VK_OHOS_external_memory */
+    /*  446 */ 0xfb89dacebce47785ULL, /* VK_OHOS_surface */
+    /*  447 */ 0x6e25495f0f9c0331ULL, /* VK_QCOM_cooperative_matrix_conversion */
+    /*  448 */ 0x401c0cb6fb4e6f91ULL, /* VK_QCOM_data_graph_model */
+    /*  449 */ 0x9168a220590469fdULL, /* VK_QCOM_elapsed_timer_query */
+    /*  450 */ 0x5c76ad884426c86cULL, /* VK_QCOM_filter_cubic_clamp */
+    /*  451 */ 0xc7386bbfd1b9b423ULL, /* VK_QCOM_filter_cubic_weights */
+    /*  452 */ 0xff445069da66b635ULL, /* VK_QCOM_fragment_density_map_offset */
+    /*  453 */ 0xa6cab4106375cdfaULL, /* VK_QCOM_image_processing */
+    /*  454 */ 0xa4a1ae34c2527a4aULL, /* VK_QCOM_image_processing2 */
+    /*  455 */ 0x07c8dac4f7edd907ULL, /* VK_QCOM_image_processing3 */
+    /*  456 */ 0xbff750af2234e2ceULL, /* VK_QCOM_multiview_per_view_render_areas */
+    /*  457 */ 0x876a51c6df08420aULL, /* VK_QCOM_multiview_per_view_viewports */
+    /*  458 */ 0x3091c81eb1bef9bdULL, /* VK_QCOM_queue_perf_hint */
+    /*  459 */ 0xa3b4fc40f185c799ULL, /* VK_QCOM_render_pass_shader_resolve */
+    /*  460 */ 0x9b5c2a0bc41e00cdULL, /* VK_QCOM_render_pass_store_ops */
+    /*  461 */ 0x8d33cd618c723019ULL, /* VK_QCOM_render_pass_transform */
+    /*  462 */ 0xd5a3f971e2e8b5c9ULL, /* VK_QCOM_rotated_copy_commands */
+    /*  463 */ 0xf1e6039c26b058b9ULL, /* VK_QCOM_shader_multiple_wait_queues */
+    /*  464 */ 0x73244ac23f3ec04aULL, /* VK_QCOM_tile_memory_heap */
+    /*  465 */ 0xc37b456dbdf5565fULL, /* VK_QCOM_tile_properties */
+    /*  466 */ 0x80b039482dfe4631ULL, /* VK_QCOM_tile_shading */
+    /*  467 */ 0x49bfbd9f92e0b029ULL, /* VK_QCOM_ycbcr_degamma */
+    /*  468 */ 0xc2e6f6dcc7614aceULL, /* VK_QNX_external_memory_screen_buffer */
+    /*  469 */ 0x236bd86b3b17cf06ULL, /* VK_QNX_screen_surface */
+    /*  470 */ 0xe6fed416ddebf8d0ULL, /* VK_SEC_amigo_profiling */
+    /*  471 */ 0x8501d958b34af871ULL, /* VK_SEC_pipeline_cache_incremental_mode */
+    /*  472 */ 0xd4a79bb9ef473eebULL, /* VK_SEC_throttle_hint */
+    /*  473 */ 0xf2db0e65fc3b0eafULL, /* VK_SEC_ubm_surface */
+    /*  474 */ 0x93b3ceab4d9d7e46ULL, /* VK_VALVE_buffer_device_address_allocation_alignment */
+    /*  475 */ 0x45542cac22bd41a7ULL, /* VK_VALVE_descriptor_set_host_mapping */
+    /*  476 */ 0x7aab48db428bd31bULL, /* VK_VALVE_fragment_density_map_layered */
+    /*  477 */ 0x38c73d4ab66a4942ULL, /* VK_VALVE_mutable_descriptor_type */
+    /*  478 */ 0x9d00e44ab9b69551ULL, /* VK_VALVE_shader_mixed_float_dot_product */
+    /*  479 */ 0x5674ed8bc838fecbULL  /* VK_VALVE_video_encode_rgb_conversion */
 };
 
 /* ---- Feature PFN range table ---------------------------------------------
@@ -3929,208 +3930,209 @@ static const uint16_t kExtIdx_vk[] = {
      274, /* VK_KHR_maintenance1 */
      275, /* VK_KHR_maintenance10 */
      276, /* VK_KHR_maintenance11 */
-     277, /* VK_KHR_maintenance2 */
-     278, /* VK_KHR_maintenance3 */
-     279, /* VK_KHR_maintenance4 */
-     280, /* VK_KHR_maintenance5 */
-     281, /* VK_KHR_maintenance6 */
-     282, /* VK_KHR_maintenance7 */
-     283, /* VK_KHR_maintenance8 */
-     284, /* VK_KHR_maintenance9 */
-     285, /* VK_KHR_map_memory2 */
-     286, /* VK_KHR_multiview */
-     287, /* VK_KHR_opacity_micromap */
-     288, /* VK_KHR_performance_query */
-     289, /* VK_KHR_pipeline_binary */
-     290, /* VK_KHR_pipeline_executable_properties */
-     291, /* VK_KHR_pipeline_library */
-     292, /* VK_KHR_pipeline_library_group_handles */
-     293, /* VK_KHR_portability_enumeration */
-     294, /* VK_KHR_portability_subset */
-     295, /* VK_KHR_present_id */
-     296, /* VK_KHR_present_id2 */
-     297, /* VK_KHR_present_mode_fifo_latest_ready */
-     298, /* VK_KHR_present_wait */
-     299, /* VK_KHR_present_wait2 */
-     300, /* VK_KHR_push_descriptor */
-     301, /* VK_KHR_ray_query */
-     302, /* VK_KHR_ray_tracing_maintenance1 */
-     303, /* VK_KHR_ray_tracing_pipeline */
-     304, /* VK_KHR_ray_tracing_position_fetch */
-     305, /* VK_KHR_relaxed_block_layout */
-     306, /* VK_KHR_robustness2 */
-     307, /* VK_KHR_sampler_mirror_clamp_to_edge */
-     308, /* VK_KHR_sampler_ycbcr_conversion */
-     309, /* VK_KHR_separate_depth_stencil_layouts */
-     310, /* VK_KHR_shader_abort */
-     311, /* VK_KHR_shader_atomic_int64 */
-     312, /* VK_KHR_shader_bfloat16 */
-     313, /* VK_KHR_shader_clock */
-     314, /* VK_KHR_shader_constant_data */
-     315, /* VK_KHR_shader_draw_parameters */
-     316, /* VK_KHR_shader_expect_assume */
-     317, /* VK_KHR_shader_float16_int8 */
-     318, /* VK_KHR_shader_float_controls */
-     319, /* VK_KHR_shader_float_controls2 */
-     320, /* VK_KHR_shader_fma */
-     321, /* VK_KHR_shader_integer_dot_product */
-     322, /* VK_KHR_shader_maximal_reconvergence */
-     323, /* VK_KHR_shader_non_semantic_info */
-     324, /* VK_KHR_shader_quad_control */
-     325, /* VK_KHR_shader_relaxed_extended_instruction */
-     326, /* VK_KHR_shader_subgroup_extended_types */
-     327, /* VK_KHR_shader_subgroup_rotate */
-     328, /* VK_KHR_shader_subgroup_uniform_control_flow */
-     329, /* VK_KHR_shader_terminate_invocation */
-     330, /* VK_KHR_shader_untyped_pointers */
-     331, /* VK_KHR_shared_presentable_image */
-     332, /* VK_KHR_spirv_1_4 */
-     333, /* VK_KHR_storage_buffer_storage_class */
-     334, /* VK_KHR_surface */
-     335, /* VK_KHR_surface_maintenance1 */
-     336, /* VK_KHR_surface_protected_capabilities */
-     337, /* VK_KHR_swapchain */
-     338, /* VK_KHR_swapchain_maintenance1 */
-     339, /* VK_KHR_swapchain_mutable_format */
-     340, /* VK_KHR_synchronization2 */
-     341, /* VK_KHR_timeline_semaphore */
-     342, /* VK_KHR_unified_image_layouts */
-     343, /* VK_KHR_uniform_buffer_standard_layout */
-     344, /* VK_KHR_variable_pointers */
-     345, /* VK_KHR_vertex_attribute_divisor */
-     346, /* VK_KHR_video_decode_av1 */
-     347, /* VK_KHR_video_decode_h264 */
-     348, /* VK_KHR_video_decode_h265 */
-     349, /* VK_KHR_video_decode_queue */
-     350, /* VK_KHR_video_decode_vp9 */
-     351, /* VK_KHR_video_encode_av1 */
-     352, /* VK_KHR_video_encode_feedback2 */
-     353, /* VK_KHR_video_encode_h264 */
-     354, /* VK_KHR_video_encode_h265 */
-     355, /* VK_KHR_video_encode_intra_refresh */
-     356, /* VK_KHR_video_encode_quantization_map */
-     357, /* VK_KHR_video_encode_queue */
-     358, /* VK_KHR_video_maintenance1 */
-     359, /* VK_KHR_video_maintenance2 */
-     360, /* VK_KHR_video_queue */
-     361, /* VK_KHR_vulkan_memory_model */
-     362, /* VK_KHR_wayland_surface */
-     363, /* VK_KHR_win32_keyed_mutex */
-     364, /* VK_KHR_win32_surface */
-     365, /* VK_KHR_workgroup_memory_explicit_layout */
-     366, /* VK_KHR_xcb_surface */
-     367, /* VK_KHR_xlib_surface */
-     368, /* VK_KHR_zero_initialize_workgroup_memory */
-     369, /* VK_LUNARG_direct_driver_loading */
-     370, /* VK_MESA_image_alignment_control */
-     371, /* VK_MSFT_layered_driver */
-     372, /* VK_MVK_ios_surface */
-     373, /* VK_MVK_macos_surface */
-     374, /* VK_NN_vi_surface */
-     375, /* VK_NVX_binary_import */
-     376, /* VK_NVX_image_view_handle */
-     377, /* VK_NVX_multiview_per_view_attributes */
-     378, /* VK_NV_acquire_winrt_display */
-     379, /* VK_NV_clip_space_w_scaling */
-     380, /* VK_NV_cluster_acceleration_structure */
-     381, /* VK_NV_command_buffer_inheritance */
-     382, /* VK_NV_compute_occupancy_priority */
-     383, /* VK_NV_compute_shader_derivatives */
-     384, /* VK_NV_cooperative_matrix */
-     385, /* VK_NV_cooperative_matrix2 */
-     386, /* VK_NV_cooperative_matrix_decode_vector */
-     387, /* VK_NV_cooperative_vector */
-     388, /* VK_NV_copy_memory_indirect */
-     389, /* VK_NV_corner_sampled_image */
-     390, /* VK_NV_coverage_reduction_mode */
-     391, /* VK_NV_cuda_kernel_launch */
-     392, /* VK_NV_dedicated_allocation */
-     393, /* VK_NV_dedicated_allocation_image_aliasing */
-     394, /* VK_NV_descriptor_pool_overallocation */
-     395, /* VK_NV_device_diagnostic_checkpoints */
-     396, /* VK_NV_device_diagnostics_config */
-     397, /* VK_NV_device_generated_commands */
-     398, /* VK_NV_device_generated_commands_compute */
-     399, /* VK_NV_displacement_micromap */
-     400, /* VK_NV_display_stereo */
-     401, /* VK_NV_extended_sparse_address_space */
-     402, /* VK_NV_external_compute_queue */
-     403, /* VK_NV_external_memory */
-     404, /* VK_NV_external_memory_capabilities */
-     405, /* VK_NV_external_memory_rdma */
-     406, /* VK_NV_external_memory_win32 */
-     407, /* VK_NV_fill_rectangle */
-     408, /* VK_NV_fragment_coverage_to_color */
-     409, /* VK_NV_fragment_shader_barycentric */
-     410, /* VK_NV_fragment_shading_rate_enums */
-     411, /* VK_NV_framebuffer_mixed_samples */
-     412, /* VK_NV_geometry_shader_passthrough */
-     413, /* VK_NV_glsl_shader */
-     414, /* VK_NV_inherited_viewport_scissor */
-     415, /* VK_NV_linear_color_attachment */
-     416, /* VK_NV_low_latency */
-     417, /* VK_NV_low_latency2 */
-     418, /* VK_NV_memory_decompression */
-     419, /* VK_NV_mesh_shader */
-     420, /* VK_NV_optical_flow */
-     421, /* VK_NV_partitioned_acceleration_structure */
-     422, /* VK_NV_per_stage_descriptor_set */
-     423, /* VK_NV_present_barrier */
-     424, /* VK_NV_present_metering */
-     425, /* VK_NV_private_data_base_handle */
-     426, /* VK_NV_push_constant_bank */
-     427, /* VK_NV_raw_access_chains */
-     428, /* VK_NV_ray_tracing */
-     429, /* VK_NV_ray_tracing_invocation_reorder */
-     430, /* VK_NV_ray_tracing_linear_swept_spheres */
-     431, /* VK_NV_ray_tracing_motion_blur */
-     432, /* VK_NV_ray_tracing_validation */
-     433, /* VK_NV_representative_fragment_test */
-     434, /* VK_NV_sample_mask_override_coverage */
-     435, /* VK_NV_scissor_exclusive */
-     436, /* VK_NV_shader_atomic_float16_vector */
-     437, /* VK_NV_shader_image_footprint */
-     438, /* VK_NV_shader_sm_builtins */
-     439, /* VK_NV_shader_subgroup_partitioned */
-     440, /* VK_NV_shading_rate_image */
-     441, /* VK_NV_viewport_array2 */
-     442, /* VK_NV_viewport_swizzle */
-     443, /* VK_NV_win32_keyed_mutex */
-     444, /* VK_OHOS_external_memory */
-     445, /* VK_OHOS_surface */
-     446, /* VK_QCOM_cooperative_matrix_conversion */
-     447, /* VK_QCOM_data_graph_model */
-     448, /* VK_QCOM_elapsed_timer_query */
-     449, /* VK_QCOM_filter_cubic_clamp */
-     450, /* VK_QCOM_filter_cubic_weights */
-     451, /* VK_QCOM_fragment_density_map_offset */
-     452, /* VK_QCOM_image_processing */
-     453, /* VK_QCOM_image_processing2 */
-     454, /* VK_QCOM_image_processing3 */
-     455, /* VK_QCOM_multiview_per_view_render_areas */
-     456, /* VK_QCOM_multiview_per_view_viewports */
-     457, /* VK_QCOM_queue_perf_hint */
-     458, /* VK_QCOM_render_pass_shader_resolve */
-     459, /* VK_QCOM_render_pass_store_ops */
-     460, /* VK_QCOM_render_pass_transform */
-     461, /* VK_QCOM_rotated_copy_commands */
-     462, /* VK_QCOM_shader_multiple_wait_queues */
-     463, /* VK_QCOM_tile_memory_heap */
-     464, /* VK_QCOM_tile_properties */
-     465, /* VK_QCOM_tile_shading */
-     466, /* VK_QCOM_ycbcr_degamma */
-     467, /* VK_QNX_external_memory_screen_buffer */
-     468, /* VK_QNX_screen_surface */
-     469, /* VK_SEC_amigo_profiling */
-     470, /* VK_SEC_pipeline_cache_incremental_mode */
-     471, /* VK_SEC_throttle_hint */
-     472, /* VK_SEC_ubm_surface */
-     473, /* VK_VALVE_buffer_device_address_allocation_alignment */
-     474, /* VK_VALVE_descriptor_set_host_mapping */
-     475, /* VK_VALVE_fragment_density_map_layered */
-     476, /* VK_VALVE_mutable_descriptor_type */
-     477, /* VK_VALVE_shader_mixed_float_dot_product */
-     478, /* VK_VALVE_video_encode_rgb_conversion */
+     277, /* VK_KHR_maintenance12 */
+     278, /* VK_KHR_maintenance2 */
+     279, /* VK_KHR_maintenance3 */
+     280, /* VK_KHR_maintenance4 */
+     281, /* VK_KHR_maintenance5 */
+     282, /* VK_KHR_maintenance6 */
+     283, /* VK_KHR_maintenance7 */
+     284, /* VK_KHR_maintenance8 */
+     285, /* VK_KHR_maintenance9 */
+     286, /* VK_KHR_map_memory2 */
+     287, /* VK_KHR_multiview */
+     288, /* VK_KHR_opacity_micromap */
+     289, /* VK_KHR_performance_query */
+     290, /* VK_KHR_pipeline_binary */
+     291, /* VK_KHR_pipeline_executable_properties */
+     292, /* VK_KHR_pipeline_library */
+     293, /* VK_KHR_pipeline_library_group_handles */
+     294, /* VK_KHR_portability_enumeration */
+     295, /* VK_KHR_portability_subset */
+     296, /* VK_KHR_present_id */
+     297, /* VK_KHR_present_id2 */
+     298, /* VK_KHR_present_mode_fifo_latest_ready */
+     299, /* VK_KHR_present_wait */
+     300, /* VK_KHR_present_wait2 */
+     301, /* VK_KHR_push_descriptor */
+     302, /* VK_KHR_ray_query */
+     303, /* VK_KHR_ray_tracing_maintenance1 */
+     304, /* VK_KHR_ray_tracing_pipeline */
+     305, /* VK_KHR_ray_tracing_position_fetch */
+     306, /* VK_KHR_relaxed_block_layout */
+     307, /* VK_KHR_robustness2 */
+     308, /* VK_KHR_sampler_mirror_clamp_to_edge */
+     309, /* VK_KHR_sampler_ycbcr_conversion */
+     310, /* VK_KHR_separate_depth_stencil_layouts */
+     311, /* VK_KHR_shader_abort */
+     312, /* VK_KHR_shader_atomic_int64 */
+     313, /* VK_KHR_shader_bfloat16 */
+     314, /* VK_KHR_shader_clock */
+     315, /* VK_KHR_shader_constant_data */
+     316, /* VK_KHR_shader_draw_parameters */
+     317, /* VK_KHR_shader_expect_assume */
+     318, /* VK_KHR_shader_float16_int8 */
+     319, /* VK_KHR_shader_float_controls */
+     320, /* VK_KHR_shader_float_controls2 */
+     321, /* VK_KHR_shader_fma */
+     322, /* VK_KHR_shader_integer_dot_product */
+     323, /* VK_KHR_shader_maximal_reconvergence */
+     324, /* VK_KHR_shader_non_semantic_info */
+     325, /* VK_KHR_shader_quad_control */
+     326, /* VK_KHR_shader_relaxed_extended_instruction */
+     327, /* VK_KHR_shader_subgroup_extended_types */
+     328, /* VK_KHR_shader_subgroup_rotate */
+     329, /* VK_KHR_shader_subgroup_uniform_control_flow */
+     330, /* VK_KHR_shader_terminate_invocation */
+     331, /* VK_KHR_shader_untyped_pointers */
+     332, /* VK_KHR_shared_presentable_image */
+     333, /* VK_KHR_spirv_1_4 */
+     334, /* VK_KHR_storage_buffer_storage_class */
+     335, /* VK_KHR_surface */
+     336, /* VK_KHR_surface_maintenance1 */
+     337, /* VK_KHR_surface_protected_capabilities */
+     338, /* VK_KHR_swapchain */
+     339, /* VK_KHR_swapchain_maintenance1 */
+     340, /* VK_KHR_swapchain_mutable_format */
+     341, /* VK_KHR_synchronization2 */
+     342, /* VK_KHR_timeline_semaphore */
+     343, /* VK_KHR_unified_image_layouts */
+     344, /* VK_KHR_uniform_buffer_standard_layout */
+     345, /* VK_KHR_variable_pointers */
+     346, /* VK_KHR_vertex_attribute_divisor */
+     347, /* VK_KHR_video_decode_av1 */
+     348, /* VK_KHR_video_decode_h264 */
+     349, /* VK_KHR_video_decode_h265 */
+     350, /* VK_KHR_video_decode_queue */
+     351, /* VK_KHR_video_decode_vp9 */
+     352, /* VK_KHR_video_encode_av1 */
+     353, /* VK_KHR_video_encode_feedback2 */
+     354, /* VK_KHR_video_encode_h264 */
+     355, /* VK_KHR_video_encode_h265 */
+     356, /* VK_KHR_video_encode_intra_refresh */
+     357, /* VK_KHR_video_encode_quantization_map */
+     358, /* VK_KHR_video_encode_queue */
+     359, /* VK_KHR_video_maintenance1 */
+     360, /* VK_KHR_video_maintenance2 */
+     361, /* VK_KHR_video_queue */
+     362, /* VK_KHR_vulkan_memory_model */
+     363, /* VK_KHR_wayland_surface */
+     364, /* VK_KHR_win32_keyed_mutex */
+     365, /* VK_KHR_win32_surface */
+     366, /* VK_KHR_workgroup_memory_explicit_layout */
+     367, /* VK_KHR_xcb_surface */
+     368, /* VK_KHR_xlib_surface */
+     369, /* VK_KHR_zero_initialize_workgroup_memory */
+     370, /* VK_LUNARG_direct_driver_loading */
+     371, /* VK_MESA_image_alignment_control */
+     372, /* VK_MSFT_layered_driver */
+     373, /* VK_MVK_ios_surface */
+     374, /* VK_MVK_macos_surface */
+     375, /* VK_NN_vi_surface */
+     376, /* VK_NVX_binary_import */
+     377, /* VK_NVX_image_view_handle */
+     378, /* VK_NVX_multiview_per_view_attributes */
+     379, /* VK_NV_acquire_winrt_display */
+     380, /* VK_NV_clip_space_w_scaling */
+     381, /* VK_NV_cluster_acceleration_structure */
+     382, /* VK_NV_command_buffer_inheritance */
+     383, /* VK_NV_compute_occupancy_priority */
+     384, /* VK_NV_compute_shader_derivatives */
+     385, /* VK_NV_cooperative_matrix */
+     386, /* VK_NV_cooperative_matrix2 */
+     387, /* VK_NV_cooperative_matrix_decode_vector */
+     388, /* VK_NV_cooperative_vector */
+     389, /* VK_NV_copy_memory_indirect */
+     390, /* VK_NV_corner_sampled_image */
+     391, /* VK_NV_coverage_reduction_mode */
+     392, /* VK_NV_cuda_kernel_launch */
+     393, /* VK_NV_dedicated_allocation */
+     394, /* VK_NV_dedicated_allocation_image_aliasing */
+     395, /* VK_NV_descriptor_pool_overallocation */
+     396, /* VK_NV_device_diagnostic_checkpoints */
+     397, /* VK_NV_device_diagnostics_config */
+     398, /* VK_NV_device_generated_commands */
+     399, /* VK_NV_device_generated_commands_compute */
+     400, /* VK_NV_displacement_micromap */
+     401, /* VK_NV_display_stereo */
+     402, /* VK_NV_extended_sparse_address_space */
+     403, /* VK_NV_external_compute_queue */
+     404, /* VK_NV_external_memory */
+     405, /* VK_NV_external_memory_capabilities */
+     406, /* VK_NV_external_memory_rdma */
+     407, /* VK_NV_external_memory_win32 */
+     408, /* VK_NV_fill_rectangle */
+     409, /* VK_NV_fragment_coverage_to_color */
+     410, /* VK_NV_fragment_shader_barycentric */
+     411, /* VK_NV_fragment_shading_rate_enums */
+     412, /* VK_NV_framebuffer_mixed_samples */
+     413, /* VK_NV_geometry_shader_passthrough */
+     414, /* VK_NV_glsl_shader */
+     415, /* VK_NV_inherited_viewport_scissor */
+     416, /* VK_NV_linear_color_attachment */
+     417, /* VK_NV_low_latency */
+     418, /* VK_NV_low_latency2 */
+     419, /* VK_NV_memory_decompression */
+     420, /* VK_NV_mesh_shader */
+     421, /* VK_NV_optical_flow */
+     422, /* VK_NV_partitioned_acceleration_structure */
+     423, /* VK_NV_per_stage_descriptor_set */
+     424, /* VK_NV_present_barrier */
+     425, /* VK_NV_present_metering */
+     426, /* VK_NV_private_data_base_handle */
+     427, /* VK_NV_push_constant_bank */
+     428, /* VK_NV_raw_access_chains */
+     429, /* VK_NV_ray_tracing */
+     430, /* VK_NV_ray_tracing_invocation_reorder */
+     431, /* VK_NV_ray_tracing_linear_swept_spheres */
+     432, /* VK_NV_ray_tracing_motion_blur */
+     433, /* VK_NV_ray_tracing_validation */
+     434, /* VK_NV_representative_fragment_test */
+     435, /* VK_NV_sample_mask_override_coverage */
+     436, /* VK_NV_scissor_exclusive */
+     437, /* VK_NV_shader_atomic_float16_vector */
+     438, /* VK_NV_shader_image_footprint */
+     439, /* VK_NV_shader_sm_builtins */
+     440, /* VK_NV_shader_subgroup_partitioned */
+     441, /* VK_NV_shading_rate_image */
+     442, /* VK_NV_viewport_array2 */
+     443, /* VK_NV_viewport_swizzle */
+     444, /* VK_NV_win32_keyed_mutex */
+     445, /* VK_OHOS_external_memory */
+     446, /* VK_OHOS_surface */
+     447, /* VK_QCOM_cooperative_matrix_conversion */
+     448, /* VK_QCOM_data_graph_model */
+     449, /* VK_QCOM_elapsed_timer_query */
+     450, /* VK_QCOM_filter_cubic_clamp */
+     451, /* VK_QCOM_filter_cubic_weights */
+     452, /* VK_QCOM_fragment_density_map_offset */
+     453, /* VK_QCOM_image_processing */
+     454, /* VK_QCOM_image_processing2 */
+     455, /* VK_QCOM_image_processing3 */
+     456, /* VK_QCOM_multiview_per_view_render_areas */
+     457, /* VK_QCOM_multiview_per_view_viewports */
+     458, /* VK_QCOM_queue_perf_hint */
+     459, /* VK_QCOM_render_pass_shader_resolve */
+     460, /* VK_QCOM_render_pass_store_ops */
+     461, /* VK_QCOM_render_pass_transform */
+     462, /* VK_QCOM_rotated_copy_commands */
+     463, /* VK_QCOM_shader_multiple_wait_queues */
+     464, /* VK_QCOM_tile_memory_heap */
+     465, /* VK_QCOM_tile_properties */
+     466, /* VK_QCOM_tile_shading */
+     467, /* VK_QCOM_ycbcr_degamma */
+     468, /* VK_QNX_external_memory_screen_buffer */
+     469, /* VK_QNX_screen_surface */
+     470, /* VK_SEC_amigo_profiling */
+     471, /* VK_SEC_pipeline_cache_incremental_mode */
+     472, /* VK_SEC_throttle_hint */
+     473, /* VK_SEC_ubm_surface */
+     474, /* VK_VALVE_buffer_device_address_allocation_alignment */
+     475, /* VK_VALVE_descriptor_set_host_mapping */
+     476, /* VK_VALVE_fragment_density_map_layered */
+     477, /* VK_VALVE_mutable_descriptor_type */
+     478, /* VK_VALVE_shader_mixed_float_dot_product */
+     479, /* VK_VALVE_video_encode_rgb_conversion */
 };
 
 /* Scope-partitioned views of the extension set. Instance-scope extensions
@@ -4166,23 +4168,23 @@ static const uint16_t kExtIdxInstance_vk[] = {
      262, /* VK_KHR_get_display_properties2 */
      264, /* VK_KHR_get_physical_device_properties2 */
      265, /* VK_KHR_get_surface_capabilities2 */
-     293, /* VK_KHR_portability_enumeration */
-     334, /* VK_KHR_surface */
-     335, /* VK_KHR_surface_maintenance1 */
-     336, /* VK_KHR_surface_protected_capabilities */
-     362, /* VK_KHR_wayland_surface */
-     364, /* VK_KHR_win32_surface */
-     366, /* VK_KHR_xcb_surface */
-     367, /* VK_KHR_xlib_surface */
-     369, /* VK_LUNARG_direct_driver_loading */
-     372, /* VK_MVK_ios_surface */
-     373, /* VK_MVK_macos_surface */
-     374, /* VK_NN_vi_surface */
-     400, /* VK_NV_display_stereo */
-     404, /* VK_NV_external_memory_capabilities */
-     445, /* VK_OHOS_surface */
-     468, /* VK_QNX_screen_surface */
-     472, /* VK_SEC_ubm_surface */
+     294, /* VK_KHR_portability_enumeration */
+     335, /* VK_KHR_surface */
+     336, /* VK_KHR_surface_maintenance1 */
+     337, /* VK_KHR_surface_protected_capabilities */
+     363, /* VK_KHR_wayland_surface */
+     365, /* VK_KHR_win32_surface */
+     367, /* VK_KHR_xcb_surface */
+     368, /* VK_KHR_xlib_surface */
+     370, /* VK_LUNARG_direct_driver_loading */
+     373, /* VK_MVK_ios_surface */
+     374, /* VK_MVK_macos_surface */
+     375, /* VK_NN_vi_surface */
+     401, /* VK_NV_display_stereo */
+     405, /* VK_NV_external_memory_capabilities */
+     446, /* VK_OHOS_surface */
+     469, /* VK_QNX_screen_surface */
+     473, /* VK_SEC_ubm_surface */
 };
 static const uint16_t kExtIdxDevice_vk[] = {
        0, /* VK_AMDX_dense_geometry_format */
@@ -4436,221 +4438,222 @@ static const uint16_t kExtIdxDevice_vk[] = {
      274, /* VK_KHR_maintenance1 */
      275, /* VK_KHR_maintenance10 */
      276, /* VK_KHR_maintenance11 */
-     277, /* VK_KHR_maintenance2 */
-     278, /* VK_KHR_maintenance3 */
-     279, /* VK_KHR_maintenance4 */
-     280, /* VK_KHR_maintenance5 */
-     281, /* VK_KHR_maintenance6 */
-     282, /* VK_KHR_maintenance7 */
-     283, /* VK_KHR_maintenance8 */
-     284, /* VK_KHR_maintenance9 */
-     285, /* VK_KHR_map_memory2 */
-     286, /* VK_KHR_multiview */
-     287, /* VK_KHR_opacity_micromap */
-     288, /* VK_KHR_performance_query */
-     289, /* VK_KHR_pipeline_binary */
-     290, /* VK_KHR_pipeline_executable_properties */
-     291, /* VK_KHR_pipeline_library */
-     292, /* VK_KHR_pipeline_library_group_handles */
-     294, /* VK_KHR_portability_subset */
-     295, /* VK_KHR_present_id */
-     296, /* VK_KHR_present_id2 */
-     297, /* VK_KHR_present_mode_fifo_latest_ready */
-     298, /* VK_KHR_present_wait */
-     299, /* VK_KHR_present_wait2 */
-     300, /* VK_KHR_push_descriptor */
-     301, /* VK_KHR_ray_query */
-     302, /* VK_KHR_ray_tracing_maintenance1 */
-     303, /* VK_KHR_ray_tracing_pipeline */
-     304, /* VK_KHR_ray_tracing_position_fetch */
-     305, /* VK_KHR_relaxed_block_layout */
-     306, /* VK_KHR_robustness2 */
-     307, /* VK_KHR_sampler_mirror_clamp_to_edge */
-     308, /* VK_KHR_sampler_ycbcr_conversion */
-     309, /* VK_KHR_separate_depth_stencil_layouts */
-     310, /* VK_KHR_shader_abort */
-     311, /* VK_KHR_shader_atomic_int64 */
-     312, /* VK_KHR_shader_bfloat16 */
-     313, /* VK_KHR_shader_clock */
-     314, /* VK_KHR_shader_constant_data */
-     315, /* VK_KHR_shader_draw_parameters */
-     316, /* VK_KHR_shader_expect_assume */
-     317, /* VK_KHR_shader_float16_int8 */
-     318, /* VK_KHR_shader_float_controls */
-     319, /* VK_KHR_shader_float_controls2 */
-     320, /* VK_KHR_shader_fma */
-     321, /* VK_KHR_shader_integer_dot_product */
-     322, /* VK_KHR_shader_maximal_reconvergence */
-     323, /* VK_KHR_shader_non_semantic_info */
-     324, /* VK_KHR_shader_quad_control */
-     325, /* VK_KHR_shader_relaxed_extended_instruction */
-     326, /* VK_KHR_shader_subgroup_extended_types */
-     327, /* VK_KHR_shader_subgroup_rotate */
-     328, /* VK_KHR_shader_subgroup_uniform_control_flow */
-     329, /* VK_KHR_shader_terminate_invocation */
-     330, /* VK_KHR_shader_untyped_pointers */
-     331, /* VK_KHR_shared_presentable_image */
-     332, /* VK_KHR_spirv_1_4 */
-     333, /* VK_KHR_storage_buffer_storage_class */
-     337, /* VK_KHR_swapchain */
-     338, /* VK_KHR_swapchain_maintenance1 */
-     339, /* VK_KHR_swapchain_mutable_format */
-     340, /* VK_KHR_synchronization2 */
-     341, /* VK_KHR_timeline_semaphore */
-     342, /* VK_KHR_unified_image_layouts */
-     343, /* VK_KHR_uniform_buffer_standard_layout */
-     344, /* VK_KHR_variable_pointers */
-     345, /* VK_KHR_vertex_attribute_divisor */
-     346, /* VK_KHR_video_decode_av1 */
-     347, /* VK_KHR_video_decode_h264 */
-     348, /* VK_KHR_video_decode_h265 */
-     349, /* VK_KHR_video_decode_queue */
-     350, /* VK_KHR_video_decode_vp9 */
-     351, /* VK_KHR_video_encode_av1 */
-     352, /* VK_KHR_video_encode_feedback2 */
-     353, /* VK_KHR_video_encode_h264 */
-     354, /* VK_KHR_video_encode_h265 */
-     355, /* VK_KHR_video_encode_intra_refresh */
-     356, /* VK_KHR_video_encode_quantization_map */
-     357, /* VK_KHR_video_encode_queue */
-     358, /* VK_KHR_video_maintenance1 */
-     359, /* VK_KHR_video_maintenance2 */
-     360, /* VK_KHR_video_queue */
-     361, /* VK_KHR_vulkan_memory_model */
-     363, /* VK_KHR_win32_keyed_mutex */
-     365, /* VK_KHR_workgroup_memory_explicit_layout */
-     368, /* VK_KHR_zero_initialize_workgroup_memory */
-     370, /* VK_MESA_image_alignment_control */
-     371, /* VK_MSFT_layered_driver */
-     375, /* VK_NVX_binary_import */
-     376, /* VK_NVX_image_view_handle */
-     377, /* VK_NVX_multiview_per_view_attributes */
-     378, /* VK_NV_acquire_winrt_display */
-     379, /* VK_NV_clip_space_w_scaling */
-     380, /* VK_NV_cluster_acceleration_structure */
-     381, /* VK_NV_command_buffer_inheritance */
-     382, /* VK_NV_compute_occupancy_priority */
-     383, /* VK_NV_compute_shader_derivatives */
-     384, /* VK_NV_cooperative_matrix */
-     385, /* VK_NV_cooperative_matrix2 */
-     386, /* VK_NV_cooperative_matrix_decode_vector */
-     387, /* VK_NV_cooperative_vector */
-     388, /* VK_NV_copy_memory_indirect */
-     389, /* VK_NV_corner_sampled_image */
-     390, /* VK_NV_coverage_reduction_mode */
-     391, /* VK_NV_cuda_kernel_launch */
-     392, /* VK_NV_dedicated_allocation */
-     393, /* VK_NV_dedicated_allocation_image_aliasing */
-     394, /* VK_NV_descriptor_pool_overallocation */
-     395, /* VK_NV_device_diagnostic_checkpoints */
-     396, /* VK_NV_device_diagnostics_config */
-     397, /* VK_NV_device_generated_commands */
-     398, /* VK_NV_device_generated_commands_compute */
-     399, /* VK_NV_displacement_micromap */
-     401, /* VK_NV_extended_sparse_address_space */
-     402, /* VK_NV_external_compute_queue */
-     403, /* VK_NV_external_memory */
-     405, /* VK_NV_external_memory_rdma */
-     406, /* VK_NV_external_memory_win32 */
-     407, /* VK_NV_fill_rectangle */
-     408, /* VK_NV_fragment_coverage_to_color */
-     409, /* VK_NV_fragment_shader_barycentric */
-     410, /* VK_NV_fragment_shading_rate_enums */
-     411, /* VK_NV_framebuffer_mixed_samples */
-     412, /* VK_NV_geometry_shader_passthrough */
-     413, /* VK_NV_glsl_shader */
-     414, /* VK_NV_inherited_viewport_scissor */
-     415, /* VK_NV_linear_color_attachment */
-     416, /* VK_NV_low_latency */
-     417, /* VK_NV_low_latency2 */
-     418, /* VK_NV_memory_decompression */
-     419, /* VK_NV_mesh_shader */
-     420, /* VK_NV_optical_flow */
-     421, /* VK_NV_partitioned_acceleration_structure */
-     422, /* VK_NV_per_stage_descriptor_set */
-     423, /* VK_NV_present_barrier */
-     424, /* VK_NV_present_metering */
-     425, /* VK_NV_private_data_base_handle */
-     426, /* VK_NV_push_constant_bank */
-     427, /* VK_NV_raw_access_chains */
-     428, /* VK_NV_ray_tracing */
-     429, /* VK_NV_ray_tracing_invocation_reorder */
-     430, /* VK_NV_ray_tracing_linear_swept_spheres */
-     431, /* VK_NV_ray_tracing_motion_blur */
-     432, /* VK_NV_ray_tracing_validation */
-     433, /* VK_NV_representative_fragment_test */
-     434, /* VK_NV_sample_mask_override_coverage */
-     435, /* VK_NV_scissor_exclusive */
-     436, /* VK_NV_shader_atomic_float16_vector */
-     437, /* VK_NV_shader_image_footprint */
-     438, /* VK_NV_shader_sm_builtins */
-     439, /* VK_NV_shader_subgroup_partitioned */
-     440, /* VK_NV_shading_rate_image */
-     441, /* VK_NV_viewport_array2 */
-     442, /* VK_NV_viewport_swizzle */
-     443, /* VK_NV_win32_keyed_mutex */
-     444, /* VK_OHOS_external_memory */
-     446, /* VK_QCOM_cooperative_matrix_conversion */
-     447, /* VK_QCOM_data_graph_model */
-     448, /* VK_QCOM_elapsed_timer_query */
-     449, /* VK_QCOM_filter_cubic_clamp */
-     450, /* VK_QCOM_filter_cubic_weights */
-     451, /* VK_QCOM_fragment_density_map_offset */
-     452, /* VK_QCOM_image_processing */
-     453, /* VK_QCOM_image_processing2 */
-     454, /* VK_QCOM_image_processing3 */
-     455, /* VK_QCOM_multiview_per_view_render_areas */
-     456, /* VK_QCOM_multiview_per_view_viewports */
-     457, /* VK_QCOM_queue_perf_hint */
-     458, /* VK_QCOM_render_pass_shader_resolve */
-     459, /* VK_QCOM_render_pass_store_ops */
-     460, /* VK_QCOM_render_pass_transform */
-     461, /* VK_QCOM_rotated_copy_commands */
-     462, /* VK_QCOM_shader_multiple_wait_queues */
-     463, /* VK_QCOM_tile_memory_heap */
-     464, /* VK_QCOM_tile_properties */
-     465, /* VK_QCOM_tile_shading */
-     466, /* VK_QCOM_ycbcr_degamma */
-     467, /* VK_QNX_external_memory_screen_buffer */
-     469, /* VK_SEC_amigo_profiling */
-     470, /* VK_SEC_pipeline_cache_incremental_mode */
-     471, /* VK_SEC_throttle_hint */
-     473, /* VK_VALVE_buffer_device_address_allocation_alignment */
-     474, /* VK_VALVE_descriptor_set_host_mapping */
-     475, /* VK_VALVE_fragment_density_map_layered */
-     476, /* VK_VALVE_mutable_descriptor_type */
-     477, /* VK_VALVE_shader_mixed_float_dot_product */
-     478, /* VK_VALVE_video_encode_rgb_conversion */
+     277, /* VK_KHR_maintenance12 */
+     278, /* VK_KHR_maintenance2 */
+     279, /* VK_KHR_maintenance3 */
+     280, /* VK_KHR_maintenance4 */
+     281, /* VK_KHR_maintenance5 */
+     282, /* VK_KHR_maintenance6 */
+     283, /* VK_KHR_maintenance7 */
+     284, /* VK_KHR_maintenance8 */
+     285, /* VK_KHR_maintenance9 */
+     286, /* VK_KHR_map_memory2 */
+     287, /* VK_KHR_multiview */
+     288, /* VK_KHR_opacity_micromap */
+     289, /* VK_KHR_performance_query */
+     290, /* VK_KHR_pipeline_binary */
+     291, /* VK_KHR_pipeline_executable_properties */
+     292, /* VK_KHR_pipeline_library */
+     293, /* VK_KHR_pipeline_library_group_handles */
+     295, /* VK_KHR_portability_subset */
+     296, /* VK_KHR_present_id */
+     297, /* VK_KHR_present_id2 */
+     298, /* VK_KHR_present_mode_fifo_latest_ready */
+     299, /* VK_KHR_present_wait */
+     300, /* VK_KHR_present_wait2 */
+     301, /* VK_KHR_push_descriptor */
+     302, /* VK_KHR_ray_query */
+     303, /* VK_KHR_ray_tracing_maintenance1 */
+     304, /* VK_KHR_ray_tracing_pipeline */
+     305, /* VK_KHR_ray_tracing_position_fetch */
+     306, /* VK_KHR_relaxed_block_layout */
+     307, /* VK_KHR_robustness2 */
+     308, /* VK_KHR_sampler_mirror_clamp_to_edge */
+     309, /* VK_KHR_sampler_ycbcr_conversion */
+     310, /* VK_KHR_separate_depth_stencil_layouts */
+     311, /* VK_KHR_shader_abort */
+     312, /* VK_KHR_shader_atomic_int64 */
+     313, /* VK_KHR_shader_bfloat16 */
+     314, /* VK_KHR_shader_clock */
+     315, /* VK_KHR_shader_constant_data */
+     316, /* VK_KHR_shader_draw_parameters */
+     317, /* VK_KHR_shader_expect_assume */
+     318, /* VK_KHR_shader_float16_int8 */
+     319, /* VK_KHR_shader_float_controls */
+     320, /* VK_KHR_shader_float_controls2 */
+     321, /* VK_KHR_shader_fma */
+     322, /* VK_KHR_shader_integer_dot_product */
+     323, /* VK_KHR_shader_maximal_reconvergence */
+     324, /* VK_KHR_shader_non_semantic_info */
+     325, /* VK_KHR_shader_quad_control */
+     326, /* VK_KHR_shader_relaxed_extended_instruction */
+     327, /* VK_KHR_shader_subgroup_extended_types */
+     328, /* VK_KHR_shader_subgroup_rotate */
+     329, /* VK_KHR_shader_subgroup_uniform_control_flow */
+     330, /* VK_KHR_shader_terminate_invocation */
+     331, /* VK_KHR_shader_untyped_pointers */
+     332, /* VK_KHR_shared_presentable_image */
+     333, /* VK_KHR_spirv_1_4 */
+     334, /* VK_KHR_storage_buffer_storage_class */
+     338, /* VK_KHR_swapchain */
+     339, /* VK_KHR_swapchain_maintenance1 */
+     340, /* VK_KHR_swapchain_mutable_format */
+     341, /* VK_KHR_synchronization2 */
+     342, /* VK_KHR_timeline_semaphore */
+     343, /* VK_KHR_unified_image_layouts */
+     344, /* VK_KHR_uniform_buffer_standard_layout */
+     345, /* VK_KHR_variable_pointers */
+     346, /* VK_KHR_vertex_attribute_divisor */
+     347, /* VK_KHR_video_decode_av1 */
+     348, /* VK_KHR_video_decode_h264 */
+     349, /* VK_KHR_video_decode_h265 */
+     350, /* VK_KHR_video_decode_queue */
+     351, /* VK_KHR_video_decode_vp9 */
+     352, /* VK_KHR_video_encode_av1 */
+     353, /* VK_KHR_video_encode_feedback2 */
+     354, /* VK_KHR_video_encode_h264 */
+     355, /* VK_KHR_video_encode_h265 */
+     356, /* VK_KHR_video_encode_intra_refresh */
+     357, /* VK_KHR_video_encode_quantization_map */
+     358, /* VK_KHR_video_encode_queue */
+     359, /* VK_KHR_video_maintenance1 */
+     360, /* VK_KHR_video_maintenance2 */
+     361, /* VK_KHR_video_queue */
+     362, /* VK_KHR_vulkan_memory_model */
+     364, /* VK_KHR_win32_keyed_mutex */
+     366, /* VK_KHR_workgroup_memory_explicit_layout */
+     369, /* VK_KHR_zero_initialize_workgroup_memory */
+     371, /* VK_MESA_image_alignment_control */
+     372, /* VK_MSFT_layered_driver */
+     376, /* VK_NVX_binary_import */
+     377, /* VK_NVX_image_view_handle */
+     378, /* VK_NVX_multiview_per_view_attributes */
+     379, /* VK_NV_acquire_winrt_display */
+     380, /* VK_NV_clip_space_w_scaling */
+     381, /* VK_NV_cluster_acceleration_structure */
+     382, /* VK_NV_command_buffer_inheritance */
+     383, /* VK_NV_compute_occupancy_priority */
+     384, /* VK_NV_compute_shader_derivatives */
+     385, /* VK_NV_cooperative_matrix */
+     386, /* VK_NV_cooperative_matrix2 */
+     387, /* VK_NV_cooperative_matrix_decode_vector */
+     388, /* VK_NV_cooperative_vector */
+     389, /* VK_NV_copy_memory_indirect */
+     390, /* VK_NV_corner_sampled_image */
+     391, /* VK_NV_coverage_reduction_mode */
+     392, /* VK_NV_cuda_kernel_launch */
+     393, /* VK_NV_dedicated_allocation */
+     394, /* VK_NV_dedicated_allocation_image_aliasing */
+     395, /* VK_NV_descriptor_pool_overallocation */
+     396, /* VK_NV_device_diagnostic_checkpoints */
+     397, /* VK_NV_device_diagnostics_config */
+     398, /* VK_NV_device_generated_commands */
+     399, /* VK_NV_device_generated_commands_compute */
+     400, /* VK_NV_displacement_micromap */
+     402, /* VK_NV_extended_sparse_address_space */
+     403, /* VK_NV_external_compute_queue */
+     404, /* VK_NV_external_memory */
+     406, /* VK_NV_external_memory_rdma */
+     407, /* VK_NV_external_memory_win32 */
+     408, /* VK_NV_fill_rectangle */
+     409, /* VK_NV_fragment_coverage_to_color */
+     410, /* VK_NV_fragment_shader_barycentric */
+     411, /* VK_NV_fragment_shading_rate_enums */
+     412, /* VK_NV_framebuffer_mixed_samples */
+     413, /* VK_NV_geometry_shader_passthrough */
+     414, /* VK_NV_glsl_shader */
+     415, /* VK_NV_inherited_viewport_scissor */
+     416, /* VK_NV_linear_color_attachment */
+     417, /* VK_NV_low_latency */
+     418, /* VK_NV_low_latency2 */
+     419, /* VK_NV_memory_decompression */
+     420, /* VK_NV_mesh_shader */
+     421, /* VK_NV_optical_flow */
+     422, /* VK_NV_partitioned_acceleration_structure */
+     423, /* VK_NV_per_stage_descriptor_set */
+     424, /* VK_NV_present_barrier */
+     425, /* VK_NV_present_metering */
+     426, /* VK_NV_private_data_base_handle */
+     427, /* VK_NV_push_constant_bank */
+     428, /* VK_NV_raw_access_chains */
+     429, /* VK_NV_ray_tracing */
+     430, /* VK_NV_ray_tracing_invocation_reorder */
+     431, /* VK_NV_ray_tracing_linear_swept_spheres */
+     432, /* VK_NV_ray_tracing_motion_blur */
+     433, /* VK_NV_ray_tracing_validation */
+     434, /* VK_NV_representative_fragment_test */
+     435, /* VK_NV_sample_mask_override_coverage */
+     436, /* VK_NV_scissor_exclusive */
+     437, /* VK_NV_shader_atomic_float16_vector */
+     438, /* VK_NV_shader_image_footprint */
+     439, /* VK_NV_shader_sm_builtins */
+     440, /* VK_NV_shader_subgroup_partitioned */
+     441, /* VK_NV_shading_rate_image */
+     442, /* VK_NV_viewport_array2 */
+     443, /* VK_NV_viewport_swizzle */
+     444, /* VK_NV_win32_keyed_mutex */
+     445, /* VK_OHOS_external_memory */
+     447, /* VK_QCOM_cooperative_matrix_conversion */
+     448, /* VK_QCOM_data_graph_model */
+     449, /* VK_QCOM_elapsed_timer_query */
+     450, /* VK_QCOM_filter_cubic_clamp */
+     451, /* VK_QCOM_filter_cubic_weights */
+     452, /* VK_QCOM_fragment_density_map_offset */
+     453, /* VK_QCOM_image_processing */
+     454, /* VK_QCOM_image_processing2 */
+     455, /* VK_QCOM_image_processing3 */
+     456, /* VK_QCOM_multiview_per_view_render_areas */
+     457, /* VK_QCOM_multiview_per_view_viewports */
+     458, /* VK_QCOM_queue_perf_hint */
+     459, /* VK_QCOM_render_pass_shader_resolve */
+     460, /* VK_QCOM_render_pass_store_ops */
+     461, /* VK_QCOM_render_pass_transform */
+     462, /* VK_QCOM_rotated_copy_commands */
+     463, /* VK_QCOM_shader_multiple_wait_queues */
+     464, /* VK_QCOM_tile_memory_heap */
+     465, /* VK_QCOM_tile_properties */
+     466, /* VK_QCOM_tile_shading */
+     467, /* VK_QCOM_ycbcr_degamma */
+     468, /* VK_QNX_external_memory_screen_buffer */
+     470, /* VK_SEC_amigo_profiling */
+     471, /* VK_SEC_pipeline_cache_incremental_mode */
+     472, /* VK_SEC_throttle_hint */
+     474, /* VK_VALVE_buffer_device_address_allocation_alignment */
+     475, /* VK_VALVE_descriptor_set_host_mapping */
+     476, /* VK_VALVE_fragment_density_map_layered */
+     477, /* VK_VALVE_mutable_descriptor_type */
+     478, /* VK_VALVE_shader_mixed_float_dot_product */
+     479, /* VK_VALVE_video_encode_rgb_conversion */
 };
 
 /* Extension PFN range table for vk. */
 static const GloamPfnRange_t kExtPfnRanges_vk[] = {
-    {  334,  234,    5 }, /* VK_KHR_surface */
-    {  337,  239,    9 }, /* VK_KHR_swapchain */
+    {  335,  234,    5 }, /* VK_KHR_surface */
+    {  338,  239,    9 }, /* VK_KHR_swapchain */
     {  240,  248,    7 }, /* VK_KHR_display */
     {  241,  255,    1 }, /* VK_KHR_display_swapchain */
-    {  367,  256,    2 }, /* VK_KHR_xlib_surface */
-    {  366,  258,    2 }, /* VK_KHR_xcb_surface */
-    {  362,  260,    2 }, /* VK_KHR_wayland_surface */
+    {  368,  256,    2 }, /* VK_KHR_xlib_surface */
+    {  367,  258,    2 }, /* VK_KHR_xcb_surface */
+    {  363,  260,    2 }, /* VK_KHR_wayland_surface */
     {  222,  262,    1 }, /* VK_KHR_android_surface */
-    {  364,  263,    2 }, /* VK_KHR_win32_surface */
+    {  365,  263,    2 }, /* VK_KHR_win32_surface */
     {   61,  265,    3 }, /* VK_EXT_debug_report */
     {   60,  268,    5 }, /* VK_EXT_debug_marker */
-    {  360,  273,   12 }, /* VK_KHR_video_queue */
-    {  349,  285,    1 }, /* VK_KHR_video_decode_queue */
+    {  361,  273,   12 }, /* VK_KHR_video_queue */
+    {  350,  285,    1 }, /* VK_KHR_video_decode_queue */
     {  186,  286,    6 }, /* VK_EXT_transform_feedback */
-    {  375,  292,    5 }, /* VK_NVX_binary_import */
-    {  376,  297,    4 }, /* VK_NVX_image_view_handle */
+    {  376,  292,    5 }, /* VK_NVX_binary_import */
+    {  377,  297,    4 }, /* VK_NVX_image_view_handle */
     {    6,  301,    2 }, /* VK_AMD_draw_indirect_count */
     {   23,  303,    1 }, /* VK_AMD_shader_info */
     {  244,  304,    2 }, /* VK_KHR_dynamic_rendering */
     {  201,  306,    1 }, /* VK_GGP_stream_descriptor_surface */
-    {  404,  307,    1 }, /* VK_NV_external_memory_capabilities */
-    {  406,  308,    1 }, /* VK_NV_external_memory_win32 */
+    {  405,  307,    1 }, /* VK_NV_external_memory_capabilities */
+    {  407,  308,    1 }, /* VK_NV_external_memory_win32 */
     {  264,  309,    7 }, /* VK_KHR_get_physical_device_properties2 */
     {  238,  244,    4 }, /* VK_KHR_device_group */
     {  238,  316,    3 }, /* VK_KHR_device_group */
-    {  374,  319,    1 }, /* VK_NN_vi_surface */
+    {  375,  319,    1 }, /* VK_NN_vi_surface */
     {  274,  320,    1 }, /* VK_KHR_maintenance1 */
     {  239,  321,    1 }, /* VK_KHR_device_group_creation */
     {  252,  322,    1 }, /* VK_KHR_external_memory_capabilities */
@@ -4659,11 +4662,11 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {  256,  327,    1 }, /* VK_KHR_external_semaphore_capabilities */
     {  258,  328,    2 }, /* VK_KHR_external_semaphore_win32 */
     {  257,  330,    2 }, /* VK_KHR_external_semaphore_fd */
-    {  300,  332,    2 }, /* VK_KHR_push_descriptor */
+    {  301,  332,    2 }, /* VK_KHR_push_descriptor */
     {   55,  334,    2 }, /* VK_EXT_conditional_rendering */
     {  235,  333,    1 }, /* VK_KHR_descriptor_update_template */
     {  235,  336,    3 }, /* VK_KHR_descriptor_update_template */
-    {  379,  339,    1 }, /* VK_NV_clip_space_w_scaling */
+    {  380,  339,    1 }, /* VK_NV_clip_space_w_scaling */
     {   76,  340,    1 }, /* VK_EXT_direct_mode_display */
     {   46,  341,    2 }, /* VK_EXT_acquire_xlib_display */
     {   80,  343,    1 }, /* VK_EXT_display_surface_counter */
@@ -4672,15 +4675,15 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {   78,  350,    3 }, /* VK_EXT_discard_rectangles */
     {   99,  353,    1 }, /* VK_EXT_hdr_metadata */
     {  230,  354,    4 }, /* VK_KHR_create_renderpass2 */
-    {  331,  358,    1 }, /* VK_KHR_shared_presentable_image */
+    {  332,  358,    1 }, /* VK_KHR_shared_presentable_image */
     {  248,  359,    1 }, /* VK_KHR_external_fence_capabilities */
     {  250,  360,    2 }, /* VK_KHR_external_fence_win32 */
     {  249,  362,    2 }, /* VK_KHR_external_fence_fd */
-    {  288,  364,    4 }, /* VK_KHR_performance_query */
+    {  289,  364,    4 }, /* VK_KHR_performance_query */
     {  265,  368,    2 }, /* VK_KHR_get_surface_capabilities2 */
     {  262,  370,    4 }, /* VK_KHR_get_display_properties2 */
-    {  372,  374,    1 }, /* VK_MVK_ios_surface */
-    {  373,  375,    1 }, /* VK_MVK_macos_surface */
+    {  373,  374,    1 }, /* VK_MVK_ios_surface */
+    {  374,  375,    1 }, /* VK_MVK_macos_surface */
     {   62,  376,   11 }, /* VK_EXT_debug_utils */
     {   27,  387,    2 }, /* VK_ANDROID_external_memory_android_hardware_buffer */
     {    8,  389,   12 }, /* VK_AMD_gpa_interface */
@@ -4689,22 +4692,22 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {  154,  418,    2 }, /* VK_EXT_sample_locations */
     {  263,  420,    3 }, /* VK_KHR_get_memory_requirements2 */
     {  221,  423,   16 }, /* VK_KHR_acceleration_structure */
-    {  303,  439,    7 }, /* VK_KHR_ray_tracing_pipeline */
-    {  308,  446,    2 }, /* VK_KHR_sampler_ycbcr_conversion */
+    {  304,  439,    7 }, /* VK_KHR_ray_tracing_pipeline */
+    {  309,  446,    2 }, /* VK_KHR_sampler_ycbcr_conversion */
     {  223,  448,    2 }, /* VK_KHR_bind_memory2 */
     {  106,  450,    1 }, /* VK_EXT_image_drm_format_modifier */
     {  187,  451,    4 }, /* VK_EXT_validation_cache */
-    {  440,  455,    3 }, /* VK_NV_shading_rate_image */
-    {  428,  458,   12 }, /* VK_NV_ray_tracing */
-    {  278,  470,    1 }, /* VK_KHR_maintenance3 */
+    {  441,  455,    3 }, /* VK_NV_shading_rate_image */
+    {  429,  458,   12 }, /* VK_NV_ray_tracing */
+    {  279,  470,    1 }, /* VK_KHR_maintenance3 */
     {  242,  471,    2 }, /* VK_KHR_draw_indirect_count */
     {   87,  473,    1 }, /* VK_EXT_external_memory_host */
     {    3,  474,    2 }, /* VK_AMD_buffer_marker */
     {   53,  476,    2 }, /* VK_EXT_calibrated_timestamps */
-    {  419,  478,    3 }, /* VK_NV_mesh_shader */
-    {  435,  481,    2 }, /* VK_NV_scissor_exclusive */
-    {  395,  483,    3 }, /* VK_NV_device_diagnostic_checkpoints */
-    {  341,  486,    3 }, /* VK_KHR_timeline_semaphore */
+    {  420,  478,    3 }, /* VK_NV_mesh_shader */
+    {  436,  481,    2 }, /* VK_NV_scissor_exclusive */
+    {  396,  483,    3 }, /* VK_NV_device_diagnostic_checkpoints */
+    {  342,  486,    3 }, /* VK_KHR_timeline_semaphore */
     {  143,  489,    4 }, /* VK_EXT_present_timing */
     {  217,  493,    9 }, /* VK_INTEL_performance_query */
     {    5,  502,    1 }, /* VK_AMD_display_native_hdr */
@@ -4714,9 +4717,9 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {  245,  507,    2 }, /* VK_KHR_dynamic_rendering_local_read */
     {   52,  509,    1 }, /* VK_EXT_buffer_device_address */
     {  185,  510,    1 }, /* VK_EXT_tooling_info */
-    {  298,  511,    1 }, /* VK_KHR_present_wait */
-    {  384,  512,    1 }, /* VK_NV_cooperative_matrix */
-    {  390,  513,    1 }, /* VK_NV_coverage_reduction_mode */
+    {  299,  511,    1 }, /* VK_KHR_present_wait */
+    {  385,  512,    1 }, /* VK_NV_cooperative_matrix */
+    {  391,  513,    1 }, /* VK_NV_coverage_reduction_mode */
     {   95,  514,    4 }, /* VK_EXT_full_screen_exclusive */
     {  100,  518,    1 }, /* VK_EXT_headless_surface */
     {  224,  519,    3 }, /* VK_KHR_buffer_device_address */
@@ -4724,29 +4727,29 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {  102,  523,    1 }, /* VK_EXT_host_query_reset */
     {   82,  524,   12 }, /* VK_EXT_extended_dynamic_state */
     {  232,  536,    5 }, /* VK_KHR_deferred_host_operations */
-    {  290,  541,    3 }, /* VK_KHR_pipeline_executable_properties */
+    {  291,  541,    3 }, /* VK_KHR_pipeline_executable_properties */
     {  101,  544,    5 }, /* VK_EXT_host_image_copy */
-    {  285,  549,    2 }, /* VK_KHR_map_memory2 */
+    {  286,  549,    2 }, /* VK_KHR_map_memory2 */
     {  181,  551,    1 }, /* VK_EXT_swapchain_maintenance1 */
-    {  397,  552,    6 }, /* VK_NV_device_generated_commands */
+    {  398,  552,    6 }, /* VK_NV_device_generated_commands */
     {   63,  558,    1 }, /* VK_EXT_depth_bias_control */
     {   45,  559,    2 }, /* VK_EXT_acquire_drm_display */
     {  147,  561,    4 }, /* VK_EXT_private_data */
-    {  357,  565,    3 }, /* VK_KHR_video_encode_queue */
-    {  457,  568,    1 }, /* VK_QCOM_queue_perf_hint */
-    {  391,  569,    6 }, /* VK_NV_cuda_kernel_launch */
-    {  465,  575,    3 }, /* VK_QCOM_tile_shading */
-    {  416,  578,    7 }, /* VK_NV_low_latency */
+    {  358,  565,    3 }, /* VK_KHR_video_encode_queue */
+    {  458,  568,    1 }, /* VK_QCOM_queue_perf_hint */
+    {  392,  569,    6 }, /* VK_NV_cuda_kernel_launch */
+    {  466,  575,    3 }, /* VK_QCOM_tile_shading */
+    {  417,  578,    7 }, /* VK_NV_low_latency */
     {  123,  585,    1 }, /* VK_EXT_metal_objects */
-    {  340,  586,    6 }, /* VK_KHR_synchronization2 */
+    {  341,  586,    6 }, /* VK_KHR_synchronization2 */
     {   69,  592,   11 }, /* VK_EXT_descriptor_buffer */
     {  236,  603,   22 }, /* VK_KHR_device_address_commands */
-    {  410,  625,    1 }, /* VK_NV_fragment_shading_rate_enums */
+    {  411,  625,    1 }, /* VK_NV_fragment_shading_rate_enums */
     {  122,  626,    3 }, /* VK_EXT_mesh_shader */
     {  228,  629,    6 }, /* VK_KHR_copy_commands2 */
     {  104,  548,    1 }, /* VK_EXT_image_compression_control */
     {   73,  635,    1 }, /* VK_EXT_device_fault */
-    {  378,  636,    2 }, /* VK_NV_acquire_winrt_display */
+    {  379,  636,    2 }, /* VK_NV_acquire_winrt_display */
     {   77,  638,    2 }, /* VK_EXT_directfb_surface */
     {  192,  640,    1 }, /* VK_EXT_vertex_input_dynamic_state */
     {  197,  641,    2 }, /* VK_FUCHSIA_external_memory */
@@ -4754,59 +4757,59 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {  196,  645,    5 }, /* VK_FUCHSIA_buffer_collection */
     {  211,  650,    2 }, /* VK_HUAWEI_subpass_shading */
     {  210,  652,    1 }, /* VK_HUAWEI_invocation_mask */
-    {  405,  653,    1 }, /* VK_NV_external_memory_rdma */
+    {  406,  653,    1 }, /* VK_NV_external_memory_rdma */
     {  138,  654,    1 }, /* VK_EXT_pipeline_properties */
     {   83,  655,    5 }, /* VK_EXT_extended_dynamic_state2 */
-    {  468,  660,    2 }, /* VK_QNX_screen_surface */
+    {  469,  660,    2 }, /* VK_QNX_screen_surface */
     {   54,  662,    1 }, /* VK_EXT_color_write_enable */
-    {  302,  663,    1 }, /* VK_KHR_ray_tracing_maintenance1 */
+    {  303,  663,    1 }, /* VK_KHR_ray_tracing_maintenance1 */
     {  125,  664,    2 }, /* VK_EXT_multi_draw */
     {  131,  666,   14 }, /* VK_EXT_opacity_micromap */
     {  208,  680,    2 }, /* VK_HUAWEI_cluster_culling_shader */
     {  132,  682,    1 }, /* VK_EXT_pageable_device_local_memory */
-    {  279,  683,    3 }, /* VK_KHR_maintenance4 */
+    {  280,  683,    3 }, /* VK_KHR_maintenance4 */
     {   38,  686,    1 }, /* VK_ARM_scheduling_controls */
-    {  474,  687,    2 }, /* VK_VALVE_descriptor_set_host_mapping */
-    {  388,  689,    2 }, /* VK_NV_copy_memory_indirect */
-    {  418,  691,    2 }, /* VK_NV_memory_decompression */
-    {  398,  693,    3 }, /* VK_NV_device_generated_commands_compute */
-    {  444,  696,    2 }, /* VK_OHOS_external_memory */
+    {  475,  687,    2 }, /* VK_VALVE_descriptor_set_host_mapping */
+    {  389,  689,    2 }, /* VK_NV_copy_memory_indirect */
+    {  419,  691,    2 }, /* VK_NV_memory_decompression */
+    {  399,  693,    3 }, /* VK_NV_device_generated_commands_compute */
+    {  445,  696,    2 }, /* VK_OHOS_external_memory */
     {   84,  698,   31 }, /* VK_EXT_extended_dynamic_state3 */
     {   43,  729,   11 }, /* VK_ARM_tensors */
     {  165,  740,    2 }, /* VK_EXT_shader_module_identifier */
-    {  420,  742,    5 }, /* VK_NV_optical_flow */
-    {  280,  747,    4 }, /* VK_KHR_maintenance5 */
+    {  421,  742,    5 }, /* VK_NV_optical_flow */
+    {  281,  747,    4 }, /* VK_KHR_maintenance5 */
     {    2,  751,    1 }, /* VK_AMD_anti_lag */
-    {  299,  752,    1 }, /* VK_KHR_present_wait2 */
+    {  300,  752,    1 }, /* VK_KHR_present_wait2 */
     {  166,  524,   12 }, /* VK_EXT_shader_object */
     {  166,  640,    1 }, /* VK_EXT_shader_object */
     {  166,  655,    5 }, /* VK_EXT_shader_object */
     {  166,  698,   31 }, /* VK_EXT_shader_object */
     {  166,  753,    5 }, /* VK_EXT_shader_object */
-    {  289,  758,    5 }, /* VK_KHR_pipeline_binary */
-    {  464,  763,    2 }, /* VK_QCOM_tile_properties */
-    {  338,  765,    1 }, /* VK_KHR_swapchain_maintenance1 */
-    {  387,  766,    3 }, /* VK_NV_cooperative_vector */
-    {  417,  769,    5 }, /* VK_NV_low_latency2 */
+    {  290,  758,    5 }, /* VK_KHR_pipeline_binary */
+    {  465,  763,    2 }, /* VK_QCOM_tile_properties */
+    {  339,  765,    1 }, /* VK_KHR_swapchain_maintenance1 */
+    {  388,  766,    3 }, /* VK_NV_cooperative_vector */
+    {  418,  769,    5 }, /* VK_NV_low_latency2 */
     {  227,  774,    1 }, /* VK_KHR_cooperative_matrix */
     {   29,  775,   11 }, /* VK_ARM_data_graph */
     {   30,  786,    1 }, /* VK_ARM_data_graph_instruction_set_tosa */
     {   48,  787,    1 }, /* VK_EXT_attachment_feedback_loop_dynamic_state */
-    {  467,  788,    1 }, /* VK_QNX_external_memory_screen_buffer */
+    {  468,  788,    1 }, /* VK_QNX_external_memory_screen_buffer */
     {  272,  789,    1 }, /* VK_KHR_line_rasterization */
     {  225,  790,    2 }, /* VK_KHR_calibrated_timestamps */
-    {  281,  792,    6 }, /* VK_KHR_maintenance6 */
-    {  463,  798,    1 }, /* VK_QCOM_tile_memory_heap */
+    {  282,  792,    6 }, /* VK_KHR_maintenance6 */
+    {  464,  798,    1 }, /* VK_QCOM_tile_memory_heap */
     {  229,  799,    2 }, /* VK_KHR_copy_memory_indirect */
     {  120,  801,    2 }, /* VK_EXT_memory_decompression */
-    {  402,  803,    3 }, /* VK_NV_external_compute_queue */
-    {  380,  806,    2 }, /* VK_NV_cluster_acceleration_structure */
-    {  421,  808,    2 }, /* VK_NV_partitioned_acceleration_structure */
+    {  403,  803,    3 }, /* VK_NV_external_compute_queue */
+    {  381,  806,    2 }, /* VK_NV_cluster_acceleration_structure */
+    {  422,  808,    2 }, /* VK_NV_partitioned_acceleration_structure */
     {   74,  810,    9 }, /* VK_EXT_device_generated_commands */
     {  237,  819,    2 }, /* VK_KHR_device_fault */
     {   64,  757,    1 }, /* VK_EXT_depth_clamp_control */
-    {  445,  821,    1 }, /* VK_OHOS_surface */
-    {  385,  822,    1 }, /* VK_NV_cooperative_matrix2 */
+    {  446,  821,    1 }, /* VK_OHOS_surface */
+    {  386,  822,    1 }, /* VK_NV_cooperative_matrix2 */
     {   88,  823,    2 }, /* VK_EXT_external_memory_metal */
     {   34,  825,    1 }, /* VK_ARM_performance_counters_by_region */
     {   41,  826,    7 }, /* VK_ARM_shader_instrumentation */
@@ -4815,9 +4818,9 @@ static const GloamPfnRange_t kExtPfnRanges_vk[] = {
     {  275,  835,    1 }, /* VK_KHR_maintenance10 */
     {   32,  786,    1 }, /* VK_ARM_data_graph_optical_flow */
     {   32,  836,    1 }, /* VK_ARM_data_graph_optical_flow */
-    {  382,  837,    1 }, /* VK_NV_compute_occupancy_priority */
+    {  383,  837,    1 }, /* VK_NV_compute_occupancy_priority */
     {   57,  838,    1 }, /* VK_EXT_cooperative_matrix_maintenance1 */
-    {  472,  839,    2 }, /* VK_SEC_ubm_surface */
+    {  473,  839,    2 }, /* VK_SEC_ubm_surface */
     {  144,  841,    1 }, /* VK_EXT_primitive_restart_index */
 };
 
