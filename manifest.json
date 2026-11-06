@@ -11,22 +11,22 @@
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/EGL/eglplatform.h",
-      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
+      "commit": "8e56e86e65687697ef54114cdb1afabdfac756bf",
       "blob": "6786afd90b685895efa25b302afba68fc8296941"
     },
     "KHR/khrplatform.h": {
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/KHR/khrplatform.h",
-      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
+      "commit": "8e56e86e65687697ef54114cdb1afabdfac756bf",
       "blob": "01646449caedc958effc3b450360aefd260671ab"
     },
     "egl.xml": {
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/egl.xml",
-      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
-      "blob": "e937823199839abcc7b0844ee7cd519242ef8396"
+      "commit": "8e56e86e65687697ef54114cdb1afabdfac756bf",
+      "blob": "d7ab67d267eedad03becccb6a26384a4e24ffaf5"
     },
     "egl_angle_ext.xml": {
       "repo": "angle/angle",
@@ -67,8 +67,8 @@
       "repo": "KhronosGroup/Vulkan-Docs",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Docs",
       "path_in_repo": "xml/vk.xml",
-      "commit": "b94f8bd2d004d2949469d8a5071ee10eb7d23566",
-      "blob": "0ecb178ac1ed2eff2c8de8271c99cd86b04a94cc"
+      "commit": "fa30d4e312e843193601be7cb926c7e25d9ec885",
+      "blob": "885e3ed97b00d8baddc7e35996c284b54e88eccf"
     },
     "vk_video/vulkan_video_codec_av1std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",

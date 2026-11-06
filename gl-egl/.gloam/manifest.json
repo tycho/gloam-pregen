@@ -11,22 +11,22 @@
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/EGL/eglplatform.h",
-      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
+      "commit": "8e56e86e65687697ef54114cdb1afabdfac756bf",
       "blob": "6786afd90b685895efa25b302afba68fc8296941"
     },
     "KHR/khrplatform.h": {
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/KHR/khrplatform.h",
-      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
+      "commit": "8e56e86e65687697ef54114cdb1afabdfac756bf",
       "blob": "01646449caedc958effc3b450360aefd260671ab"
     },
     "egl.xml": {
       "repo": "KhronosGroup/EGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/EGL-Registry",
       "path_in_repo": "api/egl.xml",
-      "commit": "db3425b8246136faccb5e2782b5694960bd6edf1",
-      "blob": "e937823199839abcc7b0844ee7cd519242ef8396"
+      "commit": "8e56e86e65687697ef54114cdb1afabdfac756bf",
+      "blob": "d7ab67d267eedad03becccb6a26384a4e24ffaf5"
     },
     "egl_angle_ext.xml": {
       "repo": "angle/angle",
@@ -83,7 +83,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "8a4dce16e69a109a67b479434552dccc0c78df24",
+      "blob": "06cf6ecbb12e499c781b570239bf2c07ae19e1ac",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -94,7 +94,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "bee81026e0cdcadc06a3548ea5042b1cf444e456",
+      "blob": "ecb3d57107205d8a1795e7935d9528cc08cbea91",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -113,7 +113,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "127e0c7cb2d97867837f7fb38aff09edbdf8ffcf",
+      "blob": "99718cd67f82757117250318d4fab4b197b9e1b6",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -124,7 +124,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "d759f6d375f89a428cf6ff842356aecd8b7d385c",
+      "blob": "ee5f47cd6ade5e10237aa1c15948e7df94234bf0",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
