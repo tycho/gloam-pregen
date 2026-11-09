@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "gloam": {
-    "version": "0.7.5",
-    "describe": "0.7.5",
+    "version": "0.7.6",
+    "describe": "0.7.6",
     "commit": "",
     "command_line": "gloam --api vk --fetch --out-path vulkan --quiet c --alias --loader --external-headers"
   },
@@ -109,7 +109,7 @@
   "output": [
     {
       "path": "include/gloam/vk.h",
-      "blob": "049a55635ec0e18d08a9d168dc6106d2f8c8f074",
+      "blob": "c3d91f7e0acfb77276cd23ed01d98d8982db9287",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -137,7 +137,7 @@
     },
     {
       "path": "src/vk.c",
-      "blob": "3a37ffb91bccc78ba14ab48ada07ac150775af08",
+      "blob": "d7e62f68d7924f688bdec3fb2b15fce38d2632e1",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
