@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (2ec67ca)
  *     xxhash.h (blob 744b6cb)
- *   KhronosGroup/Vulkan-Docs (33d3353)
- *     xml/vk.xml (blob 8f8561b)
+ *   KhronosGroup/Vulkan-Docs (825e9b7)
+ *     xml/vk.xml (blob 1b9f428)
  *   KhronosGroup/Vulkan-Headers (b0c3dd6)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob c25080a)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 11f9e7b)
@@ -2277,6 +2277,8 @@ extern "C" {
 #define VK_RFIVE_VIEW_SURFACE_EXTENSION_NAME "VK_RFIVE_view_surface"
 #define VK_QCOM_EXTENSION_733_SPEC_VERSION 0
 #define VK_QCOM_EXTENSION_733_EXTENSION_NAME "VK_QCOM_extension_733"
+#define VK_NV_EXTENSION_734_SPEC_VERSION 0
+#define VK_NV_EXTENSION_734_EXTENSION_NAME "VK_NV_extension_734"
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 
