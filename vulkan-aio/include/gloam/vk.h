@@ -20,8 +20,8 @@
  *
  *   Cyan4973/xxHash (2ec67ca)
  *     xxhash.h (blob 744b6cb)
- *   KhronosGroup/Vulkan-Docs (825e9b7)
- *     xml/vk.xml (blob 1b9f428)
+ *   KhronosGroup/Vulkan-Docs (d4e43a0)
+ *     xml/vk.xml (blob 8ebbf8a)
  *   KhronosGroup/Vulkan-Headers (b0c3dd6)
  *     include/vk_video/vulkan_video_codec_av1std.h (blob c25080a)
  *     include/vk_video/vulkan_video_codec_av1std_decode.h (blob 11f9e7b)
@@ -2279,6 +2279,8 @@ extern "C" {
 #define VK_QCOM_EXTENSION_733_EXTENSION_NAME "VK_QCOM_extension_733"
 #define VK_NV_EXTENSION_734_SPEC_VERSION 0
 #define VK_NV_EXTENSION_734_EXTENSION_NAME "VK_NV_extension_734"
+#define VK_RENKU_SURFACE_SPEC_VERSION 0
+#define VK_RENKU_SURFACE_EXTENSION_NAME "VK_RENKU_surface"
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 
@@ -8967,6 +8969,10 @@ typedef enum VkImageTilingControlEXT {
     #endif
 #endif
 
+#ifndef VKAPI_NODISCARD
+    #define VKAPI_NODISCARD
+#endif
+
 #if defined(VK_USE_PLATFORM_ANDROID_KHR)
 struct ANativeWindow;
 
@@ -9520,12 +9526,6 @@ typedef struct VkQueryLowLatencySupportNV {
     const void* pNext;
     void*                                       pQueriedLowLatencyData;
 } VkQueryLowLatencySupportNV;
-
-typedef struct VkBindMemoryStatus {
-    VkStructureType sType;
-    const void*                                pNext;
-    VkResult*                                                  pResult;
-} VkBindMemoryStatus;
 
 typedef struct VkSamplerCubicWeightsCreateInfoQCOM {
     VkStructureType sType;
@@ -11590,6 +11590,12 @@ typedef struct VkImportScreenBufferInfoQNX {
 } VkImportScreenBufferInfoQNX;
 #endif
 
+typedef struct VkBindMemoryStatus {
+    VkStructureType sType;
+    const void*                                pNext;
+    VkResult*                                                  pResult;
+} VkBindMemoryStatus;
+
 typedef struct VkVideoDecodeH264ProfileInfoKHR {
     VkStructureType sType;
     const void*                                  pNext;
@@ -12690,8 +12696,6 @@ typedef VkPipelineRobustnessCreateInfo VkPipelineRobustnessCreateInfoEXT;
 typedef VkPhysicalDevicePipelineRobustnessProperties VkPhysicalDevicePipelineRobustnessPropertiesEXT;
 
 typedef VkSurfacePresentModeKHR VkSurfacePresentModeEXT;
-
-typedef VkBindMemoryStatus VkBindMemoryStatusKHR;
 
 typedef struct VkHdrMetadataEXT {
     VkStructureType sType;
@@ -16625,6 +16629,8 @@ typedef struct VkOpaqueCaptureDataCreateInfoEXT {
     const void*    pNext;
     const VkHostAddressRangeConstEXT* pData;
 } VkOpaqueCaptureDataCreateInfoEXT;
+
+typedef VkBindMemoryStatus VkBindMemoryStatusKHR;
 
 typedef struct VkVideoDecodeH264SessionParametersCreateInfoKHR {
     VkStructureType sType;
