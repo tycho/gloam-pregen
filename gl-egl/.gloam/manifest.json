@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "gloam": {
-    "version": "0.7.7",
-    "describe": "0.7.7",
+    "version": "0.7.8",
+    "describe": "0.7.8",
     "commit": "",
     "command_line": "gloam --api gl:core,gles2,egl --merge --fetch --out-path gl-egl --quiet c --alias --loader"
   },
@@ -32,7 +32,7 @@
       "repo": "angle/angle",
       "repo_url": "https://chromium.googlesource.com/angle/angle",
       "path_in_repo": "scripts/egl_angle_ext.xml",
-      "commit": "4a5ccd7b61e6ea3bf8bb1c486ac5f92ee7bf4f67",
+      "commit": "6d3ed8b68d10901b7c95477a6c8f926792bc47fa",
       "blob": "8e0552967066755410d122b9f3e3d41ad94e89e4"
     },
     "gl.xml": {
@@ -46,8 +46,8 @@
       "repo": "angle/angle",
       "repo_url": "https://chromium.googlesource.com/angle/angle",
       "path_in_repo": "scripts/gl_angle_ext.xml",
-      "commit": "4a5ccd7b61e6ea3bf8bb1c486ac5f92ee7bf4f67",
-      "blob": "67eca0d0344a1d2d136de08c32a6fc544ff55fbb"
+      "commit": "6d3ed8b68d10901b7c95477a6c8f926792bc47fa",
+      "blob": "92dbe5c39efb7c58d39f7f10f6a717d70a6b24a7"
     },
     "glsl_exts.xml": {
       "repo": "tycho/gloam-registry",
@@ -83,7 +83,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "bb076326c99db9cae351d15a0c5353989f0870a8",
+      "blob": "1c8a158db87be1647c1375ff25566aeaad1827a6",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -94,7 +94,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "56433fd05e9a6f223654d64f93bb026d280a20bf",
+      "blob": "058104cd84166c50ec8f7d9400f4c93a692b9012",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -113,7 +113,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "05ba80f1922af7a4305c3fc2c5577eb5879d05ad",
+      "blob": "9003133cdd2096f88852605b46811e9276621f18",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -124,7 +124,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "c867b93c990692c69d9283376cec056deaa0247a",
+      "blob": "e2f85d0b7176726fd3aa49c105de6c034c045216",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
